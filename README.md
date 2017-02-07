@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-Auto Click Almost anything [Test]
+Auto Click Almost anything [Test](https://dhruv-techapps.github.io/Auto-Click/test.html)
 
 
 ### [Issues](https://github.com/Dhruv-Techapps/Auto-Click/issues)
