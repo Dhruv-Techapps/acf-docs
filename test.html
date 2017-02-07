@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Click Test</title>
+    <script src="./jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script src="./utility.js" type="text/javascript"></script>
+  </head>
+  <style type="text/css">
+	body{
+		background-color: #383838;
+		color: white;
+	}
+	#test > *{
+		padding: 20px;
+		margin: 20px;
+		background: white;
+		border: 1px dotted #7f7f7f;
+		cursor: pointer;
+		text-decoration:none;
+		color: #7f7f7f;
+		font-weight: bold;
+	}
+	#test > *:hover{
+		background: #7f7f7f;
+		border: 1px dotted white;
+		color: white;
+	}
+	#test > *:hover > span{
+		background-color: white;
+		border-color: #7f7f7f;
+		color: #7f7f7f;
+	}
+	#test > * > span{
+		background-color: #7f7f7f;
+		border-radius: 15px;
+		padding:3px 10px;
+		margin-left: 10px;
+		color: white;
+	}
+	.clear{
+		text-transform: uppercase;
+		padding: 20px 50px;
+		cursor: pointer;
+		font-weight: bold;
+	}
+  </style>
+  <body>
+  <center>
+  <h1>Click Test</h1>
+  <div id="test">
+	<button type="button" id="button">I'm Button with ID <span class="badge">0</span></button>
+	<button type="button">I'm Button without ID<span class="badge">0</span></button>
+	<a href="javascript:void(0)" class="link">I'm link with class<span class="badge">0</span></a>
+	<a href="javascript:void(0)">I'm Link without class<span class="badge">0</span></a>
+	<br/><br/>
+	<span>I'm GOD. You cant auto click me<span>0</span class="badge"></span>
+ </div>
+ <br/><br/>
+	<button type="button" class="clear" onclick="clearReload();">Clear</button>
+  </center>
+  <script>
+		jQuery(function($) {
+			$("#test > *").on("click",function(i,v){
+				var count = $(this).find("span").html();
+				$(this).find("span").html(++count);
+				localStorage[$(this).getPath()] = $(this).find("span").html();
+			});
+			reload();
+		});
+		function clearReload(){
+			localStorage.clear();
+			location.reload();
+		}
+		function reload(){
+			$("#test > *").each(function(i,v){
+				$(this).find("span").html(localStorage[$(this).getPath()]);
+			});
+		}
+	</script>
+</body>
+</html>
