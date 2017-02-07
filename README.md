@@ -1,0 +1,2 @@
+# Auto-Click
+Auto Click
