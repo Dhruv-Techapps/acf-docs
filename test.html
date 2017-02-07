@@ -202,7 +202,7 @@
 					<h2 class="beta subhead">Auto Click Anything</h2>
 				</div>
 			</header>
-			<div>
+			<div id="test">
 				<div>
 					<button type="button" class="site__content_left butt js--triggerAnimation" id="button">I'M BUTTON WITH ID<span class="badge">0</span></button>
 					<button type="button" class="site__content_right butt js--triggerAnimation">I'M BUTTON WITHOUT ID<span class="badge">0</span></button>
@@ -227,7 +227,7 @@
 		</center>
 		<script>
 			jQuery(function($) {
-				$("#test > *").on("click",function(i,v){
+				$("#test > div > *").on("click",function(i,v){
 					var count = $(this).find("span").html();
 					$(this).find("span").html(++count);
 					localStorage[$(this).getPath()] = $(this).find("span").html();
@@ -239,7 +239,7 @@
 				location.reload();
 			}
 			function reload(){
-				$("#test > *").each(function(i,v){
+				$("#test > div > *").each(function(i,v){
 					$(this).find("span").html(localStorage[$(this).getPath()]);
 				});
 			}
