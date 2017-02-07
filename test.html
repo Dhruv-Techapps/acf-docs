@@ -187,15 +187,15 @@
 			</header>
 			<div id="test">
 				<div>
-					<button type="button" class="site__content_left butt js--triggerAnimation" id="button">I'M BUTTON WITH ID<span class="badge">0</span></button>
-					<button type="button" class="site__content_right butt js--triggerAnimation">I'M BUTTON WITHOUT ID<span class="badge">0</span></button>
+					<button type="button" name="btn1" class="site__content_left butt js--triggerAnimation" id="button">I'M BUTTON WITH ID<span class="badge">0</span></button>
+					<button type="button" name="btn2" class="site__content_right butt js--triggerAnimation">I'M BUTTON WITHOUT ID<span class="badge">0</span></button>
 				</div>
 				<div>
-					<a href="#" class="site__content_left butt js--triggerAnimation link" >I'M FIRST LINK<span class="badge">0</span></a>
-					<a href="#" class="site__content_right butt js--triggerAnimation" >I'M SECOND LINK<span class="badge">0</span></a>
+					<a href="#" name="link1" class="site__content_left butt js--triggerAnimation link" >I'M FIRST LINK<span class="badge">0</span></a>
+					<a href="#" name="link2" class="site__content_right butt js--triggerAnimation" >I'M SECOND LINK<span class="badge">0</span></a>
 				</div>
 				<div class=" site__content">
-					<span class="butt js--triggerAnimation">I'M GOD. YOU CANT AUTO CLICK ME<span>0</span class="badge"></span>
+					<span name="span" class="butt js--triggerAnimation">I'M GOD. YOU CANT AUTO CLICK ME<span>0</span class="badge"></span>
 				</div>
 				<button type="button" class="site__content clear butt js--triggerAnimation" onclick="clearReload();">Clear</button>
 			</div>
@@ -213,7 +213,7 @@
 				$("#test > div > *").on("click",function(i,v){
 					var count = $(this).find("span").html();
 					$(this).find("span").html(++count);
-					localStorage[$(this).getPath()] = $(this).find("span").html();
+					localStorage[$(this).attr("name")] = $(this).find("span").html();
 				});
 				reload();
 			});
@@ -223,7 +223,7 @@
 			}
 			function reload(){
 				$("#test > div > *").each(function(i,v){
-					$(this).find("span").html(localStorage[$(this).getPath()]);
+					$(this).find("span").html(localStorage[$(this).attr("name")]);
 				});
 			}
 		</script>
