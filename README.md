@@ -10,6 +10,8 @@ This google chrome extension is used to auto click anything (link or button) on 
 4. Thats it everything is done.
 5. No need to run / start. just open the website or click `Check` link 
 
+Still any Question check[Q&A](Q&A.md)
+
 ## Important
 It dont send any information to server and just store the user options in browser localy. 
  
