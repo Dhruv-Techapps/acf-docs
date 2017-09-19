@@ -26,3 +26,5 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 
 ### Support or Contact
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
+[Available on] [Google Allo] [Hangout] 
+Contact: +91 898365998
