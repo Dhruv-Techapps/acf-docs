@@ -1,4 +1,4 @@
-# AUTO CLICK
+# [AUTO CLICK](https://dhruv-techapps.github.io/auto-click/)
 
 This google chrome extension is used to auto click anything (link or button) on any website
 
