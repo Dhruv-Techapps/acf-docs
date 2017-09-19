@@ -5,7 +5,7 @@ This google chrome extension is used to auto click anything (link or button) on 
 
 ## How to use
 1. Right click app icon and select `Options`
-2. Enter `URL`, [xPath], `Interval`, `Count`
+2. Enter `URL`, [xPath](xPath.md), `Interval`, `Count`
 3. If you need another confiuration just click `Add New`
 4. Thats it everything is done.
 5. No need to run / start. just open the website or click `Check` link 
