@@ -2,19 +2,13 @@
 
 This google chrome extension is used to auto click anything (link or button) on any website
 
-## Things to know
-```
-URL : website where you need to run auto click
-xPath : xPath
-Interval (Sec) : time interval between each click	
-Count : No of times you want to click
-```
-## How to
-1. Right click app icon and select 'Options'
-2. Enter URL, xPath, Interval, Count
-3. If you need another confiuration just click 'Add New'
+
+## How to use
+1. Right click app icon and select `Options`
+2. Enter `URL`, [xPath], `Interval`, `Count`
+3. If you need another confiuration just click `Add New`
 4. Thats it everything is done.
-5. No need to run. just open the website or click check link 
+5. No need to run / start. just open the website or click `Check` link 
 
 ## Important
 It dont send any information to server and just store the user options in browser localy. 
