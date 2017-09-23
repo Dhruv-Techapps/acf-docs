@@ -17,5 +17,8 @@ Thats it you have your XPath of that element now.
 |`//div/a[position()>3]`|`<div><a selected></a><a selected></a><a></a></div>`|
 |`//a[@href]`|`<a href></a>`|
 |`//a[@href='google.com']`|`<a href="google.com"></a>`|
+|`//button[@id='1']`|`<button id="1"></a>`|
+|`//button[@class<'3']`|`<button class="1"></button><button class="2"></button>`|
+|`//*[@custom-id='1']`|`<button custom-id="1"></button><a custom-id="1"></a>`|
 
 [Inbox me](dhruv.techapps@gmail.com) if you find difficult to find xPath or you have any better suggestion for me :)
