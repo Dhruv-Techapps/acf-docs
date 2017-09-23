@@ -1,232 +1,388 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Click Test</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700" rel="stylesheet">
-		<link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
-		<script src="./jquery-3.1.1.min.js" type="text/javascript"></script>
-	</head>
-	<style type="text/css">
-		*, :before, :after {
-		margin: 0;
-		padding: 0;
-		position: relative;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		}
-		input, select, button, textarea {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		font: inherit;
-		color: inherit;
-		}
-		.butt {
-		padding: .75rem;
-		margin: .375rem;
-		background-color: transparent;
-		border-radius: 4px;
-		display: inline-block;
-		}
-		.butt:focus {
-		outline: none;
-		}
-		.butt {
-		border: 2px solid #f35626;
-		line-height: 1.375;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-		font-weight: 700;
-		color: #f35626;
-		cursor: pointer;
-		-webkit-animation: hue 60s infinite linear;
-		}
-		input {
-		border: 1px solid #c0c8c9;
-		border-radius: 4px;
-		}
-		h1 {
-		margin-bottom: 1.5rem;
-		font-size: 3rem;
-		font-weight: 100;
-		line-height: 1;
-		letter-spacing: -.05em;
-		}
-		b {
-		margin-bottom: .75rem;
-		font-weight: 400;
-		font-size: 1.5rem;
-		line-height: 1;
-		}
-		@media (min-width: 650px) {
-		.mega {
-		font-size: 6rem;
-		line-height: 1;
-		}
-		}
-		.subhead, .meta {
-		color: #7b8993;
-		}
-		.promo {
-		text-align: center;
-		}
-		p, hr, form {
-		margin-bottom: 1.5rem;
-		}
-		hr {
-		border: none;
-		margin-top: -1px;
-		height: 1px;
-		background-color: #c0c8c9;
-		background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
-		}
-		a {
-		color: inherit;
-		text-decoration: underline;
-		-webkit-animation: hue 60s infinite linear;
-		}
-		a:hover {
-		color: #f35626;
-		}
-		html {
-		font: 100%/1.5 "Roboto", Verdana, sans-serif;
-		color: #3d464d;
-		background-color: #fff;
-		-webkit-font-smoothing: antialiased;
-		width: 100%;
-		overflow: hidden-x;
-		/* Centering in The Unknown */
-		text-align: center;
-		}
-		html {
-		height: 100%;
-		}
-		html:before {
-		content: '';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-		margin-right: -0.25em;
-		}
-		body {
-		display: inline-block;
-		vertical-align: middle;
-		max-width: 60rem;
-		}
-		.site__header {
-		-webkit-animation: bounceInUp 1s;
-		}
-		.site__title {
-		color: #f35626;
-		background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-webkit-animation: hue 60s infinite linear;
-		}
-		.site__content_left {
-		-webkit-animation: bounceInLeft 1s;
-		-webkit-animation-delay: .1s;
-		}
-		.site__content_right {
-		-webkit-animation: bounceInRight 1s;
-		-webkit-animation-delay: .1s;
-		}
-		.site__content {
-		-webkit-animation: bounceInUp 1s;
-		-webkit-animation-delay: .1s;
-		}
-		.site__footer {
-		-webkit-animation: bounceInUp 1s;
-		-webkit-animation-delay: .1s;
-		}
-		@-webkit-keyframes hue {
-		from {
-		-webkit-filter: hue-rotate(0deg);
-		}
-		to {
-		-webkit-filter: hue-rotate(-360deg);
-		}
-		}
-		input{
-		background: white;
-		border:1px solid #7b8993;
-		padding: 2px;
-		margin-left: 10px;
-		}
-		input.url,input.xpath{
-		width: 200px;
-		}
-		.butt > span{
-		background-color: #636c72;
-		display: inline-block;
-		padding: .25em .4em;
-		padding-right: .6em;
-		padding-left: .6em;
-		margin-left: 10px;
-		font-size: 75%;
-		font-weight: 700;
-		line-height: 1;
-		color: #fff;
-		text-align: center;
-		white-space: nowrap;
-		vertical-align: baseline;
-		border-radius: 10rem;
-		}
-	</style>
-	<body>
-		<center>
-			<header class="site__header island">
-				<div class="wrap">
-					<span id="animationSandbox" style="display: block;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Click Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,700" rel="stylesheet">
+    <link href="./../dist/assets/styles/animate.min.css" rel="stylesheet">
+    <script src="./../dist/assets/scripts/jquery.slim.min.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+    input:not([type=radio][type=checkbox]),
+    select,
+    button,
+    textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font: inherit;
+        color: inherit;
+    }
+
+    .butt {
+        padding: .75rem;
+        margin: .375rem;
+        background-color: transparent;
+        border-radius: 4px;
+        display: inline-block;
+        border: 2px solid #f35626;
+        line-height: 1.375;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-weight: 700;
+        color: #f35626;
+        cursor: pointer;
+        -webkit-animation: hue 60s infinite linear;
+    }
+
+    .butt:focus {
+        outline: none;
+    }
+
+    h1 {
+        margin-bottom: 1.5rem;
+        font-size: 3rem;
+        font-weight: 100;
+        line-height: 1;
+        letter-spacing: -.05em;
+    }
+
+    @media (min-width: 650px) {
+        .mega {
+            font-size: 6rem;
+            line-height: 1;
+        }
+    }
+
+    .subhead,
+    .meta {
+        color: #7b8993;
+    }
+
+    p,
+    hr,
+    form {
+        margin-bottom: 1.5rem;
+    }
+
+    hr {
+        border: none;
+        margin-top: -1px;
+        height: 1px;
+        background-color: #c0c8c9;
+        background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+        -webkit-animation: hue 60s infinite linear;
+    }
+
+    a:hover {
+        color: #f35626;
+    }
+
+    html {
+        font: 100%/1.5 "Roboto", Verdana, sans-serif;
+        color: #3d464d;
+        background-color: #fff;
+        -webkit-font-smoothing: antialiased;
+        width: 100%;
+        overflow: hidden-x;
+        /* Centering in The Unknown */
+        text-align: center;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    html:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+    .click{
+        cursor: pointer;
+    }
+
+    body {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 80rem;
+    }
+
+    .site__header {
+        -webkit-animation: bounceInUp 1s;
+    }
+
+    .site__title {
+        color: #f35626;
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear;
+    }
+
+    .site__content_left {
+        -webkit-animation: bounceInLeft 1s;
+        -webkit-animation-delay: .1s;
+    }
+
+    .site__content_right {
+        -webkit-animation: bounceInRight 1s;
+        -webkit-animation-delay: .1s;
+    }
+
+    .site__content {
+        -webkit-animation: bounceInUp 1s;
+        -webkit-animation-delay: .1s;
+    }
+
+    .site__footer {
+        -webkit-animation: bounceInUp 1s;
+        -webkit-animation-delay: .1s;
+    }
+
+    @-webkit-keyframes hue {
+        from {
+            -webkit-filter: hue-rotate(0deg);
+        }
+        to {
+            -webkit-filter: hue-rotate(-360deg);
+        }
+    }
+
+    .badge {
+        background-color: #636c72;
+        display: inline-block;
+        padding: .25em .4em;
+        padding-right: .6em;
+        padding-left: .6em;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 10rem;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        vertical-align: middle;
+        margin: 0;
+        /*or instead of color use some image*/
+    }
+
+    input[type=radio] {
+        border-radius: 50%;
+        border: 1px solid #c0c8c9;
+    }
+
+    .gradient>span {
+        float: left;
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+
+    .gradient>span:nth-child(1) {
+        background-color: #E8EAF6;
+        color:rgba(0,0,0,.87);
+    }
+
+    .gradient>span:nth-child(2) {
+        background-color: #C5CAE9;
+        color:rgba(0,0,0,.87);
+    }
+
+    .gradient>span:nth-child(3) {
+        background-color: #9FA8DA;
+        color:rgba(0,0,0,.87);
+    }
+
+    .gradient>span:nth-child(4) {
+        background-color: #7986CB;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(5) {
+        background-color: #5C6BC0;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(6) {
+        background-color: #3F51B5;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(7) {
+        background-color: #3949AB;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(8) {
+        background-color: #303F9F;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(9) {
+        background-color: #283593;
+        color:rgba(255,255,255,.87);
+    }
+
+    .gradient>span:nth-child(10) {
+        background-color: #1A237E;
+        color:rgba(255,255,255,.87);
+    }
+
+    input[rd="10"]:checked {
+        background-color: #1A237E;
+    }
+</style>
+
+<body>
+    <center>
+        <header class="site__header island">
+            <div class="wrap">
+                <span id="animationSandbox" style="display: block;">
 						<h1 class="site__title mega">Click Test</h1>
 					</span>
-					<h2 class="beta subhead">Auto Click Anything</h2>
-				</div>
-			</header>
-			<div id="test">
-				<div>
-					<button type="button" name="btn1" class="site__content_left butt js--triggerAnimation" id="button">I'M BUTTON WITH ID<span class="badge">0</span></button>
-					<button type="button" name="btn2" class="site__content_right butt js--triggerAnimation">I'M BUTTON WITHOUT ID<span class="badge">0</span></button>
-				</div>
-				<div>
-					<a href="#" name="link1" class="site__content_left butt js--triggerAnimation link" >I'M FIRST LINK<span class="badge">0</span></a>
-					<a href="#" name="link2" class="site__content_right butt js--triggerAnimation" >I'M SECOND LINK<span class="badge">0</span></a>
-				</div>
-				<div class=" site__content">
-					<span name="span" class="butt js--triggerAnimation">I'M GOD. YOU CANT AUTO CLICK ME<span>0</span class="badge"></span>
-				</div>
-				<button type="button" class="site__content clear butt js--triggerAnimation" onclick="clearReload();">Clear</button>
-			</div>
-			<div class="site__footer wrap">
-				<p class="meta">
-					<a href="https://github.com/Dhruv-Techapps/auto-click">View on Github</a> | 
-					<a href="https://dhruv-techapps.github.io/auto-click/Q%26A.html">Q &amp; A</a> | 
-					<a href="https://github.com/Dhruv-Techapps/auto-click/issues">Report Issues</a> | 
-					<a href="https://github.com/Dhruv-Techapps/">Dhruv Techapps</a>
-				</p>
-			</div>
-			<p><small>Sincere thanks to <a href="//daneden.me">Daniel Eden</a> for animation</small></p>
-		</center>
-		<script>
-			jQuery(function($) {
-				$("#test > div > *").on("click",function(i,v){
-					var count = $(this).find("span").html();
-					$(this).find("span").html(++count);
-					localStorage[$(this).attr("name")] = $(this).find("span").html();
-				});
-				reload();
-			});
-			function clearReload(){
-				localStorage.clear();
-				location.reload();
-			}
-			function reload(){
-				$("#test > div > *").each(function(i,v){
-					$(this).find("span").html(localStorage[$(this).attr("name")]);
-				});
-			}
-		</script>
-	</body>
+                <h2 class="beta subhead">Auto Click Anything</h2>
+            </div>
+        </header>
+        <hr>
+        <div id="test">
+            <div>
+                <button type="button" badge="btn1" class="site__content_left butt js--triggerAnimation click" id="button">I'M BUTTON WITH ID<span class="badge" for="btn1">0</span></button>
+                <a href="#" badge="link1" class="site__content_right butt js--triggerAnimation click">I'M FIRST LINK<span class="badge" for="link1">0</span></a>
+                <a href="#" badge="link2" class="site__content_right butt js--triggerAnimation click">I'M SECOND LINK<span class="badge" for="link2">0</span></a>
+                <button type="button" badge="btn2" class="site__content_left butt js--triggerAnimation click">I'M BUTTON WITHOUT ID<span class="badge" for="btn2">0</span></button>
+            </div>
+            <div class="gradient">
+                <span class="site__content_left js--triggerAnimation click" badge="xid1" xid="1">xid=1<span class="badge" for="xid1">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid2" xid="2">xid=2<span class="badge" for="xid2">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid3" xid="3">xid=3<span class="badge" for="xid3">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid4" xid="4">xid=4<span class="badge" for="xid4">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid5" xid="5">xid=5<span class="badge" for="xid5">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid6" xid="6">xid=6<span class="badge" for="xid6">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid7" xid="7">xid=7<span class="badge" for="xid7">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid8" xid="8">xid=8<span class="badge" for="xid8">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid9" xid="9">xid=9<span class="badge" for="xid9">0</span></span>
+                <span class="site__content_left js--triggerAnimation click" badge="xid10" xid="10">xid=10<span class="badge" for="xid10">0</span></span>
+            </div>
+            <div class="butt js--triggerAnimation" style="display:table">
+                <div style="display:table-row">
+                    <div style="display:table-cell">
+                        <input type="checkbox" badge="checkbox1" ck="1" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="checkbox" badge="checkbox2" ck="2" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="checkbox" badge="checkbox3" ck="3" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="checkbox" badge="checkbox4" ck="4" class="click">
+                    </div>
+                    <div style="display:table-cell;">
+                        <input type="checkbox" badge="checkbox5" ck="5" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="radio" badge="radio6" name="radio" rd="6" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="radio" badge="radio7" name="radio" rd="7" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="radio" badge="radio8" name="radio" rd="8" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="radio" badge="radio9" name="radio" rd="9" class="click">
+                    </div>
+                    <div style="display:table-cell">
+                        <input type="radio" badge="radio10" name="radio" rd="10" class="click">
+                    </div>
+                </div>
+                <div style="display:table-row">
+                    <div style="display:table-cell">
+                        <span class="badge" for="checkbox1">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="checkbox2">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="checkbox3">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="checkbox4">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="checkbox5">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="radio6">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="radio7">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="radio8">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="radio9">0</span>
+                    </div>
+                    <div style="display:table-cell">
+                        <span class="badge" for="radio10">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="site__content">
+                <span badge="span" class="butt js--triggerAnimation click">I'M GOD. YOU CANT AUTO CLICK ME<span class="badge" for="span" >0</span></span>
+            </div>
+            <button type="button" class="site__content clear butt js--triggerAnimation" onclick="clearReload();">Clear</button>
+        </div>
+        <div class="site__footer wrap">
+            <p class="meta">
+                <a href="https://github.com/Dhruv-Techapps/auto-click">View on Github</a> |
+                <a href="https://dhruv-techapps.github.io/auto-click/Q%26A.html">Q &amp; A</a> |
+                <a href="https://github.com/Dhruv-Techapps/auto-click/issues">Report Issues</a> |
+                <a href="https://github.com/Dhruv-Techapps/">Dhruv Techapps</a>
+            </p>
+        </div>
+        <p><small>Sincere thanks to <a href="//daneden.me">Daniel Eden</a> for animation</small></p>
+    </center>
+    <script>
+        jQuery(function ($) {
+            $("#test > div *.click").on("click", function (i, v) {
+                var badge = $(document).find("span[for=" + $(this).attr('badge') + "]");
+                var count = badge.html();
+                badge.html(++count);
+                localStorage[$(this).attr("badge")] = badge.html();
+            });
+            reload();
+        });
+        function clearReload() {
+            localStorage.clear();
+            location.reload();
+        }
+        function reload() {
+            $("#test > div > *.click").each(function (i, v) {
+                $(document).find("span[for='" + $(this).attr('badge') + "']").html(localStorage[$(this).attr("badge")]);
+            });
+        }
+    </script>
+</body>
+
 </html>

@@ -7,4 +7,9 @@ Its little tricky but believe me its not that hard to find.
 
 Thats it you have your XPath of that element now.
 
+## Examples
+```
+//a[@href="google.com"]
+```
+
 [Inbox me](dhruv.techapps@gmail.com) if you find difficult to find xPath or you have any better suggestion for me :)
