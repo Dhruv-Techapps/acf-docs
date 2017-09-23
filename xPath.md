@@ -11,7 +11,7 @@ Thats it you have your XPath of that element now.
 
 | xPath | HTML |
 | ------ | ------ |
-|`//div/a[1]`|<div>`<a></a>`<a></a></div>|
+|`//div/a[1]`|``<div>`<a></a>`<a></a></div>``|
 |`//div/a[last()]`|<div><a></a>`<a></a>`</div>|
 |`//div/a[last()-1]`|<div>`<a></a>`<a></a></div>|
 |`//div/a[position()>3]`|<div>`<a></a><a></a>`<a></a></div>|
