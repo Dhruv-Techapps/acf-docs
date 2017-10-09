@@ -29,5 +29,6 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
 
 If this project help you reduce time to develop, you can give me a cup of coffee :)
+
 [PayPal](paypal.me/DharmeshH/5)
 
