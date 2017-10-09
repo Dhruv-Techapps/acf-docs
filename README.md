@@ -28,6 +28,6 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
 
-If this project help you reduce time to develop, you can give me a cup of coffee :)
-[![PayPal](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png)](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951)
+If this project help you reduce time to develop, you can give me a :beers: :)
+[Donate](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951)
 
