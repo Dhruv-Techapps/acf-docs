@@ -30,5 +30,5 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 
 If this project help you reduce time to develop, you can give me a cup of coffee :)
 
-[PayPal](paypal.me/DharmeshH/5)
+[PayPal](https://www.paypal.me/DharmeshH/5)
 
