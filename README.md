@@ -12,7 +12,7 @@ This google chrome extension is used to auto click anything (link or button) on 
 
 Still have Question check [Q&A](https://github.com/Dhruv-Techapps/auto-click/wiki/Q&A)
 
-[Video Tutorial](https://youtu.be/kgSgkEmCiKY)
+[:video_camera: Video Tutorial](https://youtu.be/kgSgkEmCiKY)
 
 ## Important
 It dont send any information to server and just store the user options in browser localy. 
