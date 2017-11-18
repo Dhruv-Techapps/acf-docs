@@ -11,6 +11,7 @@ This google chrome extension is used to auto click anything (link or button) on 
 5. No need to run / start. just open the website or click `Check` link 
 
 Still have Question check [Q&A](https://github.com/Dhruv-Techapps/auto-click/wiki/Q&A)
+[Video Tutorial](https://youtu.be/kgSgkEmCiKY)
 
 ## Important
 It dont send any information to server and just store the user options in browser localy. 
