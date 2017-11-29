@@ -2,13 +2,17 @@
 
 This google chrome extension is used to auto click anything (link or button) on any website
 
+# Whats new
+* [Init-Wait](https://github.com/Dhruv-Techapps/auto-click/wiki/init-wait) is used by extension to wait for # of secs wait before it starts first click. Many website takes time to load and init-wait can help extension to wait for page to load.
+* `Retry` Auto click extension will retry for 5 attempts to find given xPath within page. After which extension will skip that record.
+
 
 ## How to use
 1. Right click app icon and select `Options`
 2. Enter `Init-Wait`,`URL`, [xPath](https://github.com/Dhruv-Techapps/auto-click/wiki/xPath), `Interval`, `Count`
 3. If you need another confiuration just click `Add New`
 4. Thats it everything is done.
-5. No need to run / start. just open the website or click `Check` link 
+5. No need to run / start. just open the website for which you did configuration
 
 Still have Question check [Q&A](https://github.com/Dhruv-Techapps/auto-click/wiki/Q&A)
 
@@ -31,5 +35,5 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
 
 If this project help you reduce time to develop, you can give me a :beers: :)
-[Donate](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951)
+[Paypal](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951) [Amazon](https://www.amazon.in/Our-Gift-You-mail-Amazon/dp/B00JPXXBOA/ref=lp_4048867031_1_11?s=gift-cards&ie=UTF8&qid=1511934575&sr=1-11)
 
