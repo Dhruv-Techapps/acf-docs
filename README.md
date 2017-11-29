@@ -35,5 +35,5 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
 
 If this project help you reduce time to develop, you can give me a :beers: :)
-[Paypal](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951) [Amazon](https://www.amazon.in/Our-Gift-You-mail-Amazon/dp/B00JPXXBOA/ref=lp_4048867031_1_11?s=gift-cards&ie=UTF8&qid=1511934575&sr=1-11)
+[Paypal](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951) | [Amazon](https://www.amazon.in/Our-Gift-You-mail-Amazon/dp/B00JPXXBOA/ref=lp_4048867031_1_11?s=gift-cards&ie=UTF8&qid=1511934575&sr=1-11) | Paytm
 
