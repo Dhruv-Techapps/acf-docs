@@ -24,7 +24,7 @@ It dont send any information to server and just store the user options in browse
 It is very simple and beta version as far now. We will keep improving this extension based on the user demand. So Please drop a mail to us if you like the extension.
 
 ## TEST
-Install [Auto Click](https://chrome.google.com/webstore/detail/auto-click-beta/faeeclonpikbempnbjbbajfjjajjgfio?hl=en) and [click me.](https://dhruv-techapps.github.io/auto-click/test.html)
+Install [Auto Click](https://chrome.google.com/webstore/detail/auto-click-beta/faeeclonpikbempnbjbbajfjjajjgfio?hl=en) and [click me.](https://dhruv-techapps.github.io/auto-click/test/index.html)
 
 ### [Issues](https://github.com/Dhruv-Techapps/Auto-Click/issues)
 If you run out any issues you can rause a issue on our github and we will resolve the issue ASAP
@@ -35,5 +35,5 @@ To raise [new issue](https://github.com/Dhruv-Techapps/Auto-Click/issues/new)
 [Inbox me](dhruv.techapps@gmail.com) and we’ll help you sort it out.
 
 If this project help you reduce time to develop, you can give me a :beers: :)
-[Paypal](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951) | [Amazon](https://www.amazon.in/Our-Gift-You-mail-Amazon/dp/B00JPXXBOA/ref=lp_4048867031_1_11?s=gift-cards&ie=UTF8&qid=1511934575&sr=1-11) | Paytm
+[Paypal](https://paypal.me/DharmeshH/25?_ga=1.267642062.1305492970.1507529951)
 
