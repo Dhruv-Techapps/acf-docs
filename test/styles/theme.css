@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    /*background-image: url('../images/bg.jpg');*/
+    background-image: url('../images/bg.png');
     background-color: #0D1017;
     padding: 50px 10px;
     font-size: 12px;
@@ -51,13 +51,13 @@ footer a:hover {
 }
 
 main button {
-    background-color: #201E29;
+    background-color: rgba(0, 0, 0, .3);
     color: white;
-    border: 1px solid #23262D;
+    border: none;
     font-size: 12px;
     cursor: pointer;
     border-radius: 3px;
-    box-shadow: 0px 0px 1px grey;
+    box-shadow: 0px 0px 1px #201E29;
 }
 
 main button[type=reset],
@@ -82,7 +82,9 @@ main input[type=radio] {
 
 main input,
 main select {
-    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    padding: 10px 15px;
     border-radius: 3px;
     border: none;
 }

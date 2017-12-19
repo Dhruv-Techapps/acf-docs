@@ -11,7 +11,6 @@ class Badge {
     }
 
     append() {
-        console.log(this.element, this.element.type);
         if (this.element.type === "checkbox" || this.element.type === "radio") {
             this.create().insertBefore(this.element);
         } else {
