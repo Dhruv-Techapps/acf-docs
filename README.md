@@ -17,7 +17,7 @@ This google chrome extension is used to auto click anything (link or button) on 
 
 Still have Question check [Q&A](https://github.com/Dhruv-Techapps/auto-click/wiki/Q&A)
 
-[:video_camera: Video Tutorial](https://youtu.be/kgSgkEmCiKY)
+[:video_camera: Video Tutorial](https://www.youtube.com/watch?v=lctBWouTxic#action=share)
 
 ## Important
 It dont send any information to server and just store the user options in browser localy. 
@@ -26,7 +26,7 @@ It is very simple and beta version as far now. We will keep improving this exten
 
 ## TEST
 * [Chrome Extension](https://chrome.google.com/webstore/detail/auto-click-lite/faeeclonpikbempnbjbbajfjjajjgfio?hl=en)
-* [Firefox Addons] (https://addons.mozilla.org/en-GB/firefox/addon/auto-click-lite/)
+* [Firefox Addons](https://addons.mozilla.org/en-GB/firefox/addon/auto-click-lite/)
 * [Test](https://dhruv-techapps.github.io/auto-click/test/index.html)
 
 ### [Issues](https://github.com/Dhruv-Techapps/Auto-Click/issues)
