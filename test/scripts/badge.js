@@ -32,7 +32,7 @@ $("[badge]").each((index, element) => {
     new Badge(element);
 });
 
-$("input[type=reset").on("click", () => {
+$("input[type=reset]").on("click", () => {
     localStorage.clear();
     location.reload();
 })
