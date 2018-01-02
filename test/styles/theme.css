@@ -35,6 +35,11 @@ header h3 {
     margin: 0;
 }
 
+header a {
+    color: white;
+    margin: 0px 20px;
+}
+
 .primary-color {
     color: #FE0036;
 }
@@ -48,6 +53,10 @@ footer a {
 
 footer a:hover {
     color: #FE0036;
+}
+
+main {
+    margin-right: 160px;
 }
 
 main button {
@@ -181,4 +190,14 @@ badge {
 .gradient>span:nth-child(10) {
     background-color: #1A237E;
     color: rgba(255, 255, 255, .87);
+}
+
+#add-banner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
 }
