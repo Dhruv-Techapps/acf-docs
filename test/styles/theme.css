@@ -55,10 +55,6 @@ footer a:hover {
     color: #FE0036;
 }
 
-main {
-    margin-right: 160px;
-}
-
 main button {
     background-color: rgba(0, 0, 0, .3);
     color: white;
