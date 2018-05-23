@@ -107,7 +107,14 @@
 	<script src="./scripts/jquery.slim.min.js" type="text/javascript"></script>
 	<script src="./scripts/badge.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		document.getElementById('iframe').contentDocument.write("<h1>Injected from parent frame <button id='iframebtn' onclick='alert(2);'>Click</button></h1>")
+		 var iframe = document.getElementById("iframe");
+		var content = "<h1>Injected from parent frame <button id='iframebtn' onclick='alert(2);'>Click</button></h1>";
+        	var frameDoc = iframe.document;
+        	if (iframe.contentWindow)
+            	frameDoc = iframe.contentWindow.document;
+        	frameDoc.open();
+        	frameDoc.writeln(content);
+        	frameDoc.close();
 	</script>
 </body>
 
