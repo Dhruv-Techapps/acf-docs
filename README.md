@@ -25,7 +25,7 @@ It dont send any information to server and just store the user options in browse
 It is very simple and beta version as far now. We will keep improving this extension based on the user demand. So Please drop a mail to us if you like the extension.
 
 ## TEST
-* [Chrome Extension](https://chrome.google.com/webstore/detail/auto/iapifmceeokikomajpccajhjpacjmiben)
+* [Chrome Extension](https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe)
 * [Test](https://dhruv-techapps.github.io/auto-click/test/index.html)
 
 ### [Issues](https://github.com/Dhruv-Techapps/Auto-Click/issues)
