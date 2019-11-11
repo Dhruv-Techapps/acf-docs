@@ -6,27 +6,25 @@ All data remains on your local hard disk drive at all times. However, the data s
 
 In future DhruvTechapps may collect browser version, platform name, display settings and user's filter settings (except website list or any other data which can help identify user). This information is needed for decision on implementing new features, removing unused features or suggesting default settings for new users.
 
-DhruvTechapps uses Chrome or WebExtensions Storage Sync API for storing user's settings and browser's Web Storage API (localStorage) for storing user's Developer Tools fixes.
-
-
 ### Sharing Information with Third Parties
 
 DhruvTechapps does not sell, rent or lease its customer lists to third parties.
 
 DhruvTechapps may share data with trusted partners to help perform statistical analysis, send you email or postal mail, provide customer support, or arrange for deliveries. All such third parties are prohibited from using your personal information except to provide these services to DhruvTechapps, and they are required to maintain the confidentiality of your information.
 
-DhruvTechapps may disclose your personal information, without notice, if required to do so by law or in the good faith belief that such action is necessary to: (a) conform to the edicts of the law or comply with legal process served on DhruvTechapps or the site; (b) protect and defend the rights or property of DhruvTechapps; and/or (c) act under exigent circumstances to protect the personal safety
-of users of DhruvTechapps, or the public.
+DhruvTechapps may disclose your personal information, without notice, if required to do so by law or in the good faith belief that such action is necessary to: 
+<br />(a) conform to the edicts of the law or comply with legal process served on DhruvTechapps or the site; 
+<br />(b) protect and defend the rights or property of DhruvTechapps; and/or 
+<br />(c) act under exigent circumstances to protect the personal safety of users of DhruvTechapps, or the public.
 
 ### Tracking User Behavior
-DhruvTechapps may keep track of the websites and pages our users visit within Auto Click / Auto Fill, in order to determine what DhruvTechapps services are the most popular. This data is used to deliver customized content and advertising within DhruvTechapps to customers whose behavior indicates that they are interested in a particular subject area. 
+DhruvTechapps may keep track of the websites and pages our users visit within Auto Click / Auto Fill, in order to determine what DhruvTechapps services are the most popular. This data is used to deliver customized content within DhruvTechapps to customers whose behavior indicates that they are interested in a particular subject area. 
 
 ### Children Under Thirteen
 DhruvTechapps does not knowingly collect personally identifiable information from children under the age of thirteen. If you are under the age of thirteen, you must ask your parent or guardian for permission to use this website. 
 
 ### Changes to this Statement
-DhruvTechapps reserves the right to change this Privacy Policy from time to time. We will notify you about significant changes in the way we treat personal information by sending a notice to the primary email address specified in your account, by placing a prominent notice on our site, and/or by updating any privacy information on this page. Your continued use of the Site and/or
-Services available through this Site after such modifications will constitute your: (a) acknowledgment of the modified Privacy Policy; and (b) agreement to abide and be bound by that Policy.
+I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
 
 ### Contact Information
 DhruvTechapps welcomes your questions or comments regarding this Statement of Privacy. If you believe that DhruvTechapps has not adhered to this Statement, please contact DhruvTechapps at:
