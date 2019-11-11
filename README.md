@@ -1,6 +1,6 @@
-# [AUTO CLICK](https://dhruv-techapps.github.io/auto-click/)
+# [AUTO CLICK / AUTO FILL](https://dhruv-techapps.github.io/auto-click/)
 
-This google chrome extension is used to auto click anything (link or button) on any website
+This google chrome extension is used to auto click / fill anything (link or button) on any website
 
 # Whats new
 * Easy Configuration.
