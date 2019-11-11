@@ -33,5 +33,5 @@ Dhruv Techapps,<br />
 706 - E17, Ivy Apartment, Ivy Estate,<br />
 Wagholi, Pune,<br />
 Maharasthra - 412207<br />
-Email Address: dhruv.techapps@gmail.com<br />
-Effective as of Nov 11, 2019
+Email Address: dhruv.techapps@gmail.com
+<br /><br />Effective as of Nov 11, 2019
