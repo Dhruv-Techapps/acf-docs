@@ -58,3 +58,4 @@ typings/
 .env
 
 .jekyll-cache
+_site

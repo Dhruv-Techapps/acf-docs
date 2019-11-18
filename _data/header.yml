@@ -1,6 +1,6 @@
 - name: Home
   link: /
 - name: Documentaion
-  link: /docs/getting-started
+  link: ./docs/getting-started
 - name: Blog
-  link: /blog.html
+  link: ./blog
