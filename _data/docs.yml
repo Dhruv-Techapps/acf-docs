@@ -1,0 +1,14 @@
+- name: Getting Started
+  link: /docs/getting-started
+- name: Configuration List
+  link: /docs/configuration-list
+- name: Configuration
+  link: /docs/configuration
+- name: Batch
+  link: /docs/batch
+- name: Action
+  link: /docs/action
+- name: Addon
+  link: /docs/action
+- name: Settings
+  link: /docs/action
