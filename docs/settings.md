@@ -6,7 +6,7 @@ tags: [xpath, configuration, settings, iframe, retry, retry interval, retry opti
 
 # Settings
 
-![Settings](../assets/img/settings.png){:width="100%"}
+![Settings]({{'/assets/img/settings.png' | relative_url }}){:width="100%"}
 
 You can control how and when should extension connect with your configured site.
 

@@ -5,7 +5,7 @@ tags: [configuration, configuration list, configuration ,action, Init wait, XPat
 ---
 # Action
 
-![Action](../assets/img/action.png){:width="100%"}
+![Action]({{'/assets/img/action.png' | relative_url }}){:width="100%"}
 action is combination of
 
 ---

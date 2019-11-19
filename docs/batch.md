@@ -7,7 +7,7 @@ tags: [configuration, configuration list, configuration ,batch, action, start ti
 
 # Batch
 
-![Batch](/assets/img/batch.png){:width="100%"}
+![Batch]({{'/assets/img/batch.png' | relative_url }}){:width="100%"}
 
 Batch is group of action [Action](action.md) which can be Repeated with Interval. It consist of 4 parts 
 

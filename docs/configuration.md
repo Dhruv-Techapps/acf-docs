@@ -6,9 +6,9 @@ tags: [configuration, configuration list, configuration url, enable, disable, re
 
 # Configuration
 
-![Configuration](/assets/img/configuration.PNG){:width="100%"}
+![Configuration]({{'/assets/img/configuration.png' | relative_url }}){:width="100%"}
 
- This is main part of configuration section you need to provide url of site in which you need to Auto click / Auto Fill.
+This is main part of configuration section you need to provide url of site in which you need to Auto click / Auto Fill.
 
 ---
 
