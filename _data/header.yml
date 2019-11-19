@@ -1,5 +1,5 @@
 - name: Home
-  link: /
+  link: ./
 - name: Documentaion
   link: ./docs/getting-started
 - name: Blog

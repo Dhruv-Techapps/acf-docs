@@ -17,6 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dhruv-techapps
 github_username: dhruv-techapps
+baseurl: / #https://dhruv-techapps.github.io/auto-click-auto-fill
 exclude:
   [
     "cpu",

@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
  <a class="navbar-brand" href="#">
-  <img src="./assets/img/icon128.png" width="30" height="30" alt="">
+  [{{relative_url}}|{{baseurl}}]
+  <img src="{{ '/assets/img/icon128.png' | relative_url }}" width="30" height="30" alt="">
  </a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -9,7 +10,7 @@
   <ul class="navbar-nav mr-auto">
    {% for item in site.data.header %}
    <li {% if page.url == item.link %} class="nav-item active" {% endif %}>
-    <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+    <a class="nav-link" href="{{ item.link  | relative_url }}">{{ item.name }}</a>
    </li>
    {% endfor %}
   </ul>
