@@ -3,31 +3,147 @@ menu: docs
 title:  "XPath"
 tags: [xpath, configuration]
 ---
+{:.bd-title}
+# XPath
 
-# XPATH
+{:.bd-lead}
 Its little tricky but believe me its not that hard to find.
 
-## Follow below steps to get XPath
-1. Right click any button or link or whaterver you want to click in webpage and select Inspect.
-2. It will open developer console and highlight that element under Elements Tab
-3. Right click that element and select Copy > Copy XPath.
+{:.bd-callout .bd-callout-warning}
+> Follow below steps to get XPath
+> 1. Right click any button or link or whaterver you want to click in webpage and select Inspect.
+> 2. It will open developer console and highlight that element under Elements Tab
+> 3. Right click that element and select Copy > Copy XPath.
+> 4. Thats it you have your XPath of that element now.
 
-Thats it you have your XPath of that element now.
+### <kbd>Examples</kbd>
 
-## Examples
+{:.bd-example}
+### `//div/a[1]`
 
-| XPath | HTML |
-| ------ | ------ |
-|//div/a[1]|`<div><a selected></a><a></a></div>`|
-|//div/a[last()]|`<div><a></a><a selected></a></div>`|
-|//div/a[last()-1]|`<div><a selected></a><a></a></div>`|
-|//div/a[position()>3]|`<div><a selected></a><a selected></a><a></a></div>`|
-|//a[@href]|`<a href></a>`|
-|//a[@href='google.com']|`<a href="google.com"></a>`|
-|//button[@id='1']|`<button id="1"></a>`|
-|//button[contains(@class,'me')]|`<button class='me'>click me<button>`|
-|//button[contains(text(),'me')]|`<button class='me'>click me<button>`|
-|//button[@class<'3']|`<button class="1"></button><button class="2"></button>`|
-|//*[@custom-id='1']|`<button custom-id="1"></button><a custom-id="1"></a>`|
+{:.highlight}
+```html
+<div>
+  <a>One</a> 👈 selected
+  <a>Two</a>
+</div>
+```
+
+{:.bd-example}
+### `//div/a[last()]`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <a>Middle</a>
+  <a>Last</a> 👈 selected
+</div>
+```
+
+{:.bd-example}
+### `//div/a[last()-1]`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <a>Middle</a> 👈 selected
+  <a>Last</a>
+</div>
+```
+
+{:.bd-example}
+### `//div/a[position()>2]`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <a>Second</a>
+  <a>Third</a> 👈 selected
+  <a>Forth</a> 👈 selected
+</div>
+```
+
+
+{:.bd-example}
+### `//a[@href]`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <a>Second</a>
+  <a href="#">Third</a> 👈 selected
+  <a>Forth</a>
+</div>
+```
+
+{:.bd-example}
+### `//a[@href='google']`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <a href="#">Second</a>
+  <a href="google">Third</a> 👈 selected
+  <a>Forth</a>
+</div>
+```
+
+{:.bd-example}
+### `//button[@id='1']`
+
+{:.highlight}
+```html
+<div>
+  <a>First</a>
+  <button type="button" id="1">Click me</button> 👈 selected
+  <a href="#">Second</a>
+  <a href="dhruv-techapps.github.io">Third</a>
+  <a>Forth</a>
+</div>
+```
+
+{:.bd-example}
+### `//a[@id<'3']`
+
+{:.highlight}
+```html
+<div>
+  <a id='1'>Primary</button> 👈 selected
+  <a id='2'>Secondary<button> 👈 selected
+  <a id='3'>Warning<button>
+  <a id='4'>Me Too<button>
+</div>
+```
+
+{:.bd-example}
+### `//button[contains(@class,'me')]`
+
+{:.highlight}
+```html
+<div>
+  <button type='button' id='1'>Primary</button>
+  <button class='me second'>Secondary<button> 👈 selected
+  <button class='me warning'>Warning<button> 👈 selected
+  <button class='me-too done'>Me Too<button> 👈 selected
+</div>
+```
+
+{:.bd-example}
+### `//button[contains(text(),'Me')]`
+
+{:.highlight}
+```html
+<div>
+  <button type='button' id='1'>Primary</button>
+  <button class='me second'>Secondary<button>
+  <button class='me warning'>Warning<button>
+  <button class='me-too done'>Me Too<button> 👈 selected
+</div>
+```
 
 [Inbox me](dhruv.techapps@gmail.com) if you find difficult to find XPath or you have any better suggestion for me :)

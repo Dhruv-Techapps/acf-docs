@@ -4,11 +4,16 @@ title:  "Settings"
 tags: [xpath, configuration, settings, iframe, retry, retry interval, retry option, error , error handling,export, import]
 ---
 
+{:.bd-title}
 # Settings
 
-![Settings]({{'/assets/img/settings.png' | relative_url }}){:width="100%"}
+{:.bd-lead}
+Under settings screen you can control how and when should extension connect with your configured site,  also if any of [xpath](action/#xpath.md) is not found how many [retry](#retry) attempt should be made, and fallback option if no element is found.
 
-You can control how and when should extension connect with your configured site.
+{:.bd-callout .bd-callout-info}
+> You can also export and backup your configuration and import back whenever required.
+
+> ![Settings]({{'/assets/img/settings.png' | relative_url }}){:width="100%"}
 
 ---
 ## Check Iframe
@@ -29,29 +34,36 @@ If an action need to be performed on button / input field which is inside iframe
 ## Retry & Retry Interval
 Retry finding [xpath](xpath) in webpage for number of times provided. default is `5`
 
-### Example
+### <kbd>Examples</kbd>
 - positive numeric value `1` to `999`
 
 ---
 ## Retry Interval
-Retry Interval will wait for no of sec provided before [retry](retry) to find [xpath](xpath) of [action](action). default is `1` sec
+Retry Interval will wait for no of sec provided before retry to find [xpath](xpath) of [action](action). default is `1` sec
 
-{% include_relative repeat-interval-example.md %}
+{% include_relative float-number-example.md %}
 
 ---
 ## Error Handling
-Select what should happen if XPath is not found after no of retry.
-- `Stop` (default) - Do nothing. Stop extension without procedding further
-- `Skip` - Skip current action and continue next action
-- `Refresh Page` - Refresh whole page
+Select what should happen if xpath is not found after no of retry.
+
+|Name|Default|Description|
+|---|---|---|
+|`Stop`|selected| Do nothing. Stop extension without procedding further.|
+|`Skip`|not selected| Skip current action and continue next action.|
+|`Refresh Page`|not selected|Refresh whole page.|
 
 ---
 ## Show Notification
-This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
+
+{:.bd-callout .bd-callout-warning}
+> #### ! Important
+> This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
 
 ---
 ## Export & Import
 You can export and import whole configuration anytime and keep it as back
 
 {:.bd-callout .bd-callout-danger}
+> #### Warning
 > Import functionality will override all current configuration. Make sure before performing this operation

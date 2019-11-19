@@ -2,8 +2,10 @@
 menu: docs
 title: How to Use
 ---
+{:.bd-title}
 ## How to use
 
+{:.bd-lead}
 1. Click App icon to configuration page.
 2. Enter Init-Wait,URL, xPath, Interval, Count
 3. If you need another confiuration just click Add New

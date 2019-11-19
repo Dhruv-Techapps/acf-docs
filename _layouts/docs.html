@@ -20,7 +20,7 @@ layout: default
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">{{content}}</main>
     <div class="d-none d-xl-block col-xl-2 bd-toc">
       {% capture itemClass %}toc-entry.toc-h%level%{% endcapture %}
-      {% include toc.html html=content class="section-nav" item_class=itemClass h_min=2 %}
+      {% include toc.html html=content class="section-nav" item_class=itemClass h_min=2 h_max=3 %}
     </div>
   </div>
 </div>
