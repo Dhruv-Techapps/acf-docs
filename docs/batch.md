@@ -7,7 +7,7 @@ tags: [configuration, configuration list, configuration ,batch, action, start ti
 
 # Batch
 
-![Batch](../assets/img/batch.png){:width="100%"}
+![Batch](/assets/img/batch.png){:width="100%"}
 
 Batch is group of action [Action](action.md) which can be Repeated with Interval. It consist of 4 parts 
 
@@ -32,19 +32,14 @@ Init Wait stands for Initial Wait. Initial Wait to start particular batch/action
 
 ---
 
-## Repeat & Repeat Interval
-If you want specific `action` to repeat more than once you can provide `repeat` value. 
-If you want to control the time between each repeat you can provide `repeat Interval` as well.
+## Repeat
+If you want specific [batch](#batch) to repeat more than once you can provide `repeat` value. 
 
 ### Example
-
-**Repeat**
 - positive numeric value `1` to `999`
 
-**Repeat Interval**
-* `1`
-* `1.5`
-* `0.5`
-* `2`
-* `1e4` (Random value between 1 to 4)
-* `empty` | `blank`
+---
+## Repeat Interval
+If you want to control the time between each [repeat](#repeat) you can provide `repeat Interval` as well.
+
+{% include_relative repeat-interval-example.md %}

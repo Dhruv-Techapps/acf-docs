@@ -8,7 +8,7 @@ title: How to Use
 {:.bd-lead}
 Auto Click / Auto Fill Extension is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.
 
-Auto Click / Auto Fill extension consist of 4 major parts [Configuration List]({{docs/configuration-list | site.baseurl}}), [Configure](configuration.md), [Batch](batch.md), [Action](action.md) with extra added configuration such as [Settings](settings), [Addon](addon). 
+Auto Click / Auto Fill extension consist of 4 major parts [Configuration List](/docs/configuration-list), [Configure](/docs/configuration), [Batch](batch), [Action](action) with extra added configuration such as [Settings](settings), [Addon](addon). 
 
 There are two version of extension
 

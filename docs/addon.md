@@ -6,7 +6,7 @@ tags: [configuration, configuration list, configuration ,addon,  XPath, Value, c
 
 # Addon
 
-![Addon](../assets/img/addon.png){:width="100%"}
+![Addon](/assets/img/addon.png){:width="100%"}
 
 In order to check some condition before clicking / filling add addon to that specific [action](action.md). You can add condition by clicking on **</>** icon which appears when you hover over [action](action.md).
 

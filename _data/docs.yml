@@ -1,14 +1,16 @@
 - name: Getting Started
-  link: ./docs/getting-started
+  link: /docs/getting-started
 - name: Configuration List
-  link: ./docs/configuration-list
+  link: /docs/configuration-list
 - name: Configuration
-  link: ./docs/configuration
+  link: /docs/configuration
 - name: Batch
-  link: ./docs/batch
+  link: /docs/batch
 - name: Action
-  link: ./docs/action
+  link: /docs/action
 - name: Addon
-  link: ./docs/action
+  link: /docs/addon
 - name: Settings
-  link: ./docs/action
+  link: /docs/settings
+- name: XPath
+  link: /docs/xpath

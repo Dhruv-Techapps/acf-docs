@@ -22,7 +22,7 @@ Init Wait stands for Initial Wait. Initial Wait to start particular action. Wait
 > Its not mandatory field. if left blank extension will start executing right away.
 
 ---
-## XPath
+## <span class="text-danger">*</span> XPath
 Its little tricky but believe me its not that hard to find.
 
 ### Follow below steps to get XPath
@@ -40,29 +40,24 @@ Thats it you have your XPath of that element now.
 |//div/a[1]|`<div><a selected></a><a></a></div>`|
 
 
-**[Click here](action/xpath.md) to find more XPath Examples**
+**[Click here](xpath) to find more XPath Examples**
 
 ---
 ## Value
 
-Suppose you are performing action on `input`|`textarea`|`dropdown` you should provide one extra field that is value for [XPath](XPath) you have added.
+Suppose you are performing action on `input`|`textarea`|`dropdown` you should provide one extra field that is value for [XPath](/docs/xpath) you have added.
 
 > This is mandatory field only if XPath element is `input`|`textarea`|`dropdown`.
 
 ---
-## Repeat & Repeat interval
-If you want specific `action` to repeat more than once you can provide `repeat` value. 
-If you want to control the time between each repeat you can provide `repeat Interval` as well.
+## Repeat
+If you want specific [action](#action) to repeat more than once you can provide `repeat` value. 
 
-### Example
+{:.lead}
+> positive numeric value `1` to `999`
 
-**Repeat**
-- positive numeric value `1` to `999`
+---
+## Repeat Interval
+If you want to control the time between each [repeat](#repeat) you can provide `repeat Interval` as well.
 
-**Repeat Interval**
-* `1`
-* `1.5`
-* `0.5`
-* `2`
-* `1e4` (Random value between 1 to 4)
-* `empty` | `blank`
+{% include_relative repeat-interval-example.md %}

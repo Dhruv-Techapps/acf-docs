@@ -1,21 +1,22 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
- <a class="navbar-brand" href="#">
-  [{{relative_url}}|{{baseurl}}]
-  <img src="{{ '/assets/img/icon128.png' | relative_url }}" width="30" height="30" alt="">
- </a>
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
- </button>
- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-   {% for item in site.data.header %}
-   <li {% if page.url == item.link %} class="nav-item active" {% endif %}>
-    <a class="nav-link" href="{{ item.link  | relative_url }}">{{ item.name }}</a>
-   </li>
-   {% endfor %}
-  </ul>
- </div>
- <form class="ml-auto">
-  <button type="button" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">Download</button>
- </form>
+  <a class="navbar-brand" href="#">
+    <img src="{{ '/assets/img/icon128.png' | relative_url }}" width="30" height="30" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% assign pageUrl = page.url | replace : '.html', '' %}
+      {% for item in site.data.header %}
+      <li {% if pageUrl == item.link %} class="nav-item active" {% endif %}>
+        <a class="nav-link" href="{{ item.link  | relative_url }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <form class="ml-auto">
+    <button type="button" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">Download</button>
+  </form>
 </nav>

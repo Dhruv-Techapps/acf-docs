@@ -17,8 +17,8 @@ If you dont want to disable / stop particular configuration temporary to fill / 
 
 ---
 
-## <span style="color:red;">*</span> [URL](configuration/url.md)
-You need to paste the URL of site on which you need automate click / fill functionality. You can simply copy and paste the URL or you can also use regular expresion to cover more than one URL. For more details [click here](configuration/URL.md)
+## <span style="color:red;">*</span> URL
+You need to paste the URL of site on which you need automate click / fill functionality. You can simply copy and paste the URL or you can also use regular expresion to cover more than one URL. For more details [click here](/docs/configuration/url)
 
 
 
@@ -38,9 +38,9 @@ Value:
 ---
 
 ## Refresh
-If you want your site to be refresh after all the [Action](action.md) are completed successfully you can do that by checking refresh box.
+If you want your site to be refresh after all the [Action](/docs/action) are completed successfully you can do that by checking refresh box.
 
 > Refresh functionality will only trigger once all the actions are completed successfully.
 
 
-> It dont work with [Batch Repeat](batch-repeat.md) functionlity. You can either use batch repeat or page refresh.
+> It dont work with [Batch Repeat](batch-repeat) functionlity. You can either use batch repeat or page refresh.
