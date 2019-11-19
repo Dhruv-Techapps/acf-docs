@@ -53,4 +53,5 @@ This is very important feature of extension which tells you if any error occur i
 ## Export & Import
 You can export and import whole configuration anytime and keep it as back
 
-<span class="text-danger">Import functionality will override all current configuration. Make sure before performing this operation</span>
+{:.bd-callout .bd-callout-danger}
+> Import functionality will override all current configuration. Make sure before performing this operation

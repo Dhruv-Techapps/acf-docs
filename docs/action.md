@@ -22,7 +22,7 @@ Init Wait stands for Initial Wait. Initial Wait to start particular action. Wait
 > Its not mandatory field. if left blank extension will start executing right away.
 
 ---
-## <span class="text-danger">*</span> XPath
+## XPath
 Its little tricky but believe me its not that hard to find.
 
 ### Follow below steps to get XPath

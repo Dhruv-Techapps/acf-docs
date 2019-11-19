@@ -8,27 +8,44 @@ title: How to Use
 {:.bd-lead}
 Auto Click / Auto Fill Extension is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.
 
-Auto Click / Auto Fill extension consist of 4 major parts [Configuration List](/docs/configuration-list), [Configure](/docs/configuration), [Batch](batch), [Action](action) with extra added configuration such as [Settings](settings), [Addon](addon). 
+## Quick start
+Auto Click / Auto Fill extension consist of 4 major parts [configuration list](configuration-list), [configure](configuration), [batch](batch), [action](action) with extra added configuration such as [settings](settings), [addon](addon). 
 
 There are two version of extension
 
 {:.table .table--hover .table-bordered}
 | LITE / Simple | PRO / Advance |
 | ---------- | ------------ |
-| [Configuration List](configuration-list)<ul><li>Add</li><li>Remove</li></ul>| [Configuration List](configuration-list.md)<ul><li>Add</li><li>Remove</li></ul>|
-| [Configuration](configuration.md)<ul><li>[Enable/Disable](configuration.md#enable--disable)</li><li>[URL](configuration/url.md)</li><li>[Refresh](configuration.md#refresh)</li></ul>|[Configuration](configuration.md)<ul><li>[Enable/Disable](configuration.md#enable--disable)</li><li>[URL](configuration/url.md)</li><li>[Refresh](configuration.md#refresh)</li></ul>|
-| [Action](action.md)<ul><li>[XPath](xpath.md)</li><li>[Value](action.md#value)</li><li>Add</li><li>Remove</li></ul>|[Action](action.md)<ul><li>[XPath](xpath.md)</li><li>[Value](action.md#value)</li><li>Add</li><li>Remove</li><li>[Repeat & R-Interval](action.md/#repeat--repeat-interval)</li><li>[Init Wait](action.md/#repeat--repeat-interval)</li></ul>|
-|[Addon](addon.md)<ul><li>[XPath](xpath.md)</li><li>[Condition](addon.md#condition)</li><li>[Value](addon.md#value)</li></ul>|[Addon](addon.md)<ul><li>[XPath](xpath.md)</li><li>[Condition](addon.md#condition)</li><li>[Value](addon.md#value)</li></ul>|
-|[Settings](settings.md)<ul><li>[Check iFrame](settings.md#check-iframe)</li><li>[Extension Load](settings.md#extension-load)</li><li>[Retry & Retry Interval](settings.md#retry--retry-interval)</li><li>[Error Handling](settings.md#error-handling)</li><li>[Export & Import](settings.md#export--import)</li></ul>|[Settings](settings.md)<ul><li>[Check iFrame](settings.md#check-iframe)</li><li>[Extension Load](settings.md#extension-load)</li><li>[Retry & Retry Interval](settings.md#retry--retry-interval)</li><li>[Error Handling](settings.md#error-handling)</li><li>[Export & Import](settings.md#export--import)</li></ul>|
-||[Batch](batch.md)<ul><li>[Start Time](batch.md#start-time)</li><li>[Init Wait](batch.md#init-wait)</li><li>[Repeat & R-Interval](batch.md#repeat--repeat-interval)</li></ul> |
+|[Configuration List](configuration-list)<br/>* Add<br/>* Remove|[Configuration List](configuration-list)<br/>* Add<br/>* Remove|
+|[Configuration](configuration)<br/>* [Enable/Disable](configuration/#enable--disable)<br/>* [URL](configuration/#url)<br/>* [Refresh](configuration/#refresh)|[Configuration](configuration)<br/>* [Enable/Disable](configuration#enable--disable)<br/>* [URL](configuration/#url)<br/>* [Refresh](configuration/#refresh)|
+|[Action](action)<br/>* [XPath](action/#xpath)<br/>* [Value](action/#value)<br/>* Add<br/>* Remove|[Action](action)<br/>* [Init Wait](action/#init-wait)<br/>* [XPath](action/#xpath)<br/>* [Value](action/#value)<br/>* [Repeat](action/#repeat)<br/>* [Repeat Interval](action/#repeat-interval)<br/>* Add<br/>* Remove|
+|[Addon](addon)<br/>* [XPath](addon/#xpath)<br/>* [Condition](addon/#condition)<br/>* [Value](addon/#value)|[Addon](addon)<br/>* [XPath](addon/#xpath)<br/>* [Condition](addon/#condition)<br/>* [Value](addon/#value)|
+|[Settings](settings)<br/>* [Check iFrame](settings/#check-iframe)<br/>* [Extension Load](settings/#extension-load)<br/>* [Retry](settings/#retry)<br/>* [Retry Interval](settings/#retry-interval)<br/>* [Error Handling](settings/#error-handling)<br/>* [Export & Import](settings/#export--import)|[Settings](settings)<br/>* [Check iFrame](settings/#check-iframe)<br/>* [Extension Load](settings/#extension-load)<br/>* [Retry](settings/#retry)<br/>* [Retry Interval](settings/#retry-interval)<br/>* [Error Handling](settings/#error-handling)<br/>* [Export & Import](settings/#export--import)|
+||[Batch](batch)<br/>* [Start Time](batch/#start-time)<br/>* [Init Wait](batch/#init-wait)<br/>* [Repeat](batch/#repeat)<br/>* [Repeat Interval](batch/#repeat-interval)|
 
 
 ## <span class="bd-content-title">Lite Version</span>
-Lite version is not limited its simpler version off extension where you just need to take care of [XPath](xpath) and [value](value).
+Lite version is not limited its simpler version off extension where you just need to take care of<br/>
+- [Action](action)
+  - [XPath](action/#xpath)
+  - [Value](action/#value)
 
-![LITE](/assets/img/lite.png){:width="100%"}
+
+> ![LITE]({{'/assets/img/lite.png' | relative_url }}){:width="100%"}
 
 ## <span class="bd-content-title">Pro Version</span>
-Pro version is advanced version where you can perform advance functionality like [repeat](batch/#repeat--repeat-interval), [start time](batch/#start-time), [init wait](batch/#init-wait)
+Pro version is advanced version where you can perform advance functionality like<br/>
+- [Batch](batch)
+  - [start time](batch/#start-time)
+  - [init wait](batch/#init-wait)
+  - [repeat](batch/#repeat)
+  - [repeat interval](batch/#repeat--interval)
+  - [Action](action)
+    - [Init Wait](action/#init-wait)
+    - [XPath](action/#xpath)
+    - [Value](action/#value)
+    - [Repeat](action/#repeat)
+    - [Repeat Interval](action/#repeat-interval)
 
-![PRO](/assets/img/pro.png){:width="100%"}
+
+> ![PRO]({{'/assets/img/pro.png' | relative_url }}){:width="100%"}
