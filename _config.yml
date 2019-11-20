@@ -10,14 +10,13 @@ defaults:
 title: Auto click / Auto Fill
 email: dhruv.techapps@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO
+  Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly configure your job using XPath and work like PRO..
+baseurl: "/auto-click-auto-fill" # the subpath of your site, e.g. /blog
+url: "https://dhruv-techapps.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+author: Dhruv, Dharmesh
 twitter_username: dhruv-techapps
 github_username: dhruv-techapps
-baseurl: / #https://dhruv-techapps.github.io/auto-click-auto-fill
 exclude:
   [
     "cpu",
@@ -31,7 +30,7 @@ exclude:
     "vendor/ruby/",
   ]
 collections:
-  wiki:
+  docs:
     output: true
 plugins:
   - jekyll-feed
