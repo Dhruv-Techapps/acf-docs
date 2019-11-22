@@ -4,6 +4,7 @@ defaults:
       type: "pages" # previously `page` in Jekyll 2.2.
     values:
       layout: "docs" # overrides previous default layout
+      footer: false
       author: "Dhruv Techapps"
       menu: docs
 
@@ -12,11 +13,14 @@ email: dhruv.techapps@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO
   Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly configure your job using XPath and work like PRO..
+rating: 4.4 out of 5
+users: 29,577
 baseurl: "/auto-click-auto-fill" # the subpath of your site, e.g. /blog
 url: "https://dhruv-techapps.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 author: Dhruv, Dharmesh
 twitter_username: dhruv-techapps
 github_username: dhruv-techapps
+version: 2.0.56
 exclude:
   [
     "cpu",

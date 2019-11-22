@@ -59,3 +59,5 @@ typings/
 
 .jekyll-cache
 _site
+package.json
+package-lock.json

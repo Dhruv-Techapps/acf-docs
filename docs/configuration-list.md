@@ -15,4 +15,4 @@ You can view all your configuration in the left panel
 - Click ![+]({{ '/assets/svg/add.svg' | relative_url }}) Icon to add new configuration.
 - To edit / view configuration simply click on the configuration name in the configuration list.
 - You can disable from [configuration](configuration) section if you dont want that temporary.
-- You can also remove the configuration by clicking on ![-](/assets/svg/minus-circle.svg) icon  which appers when you hover over the configuratioin name.
+- You can also remove the configuration by clicking on ![-]({{ '/assets/svg/minus-circle.svg' | relative_url }}) icon  which appers when you hover over the configuratioin name.

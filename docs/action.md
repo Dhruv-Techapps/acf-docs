@@ -45,12 +45,18 @@ Suppose you are performing action on `input` `textarea` `dropdown` you should pr
 {:.bd-callout .bd-callout-warning}
 > This is mandatory field only if XPath element is `input` `textarea` `dropdown`.
 
+### <kbd>Examples</kbd>
+
+{:.mt-3 .table .table-bordered .table-striped}
+| Value | Description |
+|---|---|
+| ~\~empty~\~ | It will `clear` the field and `focus`.|
+
 ---
 ## Repeat
 If you want specific action to repeat more than once you can provide repeat value. 
 
-{:.bd-callout .bd-callout-warning}
-> positive numeric value `1` to `999`
+{% include_relative integer-number-example.md %}
 
 ---
 ## Repeat Interval

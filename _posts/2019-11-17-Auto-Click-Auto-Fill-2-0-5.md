@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Version 2.0.5"
+title:  "Version 2.0.55"
 tags: []
 ---
 * Improved UI for configuring click / fill

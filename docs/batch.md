@@ -35,8 +35,7 @@ Init Wait stands for Initial Wait. Initial Wait to start particular batch/action
 ## Repeat
 If you want specific batch to repeat more than once you can provide repeat value. 
 
-{:.bd-callout .bd-callout-warning}
-> Positive numeric value `1` to `999`
+{% include_relative integer-number-example.md %}
 
 ---
 ## Repeat Interval

@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  "Version 2.0.6"
-status: "Under Pending Review"
+title:  "Version 2.0.56"
 tags: []
 ---
 * Github Issues

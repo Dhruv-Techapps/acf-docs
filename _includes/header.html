@@ -1,22 +1,21 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
+<nav class="navbar navbar-expand-md border-bottom bd-navbar fixed-top">
   <a class="navbar-brand" href="#">
     <img src="{{ '/assets/favicons/icon128.png' | relative_url }}" width="30" height="30" alt="">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       {% assign pageUrl = page.url | replace : '.html', '' %}
       {% for item in site.data.header %}
-      <li {% if pageUrl == item.link %} class="nav-item active" {% endif %}>
-        <a class="nav-link" href="{{ item.link  | relative_url }}">{{ item.name }}</a>
+      <li class="nav-item">
+        <a  {% if pageUrl == item.link %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{{ item.link  | relative_url }}">{{ item.name }}</a>
       </li>
       {% endfor %}
     </ul>
   </div>
   <form class="ml-auto">
-    <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe" target="_blank" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">Download</a>
+    <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe" target="_blank" class="btn btn-primary px-5 rounded-pill d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">Download</a>
   </form>
 </nav>

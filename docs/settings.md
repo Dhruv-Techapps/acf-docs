@@ -23,19 +23,17 @@ If an action need to be performed on button / input field which is inside iframe
 ---
 ## Extension Load
 
-- [Window](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload) (default)
-  - Extension is loaded when all content of page is loaded e.g. stylesheets, images, subforms 
-  - Slower than Document
-- [Document](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
-  - Extension is loaded without waiting for stylesheets, images, and subframes to finish loading 
-  - Faster than Window
+{:.table .table-bordered .table-striped}
+| Event Type | Default | Description |
+| --- | --- | --- |
+|[Window](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload) | `true` |* Extension is loaded when all content of page is loaded e.g. stylesheets, images, subforms<br/>* Slower than Document|
+|[Document](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)| `false` |* Extension is loaded without waiting for stylesheets, images, and subframes to finish loading<br/>* Faster than Window|
  
 ---
 ## Retry & Retry Interval
 Retry finding [xpath](xpath) in webpage for number of times provided. default is `5`
 
-### <kbd>Examples</kbd>
-- positive numeric value `1` to `999`
+{% include_relative integer-number-example.md %}
 
 ---
 ## Retry Interval

@@ -4,3 +4,5 @@
   link: /docs/getting-started
 - name: Blog
   link: /blog
+- name: Test
+  link: /test

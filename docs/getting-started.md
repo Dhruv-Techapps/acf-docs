@@ -25,7 +25,7 @@ There are two version of extension
 ||[Batch](batch)<br/>* [Start Time](batch/#start-time)<br/>* [Init Wait](batch/#init-wait)<br/>* [Repeat](batch/#repeat)<br/>* [Repeat Interval](batch/#repeat-interval)|
 
 
-## <span class="bd-content-title">Lite Version</span>
+## Lite Version
 Lite version is not limited its simpler version off extension where you just need to take care of<br/>
 - [Action](action)
   - [XPath](action/#xpath)
@@ -34,7 +34,7 @@ Lite version is not limited its simpler version off extension where you just nee
 
 > ![LITE]({{'/assets/img/lite.png' | relative_url }}){:width="100%"}
 
-## <span class="bd-content-title">Pro Version</span>
+## Pro Version
 Pro version is advanced version where you can perform advance functionality like<br/>
 - [Batch](batch)
   - [Start Time](batch/#start-time)

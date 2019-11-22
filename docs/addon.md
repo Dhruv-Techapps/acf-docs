@@ -12,8 +12,6 @@ In order to check some condition before clicking / filling add addon to that spe
 
 > ![Addon]({{'/assets/img/addon.png' | relative_url }}){:width="100%"}
 
-
-
 ---
 ## XPath
 Its little tricky but believe me its not that hard to find.

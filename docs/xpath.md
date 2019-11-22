@@ -16,12 +16,11 @@ Its little tricky but believe me its not that hard to find.
 > 3. Right click that element and select Copy > Copy XPath.
 > 4. Thats it you have your XPath of that element now.
 
-### <kbd>Examples</kbd>
+#### <kbd>Examples</kbd>
 
 {:.bd-example}
-### `//div/a[1]`
+#### `//div/a[1]`
 
-{:.highlight}
 ```html
 <div>
   <a>One</a> 👈 selected
@@ -30,9 +29,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//div/a[last()]`
+#### `//div/a[last()]`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -42,9 +40,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//div/a[last()-1]`
+#### `//div/a[last()-1]`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -54,9 +51,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//div/a[position()>2]`
+#### `//div/a[position()>2]`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -68,9 +64,8 @@ Its little tricky but believe me its not that hard to find.
 
 
 {:.bd-example}
-### `//a[@href]`
+#### `//a[@href]`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -81,9 +76,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//a[@href='google']`
+#### `//a[@href='google']`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -96,7 +90,6 @@ Its little tricky but believe me its not that hard to find.
 {:.bd-example}
 ### `//button[@id='1']`
 
-{:.highlight}
 ```html
 <div>
   <a>First</a>
@@ -108,9 +101,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//a[@id<'3']`
+#### `//a[@id<'3']`
 
-{:.highlight}
 ```html
 <div>
   <a id='1'>Primary</button> 👈 selected
@@ -121,9 +113,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//button[contains(@class,'me')]`
+#### `//button[contains(@class,'me')]`
 
-{:.highlight}
 ```html
 <div>
   <button type='button' id='1'>Primary</button>
@@ -134,9 +125,8 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-### `//button[contains(text(),'Me')]`
+#### `//button[contains(text(),'Me')]`
 
-{:.highlight}
 ```html
 <div>
   <button type='button' id='1'>Primary</button>

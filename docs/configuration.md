@@ -3,6 +3,7 @@ menu: docs
 title:  "Configuration"
 tags: [configuration, configuration list, configuration url, enable, disable, refresh ,batch, action, start time, XPath, Value,repeat, repeat interval, r-interval]
 ---
+
 {:.bd-title}
 # Configuration
 
