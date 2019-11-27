@@ -16,10 +16,10 @@ Its little tricky but believe me its not that hard to find.
 > 3. Right click that element and select Copy > Copy XPath.
 > 4. Thats it you have your XPath of that element now.
 
-#### <kbd>Examples</kbd>
+### <kbd>Examples</kbd>
 
 {:.bd-example}
-#### `//div/a[1]`
+### `//div/a[1]`
 
 ```html
 <div>
@@ -29,7 +29,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//div/a[last()]`
+### `//div/a[last()]`
 
 ```html
 <div>
@@ -40,7 +40,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//div/a[last()-1]`
+### `//div/a[last()-1]`
 
 ```html
 <div>
@@ -51,7 +51,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//div/a[position()>2]`
+### `//div/a[position()>2]`
 
 ```html
 <div>
@@ -64,7 +64,7 @@ Its little tricky but believe me its not that hard to find.
 
 
 {:.bd-example}
-#### `//a[@href]`
+### `//a[@href]`
 
 ```html
 <div>
@@ -76,7 +76,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//a[@href='google']`
+### `//a[@href='google']`
 
 ```html
 <div>
@@ -101,7 +101,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//a[@id<'3']`
+### `//a[@id<'3']`
 
 ```html
 <div>
@@ -113,7 +113,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//button[contains(@class,'me')]`
+### `//button[contains(@class,'me')]`
 
 ```html
 <div>
@@ -125,7 +125,7 @@ Its little tricky but believe me its not that hard to find.
 ```
 
 {:.bd-example}
-#### `//button[contains(text(),'Me')]`
+### `//button[contains(text(),'Me')]`
 
 ```html
 <div>

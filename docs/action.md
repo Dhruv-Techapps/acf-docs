@@ -11,7 +11,7 @@ tags: [configuration, configuration list, configuration ,action, Init wait, XPat
 Action is combination of [xpath](#xpath) and [value](#value). where xpath is used to find the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) element in page. If found element is `select`, `textarea`, `input` it requires extra parameter that is value to be filled or else it will trigger click on found element.
 
 {:.bd-callout .bd-callout-warning}
-> If no element is found it will do [retry](settings/#retry) for n number of times as configured under [settings](settings) screen and proceed with [error handling](settings/#error-handling) method.
+> If no element is found it will do [retry](settings#retry) for n number of times as configured under [settings](settings) screen and proceed with [error handling](settings#error-handling) method.
 
 > ![Action]({{'/assets/img/action.png' | relative_url }}){:width="100%"}
 

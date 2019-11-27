@@ -8,6 +8,9 @@ footer: false
 <link rel="stylesheet" href="{{ '/assets/prism/prism-support.css' | relative_url }}">
 <div class="container-fluid">
   <h1 class="bd-title">Practice form</h1>
+  <p class=>
+    This is a sample web form to help you practice creating auto click / auto fill rules for all the different types of form fields that supports. You can identify the field to automatically fill by entering a supported xpath value into the xpath column.
+  </p>
   <h2 class="bd-content-title">Basic XPath</h2>
   <form name="form" class="form-inline">
     <table class="table sm">
@@ -21,7 +24,7 @@ footer: false
       <tbody>
         <tr>
           <td>
-            <input type="text" class="form-control ml-2" placeholder="full name" />
+            <input type="text" class="form-control ml-2" placeholder="full name" autofocus=""/>
           </td>
           <td>
             <pre class="language-html"><code>&lt;input type="text" /></code></pre>
@@ -422,8 +425,7 @@ footer: false
         <td>
           <form class="form-signin">
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
-              autofocus="">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
           </form>

@@ -8,7 +8,7 @@ tags: [xpath, configuration, settings, iframe, retry, retry interval, retry opti
 # Settings
 
 {:.bd-lead}
-Under settings screen you can control how and when should extension connect with your configured site,  also if any of [xpath](action/#xpath.md) is not found how many [retry](#retry) attempt should be made, and fallback option if no element is found.
+Under settings screen you can control how and when should extension connect with your configured site,  also if any of [xpath](action#xpath) is not found how many [retry](#retry) attempt should be made, and fallback option if no element is found.
 
 {:.bd-callout .bd-callout-info}
 > You can also export and backup your configuration and import back whenever required.

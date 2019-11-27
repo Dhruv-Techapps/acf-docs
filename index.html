@@ -3,12 +3,12 @@ title: Dhruv Techapps
 layout: default
 ---
 <main role="main" class="bd-masthead">
- <div class="container mt-5">
+ <div class="container">
   <div class="row">
-   <div class="col-6">
+   <div class="col-12 col-md-6">
     <div class="row">
      <div class="col-4 d-flex justify-content-center align-items-center"><img src="assets/favicons/icon128.png" /></div>
-     <div class="col bd-text-purple-bright">
+     <div class="col bd-text-purple-bright d-flex flex-column justify-content-center align-items-center">
       <h1 class="mb-3">AUTO Click</h1>
       <h1 class="mb-3">AUTO Fill</h1>
      </div>
@@ -25,7 +25,7 @@ layout: default
     </p>
     <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe" target="_blank" class="btn btn-lg btn-primary mb-3">Add to Chrome - Its Free</a>
    </div>
-   <div class="col-6">
+   <div class="col-12 col-md-12">
     <p class="lead mb-5">Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO</p>
     <p class="lead mb-5">Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly configure your job using XPath and work like PRO.</p>
    </div>
@@ -46,7 +46,7 @@ layout: default
     {% endif %}
     {% if forloop.first == true or remainder == 1 %}
     <div class="carousel-item {{className}}">
-     <div class="d-flex flex-nowrap">
+     <div class="d-flex flex-nowrap flex-column flex-md-row">
     {% endif %}
     <div class="card w-100 p-3 m-1">
      <div class="car-body">

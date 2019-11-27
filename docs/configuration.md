@@ -48,4 +48,4 @@ If you want your site to be refresh after all the [action](action) are completed
 
 {:.bd-callout .bd-callout-danger}
 > #### Refresh will override Batch Repeat  
-> It dont work with [Batch > Repeat](batch/#repeat) functionlity. You can either use batch repeat or page refresh.
+> It dont work with [Batch > Repeat](batch#repeat) functionlity. You can either use batch repeat or page refresh.
