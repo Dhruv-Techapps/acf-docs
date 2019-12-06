@@ -43,7 +43,9 @@
     window.apiKey = $('meta[name=api_key]').attr("content");
     if (apiKey) {
       window.chrome.runtime.sendMessage(apiKey, { action: "chrome.manifest", key: "version" }, _ => {
-        window.extension_installed = true;
+        if (!window.chrome.runtime.lastError) {
+          window.extension_installed = true;
+        }
       });
     } else {
       console.info("api key not avaiable");
