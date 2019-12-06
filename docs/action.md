@@ -16,6 +16,11 @@ Action is combination of [xpath](#xpath) and [value](#value). where xpath is use
 > ![Action]({{'/assets/img/action.png' | relative_url }}){:width="100%"}
 
 ---
+## Name
+Provide unique name to each action to identify its purpose.
+
+---
+
 ## Init Wait
 Init Wait stands for Initial Wait. Initial Wait to start particular action. Waiting time is provided in sec. It can be used were extension starts but it require few sec for page to load fully.
 
@@ -51,6 +56,7 @@ Suppose you are performing action on `input` `textarea` `dropdown` you should pr
 | Value | Description |
 |---|---|
 | ~\~empty~\~ | It will `clear` the field and `focus`.|
+| ~\~doubleClick~\~ | It will perform double click on button |
 
 ---
 ## Repeat
@@ -63,3 +69,15 @@ If you want specific action to repeat more than once you can provide repeat valu
 If you want to control the time between each repeat you can provide repeat-interval as well.
 
 {% include_relative float-number-example.md %}
+
+---
+## Columns Filter
+If you dont want any specific column you can hide/show the same from table view.
+
+---
+## Export & Import
+You can export and import whole list of actions of configuration anytime and keep it as backup.
+
+{:.bd-callout .bd-callout-danger}
+> #### Warning
+> Import functionality will override all current actions. Make sure before performing this operation

@@ -1,5 +1,6 @@
 ---
 layout: container
+menu: blog
 title: Blog
 ---
 {% for post in site.posts %}

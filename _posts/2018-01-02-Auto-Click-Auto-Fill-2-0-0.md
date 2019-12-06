@@ -1,5 +1,6 @@
 ---
 layout: post
+menu: blog
 title:  "Version 2.0.0"
 tags: [vesrion, 2.0.0,auto click version]
 ---

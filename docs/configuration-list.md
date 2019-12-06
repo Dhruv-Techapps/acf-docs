@@ -10,9 +10,10 @@ tags: [configuration, configuration list]
 {:.bd-lead}
 You can view all your configuration in the left panel
 
-<img src="{{ '/assets/img/configuration-list.png' | relative_url }}" style="float:left; margin-right:30px;">
+![configuration-list]({{'/assets/img/configuration-list.png' | relative_url }}){:width="100%"}
 
-- Click ![+]({{ '/assets/svg/add.svg' | relative_url }}) Icon to add new configuration.
-- To edit / view configuration simply click on the configuration name in the configuration list.
-- You can disable from [configuration](configuration) section if you dont want that temporary.
-- You can also remove the configuration by clicking on ![-]({{ '/assets/svg/minus-circle.svg' | relative_url }}) icon  which appers when you hover over the configuratioin name.
+- Click __Add New__ button to add new configuration.
+- To edit / view configuration simply select configuration from dropdown list.
+
+![configuration]({{'/assets/img/configuration-delete.png' | relative_url }}){:width="100%"}
+- You can also remove the configuration by clicking on __Delete__ button at bottom of configuration.

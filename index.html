@@ -1,61 +1,70 @@
 ---
 title: Dhruv Techapps
+menu: home
 layout: default
 ---
 <main role="main" class="bd-masthead">
- <div class="container">
-  <div class="row">
-   <div class="col-12 col-md-6">
+  <div class="container">
     <div class="row">
-     <div class="col-4 d-flex justify-content-center align-items-center"><img src="assets/favicons/icon128.png" /></div>
-     <div class="col bd-text-purple-bright d-flex flex-column justify-content-center align-items-center">
-      <h1 class="mb-3">AUTO Click</h1>
-      <h1 class="mb-3">AUTO Fill</h1>
-     </div>
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-4 d-flex justify-content-center align-items-center"><img class="img-fluid"
+                 src="assets/favicons/icon128.png" />
+          </div>
+          <div class="col bd-text-purple-bright d-flex flex-column justify-content-center align-items-center">
+            <h1 class="mb-3">AUTO Click</h1>
+            <h1 class="mb-3">AUTO Fill</h1>
+          </div>
+        </div>
+        <h5 class="text-muted mt-5 mb-3">{{site.title}} - v{{site.version}}</h5>
+        <div class="text-muted d-flex flex-column flex-md-row align-item-center mb-4">
+          <div>
+            <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
+            <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
+            <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
+            <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
+            <img src="{{ '/assets/svg/star-half-alt.svg' | relative_url }}" class="mr-2" />
+            {{site.rating}}
+          </div>
+          <div class="d-none d-md-block mx-sm-3">|</div>
+          <div class="mt-3 mt-md-0">
+            <img src="{{ '/assets/svg/user-alt.svg' | relative_url }}" /> {{site.users}} users
+          </div>
+        </div>
+        <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe"
+           target="_blank" class="btn btn-lg btn-primary mb-3 invisible btn-download">Add to Chrome - Its Free</a>
+      </div>
+      <div class="col-12 col-md-12">
+        <p class="lead mb-3">Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO</p>
+        <p class="lead mb-5">Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly configure your job using XPath and work like PRO.</p>
+      </div>
     </div>
-    <h5 class="text-muted mt-5 mb-3">{{site.title}} - v{{site.version}}</h5>
-    <p class="text-muted d-flex align-item-center mb-4">
-     <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-     <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-     <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-     <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-     <img src="{{ '/assets/svg/star-half-alt.svg' | relative_url }}" class="mr-2" />
-     {{site.rating}} |
-     <img src="{{ '/assets/svg/user-alt.svg' | relative_url }}" class="mx-2" /> {{site.users}} users
-    </p>
-    <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe" target="_blank" class="btn btn-lg btn-primary mb-3">Add to Chrome - Its Free</a>
-   </div>
-   <div class="col-12 col-md-12">
-    <p class="lead mb-5">Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO</p>
-    <p class="lead mb-5">Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly configure your job using XPath and work like PRO.</p>
-   </div>
-  </div>
-  <hr />
-  <div id="carouselExampleSlidesOnly" class="carousel slide text-muted" data-ride="carousel">
-   <div class="carousel-inner">
-    {% for review in site.data.reviews %}
-    {% if forloop.first == true%}
-     {% assign className = 'active' %}
-    {% else if%}
-     {% assign className = '' %}
-    {% endif %}
-    {% assign remainder = forloop.index | modulo: 3 %}
-    {% if forloop.first != true and remainder == 1 %}
-     </div>
+    <hr />
+    <div id="carouselExampleSlidesOnly" class="carousel slide text-muted" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for review in site.data.reviews %}
+        {% if forloop.first == true%}
+        {% assign className = 'active' %}
+        {% else if%}
+        {% assign className = '' %}
+        {% endif %}
+        {% assign remainder = forloop.index | modulo: 3 %}
+        {% if forloop.first != true and remainder == 1 %}
+      </div>
     </div>
     {% endif %}
     {% if forloop.first == true or remainder == 1 %}
     <div class="carousel-item {{className}}">
-     <div class="d-flex flex-nowrap flex-column flex-md-row">
-    {% endif %}
-    <div class="card w-100 p-3 m-1">
-     <div class="car-body">
-      <p>{{review.review}}</p>
-      <h5>- {{review.name}}</h5>
-     </div>
+      <div class="d-flex flex-nowrap flex-column flex-md-row">
+        {% endif %}
+        <div class="card w-100 p-3 m-1">
+          <div class="car-body">
+            <p>{{review.review}}</p>
+            <h5>- {{review.name}}</h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
-   </div>
   </div>
- </div>
 </main>

@@ -27,26 +27,10 @@ There are two version of extension
 
 ## Lite Version
 Lite version is not limited its simpler version off extension where you just need to take care of<br/>
-- [Action](action)
-  - [XPath](action#xpath)
-  - [Value](action#value)
-
 
 > ![LITE]({{'/assets/img/lite.png' | relative_url }}){:width="100%"}
 
 ## Pro Version
 Pro version is advanced version where you can perform advance functionality like<br/>
-- [Batch](batch)
-  - [Start Time](batch#start-time)
-  - [Init Wait](batch#init-wait)
-  - [Repeat](batch#repeat)
-  - [Repeat Interval](batch#repeat--interval)
-  - [Action](action)
-    - [Init Wait](action#init-wait)
-    - [XPath](action#xpath)
-    - [Value](action#value)
-    - [Repeat](action#repeat)
-    - [Repeat Interval](action#repeat-interval)
-
 
 > ![PRO]({{'/assets/img/pro.png' | relative_url }}){:width="100%"}

@@ -1,5 +1,6 @@
 ---
 layout: post
+menu: blog
 title:  "Version 2.0.55"
 tags: []
 ---

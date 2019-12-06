@@ -57,11 +57,3 @@ Select what should happen if xpath is not found after no of retry.
 {:.bd-callout .bd-callout-warning}
 > #### ! Important
 > This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
-
----
-## Export & Import
-You can export and import whole configuration anytime and keep it as back
-
-{:.bd-callout .bd-callout-danger}
-> #### Warning
-> Import functionality will override all current configuration. Make sure before performing this operation
