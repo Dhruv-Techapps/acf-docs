@@ -2,7 +2,7 @@
 layout: post
 menu: blog
 title:  "Version 2.0.57"
-status: "Under Development"
+status: "Under Review"
 tags: []
 ---
 - ##### New Features
@@ -10,5 +10,5 @@ tags: []
   - Double Click Event
   - [Action](../docs/action) level Import and export feature
   - Hide / Show Column under [Action](../docs/action) table
-  - Name Column
+  - Name each Action/Row
   - > [Inbox me](mailto:dhruv.techapps@gmail.com) for new features you like to be added.
