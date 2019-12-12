@@ -2,10 +2,9 @@
 layout: post
 menu: blog
 title:  "Version 2.0.57"
-status: "Under Review"
 tags: []
 ---
-- ##### New Features
+- ##### New Features (_Under Review_)
   - [Action](../docs/action) Sorting
   - Double Click Event
   - [Action](../docs/action) level Import and export feature

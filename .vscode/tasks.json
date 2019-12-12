@@ -6,7 +6,11 @@
   {
    "label": "build and serve",
    "type": "shell",
-   "command": "bundle exec jekyll serve"
+   "command": "bundle exec jekyll serve",
+   "group": {
+    "kind": "build",
+    "isDefault": true
+   }
   }
  ]
 }

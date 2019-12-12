@@ -11,7 +11,7 @@ Auto Click / Auto Fill is like a utility extension which helps user to click / f
 
 ## Quick start
 * Download [Auto Click/Auto Fill](https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe) extension.
-* Go to [site](test) on which you need to perform automation.
+* Go to [site](test) on which you need to perform click/fill automation.
 * Right Click `button`,`input`,`textarea`, or any UI element and select ![Action]({{'/assets/favicons/icon32.png' | relative_url }}){:width="22px"} <kbd>Auto Click / Auto Fill</kbd> option from menu.
 * You will be redirected to configuration page of extension, with pre filled value 
   * URL of site
