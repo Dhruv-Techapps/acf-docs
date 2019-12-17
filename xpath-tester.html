@@ -8,392 +8,392 @@ footer: false
 <link rel="stylesheet" href="{{ '/assets/prism/prism.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/prism/prism-support.css' | relative_url }}">
 <div class="container-fluid">
-  <h1 class="bd-title">Practice form</h1>
-  <p class=>
-    This is a sample web form to help you practice creating auto click / auto fill rules for all the different types of
-    form fields that supports. You can identify the field to automatically fill by entering a supported xpath value into
-    the xpath column.
-  </p>
-  <h2 class="bd-content-title">Basic XPath</h2>
-  <form name="form" class="form-inline">
-    <table class="table sm">
-      <thead>
-        <tr>
-          <th scope="col">Form Field</th>
-          <th scope="col">HTML</th>
-          <th scope="col">XPath</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" placeholder="full name" autofocus="" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="text" /></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@type="text"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" name="username" placeholder="username" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input name="username"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@name="username"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" placeholder="First name" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input placeholder="First name"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@placeholder="First name"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" id="last-name" placeholder="last name" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input id="last-name"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@id="last-name"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" aria-describedby="name" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input aria-describedby="name"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@aria-describedby="name"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" readonly />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input readonly/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@readonly]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control ml-2" disabled />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input disabled/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@disabled]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="email" class="form-control ml-2" placeholder="email" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="email"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@type="email"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="password" class="form-control ml-2" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="password"/></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[@type="password"]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#" target="_blank">link</a>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;a href="#" target="_blank">link&lt;/a></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>
-                //a[@href]
-              </li>
-              <li>
-                //a[@href="#"]
-              </li>
-              <li>
-                //a[@target="_blank"]
-              </li>
-              <li>
-                //a[text()="link"]
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="radio" name="gender" value="male" checked> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="radio" name="gender" value="male" checked> Male<br>
+ <h1 class="bd-title">Practice form</h1>
+ <p class=>
+  This is a sample web form to help you practice creating auto click / auto fill rules for all the different types of
+  form fields that supports. You can identify the field to automatically fill by entering a supported xpath value into
+  the xpath column.
+ </p>
+ <h2 class="bd-content-title">Basic XPath</h2>
+ <form name="form" class="form-inline">
+  <table class="table sm">
+   <thead>
+    <tr>
+     <th scope="col">Form Field</th>
+     <th scope="col">HTML</th>
+     <th scope="col">XPath</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" placeholder="full name" autofocus="" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="text" /></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@type="text"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" name="username" placeholder="username" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input name="username"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@name="username"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" placeholder="First name" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input placeholder="First name"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@placeholder="First name"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" id="last-name" placeholder="last name" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input id="last-name"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@id="last-name"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" aria-describedby="name" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input aria-describedby="name"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@aria-describedby="name"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" readonly />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input readonly/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@readonly]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="text" class="form-control ml-2" disabled />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input disabled/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@disabled]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="email" class="form-control ml-2" placeholder="email" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="email"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@type="email"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="password" class="form-control ml-2" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="password"/></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[@type="password"]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <a href="#" target="_blank">link</a>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;a href="#" target="_blank">link&lt;/a></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>
+        //a[@href]
+       </li>
+       <li>
+        //a[@href="#"]
+       </li>
+       <li>
+        //a[@target="_blank"]
+       </li>
+       <li>
+        //a[text()="link"]
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="radio" name="gender" value="male" checked> Male<br>
 &lt;input type="radio" name="gender" value="female"> Female<br>
 &lt;input type="radio" name="gender" value="other"> Other</code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>
-                //input[@type="radio"]
-              </li>
-              <li>
-                //input[@name="gender"]
-              </li>
-              <li>
-                //input[@value="other"]
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <select name="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;select name="cars">
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>
+        //input[@type="radio"]
+       </li>
+       <li>
+        //input[@name="gender"]
+       </li>
+       <li>
+        //input[@value="other"]
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <select name="cars">
+       <option value="volvo">Volvo</option>
+       <option value="saab">Saab</option>
+       <option value="fiat">Fiat</option>
+       <option value="audi">Audi</option>
+      </select>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;select name="cars">
   &lt;option value="volvo">Volvo&lt;/option>
   &lt;option value="saab">Saab&lt;/option>
   &lt;option value="fiat">Fiat&lt;/option>
   &lt;option value="audi">Audi&lt;/option>
 &lt;/select></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//select[@name="cars"]</li>
-            </ul>
-            <kbd>values</kbd>
-            <ul class="xpath">
-              <li>volvo</li>
-              <li>saab</li>
-              <li>fiat</li>
-              <li>audi</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <textarea name="message" rows="3" cols="30">The cat was playing in the garden.</textarea>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;textarea name="message" rows="3" cols="30">
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//select[@name="cars"]</li>
+      </ul>
+      <kbd>values</kbd>
+      <ul class="xpath">
+       <li>volvo</li>
+       <li>saab</li>
+       <li>fiat</li>
+       <li>audi</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <textarea name="message" rows="3" cols="30">The cat was playing in the garden.</textarea>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;textarea name="message" rows="3" cols="30">
   The cat was playing in the garden.
 &lt;/textarea></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>
-                //textarea[@name="message"]
-              </li>
-              <li>
-                //textarea[@rows="3"]
-              </li>
-              <li>
-                //textarea[@cols="30"]
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="submit" value="Submit" class="btn btn-primary">
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="submit" value="Submit"></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>
-                //input[@type="submit"]
-              </li>
-              <li>
-                //input[@value="Submit"]
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
-            <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
-            <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>
+        //textarea[@name="message"]
+       </li>
+       <li>
+        //textarea[@rows="3"]
+       </li>
+       <li>
+        //textarea[@cols="30"]
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="submit" value="Submit" class="btn btn-primary">
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="submit" value="Submit"></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>
+        //input[@type="submit"]
+       </li>
+       <li>
+        //input[@value="Submit"]
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+      <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="checkbox" name="vehicle1" value="Bike"> I have a bike
 &lt;input type="checkbox" name="vehicle2" value="Car"> I have a car
 &lt;input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat</code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>
-                //input[@type="checkbox"]
-              </li>
-              <li>
-                //input[@name="vehicle2"]
-              </li>
-              <li>
-                //input[@value="Car"]
-              </li>
-              <li>
-                //input[@checked]
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" class="btn btn-success" onclick="alert('Hello World!')">Click Me!</button>
-          </td>
-          <td>
-            <pre
-              class="language-html"><code>&lt;button type="button" onclick="alert('Hello World!')">Click Me!&lt;/button></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//button[@type="button"]</li>
-              <li>//button[@onclick]</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-  <hr />
-  <h2>Advance XPath</h2>
-  <h3>Contains()</h3>
-  <form name="form">
-    <table class="table sm">
-      <thead>
-        <tr>
-          <th scope="col">Element</th>
-          <th scope="col">HTML</th>
-          <th scope="col">XPath</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <input type="submit" class="btn btn-success" />
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;input type="submit" /></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//input[contains(@type,"submit")]</li>
-              <li>//input[contains(@type,"sub")]</li>
-              <li>//*[contains(@type,"mit")]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" class="btn btn-primary" name="btnLogin">Login</button>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;button type="button" name="btnLogin">Login&lt;/button></code></pre>
-          </td>
-          <td>
-            <ul class="xpath">
-              <li>//button[contains(@name,"btn")]</li>
-              <li>//button[contains(text(),"Log")]</li>
-              <li>//*[contains(@type,"button")]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="mb-3">
-              <label for="address">Address</label>
-              <input type="text" class="form-control is-invalid" id="address" placeholder="1234 Main St" required="">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
-            </div>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;label for="address">Address&lt;/label>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>
+        //input[@type="checkbox"]
+       </li>
+       <li>
+        //input[@name="vehicle2"]
+       </li>
+       <li>
+        //input[@value="Car"]
+       </li>
+       <li>
+        //input[@checked]
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <button type="button" class="btn btn-success" onclick="alert('Hello World!')">Click Me!</button>
+     </td>
+     <td>
+      <pre
+       class="language-html"><code>&lt;button type="button" onclick="alert('Hello World!')">Click Me!&lt;/button></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//button[@type="button"]</li>
+       <li>//button[@onclick]</li>
+      </ul>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </form>
+ <hr />
+ <h2>Advance XPath</h2>
+ <h3>Contains()</h3>
+ <form name="form">
+  <table class="table sm">
+   <thead>
+    <tr>
+     <th scope="col">Element</th>
+     <th scope="col">HTML</th>
+     <th scope="col">XPath</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <input type="submit" class="btn btn-success" />
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;input type="submit" /></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//input[contains(@type,"submit")]</li>
+       <li>//input[contains(@type,"sub")]</li>
+       <li>//*[contains(@type,"mit")]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <button type="button" class="btn btn-primary" name="btnLogin">Login</button>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;button type="button" name="btnLogin">Login&lt;/button></code></pre>
+     </td>
+     <td>
+      <ul class="xpath">
+       <li>//button[contains(@name,"btn")]</li>
+       <li>//button[contains(text(),"Log")]</li>
+       <li>//*[contains(@type,"button")]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <div class="mb-3">
+       <label for="address">Address</label>
+       <input type="text" class="form-control is-invalid" id="address" placeholder="1234 Main St" required="">
+       <div class="invalid-feedback">
+        Please enter your shipping address.
+       </div>
+      </div>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;label for="address">Address&lt;/label>
 &lt;input type="text" class="form-control is-invalid" id="address">
 &lt;div class="invalid-feedback">
  Please enter your shipping address.
 &lt;/div></code></pre>
-          </td>
-          <td>
-            <kbd>label</kbd>
-            <ul class="xpath">
-              <li>//label[@for="address"]</li>
-              <li>//label[contains(text(),"Address")]</li>
-            </ul>
-            <kbd>div</kbd>
-            <ul class="xpath">
-              <li>//*[@class="invalid-feedback"]</li>
-              <li>//div[contains(@class,"invalid")]</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" class="btn btn-primary mb-3">Primary</button>
-            <button type="button" class="btn btn-secondary mb-3">Secondary</button>
-            <button type="button" class="btn btn-success mb-3">Success</button>
-            <button type="button" class="btn btn-danger mb-3">Danger</button>
-            <button type="button" class="btn btn-warning mb-3">Warning</button>
-            <button type="button" class="btn btn-info mb-3">Info</button>
-            <button type="button" class="btn btn-light mb-3">Light</button>
-            <button type="button" class="btn btn-dark mb-3">Dark</button>
-          </td>
-          <td>
-            <pre class="language-html"><code>&lt;button type="button" class="btn-primary">Primary&lt;/button>
+     </td>
+     <td>
+      <kbd>label</kbd>
+      <ul class="xpath">
+       <li>//label[@for="address"]</li>
+       <li>//label[contains(text(),"Address")]</li>
+      </ul>
+      <kbd>div</kbd>
+      <ul class="xpath">
+       <li>//*[@class="invalid-feedback"]</li>
+       <li>//div[contains(@class,"invalid")]</li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <button type="button" class="btn btn-primary mb-3">Primary</button>
+      <button type="button" class="btn btn-secondary mb-3">Secondary</button>
+      <button type="button" class="btn btn-success mb-3">Success</button>
+      <button type="button" class="btn btn-danger mb-3">Danger</button>
+      <button type="button" class="btn btn-warning mb-3">Warning</button>
+      <button type="button" class="btn btn-info mb-3">Info</button>
+      <button type="button" class="btn btn-light mb-3">Light</button>
+      <button type="button" class="btn btn-dark mb-3">Dark</button>
+     </td>
+     <td>
+      <pre class="language-html"><code>&lt;button type="button" class="btn-primary">Primary&lt;/button>
 &lt;button type="button" class="btn-secondary">Secondary&lt;/button>
 &lt;button type="button" class="btn-success">Success&lt;/button>
 &lt;button type="button" class="btn-danger">Danger&lt;/button>
@@ -401,82 +401,82 @@ footer: false
 &lt;button type="button" class="btn-info">Info&lt;/button>
 &lt;button type="button" class="btn-light">Light&lt;/button>
 &lt;button type="button" class="btn-dark">Dark&lt;/button></code></pre>
-          </td>
-          <td>
-            <kbd>Select All</kbd>
-            <ul class="xpath">
-              <li>//button</li>
-              <li>//button[@type="button"]</li>
-              <li>//*[contains(@class,"btn-")]</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-  <h3>Using OR & AND</h3>
-  <table class="table sm">
-    <thead>
-      <tr>
-        <th scope="col">Element</th>
-        <th scope="col">HTML</th>
-        <th scope="col">XPath</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <form class="form-signin">
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-          </form>
-        </td>
-        <td>
-          <pre class="language-html"><code>&lt;form class="form-signin">
+     </td>
+     <td>
+      <kbd>Select All</kbd>
+      <ul class="xpath">
+       <li>//button</li>
+       <li>//button[@type="button"]</li>
+       <li>//*[contains(@class,"btn-")]</li>
+      </ul>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </form>
+ <h3>Using OR & AND</h3>
+ <table class="table sm">
+  <thead>
+   <tr>
+    <th scope="col">Element</th>
+    <th scope="col">HTML</th>
+    <th scope="col">XPath</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>
+     <form class="form-signin">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+     </form>
+    </td>
+    <td>
+     <pre class="language-html"><code>&lt;form class="form-signin">
   &lt;label for="inputEmail">Email address&lt;/label>
   &lt;input type="email" id="inputEmail" placeholder="Email address" >
   &lt;label for="inputPassword">Password&lt;/label>
   &lt;input type="password" id="inputPassword" placeholder="Password" >
 &lt;/form></code></pre>
-        </td>
-        <td>
-          <ul class="xpath">
-            <li>//form/input[@type="email" or @type="password"]</li>
-            <li>//form/input[@type="email" and @id="inputEmail"]</li>
-            <li>//form/input[@type="email" and @id]</li>
-            <li>//form[@class="form-signin"]/input[@id="inputPassword"]</li>
-            <li>//form[@class="form-signin"]/input[1]</li>
-            <li>//form[@class="form-signin"]/input[2]</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>starts-with(@attribute,value)</h3>
-  <table class="table sm">
-    <thead>
-      <tr>
-        <th scope="col">Element</th>
-        <th scope="col">HTML</th>
-        <th scope="col">XPath</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <button type="button" class="btn btn-primary mb-3">Primary</button>
-          <button type="button" class="btn btn-secondary mb-3">Secondary</button>
-          <button type="button" class="btn btn-success mb-3">Success</button>
-          <button type="button" class="btn btn-danger mb-3">Danger</button>
-          <button type="button" class="btn btn-warning mb-3">Warning</button>
-          <button type="button" class="btn btn-info mb-3">Info</button>
-          <button type="button" class="btn btn-light mb-3">Light</button>
-          <button type="button" class="btn btn-dark mb-3">Dark</button>
-        </td>
-        <td>
-          <pre class="language-html"><code>&lt;button type="button" class="btn-primary">Primary&lt;/button>
+    </td>
+    <td>
+     <ul class="xpath">
+      <li>//form/input[@type="email" or @type="password"]</li>
+      <li>//form/input[@type="email" and @id="inputEmail"]</li>
+      <li>//form/input[@type="email" and @id]</li>
+      <li>//form[@class="form-signin"]/input[@id="inputPassword"]</li>
+      <li>//form[@class="form-signin"]/input[1]</li>
+      <li>//form[@class="form-signin"]/input[2]</li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>starts-with(@attribute,value)</h3>
+ <table class="table sm">
+  <thead>
+   <tr>
+    <th scope="col">Element</th>
+    <th scope="col">HTML</th>
+    <th scope="col">XPath</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>
+     <button type="button" class="btn btn-primary mb-3">Primary</button>
+     <button type="button" class="btn btn-secondary mb-3">Secondary</button>
+     <button type="button" class="btn btn-success mb-3">Success</button>
+     <button type="button" class="btn btn-danger mb-3">Danger</button>
+     <button type="button" class="btn btn-warning mb-3">Warning</button>
+     <button type="button" class="btn btn-info mb-3">Info</button>
+     <button type="button" class="btn btn-light mb-3">Light</button>
+     <button type="button" class="btn btn-dark mb-3">Dark</button>
+    </td>
+    <td>
+     <pre class="language-html"><code>&lt;button type="button" class="btn-primary">Primary&lt;/button>
 &lt;button type="button" class="btn-secondary">Secondary&lt;/button>
 &lt;button type="button" class="btn-success">Success&lt;/button>
 &lt;button type="button" class="btn-danger">Danger&lt;/button>
@@ -484,15 +484,55 @@ footer: false
 &lt;button type="button" class="btn-info">Info&lt;/button>
 &lt;button type="button" class="btn-light">Light&lt;/button>
 &lt;button type="button" class="btn-dark">Dark&lt;/button></code></pre>
-        </td>
-        <td>
-          <ul class="xpath">
-            <li>//button[starts-with(@class,"btn")]</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    </td>
+    <td>
+     <ul class="xpath">
+      <li>//button[starts-with(@class,"btn")]</li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h3>Events</h3>
+ <table class="table sm">
+  <thead>
+   <tr>
+    <th scope="col" width="40%">Element</th>
+    <th scope="col">HTML</th>
+    <th scope="col">XPath</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>
+     <button type="button" class="btn btn-primary mb-3" id="click-events-test">Click Events</button>
+    </td>
+    <td>
+     <pre class="language-html"><code>&lt;button id="ClickEvents">Click Events&lt;/button></code></pre>
+    </td>
+    <td>
+     <ul class="xpath">
+      <li>//button[@id="click-events-test"]</li>
+     </ul>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <input type="text" id="form-events-test" class="form-control" placeholder="Form Events Test" />
+    </td>
+    <td>
+     <pre
+      class="language-html"><code>&lt;input type="text" id="FormEvents" class="form-control" placeholder="Form Events Test" /></code></pre>
+    </td>
+    <td>
+     <ul class="xpath">
+      <li>//input[@id="form-events-test"]</li>
+     </ul>
+    </td>
+   </tr>
+  </tbody>
+ </table>
 </div>
+<script src="{{ '/assets/scripts/events.js' | relative_url }}"></script>
 <script src="{{ '/assets/prism/prism.js' | relative_url }}"></script>
 <script src="{{ '/assets/scripts/xpath-formatter.js' | relative_url }}"></script>
