@@ -1,9 +1,4 @@
 - name: Home
   link: /
-- name: Documentaion
-  link: /docs/getting-started
-  menu: docs
 - name: Blog
   link: /blog
-- name: Examples
-  link: /examples/dhruv-techapps.github.io

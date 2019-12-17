@@ -41,6 +41,7 @@
     crossorigin="anonymous"></script>
   <script>
     window.apiKey = $('meta[name=api_key]').attr("content");
+    console.log(apiKey);  
     if (apiKey) {
       window.chrome.runtime.sendMessage(apiKey, { action: "chrome.manifest", key: "version" }, _ => {
         if (!window.chrome.runtime.lastError) {
