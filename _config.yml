@@ -48,6 +48,7 @@ collections:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
   - jekyll-seo-tag
 # Markdown rendering
 markdown: kramdown

@@ -44,21 +44,75 @@ Its little tricky but believe me its not that hard to find.
 
 ---
 ## Value
+Now you can perform much more than just click or fill form elements. an element refered in below table is one which is found by `Xpath`
 
-Suppose you are performing action on `input` `textarea` `dropdown` you should provide one extra field that is value for [xpath](xpath) you have added.
-
-{:.bd-callout .bd-callout-warning}
-> This is mandatory field only if XPath element is `input` `textarea` `dropdown`.
-
-### <kbd>Examples</kbd>
+### <kbd>Scroll To Examples</kbd>
 
 {:.mt-3 .table .table-bordered .table-striped}
-| Value | Description |
+| ScrollTo:: | Description |
 |---|---|
-| ~\~empty~\~ | It will `clear` the field and `focus`.|
-| ~\~doubleClick~\~ | It will perform double click on button |
+| `XPath` | It will scroll the page to element.|
+| `Top` \| `TopLeft` | It will scroll the page to `Top Left` position.|
+| `TopRight` | It will scroll the page to `Top Right` position.|
+| `Bottom` \| `BottomLeft` |  It will scroll the page to `Bottom Left` position.|
+| `BottomRight` |  It will scroll the page to `Bottom Right` position.|
+
+```json
+ {"XPath" :"/html/body", "Value":"ScrollTo::Bottom"}
+```
+
+### <kbd>Click Events Examples</kbd>
+
+{:.mt-3 .table .table-bordered .table-striped}
+| ClickEvents:: | Description |
+|---|---|
+| `click` | It will `click` the element.|
+| `dblclick` | It will `double click` the element.|
+
+```json
+ {"XPath" :"//button", "Value":"ClickEvents::dblclick"}
+```
+
+### <kbd>Form Events Examples</kbd>
+
+{:.mt-3 .table .table-bordered .table-striped}
+| FormEvents:: | Description |
+|---|---|
+| `blur` | It will trigger `blur` event on the element.<br/> It removed focus from the element.|
+| `focus` | It will trigger `focus` event on the element.|
+| `select` | It will trigger `select` event on the element.<br/> In `input field` and `textarea` it will select the text inside |
+| `clear` | It will trigger `clear` event on the element.<br/> It clears field value.|
+| `remove` | It will `remove` element.|
+| `submit` | It will `submit` the form in which element is present.|
+
+```json
+ {"XPath" :"//form[@id='submit']", "Value":"FormEvents::submit"}
+```
+
+### <kbd>Exec Command Examples</kbd>
+
+{:.mt-3 .table .table-bordered .table-striped}
+| ExecCommand:: | Description |
+|---|---|
+| `cut` | It will `cut` text from element to clipboard.|
+| `copy` | It will `copy` text from element to clipboard.|
+| `delete` | It will `delete` text from element.|
+| `paste` | It will `paste` text from clipboard to element.|
+| `selectAll` | It will `selectAll` text in element.|
+
+```json
+ {"XPath" :"//input[@type='text']", "Value":"ExecCommand::copy"}
+```
+
+{:.bd-callout .bd-callout-info}
+>  You can also perform more than one task in series e.g
+> - ClickEvents::[`"click"`,`"dblclick"`]
+> - FormEvents::[`"focus"`,`"select"`,`"blur"`]
+> - ExecCommand::[`"selectAll"`,`"copy"`,`"delete"`]
+
 
 ---
+
 ## Repeat
 If you want specific action to repeat more than once you can provide repeat value. 
 

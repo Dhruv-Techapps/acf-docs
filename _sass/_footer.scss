@@ -8,7 +8,7 @@
   background-color: $bd-footer-bg-color;
   a {
     font-weight: 600;
-    color: $gray-500;
+    color: $gray-500 !important;
 
     &:hover,
     &:focus {

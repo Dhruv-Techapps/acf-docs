@@ -1,6 +1,9 @@
 ---
 menu: docs
 title: How to Use
+redirect_from:
+  - "/docs"
+  - "/getting-started"
 ---
 
 {:.bd-title}

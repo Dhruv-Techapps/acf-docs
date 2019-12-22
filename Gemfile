@@ -16,6 +16,7 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll-redirect-from', '~> 0.15.0'
   gem 'jekyll-sitemap'
   gem 'jekyll-seo-tag'
 end
