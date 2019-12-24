@@ -12,7 +12,6 @@ In order to check some condition before clicking / filling add addon to that spe
 
 > ![Addon]({{'/assets/img/addon.png' | relative_url }}){:width="100%"}
 
----
 ## XPath
 Its little tricky but believe me its not that hard to find.
 
@@ -35,12 +34,12 @@ You can specify what condition you need to apply.<br/>
 {:.table .table-bordered .table-striped}
 |Name|Type|Description|
 |---|---|---|
-|Equals|String \|<br/>Number|(a) should be equal to (b)|
-|Contains|String \|<br/>Number|(a) contains (b)|
-|Greater Than|Number|(a) is greater than (b)|
-|Lesser Than|Number|(a) is lesser than (b)|
-|Greater Than Equals|Number|(a) is greater than or equals to (b)|
-|Lesser Than Equals|Number|(a) is lesser than or equals to (b)|
+|`Equals`|`String` \| `Number`|(a) should be equal to (b)|
+|`Contains`|`String` \| `Number`|(a) contains (b)|
+|`Greater Than`|`Number`|(a) is greater than (b)|
+|`Lesser Than`|`Number`|(a) is lesser than (b)|
+|`Greater Than Equals`|`Number`|(a) is greater than or equals to (b)|
+|`Lesser Than Equals`|`Number`|(a) is lesser than or equals to (b)|
   
 ---
 ## Value

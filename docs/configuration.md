@@ -12,9 +12,6 @@ This is main part of configuration section you need to provide url of site in wh
 
 > ![Configuration]({{'/assets/img/configuration.png' | relative_url }}){:width="100%"}
 
-
----
-
 ## Enable / Disable
 If you dont want to disable / stop particular configuration temporary to fill / click, you can disable it by switching it off.
 

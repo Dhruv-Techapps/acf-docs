@@ -12,8 +12,6 @@ Batch is group of [action](action) which can be repeated with interval. It consi
 
 > ![Batch]({{'/assets/img/batch.png' | relative_url }}){:width="100%"}
 
----
-
 ## Refresh
 If you want your site to be refresh after all the [action](action) are completed successfully you can do that by checking refresh box.
 

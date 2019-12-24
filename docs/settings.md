@@ -15,7 +15,6 @@ Under settings screen you can control how and when should extension connect with
 
 > ![Settings]({{'/assets/img/settings.png' | relative_url }}){:width="100%"}
 
----
 ## Check Iframe
 
 If an action need to be performed on button / input field which is inside iframe you must check this checkbox which enables check of iframe content as well.

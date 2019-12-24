@@ -15,7 +15,6 @@ Action is combination of [xpath](#xpath) and [value](#value). where xpath is use
 
 > ![Action]({{'/assets/img/action.png' | relative_url }}){:width="100%"}
 
----
 ## Name
 Provide unique name to each action to identify its purpose.
 
@@ -57,9 +56,7 @@ Now you can perform much more than just click or fill form elements. an element 
 | `Bottom` \| `BottomLeft` |  It will scroll the page to `Bottom Left` position.|
 | `BottomRight` |  It will scroll the page to `Bottom Right` position.|
 
-```json
- {"XPath" :"/html/body", "Value":"ScrollTo::Bottom"}
-```
+> ![ScrollTo]({{'/assets/img/ScrollTo.png' | relative_url }}){:width="100%"}
 
 ### <kbd>Click Events Examples</kbd>
 
@@ -69,9 +66,7 @@ Now you can perform much more than just click or fill form elements. an element 
 | `click` | It will `click` the element.|
 | `dblclick` | It will `double click` the element.|
 
-```json
- {"XPath" :"//button", "Value":"ClickEvents::dblclick"}
-```
+> ![ClickEvents]({{'/assets/img/ClickEvents.png' | relative_url }}){:width="100%"}
 
 ### <kbd>Form Events Examples</kbd>
 
@@ -85,9 +80,8 @@ Now you can perform much more than just click or fill form elements. an element 
 | `remove` | It will `remove` element.|
 | `submit` | It will `submit` the form in which element is present.|
 
-```json
- {"XPath" :"//form[@id='submit']", "Value":"FormEvents::submit"}
-```
+
+> ![FormEvents]({{'/assets/img/FormEvents.png' | relative_url }}){:width="100%"}
 
 ### <kbd>Exec Command Examples</kbd>
 
@@ -100,16 +94,12 @@ Now you can perform much more than just click or fill form elements. an element 
 | `paste` | It will `paste` text from clipboard to element.|
 | `selectAll` | It will `selectAll` text in element.|
 
-```json
- {"XPath" :"//input[@type='text']", "Value":"ExecCommand::copy"}
-```
+> ![ExecCommand]({{'/assets/img/ExecCommand.png' | relative_url }}){:width="100%"}
 
 {:.bd-callout .bd-callout-info}
 >  You can also perform more than one task in series e.g
-> - ClickEvents::[`"click"`,`"dblclick"`]
-> - FormEvents::[`"focus"`,`"select"`,`"blur"`]
-> - ExecCommand::[`"selectAll"`,`"copy"`,`"delete"`]
 
+> ![MultipleEvents]({{'/assets/img/MultipleEvents.png' | relative_url }}){:width="100%"}
 
 ---
 

@@ -136,4 +136,16 @@ Its little tricky but believe me its not that hard to find.
 </div>
 ```
 
+{:.bd-example}
+### `//*[substring(text(), 0, 3)>='50']`
+
+```html
+<div>
+  <span class='bdage'>55 %</span> 👈 selected
+  <span class='bdage'>50 %</span> 👈 selected
+  <span class='bdage'>45 %</span>
+  <span class='bdage'>43 %</span>
+</div>
+```
+
 [Inbox me](dhruv.techapps@gmail.com) if you find difficult to find XPath or you have any better suggestion for me :)
