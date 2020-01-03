@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 rating: 4.4 out of 5
 users: 29,577
 api_key: iapifmceeokikomajpccajhjpacjmibe
-baseurl: "/auto-click-auto-fill" # the subpath of your site, e.g. /blog
-url: "https://dhruv-techapps.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: # the subpath of your site, e.g. /blog
+url: https://getautoclicker.com # the base hostname & protocol for your site, e.g. http://example.com
 author: Dhruv, Dharmesh
 twitter_username: dhruv-techapps
 github_username: dhruv-techapps
