@@ -2,6 +2,8 @@
 menu: examples
 title:  "Getautoclicker.com"
 tags: [getautoclicker.com,auto,click,fill]
+redirect_from:
+  - "/examples"
 ---
 
 ### Basic Xpath Form Fill
