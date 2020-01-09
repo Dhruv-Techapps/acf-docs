@@ -1,6 +1,6 @@
 ---
 menu: examples
-title:  "getautoclicker.com"
+title:  "Getautoclicker.com"
 tags: [getautoclicker.com,auto,click,fill]
 ---
 

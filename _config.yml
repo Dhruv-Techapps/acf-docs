@@ -29,7 +29,7 @@ url: https://getautoclicker.com # the base hostname & protocol for your site, e.
 author: Dhruv, Dharmesh
 twitter_username: dhruv-techapps
 github_username: dhruv-techapps
-version: 2.0.56
+version: 2.1.1
 exclude:
   [
     "cpu",
