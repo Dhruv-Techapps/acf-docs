@@ -143,7 +143,7 @@
   .bd-navbar .navbar-nav-scroll { max-width: 100%; height: 2.5rem; margin-top: .25rem; overflow: hidden; }
   .bd-navbar .navbar-nav-scroll .navbar-nav { padding-bottom: 2rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; } }
 
-@media (min-width: 768px) { @supports (position: sticky) { .bd-navbar { position: sticky; top: 0; z-index: 1071; } } }
+@media (min-width: 768px) { @supports (position: sticky) { .bd-navbar { position: sticky; top: 0; z-index: 1050; } } }
 
 .bd-navbar .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; color: #838E95; }
 
@@ -413,11 +413,11 @@
 
 .bd-example .pagination { margin-top: .5rem; margin-bottom: .5rem; }
 
-.modal { z-index: 1072; }
+.modal { z-index: 1052; }
 
 .modal .tooltip, .modal .popover { z-index: 1073; }
 
-.modal-backdrop { z-index: 1071; }
+.modal-backdrop { z-index: 1051; }
 
 .bd-example-modal { background-color: #fafafa; }
 
