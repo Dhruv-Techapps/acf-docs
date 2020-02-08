@@ -6,11 +6,7 @@ layout: default
 <main role="main" class="bd-masthead">
  <div class="container">
   <div class="row">
-   <div class="col-12 mb-5 d-flex justify-content-center">
-    <div class="alert alert-info" role="alert">
-     <h3 class="mb-0">Thank you to all PRO version subscribers for being part of the family!</h3>
-    </div>
-   </div>
+
    <div class="col-12 col-md-6">
     <div class="row">
      <div class="col-4 d-flex justify-content-end align-items-right"><img class="img-fluid"
@@ -34,12 +30,20 @@ layout: default
     </div>
     <div class="row">
      <div class="col">
-      <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe"
-       target="_blank" class="btn btn-block btn-primary mb-3 btn-download">Add to Chrome</a>
+      <img src="{{ '/assets/branding/chrome/medium.png' | relative_url }}" width="100%" />
+      <div class="btn-group d-flex" role="group" aria-label="Basic example">
+       <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe"
+        target="_blank" class="btn mb-3" style="background-color:#512da8;color:white">Stable</a>
+       <a href="https://chrome.google.com/webstore/detail/auto-clicker-autofill-bet/nmcpliniiebkbdehpgicgfcidgkpepep"
+        target="_blank" class="btn mb-3 px-0" style="background-color:#ffde03;opacity:75%;">Beta</a>
+      </div>
      </div>
      <div class="col">
-      <a href="https://addons.mozilla.org/en-US/firefox/addon/auto-clicker-autofill-beta/"
-       target="_blank" class="btn btn-block btn-primary mb-3 btn-download">Add to FireFox</a>
+      <img src="{{ '/assets/branding/firefox/logo.svg' | relative_url }}" style="height: 72px;padding:10px" />
+      <div class="btn-group d-flex" role="group" aria-label="Basic example">
+       <a href="https://addons.mozilla.org/en-US/firefox/addon/auto-clicker-autofill-beta/" target="_blank"
+        class="btn mb-3" style="background-color:#512da8;color:white">Stable</a>
+      </div>
      </div>
     </div>
    </div>
@@ -54,6 +58,11 @@ layout: default
    </div>
   </div>
   <hr />
+  <div class="col-12 d-flex justify-content-center">
+   <div class="alert alert-warning" role="alert">
+    <h3 class="mb-0">Thank you to all PRO version subscribers for being part of the family!</h3>
+   </div>
+  </div>
   <div id="carouselExampleSlidesOnly" class="carousel slide text-muted" data-ride="carousel">
    <div class="carousel-inner">
     {% for review in site.data.reviews %}
