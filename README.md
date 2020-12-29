@@ -1,1 +1,1 @@
-### We moved to [getautoclicker.com](https://getautoclicker.com)
+### We moved to [www.getautoclicker.com](https://www.getautoclicker.com)
