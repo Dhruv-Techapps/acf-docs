@@ -1,93 +1,11 @@
----
-title: Dhruv Techapps
-menu: home
-layout: default
----
-<main role="main" class="bd-masthead">
- <div class="container">
-  <div class="row">
-
-   <div class="col-12 col-md-6">
-    <div class="row">
-     <div class="col-4 d-flex justify-content-end align-items-right"><img class="img-fluid"
-       src="assets/favicons/icon128.png" />
-     </div>
-     <div class="col bd-text-purple-bright d-flex flex-column justify-content-center">
-      <h1 class="mb-3">AUTO Click</h1>
-      <h1 class="mb-3">AUTO Fill</h1>
-     </div>
-    </div>
-    <h5 class="text-muted mt-5 mb-3">{{site.title}} - v{{site.version}}</h5>
-    <div class="text-muted d-flex flex-column flex-md-row align-item-center mb-4">
-     <div>
-      <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-      <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-      <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-      <img src="{{ '/assets/svg/star.svg' | relative_url }}" />
-      <img src="{{ '/assets/svg/star-half-alt.svg' | relative_url }}" class="mr-2" />
-      {{site.rating}}
-     </div>
-    </div>
-    <div class="row">
-     <div class="col">
-      <img src="{{ '/assets/branding/chrome/medium.png' | relative_url }}" width="100%" />
-      <div class="btn-group d-flex" role="group" aria-label="Basic example">
-       <a href="https://chrome.google.com/webstore/detail/auto-click-auto-fill/iapifmceeokikomajpccajhjpacjmibe"
-        target="_blank" class="btn mb-3" style="background-color:#512da8;color:white">Stable</a>
-       <a href="https://chrome.google.com/webstore/detail/auto-clicker-autofill-bet/nmcpliniiebkbdehpgicgfcidgkpepep"
-        target="_blank" class="btn mb-3 px-0" style="background-color:#ffde03;opacity:75%;">Beta</a>
-      </div>
-     </div>
-     <div class="col">
-      <img src="{{ '/assets/branding/firefox/logo.svg' | relative_url }}" style="height: 72px;padding:10px" />
-      <div class="btn-group d-flex" role="group" aria-label="Basic example">
-       <a href="https://addons.mozilla.org/en-US/firefox/addon/auto-clicker-autofill-beta/" target="_blank"
-        class="btn mb-3" style="background-color:#512da8;color:white">Stable</a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="col-6 border rounded">
-    <img src="{{ '/assets/img/context-menu-branding.jpg' | relative_url }}" width="100%" />
-   </div>
-   <div class="col-12 col-md-12">
-    <p class="lead mb-3">Fill input field or click button or link anything anywhere. easy configure in few steps and
-     work like PRO</p>
-    <p class="lead mb-5">Auto click / Auto fill is chrome extension developed with HTML, CSS, Javascript. Quickly
-     configure your job using XPath and work like PRO.</p>
-   </div>
-  </div>
-  <hr />
-  <div class="col-12 d-flex justify-content-center">
-   <div class="alert alert-warning" role="alert">
-    <h3 class="mb-0">Thank you to all PRO version subscribers for being part of the family!</h3>
-   </div>
-  </div>
-  <div id="carouselExampleSlidesOnly" class="carousel slide text-muted" data-ride="carousel">
-   <div class="carousel-inner">
-    {% for review in site.data.reviews %}
-    {% if forloop.first == true%}
-    {% assign className = 'active' %}
-    {% else if%}
-    {% assign className = '' %}
-    {% endif %}
-    {% assign remainder = forloop.index | modulo: 3 %}
-    {% if forloop.first != true and remainder == 1 %}
-   </div>
-  </div>
-  {% endif %}
-  {% if forloop.first == true or remainder == 1 %}
-  <div class="carousel-item {{className}}">
-   <div class="d-flex flex-nowrap flex-column flex-md-row">
-    {% endif %}
-    <div class="card w-100 p-3 m-1">
-     <div class="car-body">
-      <p>{{review.review}}</p>
-      <h5>- {{review.name}}</h5>
-     </div>
-    </div>
-    {% endfor %}
-   </div>
-  </div>
- </div>
-</main>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>https://www.getautoclicker.com/</title>
+    <link rel="canonical" href="https://www.getautoclicker.com/">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url=https://www.getautoclicker.com/">
+  </head>
+</html>
