@@ -33,6 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
+node_modules/
 node_modules/bootstrap/dist
 node_modules/bootstrap/js
 jspm_packages/

@@ -1,0 +1,15 @@
+- group: v1.x
+  description: "No longer supported"
+  versions:
+    - v: "1.0"
+    
+- group: v2.x
+  description: "Our previous major release with its minor releases. Last update was v2.2.0."
+  versions:
+    - v: "2.0"
+
+- group: v3.x
+  description: "Current major release. Last update was v3.1.4-dev."
+  versions:
+    - v: "3.0"
+    - v: "3.1"

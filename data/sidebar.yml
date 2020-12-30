@@ -1,0 +1,62 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+
+- title: Configuration List
+  pages:
+    - title: Overview
+    - title: Add Configuration
+    - title: Remove Configuration
+    - title: Select Configuration
+    - title: Export All
+    - title: Import All
+
+- title: Configuration
+  pages:
+    - title: Overview
+    - title: Enable & Disable
+    - title: Export & Import
+    - title: Name
+    - title: URL
+    - title: Init Wait
+    - title: Start Time
+
+- title: Batch
+  pages:
+    - title: Overview
+    - title: Repeat
+    - title: Repeat Interval
+    - title: Refresh
+
+- title: Action
+  pages:
+    - title: Overview
+    - title: Name
+    - title: Init Wait
+    - title: Element Finder
+    - title: Value
+    - title: Repeat
+    - title: Repeat Interval
+    - title: Columns Filter
+
+- title: Settings
+  pages:
+    - title: Overview
+    - title: Check Iframe
+    - title: Extension Load
+    - title: Retry
+    - title: Retry Interval
+    - title: Error Handling
+    - title: Show Notification
+
+- title: Addon
+  pages:
+    - title: Overview
+    - title: Element Finder
+    - title: Condition
+    - title: Value
+
+- title: About
+  pages:
+    - title: Overview
