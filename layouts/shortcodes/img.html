@@ -5,5 +5,5 @@
 {{- $url := split $.Page.File.Dir "\\" -}}
 {{- $version := index $url 1 | default $.Site.Params.docs_version -}}
 <img class="img-thumbnail mb-3" srcset="/docs/{{$version}}/assets/img/{{.}}" src="/docs/{{$version}}/assets/img/{{.}}"
-  alt="" width={{$width}} loading="lazy" style={{$style}} />
+  alt="" width={{$width}} loading="lazy" style="{{$style}}" />
 {{- else }}{{ errorf "Missing param key: %s" $.Position }}{{ end -}}

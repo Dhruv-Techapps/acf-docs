@@ -12,16 +12,16 @@ toc: true
 
 ## Quick start
 
-* Download [{{<param name>}}]({{<docsref "/getting-started/download">}}) extension.
+* [Download extension.]({{<docsref "/getting-started/download">}})
 * Go to webpage on which you need to perform click/fill automation.
-* Right Click `button`,`input`,`textarea`, or any UI element
+* Right click `button`, `input`, `textarea`, or any UI element {{<img context-menu.png>}}
 * select <kbd>{{<param name>}}</kbd> option from menu.
 * You will be redirected to configuration page of extension, with pre filled value 
-  * URL of webpage
+  * [URL]({{<docsref "/configuration/url">}}) of webpage
   * [Element Finder]({{<docsref "/action/element-finder">}}) of UI element.
 * You can update the configuration such as [Name]({{<docsref "/configuration/name">}}), [Start Time]({{<docsref "/configuration/start-time">}}), [Repeat]({{<docsref "/batch/repeat">}}) etc.
 
-{{<img context-menu.png>}}
+
 
 ## More Options
 

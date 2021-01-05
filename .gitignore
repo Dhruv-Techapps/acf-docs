@@ -58,8 +58,4 @@ typings/
 
 # dotenv environment variables file
 .env
-
-.jekyll-cache
 _site
-package.json
-package-lock.json

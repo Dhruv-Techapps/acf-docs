@@ -42,14 +42,14 @@ toc: true
 </table>
 
 
-## Click Events Examples
+## Click Events / Mouse Events Examples
 
 {{<img click-events.png>}}
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ClickEvents::</th>
+      <th scope="col">ClickEvents:: / MouseEvents::</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
@@ -61,6 +61,34 @@ toc: true
     <tr>
       <th scope="row">dblclick</th>
       <td>It will double click the element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mousedown <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse down event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mouseup <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse up event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mouseover <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse over event on element</td>
+    </tr>
+    <tr>
+      <th scope="row">mouseout <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse out event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mouseenter <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse enter event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mouseleave <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse leave event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">mousemove <span class="badge bg-danger">DEV<span></th>
+      <td>It will trigger mouse move event on element.</td>
     </tr>
   </tbody>
 </table>
@@ -106,7 +134,40 @@ toc: true
 </table>
 
 
-## Exec Command Examples
+## Location Command
+<span class="badge bg-warning text-dark">BETA<span>
+
+{{<img location-command.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">LocationCommand::</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">LocationCommand::reload</th>
+      <td>Force reloading the current page from the server.</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::href::https://www.getautoclicker.com</th>
+      <td>it will open https://www.getautoclicker.com in same tab</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::replace::https://www.getautoclicker.com</th>
+      <td>It will open this page without maintaining history so when you click back you can come to this page again</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::assign::https://www.getautoclicker.com</th>
+      <td>Its similar to you click on link which open another page</td>
+    </tr>
+  </tbody>
+</table>
+
+## Exec Command Examples 
+<span class="badge bg-danger">Under development</span>
 
 {{<img exec-command.png>}}
 
@@ -140,6 +201,7 @@ toc: true
     </tr>
   </tbody>
 </table>
+<hr/>
 
 {{<callout info>}}
 You can also perform more than one task in series e.g

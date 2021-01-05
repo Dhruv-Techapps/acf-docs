@@ -1,5 +1,3 @@
-### Examples
-
 `//div/a[1]`
 ```html
 <div>
@@ -108,4 +106,7 @@
 </div>
 ```
 
-[Inbox me](dhruv.techapps@gmail.com) if you find difficult to find XPath or you have any better suggestion for me :)
+Chat with us on
+<a class="text-decoration-none" style="color:#7289da" href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">
+  {{ partial "icons/discord.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "36" "height" "36") }}
+</a> if you find difficult to find XPath or you have any better suggestion for me :)

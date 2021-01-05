@@ -1,6 +1,6 @@
 languageCode:           "en"
 title:                  "Auto Clicker AutoFill"
-baseURL:                "https://www.getautoclicker.com"
+baseURL:                "https://getautoclicker.com"
 enableInlineShortcodes: true
 
 markup:
@@ -20,7 +20,7 @@ enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
-publishDir:             "_gh_pages"
+publishDir:             "docs"
 
 module:
   mounts:
@@ -36,8 +36,8 @@ params:
   current_version:      "3.1.4-dev"
   previous_version:     "2.2.0"
   docs_version:         "3.1"
-  github_org:           "https://github.com/dhruv-techapps"
-  repo:                 "https://github.com/dhruv-techapps/auto-click-auto-fill"
+  github_org:           "https://github.com/Dhruv-Techapps"
+  repo:                 "https://github.com/Dhruv-Techapps/auto-click-auto-fill"
   twitter:              "dhruvtechapps"
   discord:              "https://discord.gg/vmnNfWKqnR"
   youtube:              "https://www.youtube.com/channel/UCj1acOGkIYR59furcg28nzA"

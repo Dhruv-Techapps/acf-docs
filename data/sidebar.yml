@@ -56,7 +56,12 @@
     - title: Element Finder
     - title: Condition
     - title: Value
+    - title: Value Extractor
+    - title: Recheck
+    - title: Recheck Interval
+    - title: Recheck Options
 
 - title: About
   pages:
     - title: Overview
+    - title: Permissions
