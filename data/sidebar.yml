@@ -14,6 +14,7 @@
     - title: Add Configuration
     - title: Remove Configuration
     - title: Select Configuration
+    - title: Reorder Configuration
     - title: Export All
     - title: Import All
 
@@ -21,6 +22,7 @@
   pages:
     - title: Overview
     - title: Enable & Disable
+    - title: Manual Start
     - title: Export & Import
     - title: Name
     - title: URL
@@ -49,6 +51,7 @@
   pages:
     - title: Overview
     - title: Check Iframe
+    - title: Hotkey
     - title: Extension Load
     - title: Retry
     - title: Retry Interval

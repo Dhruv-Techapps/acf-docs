@@ -7,3 +7,6 @@ toc: true
 ---
 
 {{<img configuration.png>}}
+
+It consist of below parts
+- [Manual Start]({{<docsref "/configuration/manual-start">}})

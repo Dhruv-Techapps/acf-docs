@@ -34,5 +34,13 @@ toc: true
       <th scope="row">{{<img icon-black.png 50px>}}</th>
       <td>{{<markdown>}}If extension do not find any configuration matching current tab [URL]({{<docsref "/configuration/url">}}) it will turn grey{{</markdown>}}</td>
     </tr>
+    <tr>
+      <th scope="row">{{<img icon-manual.png 50px>}}</th>
+      <td>{{<markdown>}}If extension is set for [Manual Start]({{<docsref "/configuration/manual-start">}}){{</markdown>}} </td>
+    </tr>
+    <tr>
+      <th scope="row">{{<img icon-auto.png 50px>}}</th>
+      <td>{{<markdown>}}If extension is set for auto start{{</markdown>}}</td>
+    </tr>
   </tbody>
 </table>

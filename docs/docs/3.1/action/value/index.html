@@ -233,6 +233,8 @@
               >Remove Configuration</a></li>
           <li><a href="/docs/3.1/configuration-list/select-configuration/" class="d-inline-flex align-items-center rounded"
               >Select Configuration</a></li>
+          <li><a href="/docs/3.1/configuration-list/reorder-configuration/" class="d-inline-flex align-items-center rounded"
+              >Reorder Configuration</a></li>
           <li><a href="/docs/3.1/configuration-list/export-all/" class="d-inline-flex align-items-center rounded"
               >Export All</a></li>
           <li><a href="/docs/3.1/configuration-list/import-all/" class="d-inline-flex align-items-center rounded"
@@ -253,6 +255,8 @@
               >Overview</a></li>
           <li><a href="/docs/3.1/configuration/enable-disable/" class="d-inline-flex align-items-center rounded"
               >Enable &amp; Disable</a></li>
+          <li><a href="/docs/3.1/configuration/manual-start/" class="d-inline-flex align-items-center rounded"
+              >Manual Start</a></li>
           <li><a href="/docs/3.1/configuration/export-import/" class="d-inline-flex align-items-center rounded"
               >Export &amp; Import</a></li>
           <li><a href="/docs/3.1/configuration/name/" class="d-inline-flex align-items-center rounded"
@@ -327,6 +331,8 @@
               >Overview</a></li>
           <li><a href="/docs/3.1/settings/check-iframe/" class="d-inline-flex align-items-center rounded"
               >Check Iframe</a></li>
+          <li><a href="/docs/3.1/settings/hotkey/" class="d-inline-flex align-items-center rounded"
+              >Hotkey</a></li>
           <li><a href="/docs/3.1/settings/extension-load/" class="d-inline-flex align-items-center rounded"
               >Extension Load</a></li>
           <li><a href="/docs/3.1/settings/retry/" class="d-inline-flex align-items-center rounded"
@@ -385,6 +391,14 @@
       </div>
     </li>
     
+      
+    <li class="my-3 mx-4 border-top"></li>
+    <li>
+      <a href="https://getdataentry.com/docs/3.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded" target="_blank">
+        Data Entry
+      </a>
+      </li>
+      
   </ul>
 </nav>
     </aside>
@@ -419,6 +433,7 @@
     <li><a href="#form-events-examples">Form Events Examples</a></li>
     <li><a href="#location-command">Location Command</a></li>
     <li><a href="#exec-command-examples">Exec Command Examples</a></li>
+    <li><a href="#random-value">Random Value</a></li>
   </ul>
 </nav>
       </div>
@@ -617,6 +632,20 @@ You can also perform more than one task in series e.g
 
 <img class="img-thumbnail mb-3" srcset="/docs/3.1/assets/img/multiple-events.png" src="/docs/3.1/assets/img/multiple-events.png"
   alt="" width=100% loading="lazy" style="" />
+<h2 id="random-value">Random Value</h2>
+<p><span class="badge bg-warning text-dark">DEV</span></p>
+<div class="bd-callout bd-callout-info">
+<h5 id="you-can-get-random-value-with-batch-repeatdocs31batchrepeat">You can get random value with <a href="/docs/3.1/batch/repeat/">batch repeat</a></h5>
+<p>e.g. In value field if you enter <code>example&lt;batchRepeat&gt;</code></p>
+<ol>
+<li>Value will be <code>example0</code></li>
+<li>Value will be <code>example1</code></li>
+</ol>
+<h5 id="this-will-continue-for-no-of-batch-repeat-you-have-provided">This will continue for no of batch repeat you have provided.</h5>
+<p>e.g. If batch repeat is <code>5</code> it will run till <code>example4</code></p>
+
+</div>
+
 
       </div>
     </main>

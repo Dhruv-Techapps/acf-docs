@@ -43,6 +43,7 @@ params:
   youtube:              "https://www.youtube.com/channel/UCj1acOGkIYR59furcg28nzA"
   blog:                 "https://blog.getautoclicker.com/"
   examples:             "https://examples.getautoclicker.com/"
+  data_entry:            "https://getdataentry.com/docs/3.1/getting-started/introduction/"
 
   download:
     chrome:

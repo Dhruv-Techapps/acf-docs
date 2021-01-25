@@ -45,5 +45,13 @@
       </a>
       </li>
       {{end}}
+      {{ if eq $version "3.1" }}
+    <li class="my-3 mx-4 border-top"></li>
+    <li>
+      <a href="{{ .Site.Params.data_entry }}" class="d-inline-flex align-items-center rounded" target="_blank">
+        Data Entry
+      </a>
+      </li>
+      {{end}}
   </ul>
 </nav>
