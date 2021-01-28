@@ -33,7 +33,7 @@ params:
   name: "Auto Clicker - AutoFill"
   description:          "Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click."
   authors:              "Dhruv Patel, Dharmesh Patel, and AutoClicker contributors"
-  current_version:      "3.1.4-dev"
+  current_version:      "3.1.9-dev"
   previous_version:     "2.2.0"
   docs_version:         "3.1"
   github_org:           "https://github.com/Dhruv-Techapps"
@@ -52,7 +52,7 @@ params:
       beta: "https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep"
       beta_version: 3.1.3
       dev: "https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel"
-      dev_version: 3.1.4
+      dev_version: 3.1.9
     Edge:
       beta: "https://microsoftedge.microsoft.com/addons/detail/auto-clicker-autofill-/cinocbjgkeplahhciecdcbicpccgpopl"
       beta_version: 3.1.3
