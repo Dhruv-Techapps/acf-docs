@@ -165,42 +165,6 @@ toc: true
     </tr>
   </tbody>
 </table>
-
-## Exec Command Examples 
-<span class="badge bg-danger">Under development</span>
-
-{{<img exec-command.png>}}
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ExecCommand::</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">cut</th>
-      <td>It will cut text from element to clipboard.</td>
-    </tr>
-    <tr>
-      <th scope="row">copy</th>
-      <td>It will copy text from element to clipboard.</td>
-    </tr>
-    <tr>
-      <th scope="row">delete</th>
-      <td>It will delete text from element.</td>
-    </tr>
-    <tr>
-      <th scope="row">paste</th>
-      <td>It will paste text from clipboard to element.</td>
-    </tr>
-    <tr>
-      <th scope="row">selectAll</th>
-      <td>It will selectAll text in element.</td>
-    </tr>
-  </tbody>
-</table>
 <hr/>
 
 {{<callout info>}}
