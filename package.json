@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo server --port 9001 --disableFastRender",
-    "build": "hugo",
-    "deploy":"npm run build && aws s3 sync _gh_pages/. s3://www.getautoclicker.com/"
+    "build": "hugo"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
