@@ -1,31 +1,26 @@
 .bd-navbar {
   padding: .75rem 0;
-  background-color: #f9f7fd ;
+  background-color: $bd-purple-bright;
 
   .navbar-toggler {
     padding: 0;
     border: 0;
-
-    .bi {
-      width: 2rem;
-      fill: currentColor;
-    }
   }
 
   .navbar-nav {
     .nav-link {
       padding-right: $spacer / 4;
       padding-left: $spacer / 4;
-      color: rgba($black, .85);
+      color: rgba($white, .85);
 
       &:hover,
       &:focus {
-        color: $black;
+        color: $white;
       }
 
       &.active {
         font-weight: 600;
-        color: $black;
+        color: $white;
       }
     }
   }

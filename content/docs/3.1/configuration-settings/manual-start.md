@@ -2,7 +2,7 @@
 layout: docs
 title: Manual Start
 description: Now start extension process using hotkey default hotkey is `Ctrl + Shift + A`
-group: configuration
+group: configuration-settings
 toc: true
 ---
 
@@ -13,7 +13,7 @@ toc: true
 - Refresh target page once to switch from Auto - Manual mode
 - You can check [icon]({{<docsref "/extension/icon">}}) to find Manual mode is enabled.
 - Press `Ctrl + Shift + A` to start extension
-- You can update [hotkey]({{<docsref "/settings/hotkey">}}) from settings
+- You can update [hotkey]({{<docsref "/configuration-settings/hotkey">}}) from settings
 {{</callout>}}
 
-{{<img start-manual.png>}}
+{{<img configuration-settings-manual.png>}}

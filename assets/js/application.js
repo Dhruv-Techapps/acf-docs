@@ -4,8 +4,8 @@
 
 /*!
  * JavaScript for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -19,16 +19,27 @@
   document.querySelectorAll('.tooltip-demo')
     .forEach(function (tooltip) {
       new bootstrap.Tooltip(tooltip, {
-        selector: '[data-toggle="tooltip"]'
+        selector: '[data-bs-toggle="tooltip"]'
       })
     })
 
-  document.querySelectorAll('[data-toggle="popover"]')
+  document.querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(function (popover) {
       new bootstrap.Popover(popover)
     })
 
-  document.querySelectorAll('.toast')
+  var toastPlacement = document.getElementById('toastPlacement')
+  if (toastPlacement) {
+    document.getElementById('selectToastPlacement').addEventListener('change', function () {
+      if (!toastPlacement.dataset.originalClass) {
+        toastPlacement.dataset.originalClass = toastPlacement.className
+      }
+
+      toastPlacement.className = toastPlacement.dataset.originalClass + ' ' + this.value
+    })
+  }
+
+  document.querySelectorAll('.bd-example .toast')
     .forEach(function (toastNode) {
       var toast = new bootstrap.Toast(toastNode, {
         autohide: false
@@ -36,6 +47,16 @@
 
       toast.show()
     })
+
+  var toastTrigger = document.getElementById('liveToastBtn')
+  var toastLiveExample = document.getElementById('liveToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', function () {
+      var toast = new bootstrap.Toast(toastLiveExample)
+
+      toast.show()
+    })
+  }
 
   // Demos within modals
   document.querySelectorAll('.tooltip-test')
@@ -68,8 +89,8 @@
     exampleModal.addEventListener('show.bs.modal', function (event) {
       // Button that triggered the modal
       var button = event.relatedTarget
-      // Extract info from data-* attributes
-      var recipient = button.getAttribute('data-whatever')
+      // Extract info from data-bs-* attributes
+      var recipient = button.getAttribute('data-bs-whatever')
 
       // Update the modal's content.
       var modalTitle = exampleModal.querySelector('.modal-title')
@@ -93,7 +114,7 @@
 
   // Insert copy to clipboard button before .highlight
   var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
-  document.querySelectorAll('figure.highlight, div.highlight')
+  document.querySelectorAll('div.highlight')
     .forEach(function (element) {
       element.insertAdjacentHTML('beforebegin', btnHtml)
     })
@@ -119,10 +140,10 @@
   clipboard.on('success', function (e) {
     var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
 
-    e.trigger.setAttribute('data-original-title', 'Copied!')
+    e.trigger.setAttribute('data-bs-original-title', 'Copied!')
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
     e.clearSelection()
   })
 
@@ -131,10 +152,10 @@
     var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
     var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
 
-    e.trigger.setAttribute('data-original-title', fallbackMsg)
+    e.trigger.setAttribute('data-bs-original-title', fallbackMsg)
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
   })
 
   anchors.options = {

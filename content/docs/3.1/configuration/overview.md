@@ -9,4 +9,9 @@ toc: true
 {{<img configuration.png>}}
 
 It consist of below parts
-- [Manual Start]({{<docsref "/configuration/manual-start">}})
+- [Name]({{<docsref "/configuration/name">}})
+- [URL]({{<docsref "/configuration/url">}})
+- [Init Wait]({{<docsref "/configuration/init-wait">}})
+- [Start Time]({{<docsref "/configuration/start-time">}})
+- [Enable]({{<docsref "/configuration/enable-disable">}})
+- [Export Import]({{<docsref "/configuration/export-import">}})

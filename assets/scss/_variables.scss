@@ -1,8 +1,8 @@
 // stylelint-disable scss/dollar-variable-default
 
 // Local docs variables
-$bd-purple:        #512da8;
-$bd-purple-bright: #673ab7; // stylelint-disable-line function-disallowed-list
+$bd-purple:        #563d7c;
+$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
 $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
 $bd-dark:          #2a2730;
 $bd-download:      #ffe484;

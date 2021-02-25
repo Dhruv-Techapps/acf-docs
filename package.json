@@ -5,15 +5,29 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo server --port 9001 --disableFastRender",
-    "build": "hugo"
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-compile": "npm run docs-build",
+    "docs-linkinator": "linkinator _gh_pages --recurse --silent --skip \"^(?!http://localhost)\"",
+    "docs-vnu": "node build/vnu-jar.js",
+    "docs-lint": "npm-run-all --parallel docs-vnu docs-linkinator",
+    "docs-serve-only": "npx sirv-cli _gh_pages --port 9001"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
-  "dependencies": {
-    "autoprefixer": "^10.0.4",
-    "bootstrap": "^5.0.0-alpha3",
-    "hugo-bin": "^0.67.0",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0"
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "js/{src,dist}/**/*.{js,map}",
+    "scss/**/*.scss"
+  ],
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "bootstrap": "^5.0.0-beta2",
+    "hugo-bin": "^0.68.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1"
   }
 }

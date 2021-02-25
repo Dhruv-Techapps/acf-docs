@@ -36,7 +36,7 @@ toc: true
     </tr>
     <tr>
       <th scope="row">{{<img icon-manual.png 50px>}}</th>
-      <td>{{<markdown>}}If extension is set for [Manual Start]({{<docsref "/configuration/manual-start">}}){{</markdown>}} </td>
+      <td>{{<markdown>}}If extension is set for [Manual Start]({{<docsref "/configuration-settings/manual-start">}}){{</markdown>}} </td>
     </tr>
     <tr>
       <th scope="row">{{<img icon-auto.png 50px>}}</th>

@@ -21,13 +21,18 @@
 - title: Configuration
   pages:
     - title: Overview
-    - title: Enable & Disable
-    - title: Manual Start
-    - title: Export & Import
     - title: Name
     - title: URL
     - title: Init Wait
     - title: Start Time
+    - title: Enable & Disable
+    - title: Export & Import
+  
+- title: Configuration Settings
+  pages:
+    - title: Extension Load
+    - title: Manual Start
+    - title: Hotkey
 
 - title: Batch
   pages:
@@ -51,8 +56,6 @@
   pages:
     - title: Overview
     - title: Check Iframe
-    - title: Hotkey
-    - title: Extension Load
     - title: Retry
     - title: Retry Interval
     - title: Error Handling

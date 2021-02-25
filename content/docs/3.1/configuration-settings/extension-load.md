@@ -2,11 +2,11 @@
 layout: docs
 title: Extension Load
 description: If an action need to be performed on button / input field which is inside iframe you must check this checkbox which enables check of iframe content as well.
-group: settings
+group: configuration-settings
 toc: true
 ---
 
-{{<img settings-extension-load.png>}}
+{{<img configuration-settings-auto.png>}}
 
 <table class="table">
   <thead>

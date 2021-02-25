@@ -22,14 +22,13 @@
 
 .btn-bd-download {
   font-weight: 600;
-  color: $bd-dark;
-  background-color: $bd-download;
+  color: $bd-download;
   border-color: $bd-download;
 
   &:hover,
   &:active {
     color: $bd-dark;
-    background-color: var(--bs-warning);
+    background-color: $bd-download;
     border-color: $bd-download;
   }
 
