@@ -1,8 +1,14 @@
+
+
 {{ define "main" }}
+  {{- $url := split .Permalink "/" -}}
+  {{- $version := index $url 4 -}}
+  {{- $.Scratch.Set "version" $version -}}
   {{ partial "docs-subnav" . }}
 
   <div class="container-xxl my-md-4 bd-layout">
     <aside class="bd-sidebar">
+      
       {{ partial "docs-sidebar" . }}
     </aside>
 
