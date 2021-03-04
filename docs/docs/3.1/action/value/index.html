@@ -370,6 +370,11 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
           <nav id="TableOfContents">
   <ul>
+    <li><a href="#select-option">Select Option</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
     <li><a href="#scroll-to-examples">Scroll To Examples</a></li>
     <li><a href="#click-events--mouse-events-examples">Click Events / Mouse Events Examples</a></li>
     <li><a href="#form-events-examples">Form Events Examples</a></li>
@@ -383,7 +388,52 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="scroll-to-examples">Scroll To Examples</h2>
+        <h2 id="select-option">Select Option</h2>
+<p><img class="img-thumbnail mb-3" srcset="/docs/3.1/assets/img/select-option.png" src="/docs/3.1/assets/img/select-option.png"
+  alt="" width=100% loading="lazy" style="" />
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;product-size&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>size<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-35item-0&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;35&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-35item-0&#34;</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-36item-1&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;36&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-36item-1&#34;</span><span class="p">&gt;</span>36<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-37item-2&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;37&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-37item-2&#34;</span><span class="p">&gt;</span>37<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-38item-3&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;38&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-38item-3&#34;</span><span class="p">&gt;</span>38<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-39item-4&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;39&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-39item-4&#34;</span><span class="p">&gt;</span>39<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">data-value-class</span><span class="o">=</span><span class="s">&#34;opt-40item-5&#34;</span> <span class="na">data-value-size</span><span class="o">=</span><span class="s">&#34;40&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;opt-40item-5&#34;</span><span class="p">&gt;</span>40<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<h3 id="example">Example</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Element Finder</th>
+      <th scope="col">Selection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">//select[@id="product-size"]/option[2]</th>
+      <td>It will select second option with text as <b>35</b></td>
+    </tr>
+    <tr>
+      <th scope="row">//select[@id="product-size"]/option[@data-value-size="36"]</th>
+      <td>It will select third option with text as <b>36</b></td>
+    </tr>
+    <tr>
+      <th scope="row">//select[@id="product-size"]/option[contains(@value,"opt-40")]</th>
+      <td>It will select last option with text as <b>40</b></td>
+    </tr>
+    <tr>
+      <th scope="row">//select[@id="product-size"]/option[text()="39"]</th>
+      <td>It will select last second option with text as <b>39</b></td>
+    </tr>
+  </tbody>
+</table>
+<div class="bd-callout bd-callout-info">
+You must set the value field to <code>true</code>
+</div>
+
+<h2 id="scroll-to-examples">Scroll To Examples</h2>
 <img class="img-thumbnail mb-3" srcset="/docs/3.1/assets/img/scroll-to.png" src="/docs/3.1/assets/img/scroll-to.png"
   alt="" width=100% loading="lazy" style="" />
 <table class="table">
