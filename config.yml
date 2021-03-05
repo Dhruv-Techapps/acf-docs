@@ -47,6 +47,9 @@ params:
   examples: "https://examples.getautoclicker.com/"
   data_entry: "https://getdataentry.com/docs/3.1/getting-started/introduction/"
   schedule_url: "https://scheduleurl.com/docs/1.0/getting-started/introduction/"
+  stable: "https://stable.getautoclicker.com"
+  beta: "https://beta.getautoclicker.com"
+  dev: "https://dev.getautoclicker.com"
 
   download:
     chrome:
