@@ -1,321 +1,174 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/common/value/click-events/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/common/value/click-events/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/common/value/exec-command/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/common/value/exec-command/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/common/value/form-events/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/common/value/form-events/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/common/value/scroll-to/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/common/value/scroll-to/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/common/value/click-events/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/about/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/common/value/exec-command/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/common/value/form-events/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/add-configuration/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/common/value/scroll-to/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/select-configuration/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/about/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/about/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/add-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/select-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/add-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/select-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/overview/</loc>
   </url>
   <url>
     <loc>https://getautoclicker.com/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/batch/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/batch/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/batch/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/check-iframe/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/check-iframe/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/columns-filter/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/check-iframe/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/condition/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/columns-filter/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/columns-filter/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/condition/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-settings/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/condition/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/getting-started/download/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/element-finder/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/enable-disable/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/error-handling/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/export-import/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-settings/overview/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/export-all/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/getting-started/download/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-settings/extension-load/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/getting-started/download/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-settings/hotkey/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/element-finder/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/extension/icon/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/enable-disable/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/import-all/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/enable-disable/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/init-wait/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/error-handling/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/init-wait/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/error-handling/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/getting-started/introduction/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/export-import/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/extension/log/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/export-import/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-settings/manual-start/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/export-all/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/name/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/export-all/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/name/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/extension-load/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/about/permissions/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-settings/extension-load/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/recheck/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-settings/hotkey/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/recheck-interval/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/extension/icon/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/recheck-options/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/import-all/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/batch/refresh/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/import-all/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/remove-configuration/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/init-wait/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration-list/reorder-configuration/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/batch/init-wait/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/repeat/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/init-wait/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/batch/repeat/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/init-wait/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/repeat-interval/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/getting-started/introduction/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/batch/repeat-interval/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/getting-started/introduction/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/retry/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/extension/log/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/retry-interval/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-settings/manual-start/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/overview/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/name/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/settings/show-notification/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/name/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/start-time/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/name/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/subscription/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/name/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/configuration/url/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/about/permissions/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/action/value/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/3.1/about/permissions/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/value/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/recheck/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/recheck/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/recheck-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/recheck-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/recheck-options/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/recheck-options/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/batch/refresh/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/batch/refresh/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration-list/remove-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/remove-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration-list/reorder-configuration/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/repeat/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/batch/repeat/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/repeat/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/batch/repeat/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/repeat-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/batch/repeat-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/repeat-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/batch/repeat-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/retry/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/retry/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/retry-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/retry-interval/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/overview/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/settings/show-notification/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/settings/show-notification/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/start-time/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/start-time/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/subscription/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/subscription/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/configuration/url/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/configuration/url/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/value/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/value/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/action/value/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/value/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/value-extractor/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/value-extractor/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/value-extractor/</loc>
   </url>
   <url>
     <loc>https://getautoclicker.com/docs/versions/</loc>
   </url>
   <url>
-    <loc>https://getautoclicker.com/docs/2.0/action/xpath/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/2.0/addon/xpath/</loc>
-  </url>
-  <url>
-    <loc>https://getautoclicker.com/docs/3.1/addon/element-finder/</loc>
+    <loc>https://getautoclicker.com/docs/3.x/addon/element-finder/</loc>
   </url>
 </urlset>
