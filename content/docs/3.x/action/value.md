@@ -241,11 +241,11 @@ You can also perform more than one task in series e.g
 
 {{<img multiple-events.png>}}
 
-## Random Value
+## Batch Repeat
 <span class="badge bg-warning text-dark">DEV</span>
 
 {{<callout info>}}
-##### You can get random value with [batch repeat]({{<docsref "/batch/repeat">}}) 
+##### You can get sequence value with [batch repeat]({{<docsref "/batch/repeat">}}) 
 
 e.g. In value field if you enter `example<batchRepeat>`
 1. Value will be `example0`
