@@ -61,6 +61,9 @@
     <loc>https://getautoclicker.com/docs/3.x/configuration/enable-disable/</loc>
   </url>
   <url>
+    <loc>https://getautoclicker.com/docs/3.x/action-settings/error-handling/</loc>
+  </url>
+  <url>
     <loc>https://getautoclicker.com/docs/3.x/settings/error-handling/</loc>
   </url>
   <url>
@@ -77,6 +80,9 @@
   </url>
   <url>
     <loc>https://getautoclicker.com/docs/3.x/extension/icon/</loc>
+  </url>
+  <url>
+    <loc>https://getautoclicker.com/docs/3.x/action-settings/iframe-first/</loc>
   </url>
   <url>
     <loc>https://getautoclicker.com/docs/3.x/configuration-list/import-all/</loc>
@@ -136,10 +142,19 @@
     <loc>https://getautoclicker.com/docs/3.x/batch/repeat-interval/</loc>
   </url>
   <url>
+    <loc>https://getautoclicker.com/docs/3.x/action-settings/retry/</loc>
+  </url>
+  <url>
     <loc>https://getautoclicker.com/docs/3.x/settings/retry/</loc>
   </url>
   <url>
+    <loc>https://getautoclicker.com/docs/3.x/action-settings/retry-interval/</loc>
+  </url>
+  <url>
     <loc>https://getautoclicker.com/docs/3.x/settings/retry-interval/</loc>
+  </url>
+  <url>
+    <loc>https://getautoclicker.com/docs/3.x/action-settings/overview/</loc>
   </url>
   <url>
     <loc>https://getautoclicker.com/docs/3.x/settings/overview/</loc>

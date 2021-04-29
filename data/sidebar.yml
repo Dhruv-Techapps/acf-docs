@@ -52,6 +52,14 @@
     - title: Repeat Interval
     - title: Columns Filter
 
+- title: Action Settings
+  pages:
+    - title: Overview
+    - title: Iframe First
+    - title: Retry
+    - title: Retry Interval
+    - title: Error Handling
+
 - title: Settings
   pages:
     - title: Overview
