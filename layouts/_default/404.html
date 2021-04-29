@@ -1,12 +1,16 @@
 {{ define "body_override" }}
+
 <body class="d-flex flex-column min-vh-100">
-  {{ end }} {{ define "main" }}
-  <main class="my-auto p-5" id="content">{{ .Content }}</main>
-  <script>
+  {{ end }}
+  {{ define "main" }}
+  <main class="my-auto p-5" id="content">
+    {{ .Content }}
+  </main>
+  <script type="text/javascript">
     gtag("event", "404", {
       event_category: "Not found",
-      event_label: window.location.href
+      event_label: window.location.href,
+      event_value: "3.2.0",
     });
   </script>
   {{ end }}
-</body>
