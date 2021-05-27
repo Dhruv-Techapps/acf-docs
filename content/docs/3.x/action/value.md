@@ -74,7 +74,7 @@ If you want to add multiple query parameters, an ‘&’ sign is placed in betwe
 You must set the value field to `true`
 {{</callout>}}
 
-## Scroll To Examples
+## Scroll To
 
 {{<img scroll-to.png>}}
 
@@ -87,82 +87,102 @@ You must set the value field to `true`
   </thead>
   <tbody>
     <tr>
-      <th scope="row">XPath</th>
+      <th scope="row">ScrollTo::XPath</th>
       <td>It will scroll the page to element.</td>
     </tr>
     <tr>
-      <th scope="row">Top | TopLeft</th>
+      <th scope="row">ScrollTo::Top | ScrollTo::TopLeft</th>
       <td>It will scroll the page to Top Left position.</td>
     </tr>
     <tr>
-      <th scope="row">TopRight</th>
+      <th scope="row">ScrollTo::TopRight</th>
       <td>It will scroll the page to Top Right position.</td>
     </tr>
     <tr>
-      <th scope="row">Bottom | BottomLeft</th>
+      <th scope="row">ScrollTo::Bottom | ScrollTo::BottomLeft</th>
       <td>It will scroll the page to Bottom Left position.</td>
     </tr>
     <tr>
-      <th scope="row">BottomRight</th>
+      <th scope="row">ScrollTo::BottomRight</th>
       <td>It will scroll the page to Bottom Right position.</td>
     </tr>
   </tbody>
 </table>
 
 
-## Click Events / Mouse Events Examples
+## Mouse Events
 
 {{<img click-events.png>}}
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ClickEvents:: / MouseEvents::</th>
+      <th scope="col">MouseEvents::</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">click</th>
+      <th scope="row">MouseEvents::click</th>
       <td>It will click the element.</td>
     </tr>
     <tr>
-      <th scope="row">dblclick</th>
+      <th scope="row">MouseEvents::dblclick</th>
       <td>It will double click the element.</td>
     </tr>
     <tr>
-      <th scope="row">mousedown <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mousedown</th>
       <td>It will trigger mouse down event on element.</td>
     </tr>
     <tr>
-      <th scope="row">mouseup <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mouseup</th>
       <td>It will trigger mouse up event on element.</td>
     </tr>
     <tr>
-      <th scope="row">mouseover <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mouseover</th>
       <td>It will trigger mouse over event on element</td>
     </tr>
     <tr>
-      <th scope="row">mouseout <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mouseout</th>
       <td>It will trigger mouse out event on element.</td>
     </tr>
     <tr>
-      <th scope="row">mouseenter <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mouseenter</th>
       <td>It will trigger mouse enter event on element.</td>
     </tr>
     <tr>
-      <th scope="row">mouseleave <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mouseleave</th>
       <td>It will trigger mouse leave event on element.</td>
     </tr>
     <tr>
-      <th scope="row">mousemove <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">MouseEvents::mousemove</th>
       <td>It will trigger mouse move event on element.</td>
+    </tr>
+     <tr>
+      <th scope="row">MouseEvents::["mouseover","mouseover","click"]</th>
+      <td>It will stimulate mouse click on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">MouseEvents::["mouseout","mouseleave"]</th>
+      <td>It will stimulate mouse click on element.</td>
+    </tr>
+     <tr>
+      <th scope="row">MouseEvents::input <span class="badge bg-warning text-dark">BETA<span></th>
+      <td>It will trigger input event on element.</td>
+    </tr>
+     <tr>
+      <th scope="row">MouseEvents::change <span class="badge bg-warning text-dark">BETA<span></th>
+      <td>It will trigger text change event on element.</td>
+    </tr>
+    <tr>
+      <th scope="row">MouseEvents::["input","change"] <span class="badge bg-warning text-dark">BETA<span></th>
+      <td>It will stimulate text filled and update/change event on element.</td>
     </tr>
   </tbody>
 </table>
 
 
-## Form Events Examples
+## Form Events
 
 {{<img form-events.png>}}
 
@@ -175,35 +195,61 @@ You must set the value field to `true`
   </thead>
   <tbody>
     <tr>
-      <th scope="row">blur</th>
+      <th scope="row">FormEvents::blur</th>
       <td>It will trigger blur event on the element.<br> It removed focus from the element.</td>
     </tr>
     <tr>
-      <th scope="row">focus</th>
+      <th scope="row">FormEvents::click</th>
+      <td>It will click the form element.</td>
+    </tr>
+    <tr>
+      <th scope="row">FormEvents::focus</th>
       <td>It will trigger focus event on the element.</td>
     </tr>
     <tr>
-      <th scope="row">select</th>
+      <th scope="row">FormEvents::select</th>
       <td>It will trigger select event on the element.<br> In input field and textarea it will select the text inside</td>
     </tr>
     <tr>
-      <th scope="row">clear</th>
+      <th scope="row">FormEvents::submit</th>
+      <td>It will submit the form in which element is present.</td>
+    </tr>
+    <tr>
+      <th scope="row">FormEvents::clear</th>
       <td>It will trigger clear event on the element.<br> It clears field value.</td>
     </tr>
     <tr>
-      <th scope="row">remove</th>
+      <th scope="row">FormEvents::remove</th>
       <td>It will remove element.</td>
-    </tr>
-    <tr>
-      <th scope="row">submit</th>
-      <td>It will submit the form in which element is present.</td>
     </tr>
   </tbody>
 </table>
 
+## Key Events
+<span class="badge bg-warning text-dark">BETA<span>
+
+{{<img location-command.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">KeyEvents::</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">KeyEvents::Example Text</th>
+      <td>It simulate typing of  `Example Text` same like keyboard typing.</td>
+    </tr>
+    <tr>
+      <th scope="row">KeyEvents::{"value":"Example text","delay":3}</th>
+      <td>It simulate typing of  `Example Text` same like keyboard typing where each letter is typed with 3 sec delay.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Location Command
-<span class="badge bg-warning text-dark">BETA<span>
 
 {{<img location-command.png>}}
 
@@ -231,6 +277,102 @@ You must set the value field to `true`
       <th scope="row">LocationCommand::assign::https://www.getautoclicker.com</th>
       <td>Its similar to you click on link which open another page</td>
     </tr>
+    <tr>
+      <th scope="row">LocationCommand::focus</th>
+      <td>Its similar to you focus on window/page</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::blur</th>
+      <td>Its similar to you move out on window/page</td>
+    </tr>
+     <tr>
+      <th scope="row">LocationCommand::print</th>
+      <td>Its similar to you Print (Ctrl + P) out on window/page</td>
+    </tr>
+     <tr>
+      <th scope="row">LocationCommand::stop</th>
+      <td>Its similar to you stop window/page load</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::moveBy::x,y</th>
+      <td>Its similar to move window/page by x and y pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::moveTo::x,y</th>
+      <td>Its similar to move window/page to x and y pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">LocationCommand::open::https://www.getautoclicker.com</th>
+      <td>Its similar to open https://www.getautoclicker.com page in new tab</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Window Command
+
+{{<img window-command.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">WindowCommand::</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">WindowCommand::close</th>
+      <td>Close current page only works if page is opened through script and not manually.</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::focus</th>
+      <td>Its similar to you focus on window/page</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::blur</th>
+      <td>Its similar to you move out on window/page</td>
+    </tr>
+     <tr>
+      <th scope="row">WindowCommand::print</th>
+      <td>Its similar to you Print (Ctrl + P) out on window/page</td>
+    </tr>
+     <tr>
+      <th scope="row">WindowCommand::stop</th>
+      <td>Its similar to you stop window/page load</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::moveBy::x,y</th>
+      <td>Its similar to move window/page by x and y pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::moveTo::x,y</th>
+      <td>Its similar to move window/page to x and y pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::open::https://www.getautoclicker.com</th>
+      <td>Its similar to open https://www.getautoclicker.com page in new tab</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::cut <span class="badge bg-danger">DEV<span></th>
+      <td>Cut selected text into clipboard</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::copy <span class="badge bg-danger">DEV<span></th>
+      <td>Copy selected text into clipboard</td>
+    </tr>
+   <tr>
+      <th scope="row">WindowCommand::delete <span class="badge bg-danger">DEV<span></th>
+      <td>Delete selected text into clipboard</td>
+    </tr>
+     <tr>
+      <th scope="row">WindowCommand::paste <span class="badge bg-danger">DEV<span></th>
+      <td>Paste text from clipboard into field</td>
+    </tr>
+    <tr>
+      <th scope="row">WindowCommand::selectAll <span class="badge bg-danger">DEV<span></th>
+      <td>Select All text into clipboard</td>
+    </tr>
   </tbody>
 </table>
 <hr/>
@@ -242,7 +384,6 @@ You can also perform more than one task in series e.g
 {{<img multiple-events.png>}}
 
 ## Batch Repeat
-<span class="badge bg-warning text-dark">DEV</span>
 
 {{<callout info>}}
 ##### You can get sequence value with [batch repeat]({{<docsref "/batch/repeat">}}) 
