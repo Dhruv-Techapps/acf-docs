@@ -14,3 +14,15 @@ Its regular expression field where you need to pass regex which will extract val
 
 try [regex](https://regex101.com/)
 {{</callout>}}
+
+<hr/>
+
+{{<callout info>}}
+- `@aria-checked` it extracts value (`string`) from attribute `aria-checked="string"`
+- `@class` it extracts value (`custom-checkbox`) from class attribute `class="custom-checkbox"`
+- `@type` it extracts value (`checkbox`) from type attribute `type="checkbox"`
+- `@attribute` it cam extract `value` from attribute.
+{{</callout>}}
+```html
+<input type="checkbox" aria-checked="true" class="custom-checkbox" attribute="value">
+```
