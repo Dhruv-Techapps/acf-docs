@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Reorder Configuration
-description: Click rEORDER Configuration button to change the order of configurations.
+description: Click Reorder Configuration button to change the order of configurations.
 group: configuration-list
 toc: true
 ---

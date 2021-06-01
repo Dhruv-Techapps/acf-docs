@@ -23,6 +23,9 @@
         color: $white;
       }
     }
+    .dropdown-menu {
+      z-index: 1021;
+    }
   }
 
   .navbar-nav-svg {
