@@ -6,6 +6,96 @@ group: action
 toc: true
 ---
 
+## Attribute
+<span class="badge bg-danger">DEV<span>
+
+{{<img action-attr.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Attr::</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" width="120px">Attr::set::prop::value</th>
+      <td>Now update value of attribute using attribute syntax.
+        <ul>
+          <li>Attr::set::disabled::false &lt;input disabled="<b>true</b>"> -> &lt;input disabled="<b>false</b>"></li>
+          <li>Attr::set::target::_blank &lt;a> -> &lt;a <b>target="_blank"</b>> to open links in new tab</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" width="120px">Attr::remove::prop</th>
+      <td>Now remove attribute using attribute syntax.
+        <ul>
+          <li>Attr::remove::disabled &lt;input <b>disabled="true"</b>> -> &lt;input></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Class
+<span class="badge bg-danger">DEV<span>
+
+{{<img action-class.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Class::</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" width="120px">
+        Class::add::className<br/>
+        e.g. Class::add::btn
+      </th>
+      <td>Now add new class to element using class syntax.
+        <ul>
+          <li>&lt;input class="button"> -> &lt;input class="button <b>btn</b>"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" width="120px">
+        Class::remove::className<br/>
+        e.g. Class::remove::btn
+      </th>
+      <td>Now remove new class from element using class syntax.
+        <ul>
+          <li>&lt;input class="button <b>btn</b>"> -> &lt;input class="button"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" width="120px">
+        Class::replace::removeClassName::addClassName<br/>
+        e.g. Class::replace::unlike::like
+      </th>
+      <td>Now replace one class with another to element using class syntax.
+        <ul>
+          <li>&lt;span class="<b>unlike</b>"> -> &lt;span class="<b>like</b>"></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" width="120px">Class::clear</th>
+      <td>Now remove all class of element using class syntax.
+        <ul>
+          <li>&lt;input class="<b>btn btn-primary button</b>"> -> &lt;input class=""></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Query Param
 
@@ -228,7 +318,7 @@ You must set the value field to `true`
 ## Key Events
 <span class="badge bg-warning text-dark">BETA<span>
 
-{{<img location-command.png>}}
+{{<img key-events.png>}}
 
 <table class="table">
   <thead>
@@ -266,15 +356,15 @@ You must set the value field to `true`
       <td>Force reloading the current page from the server.</td>
     </tr>
     <tr>
-      <th scope="row">LocationCommand::href::https://www.getautoclicker.com</th>
-      <td>it will open https://www.getautoclicker.com in same tab</td>
+      <th scope="row">LocationCommand::href::https://getautoclicker.com</th>
+      <td>it will open https://getautoclicker.com in same tab</td>
     </tr>
     <tr>
-      <th scope="row">LocationCommand::replace::https://www.getautoclicker.com</th>
+      <th scope="row">LocationCommand::replace::https://getautoclicker.com</th>
       <td>It will open this page without maintaining history so when you click back you can come to this page again</td>
     </tr>
     <tr>
-      <th scope="row">LocationCommand::assign::https://www.getautoclicker.com</th>
+      <th scope="row">LocationCommand::assign::https://getautoclicker.com</th>
       <td>Its similar to you click on link which open another page</td>
     </tr>
     <tr>
@@ -302,14 +392,15 @@ You must set the value field to `true`
       <td>Its similar to move window/page to x and y pixels</td>
     </tr>
     <tr>
-      <th scope="row">LocationCommand::open::https://www.getautoclicker.com</th>
-      <td>Its similar to open https://www.getautoclicker.com page in new tab</td>
+      <th scope="row">LocationCommand::open::https://getautoclicker.com</th>
+      <td>Its similar to open https://getautoclicker.com page in new tab</td>
     </tr>
   </tbody>
 </table>
 
 
 ## Window Command
+<span class="badge bg-warning text-dark">BETA<span>
 
 {{<img window-command.png>}}
 
@@ -350,27 +441,27 @@ You must set the value field to `true`
       <td>Its similar to move window/page to x and y pixels</td>
     </tr>
     <tr>
-      <th scope="row">WindowCommand::open::https://www.getautoclicker.com</th>
-      <td>Its similar to open https://www.getautoclicker.com page in new tab</td>
+      <th scope="row">WindowCommand::open::https://getautoclicker.com</th>
+      <td>Its similar to open https://getautoclicker.com page in new tab</td>
     </tr>
     <tr>
-      <th scope="row">WindowCommand::cut <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">WindowCommand::cut</th>
       <td>Cut selected text into clipboard</td>
     </tr>
     <tr>
-      <th scope="row">WindowCommand::copy <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">WindowCommand::copy</th>
       <td>Copy selected text into clipboard</td>
     </tr>
    <tr>
-      <th scope="row">WindowCommand::delete <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">WindowCommand::delete</th>
       <td>Delete selected text into clipboard</td>
     </tr>
      <tr>
-      <th scope="row">WindowCommand::paste <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">WindowCommand::paste</th>
       <td>Paste text from clipboard into field</td>
     </tr>
     <tr>
-      <th scope="row">WindowCommand::selectAll <span class="badge bg-danger">DEV<span></th>
+      <th scope="row">WindowCommand::selectAll</th>
       <td>Select All text into clipboard</td>
     </tr>
   </tbody>
