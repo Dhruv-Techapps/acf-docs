@@ -4,14 +4,13 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="Now you can perform much more than just click or fill form elements. an element referred in below table is one which is found by Xpath">
 <meta name=author content="Dhruv Patel, Dharmesh Patel, and AutoClicker contributors">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.90.1">
 <meta name=docsearch:language content="en">
 <meta name=docsearch:version content="3.x">
 <title>Value · Auto Clicker AutoFill v3.x</title>
 <link rel=canonical href=https://getautoclicker.com/docs/3.x/action/value/>
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl crossorigin=anonymous>
 <link href=/docs/3.x/assets/css/docs.css rel=stylesheet>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel=stylesheet>
 <link rel=apple-touch-icon href=/favicons/favicon180.png sizes=180x180>
 <link rel=icon href=/favicons/favicon32.png sizes=32x32 type=image/png>
 <link rel=icon href=/favicons/favicon16.png sizes=16x16 type=image/png>
@@ -36,6 +35,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-DNDW52MKWM')</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"Auto Clicker - AutoFill","url":"https://getautoclicker.com","sameAs":["https://www.facebook.com/dhruv.techapps","https://www.instagram.com/dhruv.techapps","https://twitter.com/dhruvtechapps","https://github.com/Dhruv-Techapps"]}</script>
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel=stylesheet>
 <body>
 <div class="skippy overflow-hidden">
 <div class=container-xl>
@@ -148,6 +148,16 @@ Extension
 <ul class="list-unstyled fw-normal pb-1 small">
 <li><a href=/docs/3.x/extension/icon/ class="d-inline-flex align-items-center rounded">Icon</a></li>
 <li><a href=/docs/3.x/extension/log/ class="d-inline-flex align-items-center rounded">Log</a></li>
+</ul>
+</div>
+</li>
+<li class=mb-1>
+<button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#record-collapse aria-expanded=false>
+Record
+</button>
+<div class=collapse id=record-collapse>
+<ul class="list-unstyled fw-normal pb-1 small">
+<li><a href=/docs/3.x/record/overview/ class="d-inline-flex align-items-center rounded">Overview</a></li>
 </ul>
 </div>
 </li>
@@ -309,6 +319,9 @@ Schedule URL
 <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
 <nav id=TableOfContents>
 <ul>
+<li><a href=#paste>Paste</a></li>
+<li><a href=#copy>Copy</a></li>
+<li><a href=#random-value>Random Value</a></li>
 <li><a href=#attribute>Attribute</a></li>
 <li><a href=#class>Class</a></li>
 <li><a href=#query-param>Query Param</a></li>
@@ -328,8 +341,137 @@ Schedule URL
 </nav>
 </div>
 <div class="bd-content ps-lg-4">
+<h2 id=paste>Paste</h2>
+<p><span class="badge bg-danger">DEV</span>
+<span>Now you can paste content into input fields which are copied by extension.</span></p>
+<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/paste-command.png src=/docs/3.x/assets/img/paste-command.png alt width=100% loading=lazy>
+<h2 id=copy>Copy</h2>
+<p><span class="badge bg-danger">DEV</span>
+<span>Now you can copy any content from webpage using copy syntax.</span></p>
+<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/copy-command.png src=/docs/3.x/assets/img/copy-command.png alt width=100% loading=lazy>
+<table class=table>
+<thead>
+<tr>
+<th scope=col width=210px>Copy::</th>
+<th scope=col>Description (Copy text from webpage)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope=row>Copy::[.]{6}</th>
+<td>
+<code>[.]</code> - Any Single Character <code>{6}</code> - no of characters 6
+</td>
+</tr>
+<tr>
+<th scope=row>Copy::[.]+</th>
+<td>
+<code>[.]</code> - Any Single Character <code>+</code> - all characters
+</td>
+</tr>
+<tr>
+<th scope=row>Copy::[a-z]{6}</th>
+<td>
+<code>[a-z]</code> - A character in the range: a-z
+</td>
+</tr>
+<tr>
+<th scope=row>Copy::[A-Z]{6}</th>
+<td>
+<code>[A-Z]</code> - A character in the range: A-Z
+</td>
+</tr>
+<tr>
+<th scope=row>Copy::[\d]{6}</th>
+<td>
+<code>[\d]</code> - A digit
+</td>
+</tr>
+<tr>
+<th scope=row>Copy::[\w]{6}</th>
+<td>
+<code>[\w]</code> - A word character
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id=random-value>Random Value</h2>
+<p><span class="badge bg-danger">DEV</span></p>
+<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/action-random.png src=/docs/3.x/assets/img/action-random.png alt width=100% loading=lazy>
+<table class=table>
+<thead>
+<tr>
+<th scope=col width=210px>Random::</th>
+<th scope=col>Description (Generate Random value)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope=row>Random::[.]{6}</th>
+<td>
+<code>[.]</code> - Any Single Character <code>{6}</code> - no of characters 6
+<ul>
+<li>X0UN#Z</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row>Random::[.]{6,12}</th>
+<td>
+<code>[.]</code> - Any single character <code>{6,12}</code> - no of characters between 6 and 12
+<ul>
+<li>Dr_5t4r</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row>Random::[a-z]{6}</th>
+<td>
+<code>[a-z]</code> - A character in the range: a-z
+<ul>
+<li>czlvry</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row>Random::[A-Z]{6}</th>
+<td>
+<code>[A-Z]</code> - A character in the range: A-Z
+<ul>
+<li>UDDDJT</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row>Random::[\d]{6}</th>
+<td>
+<code>[\d]</code> - A digit
+<ul>
+<li>546544</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row>Random::[\w]{6}</th>
+<td>
+<code>[\w]</code> - A word character
+<ul>
+<li>Ae3fFD</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope=row width=120px>Random::[custom-string]{6}</th>
+<td>
+<code>[custom-string]</code> - A custom string character
+<ul>
+<li>csi-om</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <h2 id=attribute>Attribute</h2>
-<p><span class="badge bg-danger">DEV<span></p>
 <img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/action-attr.png src=/docs/3.x/assets/img/action-attr.png alt width=100% loading=lazy>
 <table class=table>
 <thead>
@@ -359,7 +501,6 @@ Schedule URL
 </tbody>
 </table>
 <h2 id=class>Class</h2>
-<p><span class="badge bg-danger">DEV<span></p>
 <img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/action-class.png src=/docs/3.x/assets/img/action-class.png alt width=100% loading=lazy>
 <table class=table>
 <thead>
@@ -558,15 +699,15 @@ You must set the value field to <code>true</code>
 <td>It will stimulate mouse click on element.</td>
 </tr>
 <tr>
-<th scope=row>MouseEvents::input <span class="badge bg-warning text-dark">BETA<span></th>
+<th scope=row>MouseEvents::input</th>
 <td>It will trigger input event on element.</td>
 </tr>
 <tr>
-<th scope=row>MouseEvents::change <span class="badge bg-warning text-dark">BETA<span></th>
+<th scope=row>MouseEvents::change</th>
 <td>It will trigger text change event on element.</td>
 </tr>
 <tr>
-<th scope=row>MouseEvents::["input","change"] <span class="badge bg-warning text-dark">BETA<span></th>
+<th scope=row>MouseEvents::["input","change"]</th>
 <td>It will stimulate text filled and update/change event on element.</td>
 </tr>
 </tbody>
@@ -612,7 +753,6 @@ You must set the value field to <code>true</code>
 </tbody>
 </table>
 <h2 id=key-events>Key Events</h2>
-<p><span class="badge bg-warning text-dark">BETA<span></p>
 <img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/key-events.png src=/docs/3.x/assets/img/key-events.png alt width=100% loading=lazy>
 <table class=table>
 <thead>
@@ -689,7 +829,6 @@ You must set the value field to <code>true</code>
 </tbody>
 </table>
 <h2 id=window-command>Window Command</h2>
-<p><span class="badge bg-warning text-dark">BETA<span></p>
 <img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/window-command.png src=/docs/3.x/assets/img/window-command.png alt width=100% loading=lazy>
 <table class=table>
 <thead>
