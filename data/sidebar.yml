@@ -8,6 +8,10 @@
     - title: Icon
     - title: Log
 
+- title: Record
+  pages:
+    - title: Overview
+
 - title: Configuration List
   pages:
     - title: Overview

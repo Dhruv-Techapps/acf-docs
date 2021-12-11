@@ -6,9 +6,146 @@ group: action
 toc: true
 ---
 
-## Attribute
-<span class="badge bg-danger">DEV<span>
+## Paste
+<span class="badge bg-danger">DEV</span>
+<span>Now you can paste content into input fields which are copied by extension.</span>
 
+{{<img paste-command.png>}}
+
+## Copy
+<span class="badge bg-danger">DEV</span>
+<span>Now you can copy any content from webpage using copy syntax.</span>
+
+{{<img copy-command.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"  width="210px">Copy::</th>
+      <th scope="col">Description (Copy text from webpage)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Copy::[.]{6}</th>
+      <td>
+        <code>[.]</code> - Any Single Character <code>{6}</code> - no of characters 6
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Copy::[.]+</th>
+      <td>
+        <code>[.]</code> - Any Single Character <code>+</code> - all characters
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Copy::[a-z]{6}</th>
+      <td>
+        <code>[a-z]</code> - A character in the range: a-z
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Copy::[A-Z]{6}</th>
+      <td>
+        <code>[A-Z]</code> - A character in the range: A-Z
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Copy::[\d]{6}</th>
+      <td>
+        <code>[\d]</code> - A digit
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Copy::[\w]{6}</th>
+      <td>
+        <code>[\w]</code> - A word character
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Random Value
+<span class="badge bg-danger">DEV</span>
+
+{{<img action-random.png>}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"  width="210px">Random::</th>
+      <th scope="col">Description (Generate Random value)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Random::[.]{6}</th>
+      <td>
+        <code>[.]</code> - Any Single Character <code>{6}</code> - no of characters 6
+        <ul>
+          <li>X0UN#Z</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Random::[.]{6,12}</th>
+      <td>
+        <code>[.]</code> - Any single character <code>{6,12}</code> - no of characters between 6 and 12
+        <ul>
+          <li>Dr_5t4r</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Random::[a-z]{6}</th>
+      <td>
+        <code>[a-z]</code> - A character in the range: a-z
+        <ul>
+          <li>czlvry</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Random::[A-Z]{6}</th>
+      <td>
+        <code>[A-Z]</code> - A character in the range: A-Z
+        <ul>
+          <li>UDDDJT</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Random::[\d]{6}</th>
+      <td>
+        <code>[\d]</code> - A digit
+        <ul>
+          <li>546544</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Random::[\w]{6}</th>
+      <td>
+        <code>[\w]</code> - A word character
+        <ul>
+          <li>Ae3fFD</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" width="120px">Random::[custom-string]{6}</th>
+      <td>
+        <code>[custom-string]</code> - A custom string character
+        <ul>
+          <li>csi-om</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Attribute
 {{<img action-attr.png>}}
 
 <table class="table">
@@ -41,7 +178,6 @@ toc: true
 
 
 ## Class
-<span class="badge bg-danger">DEV<span>
 
 {{<img action-class.png>}}
 
@@ -257,15 +393,15 @@ You must set the value field to `true`
       <td>It will stimulate mouse click on element.</td>
     </tr>
      <tr>
-      <th scope="row">MouseEvents::input <span class="badge bg-warning text-dark">BETA<span></th>
+      <th scope="row">MouseEvents::input</th>
       <td>It will trigger input event on element.</td>
     </tr>
      <tr>
-      <th scope="row">MouseEvents::change <span class="badge bg-warning text-dark">BETA<span></th>
+      <th scope="row">MouseEvents::change</th>
       <td>It will trigger text change event on element.</td>
     </tr>
     <tr>
-      <th scope="row">MouseEvents::["input","change"] <span class="badge bg-warning text-dark">BETA<span></th>
+      <th scope="row">MouseEvents::["input","change"]</th>
       <td>It will stimulate text filled and update/change event on element.</td>
     </tr>
   </tbody>
@@ -316,7 +452,6 @@ You must set the value field to `true`
 </table>
 
 ## Key Events
-<span class="badge bg-warning text-dark">BETA<span>
 
 {{<img key-events.png>}}
 
@@ -400,7 +535,6 @@ You must set the value field to `true`
 
 
 ## Window Command
-<span class="badge bg-warning text-dark">BETA<span>
 
 {{<img window-command.png>}}
 

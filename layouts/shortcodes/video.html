@@ -1,0 +1,11 @@
+{{- $name := .Get 0 -}}
+{{- $width := .Get 1 | default "100%" }}
+{{- $style := .Get 2 | default "" }}
+{{- with $name -}}
+{{- $url := split $.Page.File.Dir "\\" -}}
+{{- $version := index $url 1 | default $.Site.Params.docs_version -}}
+<video class="video-thumbnail mb-3 border border-secondary" autoplay controls
+  alt="" width={{$width}} loading="lazy" style="{{$style}}" >
+  <source src="/docs/{{$version}}/assets/video/{{.}}" type="video/mp4">
+</video>
+{{- else }}{{ errorf "Missing param key: %s" $.Position }}{{ end -}}
