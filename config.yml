@@ -39,8 +39,7 @@ params:
   facebook : "dhruv.techapps"
   instagram : "dhruv.techapps"
   github : "Dhruv-Techapps"
-  current_version: "3.2.0"
-  previous_version: "2.2.0"
+  current_version: "3.4.3"
   social_image_path: "/docs/3.x/assets/brand/bootstrap-social.png"
   social_logo_path: "/docs/3.x/assets/brand/bootstrap-social-logo.png"
   docs_version: "3.x"
@@ -60,16 +59,12 @@ params:
   download:
     chrome:
       stable: "https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe"
-      stable_version: 3.2.0
       beta: "https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep"
-      beta_version: 3.1.11
       dev: "https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel"
-      dev_version: 3.1.15
     Edge:
-      beta: "https://microsoftedge.microsoft.com/addons/detail/auto-clicker-autofill-/cinocbjgkeplahhciecdcbicpccgpopl"
-      beta_version: 3.1.11
-      dev: "https://microsoftedge.microsoft.com/addons/detail/auto-clicker-autofill-/pmckiknbinanfnmbichcncmfpbcfpocn"
-      dev_version: 3.1.15
+      stable: "https://microsoftedge.microsoft.com/addons/detail/obhglnjhcgnokifphfmamhmmknipkhik"
+      beta: "https://microsoftedge.microsoft.com/addons/detail/cinocbjgkeplahhciecdcbicpccgpopl"
+      dev: "https://microsoftedge.microsoft.com/addons/detail/pmckiknbinanfnmbichcncmfpbcfpocn"
 
   cdn:
     css: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"

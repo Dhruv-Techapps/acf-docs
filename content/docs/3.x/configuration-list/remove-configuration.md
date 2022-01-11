@@ -5,4 +5,4 @@ description: Remove the configuration by clicking on Delete button at bottom of 
 group: configuration-list
 toc: true
 ---
-{{<img configuration-list-remove.png>}}
+{{<img configuration-options.png>}}

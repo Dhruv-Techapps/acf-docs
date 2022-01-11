@@ -39,8 +39,7 @@ minor parts
 
 Stay up to date on the features of {{<param name>}} and reach out to the community with these helpful resources.
 
-- Follow [@dhruvtechapps on Twitter](https://twitter.com/{{< param twitter >}}).
+- Connect with us on Discord [the official Discord server]({{< param discord >}}).
 - Read and subscribe to [The Official AutoClicker Blog]({{< param blog >}}).
-- Join [the official Discord server]({{< param discord >}}).
 
 [//]: # (You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.)
