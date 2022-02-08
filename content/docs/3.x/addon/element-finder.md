@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: XPath
+title: Element Finder
 description: Its little tricky but believe me its not that hard to find.
 group: addon
 toc: true
@@ -13,6 +13,18 @@ Follow below steps to get XPath quickly
 2. It will open developer console and highlight that element under Elements Tab
 3. Right click that element and select Copy > Copy XPath.
 4. Thats it you have your XPath of that element now.
+{{</callout>}}
+
+### Check Time
+Now its possible you can check or compare with `date` and `time` and make the action work accordingly. All you have to do is instead of Element finder try adding `Func::Date().getHours()` to get the system current hour and it will be in 24 hours. now add condition greater than less than. which ever condition you want and in value field add hour. and under Recheck add SKIP if not matched.
+{{<img addon-func.png>}}
+
+{{<callout info>}}
+There are other `Date` functions also which you can used other then `getHours()` reference link [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+{{</callout>}}
+
+{{<callout danger>}}
+ This functionality is currently available at addon level only. Trying same feature for action elementFinder will result in error.
 {{</callout>}}
 
 ### Get Element By Id
@@ -138,7 +150,12 @@ Its similar to query selector which selects all matching element rather than sel
 {{</callout>}}
 
 ### XPath
-Xpath helps to track down and element using its document chain examples are below
+Xpath helps to track down and element using its document chain examples are below. 
+
+{{<callout warning>}}
+  Combine [batch-repeat]({{<docsref "/batch/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace `<batchRepeat>` value with index from 1 to 10
+{{</callout>}}
+
 
 {{<markdown>}}
 {{<partial example-xpath.md>}}
