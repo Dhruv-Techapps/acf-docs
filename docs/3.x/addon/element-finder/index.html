@@ -7,7 +7,7 @@
 <meta name=generator content="Hugo 0.92.1">
 <meta name=docsearch:language content="en">
 <meta name=docsearch:version content="3.x">
-<title>XPath · Auto Clicker AutoFill v3.x</title>
+<title>Element Finder · Auto Clicker AutoFill v3.x</title>
 <link rel=canonical href=https://getautoclicker.com/docs/3.x/addon/element-finder/>
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl crossorigin=anonymous>
 <link href=/docs/3.x/assets/css/docs.css rel=stylesheet>
@@ -20,11 +20,11 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:site content="@dhruvtechapps">
 <meta name=twitter:creator content="@dhruvtechapps">
-<meta name=twitter:title content="XPath">
+<meta name=twitter:title content="Element Finder">
 <meta name=twitter:description content="Its little tricky but believe me its not that hard to find.">
 <meta name=twitter:image content="https://getautoclicker.com/docs/3.x/assets/brand/bootstrap-social.png">
 <meta property="og:url" content="https://getautoclicker.com/docs/3.x/addon/element-finder/">
-<meta property="og:title" content="XPath">
+<meta property="og:title" content="Element Finder">
 <meta property="og:description" content="Its little tricky but believe me its not that hard to find.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getautoclicker.com/docs/3.x/assets/brand/bootstrap-social.png">
@@ -314,7 +314,7 @@ Schedule URL
 <div class="bd-intro ps-lg-4">
 <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
 <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href=https://github.com/Dhruv-Techapps/auto-click-auto-fill/blob/main/site/content/docs/3.x/addon/element-finder.md title="View and edit this file on GitHub" target=_blank rel=noopener>View on GitHub</a>
-<h1 class=bd-title id=content>XPath</h1>
+<h1 class=bd-title id=content>Element Finder</h1>
 </div>
 <p class=bd-lead>Its little tricky but believe me its not that hard to find.</p>
 <ins class=adsbygoogle style=display:block data-ad-client=ca-pub-9512495707028343 data-ad-slot=5659992389 data-ad-format=auto data-full-width-responsive=true></ins>
@@ -326,6 +326,7 @@ Schedule URL
 <ul>
 <li>
 <ul>
+<li><a href=#check-time>Check Time</a></li>
 <li><a href=#get-element-by-id>Get Element By Id</a></li>
 <li><a href=#get-elements-by-classname>Get Elements By ClassName</a></li>
 <li><a href=#get-elements-by-name>Get Elements By Name</a></li>
@@ -347,6 +348,15 @@ Schedule URL
 <li>Right click that element and select Copy > Copy XPath.</li>
 <li>Thats it you have your XPath of that element now.</li>
 </ol>
+</div>
+<h3 id=check-time>Check Time</h3>
+<p>Now its possible you can check or compare with <code>date</code> and <code>time</code> and make the action work accordingly. All you have to do is instead of Element finder try adding <code>Func::Date().getHours()</code> to get the system current hour and it will be in 24 hours. now add condition greater than less than. which ever condition you want and in value field add hour. and under Recheck add SKIP if not matched.
+<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/addon-func.png src=/docs/3.x/assets/img/addon-func.png alt width=100% loading=lazy></p>
+<div class="bd-callout bd-callout-info">
+There are other <code>Date</code> functions also which you can used other then <code>getHours()</code> reference link <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date>Date</a>
+</div>
+<div class="bd-callout bd-callout-danger">
+This functionality is currently available at addon level only. Trying same feature for action elementFinder will result in error.
 </div>
 <h3 id=get-element-by-id>Get Element By Id</h3>
 <p>If an element tag is having <code>id="idValue"</code> attribute on it you can simply make use of <code>#idValue</code> to target that element. Since element IDs are required to be unique if specified, they&rsquo;re a useful way to get access to a specific element quickly</p>
@@ -456,7 +466,10 @@ Schedule URL
 <p>Its similar to query selector which selects all matching element rather than selecting first matching element
 </div>
 <h3 id=xpath>XPath</h3>
-<p>Xpath helps to track down and element using its document chain examples are below</p>
+<p>Xpath helps to track down and element using its document chain examples are below.</p>
+<div class="bd-callout bd-callout-warning">
+Combine <a href=/docs/3.x/batch/repeat/>batch-repeat</a> with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. <code>//table/tr[1]/td[1]/button</code> this xpath will select button of fist row. now replace it will <code>//table/tr[&lt;batchRepeat>]/td[1]/button</code> and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace <code>&lt;batchRepeat></code> value with index from 1 to 10
+</div>
 <p><code>//div/a[1]</code></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
   <span class=p>&lt;</span><span class=nt>a</span><span class=p>&gt;</span>One<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span> 👈 selected

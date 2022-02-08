@@ -457,6 +457,9 @@ Schedule URL
 </div>
 <h3 id=xpath>XPath</h3>
 <p>Xpath helps to track down and element using its document chain examples are below</p>
+<div class="bd-callout bd-callout-warning">
+Combine <a href=/docs/3.x/batch/repeat/>batch-repeat</a> with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. <code>//table/tr[1]/td[1]/button</code> this xpath will select button of fist row. now replace it will <code>//table/tr[&lt;batchRepeat>]/td[1]/button</code> and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace <code>&lt;batchRepeat></code> value with index from 1 to 10
+</div>
 <p><code>//div/a[1]</code></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
   <span class=p>&lt;</span><span class=nt>a</span><span class=p>&gt;</span>One<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span> 👈 selected
