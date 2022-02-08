@@ -42,7 +42,6 @@
     background-size: .75rem .75rem; }
   @media (min-width: 768px) {
     .bd-subnavbar {
-      position: -webkit-sticky;
       position: sticky;
       top: 0; } }
 .bd-search {
@@ -213,7 +212,6 @@
   font-weight: 600; }
   @media (min-width: 768px) {
     .bd-links {
-      position: -webkit-sticky;
       position: sticky;
       top: 5rem;
       display: block !important;
@@ -302,7 +300,6 @@
 
 @media (min-width: 992px) {
   .bd-toc {
-    position: -webkit-sticky;
     position: sticky;
     top: 5rem;
     right: 0;
