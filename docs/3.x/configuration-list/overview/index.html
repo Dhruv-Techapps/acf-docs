@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.">
+<meta name=description content="Configuration list / dropdown is list of all configuration you have within extension. you can see all the list with its name or by there URL . it also have information like if the configuration is disabled or not.">
 <meta name=author content="Dhruv Patel, Dharmesh Patel, and AutoClicker contributors">
 <meta name=generator content="Hugo 0.92.1">
 <meta name=docsearch:language content="en">
@@ -21,11 +21,11 @@
 <meta name=twitter:site content="@dhruvtechapps">
 <meta name=twitter:creator content="@dhruvtechapps">
 <meta name=twitter:title content="Configuration List">
-<meta name=twitter:description content="Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.">
+<meta name=twitter:description content="Configuration list / dropdown is list of all configuration you have within extension. you can see all the list with its name or by there URL . it also have information like if the configuration is disabled or not.">
 <meta name=twitter:image content="https://getautoclicker.com/docs/3.x/assets/brand/bootstrap-social.png">
 <meta property="og:url" content="https://getautoclicker.com/docs/3.x/configuration-list/overview/">
 <meta property="og:title" content="Configuration List">
-<meta property="og:description" content="Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.">
+<meta property="og:description" content="Configuration list / dropdown is list of all configuration you have within extension. you can see all the list with its name or by there URL . it also have information like if the configuration is disabled or not.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getautoclicker.com/docs/3.x/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -173,12 +173,12 @@ Configuration List
 <div class="collapse show" id=configuration-list-collapse>
 <ul class="list-unstyled fw-normal pb-1 small">
 <li><a href=/docs/3.x/configuration-list/overview/ class="d-inline-flex align-items-center rounded active" aria-current=page>Overview</a></li>
-<li><a href=/docs/3.x/configuration-list/add-configuration/ class="d-inline-flex align-items-center rounded">Add Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/remove-configuration/ class="d-inline-flex align-items-center rounded">Remove Configuration</a></li>
 <li><a href=/docs/3.x/configuration-list/select-configuration/ class="d-inline-flex align-items-center rounded">Select Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/reorder-configuration/ class="d-inline-flex align-items-center rounded">Reorder Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/export-all/ class="d-inline-flex align-items-center rounded">Export All</a></li>
-<li><a href=/docs/3.x/configuration-list/import-all/ class="d-inline-flex align-items-center rounded">Import All</a></li>
+<li><a href=/docs/3.x/configuration-list/add-configuration/ class="d-inline-flex align-items-center rounded">Add Configuration</a></li>
+<li><a href=/docs/3.x/configuration-list/bulk-export-configuration/ class="d-inline-flex align-items-center rounded">Bulk Export Configuration</a></li>
+<li><a href=/docs/3.x/configuration-list/bulk-import-configuration/ class="d-inline-flex align-items-center rounded">Bulk Import Configuration</a></li>
+<li><a href=/docs/3.x/configuration-list/bulk-remove-configuration/ class="d-inline-flex align-items-center rounded">Bulk Remove Configuration</a></li>
+<li><a href=/docs/3.x/configuration-list/reorder-configurations/ class="d-inline-flex align-items-center rounded">Reorder Configurations</a></li>
 </ul>
 </div>
 </li>
@@ -195,6 +195,7 @@ Configuration
 <li><a href=/docs/3.x/configuration/start-time/ class="d-inline-flex align-items-center rounded">Start Time</a></li>
 <li><a href=/docs/3.x/configuration/enable-disable/ class="d-inline-flex align-items-center rounded">Enable & Disable</a></li>
 <li><a href=/docs/3.x/configuration/export-import/ class="d-inline-flex align-items-center rounded">Export & Import</a></li>
+<li><a href=/docs/3.x/configuration/duplicate/ class="d-inline-flex align-items-center rounded">Duplicate</a></li>
 </ul>
 </div>
 </li>
@@ -313,10 +314,10 @@ Schedule URL
 <main class="bd-main order-1">
 <div class="bd-intro ps-lg-4">
 <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-<a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href=https://github.com/Dhruv-Techapps/auto-click-auto-fill/blob/main/site/content/docs/3.x/configuration-list/overview.md title="View and edit this file on GitHub" target=_blank rel=noopener>View on GitHub</a>
+<a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href=https://github.com/Dhruv-Techapps/auto-click-auto-fill/blob/master/content/docs/3.x/configuration-list/overview.md title="View and edit this file on GitHub" target=_blank rel=noopener>View on GitHub</a>
 <h1 class=bd-title id=content>Configuration List</h1>
 </div>
-<p class=bd-lead></p>
+<p class=bd-lead>Configuration list / dropdown is list of all configuration you have within extension. you can see all the list with its name or by there URL . it also have information like if the configuration is disabled or not.</p>
 <ins class=adsbygoogle style=display:block data-ad-client=ca-pub-9512495707028343 data-ad-slot=5659992389 data-ad-format=auto data-full-width-responsive=true></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
 </div>
@@ -325,15 +326,14 @@ Schedule URL
 <nav id=TableOfContents></nav>
 </div>
 <div class="bd-content ps-lg-4">
-<p><img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/configuration-list.png src=/docs/3.x/assets/img/configuration-list.png alt width=100% loading=lazy>
-<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/configuration-list-options.png src=/docs/3.x/assets/img/configuration-list-options.png alt width=auto loading=lazy style=float:right></p>
+<img class="img-thumbnail mb-3" srcset=/docs/3.x/assets/img/configuration-list-with-options.png src=/docs/3.x/assets/img/configuration-list-with-options.png alt width=100% loading=lazy>
 <ul>
-<li><a href=/docs/3.x/configuration-list/add-configuration/>Add Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/remove-configuration/>Remove Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/select-configuration/>Select Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/reorder-configuration/>Reorder Configuration</a></li>
-<li><a href=/docs/3.x/configuration-list/export-all/>Export All</a></li>
-<li><a href=/docs/3.x/configuration-list/import-all/>Import All</a></li>
+<li><a href=/docs/3.x/configuration-list/select-configuration/>Select Configuration</a> - switch between different configuration you have within Auto Clicker Auto Fill extension. It give high level overview of configuration with name or url. Also it provide information on disabled/enabled state of configuration.</li>
+<li><a href=/docs/3.x/configuration-list/add-configuration/>Add Configuration</a> - Button is used to add new configuration into extension. It adds plain configuration with just configuration name.</li>
+<li><a href=/docs/3.x/configuration-list/bulk-export-configuration/>Bulk Export Configuration</a> - Button is used to export all configuration into single json file. Bulk Export configuration in array format. Configuration which are exported using Bulk Export button can be imported as bulk configuration only. We have single configuration export and import feature as well.</li>
+<li><a href=/docs/3.x/configuration-list/bulk-import-configuration/>Bulk Import Configuration</a> - Button is used to import configurations which are exported in bulk using Bulk export button. It throw error when a user import configuration which is exported using Export Configuration and not Bulk Export Configuration</li>
+<li><a href=/docs/3.x/configuration-list/bulk-remove-configuration/>Bulk Remove Configuration</a> - Removing single configuration can be difficult so we have now bulk remove button using which you can multi select configuration and remove/delete them easily.</li>
+<li><a href=/docs/3.x/configuration-list/reorder-configurations/>Reorder Configuration</a> - Order of configuration plays main role. When you have two configuration with same url or similar url pattern the configuration which matches first gets picked and the other ones are not used. Sometime you may need to change the order of configuration in order to get picked for different set of url</li>
 </ul>
 </div>
 </main>
