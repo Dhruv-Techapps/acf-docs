@@ -4,13 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "hugo server --port 9001 --disableFastRender",
-    "build": "hugo --cleanDestinationDir --minify",
-    "docs-compile": "npm run docs-build",
-    "docs-linkinator": "linkinator _gh_pages --recurse --silent --skip \"^(?!http://localhost)\"",
-    "docs-vnu": "node build/vnu-jar.js",
-    "docs-lint": "npm-run-all --parallel docs-vnu docs-linkinator",
-    "docs-serve-only": "npx sirv-cli _gh_pages --port 9001"
+    "start": "hugo server --port 9001 --disableFastRender"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
@@ -23,11 +17,6 @@
     "buildTags": "extended"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "bootstrap": "^5.0.1",
-    "hugo-bin": "^0.71.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.0",
-    "postcss-cli": "^8.3.1"
+    "hugo-bin": "^0.80.1"
   }
 }

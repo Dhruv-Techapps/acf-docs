@@ -2,15 +2,6 @@
 <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet"  {{ printf "integrity=%q" .Site.Params.cdn.css_hash | safeHTMLAttr }} crossorigin="anonymous">
 
 {{- if (ne .Page.Layout "examples") }}
-{{- $targetDocsCssPath := printf "/docs/%s/assets/css/docs.css" .Site.Params.docs_version -}}
-{{- $sassOptions := dict "targetPath" $targetDocsCssPath "precision" 6 -}}
-{{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
-
-{{ if eq hugo.Environment "production" -}}
-{{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
-{{- end -}}
-
-{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS $postcssOptions }}
-
-<link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
+  {{- $style := resources.Get "css/docs.css" }}
+  <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
 {{- end }}
