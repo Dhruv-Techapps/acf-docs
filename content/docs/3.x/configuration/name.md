@@ -7,3 +7,5 @@ toc: true
 ---
 
 {{<img configuration.png>}}
+
+Name can be anything related to configuration or some funny name to remember what this configuration does and which site its related to.

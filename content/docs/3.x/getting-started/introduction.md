@@ -19,21 +19,21 @@ toc: true
 * You will be redirected to configuration page of extension, with pre filled value 
   * [URL]({{<docsref "/configuration/url">}}) of webpage
   * [Element Finder]({{<docsref "/action/element-finder">}}) of UI element.
-* You can update the configuration such as [Name]({{<docsref "/configuration/name">}}), [Start Time]({{<docsref "/configuration/start-time">}}), [Repeat]({{<docsref "/batch/repeat">}}) etc.
+* You can update the configuration such as [Name]({{<docsref "/configuration/name">}}), [Repeat]({{<docsref "/batch/repeat">}}) etc.
 
 
 
 ## More Options
 
 {{<param name>}}l extension consist of 4 major parts 
-- [Configuration-list]({{<docsref "/configuration-list/overview">}}) - it consist of all configuration
+- [Configuration List]({{<docsref "/configuration-list/overview">}}) - it consist of all configuration
 - [Configuration]({{<docsref "/configuration/overview">}}) - combination of url and actions
 - [Batch]({{<docsref "/batch/overview">}}) - set of actions
 - [Action]({{<docsref "/action/overview">}}) - combination of element finder and action which need to be performed.
 
 minor parts
-- [Settings](settings) - global setting how extension should work
-- [Addon](addon) - add condition before action
+- [Settings]({{<docsref "/settings/overview">}}) - global setting how extension should work
+- [Addon]({{<docsref "/addon/overview">}}) - add condition before action
 
 ## Community
 

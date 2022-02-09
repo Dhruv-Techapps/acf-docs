@@ -15,12 +15,12 @@
 - title: Configuration List
   pages:
     - title: Overview
-    - title: Add Configuration
-    - title: Remove Configuration
     - title: Select Configuration
-    - title: Reorder Configuration
-    - title: Export All
-    - title: Import All
+    - title: Add Configuration   
+    - title: Bulk Export Configuration
+    - title: Bulk Import Configuration
+    - title: Bulk Remove Configuration
+    - title: Reorder Configurations
 
 - title: Configuration
   pages:
@@ -31,6 +31,7 @@
     - title: Start Time
     - title: Enable & Disable
     - title: Export & Import
+    - title: Duplicate
   
 - title: Configuration Settings
   pages:

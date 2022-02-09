@@ -1,8 +1,12 @@
 ---
 layout: docs
-title: Add Configuration
-description: Select configuration from dropdown to update its information.
+title: Select Configuration
+description: Easily switch between different configuration using our Select Configuration dropdown.
 group: configuration-list
 toc: true
 ---
 {{<img configuration-list.png>}}
+
+This is one of main dropdown of Auto Clicker Auto Fill extension which is used to switch between configuration. This dropdown consist of all configuration list including which are disabled. It display in below format. You may find other important configuration information upon opening / selecting that configuration.
+
+(`name` of configuration) `URL` of configuration - `Disabled` state of configuration

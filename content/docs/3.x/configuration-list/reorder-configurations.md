@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Reorder Configuration
-description: Click Reorder Configuration button to change the order of configurations.
+title: Reorder Configurations
+description: Click Reorder Configurations button to change the order of configurations.
 group: configuration-list
 toc: true
 ---
@@ -14,4 +14,4 @@ toc: true
 - Click save once done
 - Click close if you do not want to save reorder.
 {{</callout>}}
-{{<img reorder-configuration.png>}}
+{{<img configuration-list-reorder-modal.png>}}
