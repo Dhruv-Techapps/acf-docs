@@ -41,5 +41,3 @@ Stay up to date on the features of {{<param name>}} and reach out to the communi
 
 - Connect with us on Discord [the official Discord server]({{< param discord >}}).
 - Read and subscribe to [The Official AutoClicker Blog]({{< param blog >}}).
-
-[//]: # (You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.)
