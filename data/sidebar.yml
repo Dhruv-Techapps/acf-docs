@@ -28,10 +28,10 @@
     - title: Name
     - title: URL
     - title: Init Wait
+    - title: Duplicate
     - title: Start Time
     - title: Enable & Disable
     - title: Export & Import
-    - title: Duplicate
   
 - title: Configuration Settings
   pages:

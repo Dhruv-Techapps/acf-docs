@@ -22,8 +22,3 @@ toc: true
 #### [downloads](https://developer.chrome.com/extensions/downloads)
 - we use it to export our configuration.
 {{</callout>}}
-
-{{<callout info>}}
-#### [identity.email](https://developer.chrome.com/extensions/identity)
-- Its used by Google Subscription API to fetch user email id and provide PRO license on subscribing.
-{{</callout>}}
