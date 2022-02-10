@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Start Time
-description:  Try [Schedule URL](https://scheduleurl.com/docs/1.0/getting-started/download/) our new browser extension. It's used to schedule webpage / URL at particular day and time.
+description:  Try [Schedule URL](https://scheduleurl.com/docs/1.x/getting-started/download/) our new browser extension. It's used to schedule webpage / URL at particular day and time.
 group: configuration
 toc: true
 ---
