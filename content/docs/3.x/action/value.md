@@ -97,7 +97,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
   </thead>
   <tbody>
     <tr>
-      <th scope="row">&lt;random::[.]{6}&gt;</th>
+      <th scope="row">&lt;random[.]{6}&gt;</th>
       <td>
         <code>[.]</code> - Any Single Character <code>{6}</code> - no of characters 6
         <ul>
@@ -106,7 +106,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row">&lt;random::[.]{6,12}&gt;</th>
+      <th scope="row">&lt;random[.]{6,12}&gt;</th>
       <td>
         <code>[.]</code> - Any single character <code>{6,12}</code> - no of characters between 6 and 12
         <ul>
@@ -115,7 +115,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row">&lt;random::[a-z]{6}&gt;</th>
+      <th scope="row">&lt;random[a-z]{6}&gt;</th>
       <td>
         <code>[a-z]</code> - A character in the range: a-z
         <ul>
@@ -124,7 +124,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row">&lt;random::[A-Z]{6}&gt;</th>
+      <th scope="row">&lt;random[A-Z]{6}&gt;</th>
       <td>
         <code>[A-Z]</code> - A character in the range: A-Z
         <ul>
@@ -133,7 +133,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row">&lt;random::[\d]{6}&gt;</th>
+      <th scope="row">&lt;random[\d]{6}&gt;</th>
       <td>
         <code>[\d]</code> - A digit
         <ul>
@@ -142,7 +142,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row">&lt;random::[\w]{6}&gt;</th>
+      <th scope="row">&lt;random[\w]{6}&gt;</th>
       <td>
         <code>[\w]</code> - A word character
         <ul>
@@ -151,7 +151,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
       </td>
     </tr>
     <tr>
-      <th scope="row" width="120px">&lt;random::[custom]{6}&gt;</th>
+      <th scope="row" width="120px">&lt;random[custom]{6}&gt;</th>
       <td>
         <code>[custom]</code> - A custom string character
         <ul>
