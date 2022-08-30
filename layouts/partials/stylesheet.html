@@ -1,3 +1,7 @@
+{{ if eq .Page.Layout "docs" -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+{{- end }}
+
 {{- "<!-- Bootstrap core CSS -->" | safeHTML }}
 <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet"  {{ printf "integrity=%q" .Site.Params.cdn.css_hash | safeHTMLAttr }} crossorigin="anonymous">
 

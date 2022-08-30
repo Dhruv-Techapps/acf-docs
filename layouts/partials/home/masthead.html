@@ -1,26 +1,29 @@
 <div class="bd-masthead mb-3" id="content">
-  <div class="container px-4 px-md-3 mt-5">
-    <div class="row text-center">
-      <div class="col-12">
-        <h1 class="mb-3">Auto click, fill, submit<br />with AutoClicker</h1>
-        <p class="lead my-5">
-          Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO
-        </p>
-        <div class="d-flex flex-column flex-md-row justify-content-center">
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/"
-            class="btn btn-lg btn-bd-primary mb-3 me-md-3"
-            onclick="gtag('event', 'click', {'event_category':'Jumbotron actions', 'event_label': 'Get started' });">Get started</a>
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/"
-            class="btn btn-lg btn-outline-secondary mb-3"
-            onclick="gtag('event', 'click', {'event_category':'Jumbotron actions', 'event_label': 'Download','event_value': '{{ .Site.Params.current_version}}' });">Download</a>
-        </div>
-        <p class="text-muted mb-0">
-          Currently <strong>v{{ .Site.Params.current_version }}</strong>
-        </p>
+  <div class="container-xxl bd-gutter">
+    <div class="col-md-8 mx-auto text-center">
+      <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/bootstrap-social-logo.png" width="165" height="165" alt="Bootstrap" class="d-block mx-auto mb-3">
+      <h1 class="mb-3 fw-semibold">Auto click, fill, submit
+with&nbsp;AutoClicker</h1>
+      <p class="lead mb-4">
+        Fill input field or click button or link anything anywhere. easy configure in few steps and work like PRO.
+      </p>
+      <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg bd-btn-lg btn-bd-light d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">
+          <svg class="bi me-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+          Download
+        </a>
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">
+          <svg class="bi me-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+          Read the docs
+        </a>
       </div>
-      <div class="col-12 mt-5">
-        <iframe width="560" height="315" title="youtube" src="https://www.youtube.com/embed/M3yNuBkJW3g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="text-muted mb-0">
+        Currently <strong>v{{ .Site.Params.current_version }}</strong>
+      </p>
+      <div class="mt-4">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/M3yNuBkJW3g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      {{ partial "ads" . }}
     </div>
   </div>
 </div>

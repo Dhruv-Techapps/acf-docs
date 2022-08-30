@@ -12,15 +12,15 @@
   pages:
     - title: Overview
 
-- title: Configuration List
+- title: Config List
   pages:
     - title: Overview
     - title: Select Configuration
     - title: Add Configuration   
-    - title: Bulk Export Configuration
-    - title: Bulk Import Configuration
-    - title: Bulk Remove Configuration
-    - title: Reorder Configurations
+    - title: Bulk Export
+    - title: Bulk Import
+    - title: Bulk Remove
+    - title: Reorder
 
 - title: Configuration
   pages:
@@ -33,7 +33,7 @@
     - title: Enable & Disable
     - title: Export & Import
   
-- title: Configuration Settings
+- title: Config Settings
   pages:
     - title: Extension Load
     - title: Manual Start

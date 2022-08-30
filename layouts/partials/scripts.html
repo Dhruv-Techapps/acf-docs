@@ -1,16 +1,13 @@
 <script src="{{ .Site.Params.cdn.js_bundle }}" {{ printf "integrity=%q" .Site.Params.cdn.js_bundle_hash | safeHTMLAttr }} crossorigin="anonymous"></script>
 
-{{ if eq .Page.Layout "docs" -}}
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-{{- end }}
-
 {{- $vendor := resources.Match "js/vendor/*.js" -}}
 {{- $js := resources.Match "js/*.js" -}}
-{{- $targetDocsJSPath := printf "/docs/%s/assets/js/docs.js" .Site.Params.docs_version -}}
+{{- $targetDocsJSPath := path.Join "/docs" .Site.Params.docs_version "assets/js/docs.js" -}}
 {{- $docsJs := append $js $vendor | resources.Concat $targetDocsJSPath -}}
 
 {{- if eq hugo.Environment "production" -}}
-{{- $docsJs = $docsJs | resources.Minify -}}
+  {{- $docsJs = $docsJs | resources.Minify -}}
 {{- end }}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <script src="{{ $docsJs.Permalink | relURL }}"></script>
+

@@ -1,3 +1,1 @@
-{{- $url := split $.Page.File.Dir "\\" -}}
-{{- $version := index $url 1 | default $.Site.Params.docs_version -}}
-{{- relref . ((printf "docs/%s%s" $version (.Get 0)) | relURL) -}}
+{{- relref . ((path.Join "docs" $.Site.Params.docs_version (.Get 0)) | relURL) -}}

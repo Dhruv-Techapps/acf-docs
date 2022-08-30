@@ -1,43 +1,35 @@
-<div class="container masthead-followup px-4 px-md-3">
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white">
-        <img src="docs/{{ .Site.Params.docs_version }}/assets/brand/data-entry-icon.png"/>
-      </div>
-      <h2 class="display-5 fw-normal">Data Entry</h2>
-      <p class="lead fw-normal">
-        Data Entry store data for AutoClicker
-      </p>
-      <p>Data Entry is part of AutoClicker extension which helps to main separate sheet from which AutoClicker can fetch data and use them row by row.</p>
-      <a class="btn btn-lg btn-outline-primary mb-3 mt-2"
-        href="https://getdataentry.com/docs/3.x/getting-started/introduction/">Read docs</a>
+<div class="container-xxl bd-gutter masthead-followup">
+  <section class="col-lg-7 mb-5">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-primary-rgb);">
+      <svg class="bi fs-1"><use xlink:href="#palette2"></use></svg>
     </div>
-    <div class="col-md-7 ps-md-5">
-      <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/data-entry.png,
-      /docs/{{ .Site.Params.docs_version }}/assets/img/data-entry@2x.png 2x"
-        src="/docs/{{ .Site.Params.docs_version }}/assets/img/data-entry.png" alt="Data Entry" width="700"
-        height="425" loading="lazy">
-    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Data Entry</h2>
+    <p class="lead fw-normal">
+      Data Entry store data for AutoClicker. Data Entry is part of AutoClicker extension which helps to main separate sheet from which AutoClicker can fetch data and use them row by row.
+    </p>
+    <p class="d-flex justify-content-start lead fw-normal">
+      <a href="{{ .Site.Params.data_entry }}" class="icon-link fw-semibold" target="_blank">
+        Learn more about Data Entry
+        <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+      </a>
+    </p>
   </section>
 
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white">
-        <img src="docs/{{ .Site.Params.docs_version }}/assets/brand/schedule-url-icon.png"/>
+  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-8 mb-5">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
+        <svg class="bi fs-1"><use xlink:href="#braces"></use></svg>
       </div>
-      <h2 class="display-5 fw-normal">Schedule URL</h2>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Schedule URL</h2>
       <p class="lead fw-normal">
-        Data Entry store data for AutoClicker
+        Schedule URL is browser extension used to schedule webpage / URL at particular day and time.
       </p>
-      <p>Schedule URL is browser extension used to schedule webpage / URL at particular day and time.</p>
-      <a class="btn btn-lg btn-outline-primary mb-3 mt-2"
-        href="https://scheduleurl.com/docs/1.x/getting-started/introduction/">Read docs</a>
-    </div>
-    <div class="col-md-7 ps-md-5">
-      <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/schedule-url.png,
-      /docs/{{ .Site.Params.docs_version }}/assets/img/schedule-url@2x.png 2x"
-        src="/docs/{{ .Site.Params.docs_version }}/assets/img/schedule-url.png" alt="Data Entry" width="700"
-        height="425" loading="lazy">
+      <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
+        <a href="{{ .Site.Params.schedule_url }}" class="icon-link fw-semibold mb-3" target="_blank">
+          Learn more about Schedule URL
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+      </p>
     </div>
   </section>
 </div>
