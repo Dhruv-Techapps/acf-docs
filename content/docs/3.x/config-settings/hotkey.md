@@ -18,4 +18,4 @@ It must be combination of below
 - `Ctrl + Alt + Shit + key`
 {{</callout>}}
 
-Check how to set [Manual Start]({{<docsref "/configuration-settings/manual-start">}})
+Check how to set [Manual Start]({{<docsref "/config-settings/manual-start">}})

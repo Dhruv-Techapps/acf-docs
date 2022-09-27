@@ -9,6 +9,6 @@ toc: true
 {{<img configuration.png>}}
 
 It consist of below parts
-- [Extension Load]({{<docsref "/configuration-settings/extension-load">}})
-- [Manual Start]({{<docsref "/configuration-settings/manual-start">}})
-- [Hotkey]({{<docsref "/configuration-settings/hotkey">}})
+- [Extension Load]({{<docsref "/config-settings/extension-load">}})
+- [Manual Start]({{<docsref "/config-settings/manual-start">}})
+- [Hotkey]({{<docsref "/config-settings/hotkey">}})

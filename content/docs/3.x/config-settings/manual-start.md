@@ -13,7 +13,7 @@ toc: true
 - Refresh target page once to switch from Auto - Manual mode
 - You can check [icon]({{<docsref "/extension/icon">}}) to find Manual mode is enabled.
 - Press `Ctrl + Shift + A` to start extension
-- You can update [hotkey]({{<docsref "/configuration-settings/hotkey">}}) from settings
+- You can update [hotkey]({{<docsref "/config-settings/hotkey">}}) from settings
 {{</callout>}}
 
 {{<img configuration-settings-manual.png>}}

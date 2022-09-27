@@ -26,7 +26,7 @@ toc: true
 ## More Options
 
 {{<param name>}}l extension consist of 4 major parts 
-- [Configuration List]({{<docsref "/configuration-list/overview">}}) - it consist of all configuration
+- [Configuration List]({{<docsref "/config-list/overview">}}) - it consist of all configuration
 - [Configuration]({{<docsref "/configuration/overview">}}) - combination of url and actions
 - [Batch]({{<docsref "/batch/overview">}}) - set of actions
 - [Action]({{<docsref "/action/overview">}}) - combination of element finder and action which need to be performed.
