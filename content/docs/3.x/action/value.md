@@ -595,26 +595,6 @@ You must set the value field to `true`
       <th scope="row">WindowCommand::open::https://getautoclicker.com</th>
       <td>Its similar to open https://getautoclicker.com page in new tab</td>
     </tr>
-    <tr>
-      <th scope="row">WindowCommand::cut</th>
-      <td>Cut selected text into clipboard</td>
-    </tr>
-    <tr>
-      <th scope="row">WindowCommand::copy</th>
-      <td>Copy selected text into clipboard</td>
-    </tr>
-   <tr>
-      <th scope="row">WindowCommand::delete</th>
-      <td>Delete selected text into clipboard</td>
-    </tr>
-     <tr>
-      <th scope="row">WindowCommand::paste</th>
-      <td>Paste text from clipboard into field</td>
-    </tr>
-    <tr>
-      <th scope="row">WindowCommand::selectAll</th>
-      <td>Select All text into clipboard</td>
-    </tr>
   </tbody>
 </table>
 <hr/>
