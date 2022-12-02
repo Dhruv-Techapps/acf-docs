@@ -53,6 +53,12 @@
 
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.google_group }}" target="_blank" rel="noopener">
+              {{ partial "icons/chat-left-quote-fill.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
+              <small class="d-lg-none ms-2">Google Group</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
               <small class="d-lg-none ms-2">GitHub</small>
@@ -65,15 +71,15 @@
             </a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">
-              {{ partial "icons/discord.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
-              <small class="d-lg-none ms-2">Discord</small>
-            </a>
-          </li>
-          <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.opencollective }}" target="_blank" rel="noopener">
               {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
               <small class="d-lg-none ms-2">Open Collective</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">
+              {{ partial "icons/discord.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
+              <small class="d-lg-none ms-2">Discord</small>
             </a>
           </li>
            <li class="nav-item col-6 col-lg-auto">
