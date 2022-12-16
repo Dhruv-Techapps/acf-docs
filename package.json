@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "hugo server --port 9001 --disableFastRender"
+    "start": "hugo server --port 9001 --disableFastRender",
+    "build": "hugo --minify"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
