@@ -7,14 +7,15 @@ toc: true
 ---
 
 {{<callout info>}}
-#### Now you can find if extension is under waiting state of below process
+### Improved Logging System (Currently on DEV)
+We have improved logging of our extension to see the flow of extension also if it breaks any where we can pin down same.
 
-- Configuration init wait
-- Batch Repeat Interval
-- Action init wait
-- Retry Interval
-- Addon Recheck Interval
+It tracks all steps from `Configuration` -> `Batch` -> `Action` -> `Event`.
+
+`Action` and `Batch` are grouped to understand its action better. You can collapse or expand group to have more clear view.
 {{</callout>}}
+
+{{<img extension-log.png>}}
 
 {{<callout info>}}
 #### To see logs follow below steps
@@ -25,6 +26,3 @@ toc: true
 - Search `Auto Clicker - AutoFill` to filter out other logs
 - Choose `Verbose` under `All levels`
 {{</callout>}}
-
-
-{{<img extension-waiting-log.png>}}
