@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Policy
+title: Privacy & Policy
 group: about
 toc: true
 ---
