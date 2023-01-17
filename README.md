@@ -6,4 +6,4 @@
 - [dhruv-techapps/core-services](https://github.com/Dhruv-Techapps/core-services)
 ## Extension Module
 - [dhruv-techapps/acf-extension](https://github.com/Dhruv-Techapps/acf-extnsion)
-- [dhruv-techapps/acf-options_page](https://github.com/Dhruv-Techapps/acf-options_page) (private)
+- [dhruv-techapps/acf-options_page](https://github.com/Dhruv-Techapps/acf-options_page)
