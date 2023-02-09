@@ -28,7 +28,7 @@ Now its possible you can check or compare with `date` and `time` and make the [A
   </thead>
   <tbody>
     <tr>
-      <th scope="col">new Date.getHours()</th>
+      <th scope="col">new Date().getHours()</th>
       <td>It will return current browser hours. There are other `Date` functions also reference link <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">Date</a></td>
     </tr>
     <tr>
