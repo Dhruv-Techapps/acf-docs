@@ -36,7 +36,7 @@ module:
 
 params:
   name: "Auto Clicker - AutoFill"
-  description: "Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click."
+  description: "Extension to automate click / fill."
   authors: "Dhruv Patel, Dharmesh Patel, and AutoClicker contributors"
   author: "Dhruv Techapps"
   logo: "/docs/3.x/assets/brand/bootstrap-social-logo.png"
