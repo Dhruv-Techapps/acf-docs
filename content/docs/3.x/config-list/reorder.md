@@ -2,7 +2,7 @@
 layout: docs
 title: Reorder Configurations
 description: Click Reorder Configurations button to change the order of configurations.
-group: configuration-list
+group: config-list
 toc: true
 ---
 {{<img configuration-list-reorder.png>}}

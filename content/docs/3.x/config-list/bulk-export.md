@@ -2,7 +2,7 @@
 layout: docs
 title: Bulk Export Configuration
 description: Bulk Export configuration from extension into json file
-group: configuration-list
+group: config-list
 toc: true
 ---
 {{<img configuration-list-bulk-export.png>}}

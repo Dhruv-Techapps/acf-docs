@@ -35,9 +35,10 @@
   
 - title: Config Settings
   pages:
+    - title: Start
     - title: Extension Load
-    - title: Manual Start
     - title: Hotkey
+    - title: Google Sheet ID
 
 - title: Batch
   pages:
@@ -77,6 +78,8 @@
     - title: Retry Interval
     - title: Error Handling
     - title: Show Notification
+    - title: Backup
+    - title: Google Sheets
 
 - title: Addon
   pages:

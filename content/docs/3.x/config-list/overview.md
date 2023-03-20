@@ -2,7 +2,7 @@
 layout: docs
 title: Configuration List
 description: Configuration list / dropdown is list of all configuration you have within extension. you can see all the list with its name or by there URL . it also have information like if the configuration is disabled or not.
-group: configuration-list
+group: config-list
 toc: true
 ---
 

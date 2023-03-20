@@ -2,7 +2,7 @@
 layout: docs
 title: Bulk Remove Configuration
 description: Click Bulk Remove Configuration button to remove more than one configuration at a time.
-group: configuration-list
+group: config-list
 toc: true
 ---
 {{<img configuration-list-bulk-remove.png>}}

@@ -6,7 +6,7 @@ group: action-condition
 toc: true
 ---
 
-<span class="badge bg-danger">DEV</span>
+
 {{<img action-condition.png>}}
 
 {{<callout info>}}

@@ -2,7 +2,7 @@
 layout: docs
 title: Select Configuration
 description: Easily switch between different configuration using our Select Configuration dropdown.
-group: configuration-list
+group: config-list
 toc: true
 ---
 {{<img configuration-list.png>}}

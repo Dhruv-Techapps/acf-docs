@@ -6,29 +6,61 @@ group: action
 toc: true
 ---
 
+## Google Sheets
+Before using Google Sheets Value please do connect extension with [Google Sheets]({{<docsref "/settings/google-sheets">}}) and add [Google Sheet ID]({{<docsref "/config-settings/google-sheet-id">}})
 
-## Func
-<span class="badge bg-danger">DEV</span>
-<span>Now run browser default API functions or custom func from extension directly. This feature is still under development and we will provide better location to run command from action. Run one or more than one command by separating them using `;` <br/>`Func::console.log("Hello");console.log("World");`</span>
 
-{{<img func-command.png>}}
-
-{{<callout danger>}}
-#### Func methods
-
-One important warning in advance: Malicious scripts can violate your privacy and act on your behalf!
-- You should create script own. for simpler functionality like calling a function and all.
-- If you not sure how to what all functions are available then You should only run scripts from sources you trust.
-{{</callout>}}
+You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api/guides/concepts#:~:text=The%20Google%20Sheets%20API%20is,Update%20spreadsheet%20formatting) to fetch the cell value
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"  width="210px">GoogleSheets::A1 Notation</th>
+      <th scope="col">Description (Copy cell value from Google Sheet)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">GoogleSheets::Sheet1!A1</th>
+      <td>
+        Fetch the A1 Cell value from Sheet1
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">GoogleSheets::Sheet1!B1</th>
+      <td>
+        Fetch the B1 Cell value from Sheet1
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">GoogleSheets::Sheet1!C&lt;batchRepeat&gt;</th>
+      <td>
+        Batch Repeat is combined with this Action and for Repeat value 0, 1, ....N it fetches values from Cell C1, C2,.... CN+1
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">GoogleSheets::Sheet1!C&lt;batchCount&gt;</th>
+      <td>
+        Same as &lt;batchRepeat&gt; but instead of fetch from C1 it starts with C2... CN+1
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">GoogleSheets::'Custom Sheet Name'!C1</th>
+      <td>
+        If you have Custom Sheet name use as above format including <code>'Custom Sheet Name'</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-warning">Beta</span>
 
 ## Paste
-<span class="badge bg-danger">DEV</span>
+
 <span>Now you can paste content into input fields which are copied by extension.</span>
 
 {{<img paste-command.png>}}
 
 ## Copy
-<span class="badge bg-danger">DEV</span>
+
 <span>Now you can copy any content from webpage using copy syntax.</span>
 
 {{<img copy-command.png>}}
@@ -82,7 +114,7 @@ One important warning in advance: Malicious scripts can violate your privacy and
 
 
 ## Random Value
-<span class="badge bg-danger">DEV</span>
+
 
 {{<img action-random.png>}}
 
@@ -617,4 +649,19 @@ e.g. In value field if you enter `example<batchRepeat>`
 ##### This will continue for no of batch repeat you have provided. 
 
 e.g. If batch repeat is `5` it will run till `example4`
+{{</callout>}}
+
+
+## Func (Deprecated)
+<span class="badge bg-danger">Legacy</span>
+<span>Now run browser default API functions or custom func from extension directly. This feature is still under development and we will provide better location to run command from action. Run one or more than one command by separating them using `;` <br/>`Func::console.log("Hello");console.log("World");`</span>
+
+{{<img func-command.png>}}
+
+{{<callout danger>}}
+#### Func methods
+
+One important warning in advance: Malicious scripts can violate your privacy and act on your behalf!
+- You should create script own. for simpler functionality like calling a function and all.
+- If you not sure how to what all functions are available then You should only run scripts from sources you trust.
 {{</callout>}}

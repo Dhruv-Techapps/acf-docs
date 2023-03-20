@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Manual Start
+title: Start [ Auto | Manual ]
 description: Now start extension process using hotkey default hotkey is `Ctrl + Shift + A`
-group: configuration-settings
+group: config-settings
 toc: true
 ---
 
@@ -16,4 +16,4 @@ toc: true
 - You can update [hotkey]({{<docsref "/config-settings/hotkey">}}) from settings
 {{</callout>}}
 
-{{<img configuration-settings-manual.png>}}
+{{<img configuration-settings-start.png>}}

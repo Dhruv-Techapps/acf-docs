@@ -6,4 +6,4 @@ group: settings
 toc: true
 ---
 
-{{<img settings-check-iframe.png>}}
+{{<img settings.png>}}
