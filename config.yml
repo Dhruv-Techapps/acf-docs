@@ -56,7 +56,7 @@ params:
   opencollective: "https://opencollective.com/auto-clicker-autofill"
   youtube: "https://www.youtube.com/@autoclickerautofill"
   blog: "https://blog.getautoclicker.com/"
-  configs: "https://configs.getautoclicker.com/"
+  configs: "https://gist.github.com/dharmesh-hemaram"
   data_entry: "https://getdataentry.com/docs/3.x/getting-started/introduction/"
   schedule_url: "https://scheduleurl.com/docs/1.x/getting-started/introduction/"
   stable: "https://stable.getautoclicker.com"
