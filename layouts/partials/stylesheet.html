@@ -1,8 +1,5 @@
-{{ if eq .Page.Layout "docs" -}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-{{- end }}
-
 {{- "<!-- Bootstrap core CSS -->" | safeHTML }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.2.0/lite-yt-embed.min.css" integrity="sha512-blJM61yZp7jxHXu9YnRkgwvYn6Wv23PeZ+SRh1Gyhkcu4KVTgXiIXgTcfhO87Fe4YEiIVooeecq8N/2WFqjbSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet"  {{ printf "integrity=%q" .Site.Params.cdn.css_hash | safeHTMLAttr }} crossorigin="anonymous">
 
 {{- if (ne .Page.Layout "examples") }}
