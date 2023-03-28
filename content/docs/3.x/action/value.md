@@ -7,10 +7,11 @@ toc: true
 ---
 
 ## Google Sheets
+
 Before using Google Sheets Value please do connect extension with [Google Sheets]({{<docsref "/settings/google-sheets">}}) and add [Google Sheet ID]({{<docsref "/config-settings/google-sheet-id">}})
 
-
 You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api/guides/concepts#:~:text=The%20Google%20Sheets%20API%20is,Update%20spreadsheet%20formatting) to fetch the cell value
+
 <table class="table">
   <thead>
     <tr>
@@ -38,15 +39,9 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
       </td>
     </tr>
     <tr>
-      <th scope="row">GoogleSheets::Sheet1!C&lt;batchCount&gt;</th>
+      <th scope="row">GoogleSheets::Sheet1!C&lt;sessionCount&gt;</th>
       <td>
-        Same as &lt;batchRepeat&gt; but instead of fetch from C1 it starts with C2... CN+1
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">GoogleSheets::'Custom Sheet Name'!C1</th>
-      <td>
-        If you have Custom Sheet name use as above format including <code>'Custom Sheet Name'</code>
+        count will be maintained in session so if page require to submit/refresh/reopen the page it will continue from where it was left until its opened in new tab
       </td>
     </tr>
   </tbody>
@@ -112,9 +107,7 @@ Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-
   </tbody>
 </table>
 
-
 ## Random Value
-
 
 {{<img action-random.png>}}
 
@@ -195,6 +188,7 @@ Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-
 </table>
 
 ## Attribute
+
 {{<img action-attr.png>}}
 
 <table class="table">
@@ -224,7 +218,6 @@ Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-
     </tr>
   </tbody>
 </table>
-
 
 ## Class
 
@@ -300,7 +293,9 @@ Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-
       <td>Query parameters can be defined as the optional key-value pairs that appear after the question mark in the URL. Basically, they are extensions of the URL that are utilized to help determine specific content or action based on the data being delivered. Query parameters are appended to the end of the URL, using a ‘?’. The question mark sign is used to separate path and query parameters.
 
 If you want to add multiple query parameters, an ‘&’ sign is placed in between them to form what is known as a query string. It can feature various object types with distinct lengths such as arrays, strings, and numbers.</td>
-    </tr>
+
+</tr>
+
   </tbody>
 </table>
 
@@ -309,6 +304,7 @@ If you want to add multiple query parameters, an ‘&’ sign is placed in betwe
 {{<img select-option.png>}}
 {{<example lang="html" show_preview="false">}}
 <select id="product-size">
+
   <option>size</option>
   <option data-value-class="opt-35item-0" data-value-size="35" value="opt-35item-0">35</option>
   <option data-value-class="opt-36item-1" data-value-size="36" value="opt-36item-1">36</option>
@@ -384,7 +380,6 @@ You must set the value field to `true`
   </tbody>
 </table>
 
-
 ## Mouse Events
 
 {{<img click-events.png>}}
@@ -455,7 +450,6 @@ You must set the value field to `true`
     </tr>
   </tbody>
 </table>
-
 
 ## Form Events
 
@@ -582,7 +576,6 @@ You must set the value field to `true`
   </tbody>
 </table>
 
-
 ## Window Command
 
 {{<img window-command.png>}}
@@ -640,28 +633,32 @@ You can also perform more than one task in series e.g
 ## Batch Repeat
 
 {{<callout info>}}
-##### You can get sequence value with [batch repeat]({{<docsref "/batch/repeat">}}) 
+
+##### You can get sequence value with [batch repeat]({{<docsref "/batch/repeat">}})
 
 e.g. In value field if you enter `example<batchRepeat>`
+
 1. Value will be `example0`
 2. Value will be `example1`
 
-##### This will continue for no of batch repeat you have provided. 
+##### This will continue for no of batch repeat you have provided.
 
 e.g. If batch repeat is `5` it will run till `example4`
 {{</callout>}}
 
-
 ## Func (Deprecated)
+
 <span class="badge bg-danger">Legacy</span>
 <span>Now run browser default API functions or custom func from extension directly. This feature is still under development and we will provide better location to run command from action. Run one or more than one command by separating them using `;` <br/>`Func::console.log("Hello");console.log("World");`</span>
 
 {{<img func-command.png>}}
 
 {{<callout danger>}}
+
 #### Func methods
 
 One important warning in advance: Malicious scripts can violate your privacy and act on your behalf!
+
 - You should create script own. for simpler functionality like calling a function and all.
 - If you not sure how to what all functions are available then You should only run scripts from sources you trust.
-{{</callout>}}
+  {{</callout>}}
