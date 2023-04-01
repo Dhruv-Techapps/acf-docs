@@ -49,6 +49,7 @@ params:
   social_logo_path: "/docs/3.x/assets/brand/bootstrap-social-logo.png"
   docs_version: "3.x"
   github_org: "https://github.com/Dhruv-Techapps"
+  discussion: "https://github.com/Dhruv-Techapps/auto-click-auto-fill/discussions"
   repo: "https://github.com/Dhruv-Techapps/auto-click-auto-fill"
   twitter: "dharmeshhemaram"
   discord: "https://discord.gg/vmnNfWKqnR"

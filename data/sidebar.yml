@@ -53,10 +53,29 @@
     - title: Name
     - title: Init Wait
     - title: Element Finder
-    - title: Value
     - title: Repeat
     - title: Repeat Interval
     - title: Columns Filter
+
+- title: Action Value
+  pages:
+    - title: Overview
+    - title: Google Sheets
+    - title: Copy
+    - title: Paste
+    - title: Random Value
+    - title: Attribute
+    - title: Class
+    - title: Query Param
+    - title: Select Option
+    - title: Scroll To
+    - title: Mouse Events
+    - title: Form Events
+    - title: Key Events
+    - title: Location Command
+    - title: Window Command
+    - title: Batch Repeat
+    - title: Function
 
 - title: Action Settings
   pages:

@@ -14,6 +14,17 @@ Follow below steps to get XPath quickly
 4. Thats it you have your XPath of that element now.
 {{</callout>}}
 
+### XPath
+Xpath helps to track down and element using its document chain examples are below
+
+{{<callout warning>}}
+  Combine [batch-repeat]({{<docsref "/batch/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace `<batchRepeat>` value with index from 1 to 10
+{{</callout>}}
+
+{{<markdown>}}
+{{<partial example-xpath.md>}}
+{{</markdown >}}
+
 ### Get Element By Id
 If an element tag is having `id="idValue"` attribute on it you can simply make use of `#idValue` to target that element. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly
 
@@ -135,14 +146,3 @@ Referring below html section
 #### Important
 Its similar to query selector which selects all matching element rather than selecting first matching element
 {{</callout>}}
-
-### XPath
-Xpath helps to track down and element using its document chain examples are below
-
-{{<callout warning>}}
-  Combine [batch-repeat]({{<docsref "/batch/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace `<batchRepeat>` value with index from 1 to 10
-{{</callout>}}
-
-{{<markdown>}}
-{{<partial example-xpath.md>}}
-{{</markdown >}}
