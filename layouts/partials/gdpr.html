@@ -1,0 +1,19 @@
+<script>
+    // Delete the Funding Choices cookie if consent is more than 12 months old
+    try {
+      const nm = "FCCDCF";        // Match name of Funding Choices cookie
+      const dm = "getautoclicker.com";  // Match domain of Funding Choices cookie
+      const pa = "/";             // Match path of Funding Choices cookie
+      let tc = ('; ' + document.cookie).split('; ' + nm + '=');
+      if (tc.length === 2) {
+        tc = decodeURIComponent(tc.pop().split(';').shift());
+        tc = JSON.parse(tc)[3][0].substring(1,9);
+        tc = Uint8Array.from(window.atob(tc), (v) => v.charCodeAt(0));
+        let dt = (tc[0] * 2**28) + (tc[1] * 2**20) + (tc[2] * 2**12) +
+                 (tc[3] * 2**4)  + (tc[4] >> 4);
+        if (Date.now() / 1000 - dt / 10 > 86400 * 365)
+          document.cookie = nm + "=;path=" + pa + ";domain=" + dm +
+                            ";expires=" + new Date(0).toUTCString();
+      }
+    } finally {}
+  </script>
