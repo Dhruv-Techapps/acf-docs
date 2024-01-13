@@ -7,7 +7,7 @@ toc: true
 ---
 
 {{<callout info>}}
-### Improved Logging System (Currently on DEV)
+### Improved Logging System
 We have improved logging of our extension to see the flow of extension also if it breaks any where we can pin down same.
 
 It tracks all steps from `Configuration` -> `Batch` -> `Action` -> `Event`.

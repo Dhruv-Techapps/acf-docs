@@ -49,7 +49,8 @@ params:
   social_logo_path: "/docs/3.x/assets/brand/bootstrap-social-logo.png"
   docs_version: "3.x"
   github_org: "https://github.com/Dhruv-Techapps"
-  discussion: "https://github.com/Dhruv-Techapps/auto-click-auto-fill/discussions"
+  discussion: "https://github.com/Dhruv-Techapps/auto-clicker-auto-fill/discussions"
+  issues: "https://github.com/Dhruv-Techapps/auto-clicker-auto-fill/issues"
   repo: "https://github.com/Dhruv-Techapps/auto-click-auto-fill"
   twitter: "dharmeshhemaram"
   discord: "https://discord.gg/vmnNfWKqnR"
@@ -63,6 +64,7 @@ params:
   stable: "https://stable.getautoclicker.com"
   beta: "https://beta.getautoclicker.com"
   dev: "https://dev.getautoclicker.com"
+  test: "https://test.getautoclicker.com"
 
   download:
     chrome:

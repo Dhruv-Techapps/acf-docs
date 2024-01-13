@@ -5,8 +5,6 @@ description: Extension can fetch the values from your Google Sheets and fill the
 group: settings
 toc: true
 ---
-Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-warning me-2">BETA</span>
-<hr/>
 
 {{<img settings.png>}}
 
@@ -22,7 +20,6 @@ Auto Clicker Auto Fill extension require your google sheets readonly permission 
 {{<img settings-google-sheets.png>}}
 
 {{<callout danger>}}
-### DEV and BETA
-on DEV and BETA version of Auto Clicker Auto Fill extension Google may warn you with below error as Google only review application which are in production version and not which are in Development or testing phase. In order to proceed click on Advance and `Go to  Auto Clicker Auto Fill (unsafe)` This step is for DEV and BETA version only.
+Auto Clicker Auto Fill extension Google may warn you with below error as Google only review application which are in production version and not which are in Development or testing phase. In order to proceed click on Advance and `Go to  Auto Clicker Auto Fill (unsafe)`.
 {{<img settings-google-sheets-error.png>}}
 {{</callout>}}

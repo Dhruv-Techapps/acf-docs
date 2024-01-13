@@ -5,8 +5,6 @@ description: Backup / Retrieve your configuration safely on your Google Drive
 group: settings
 toc: true
 ---
-Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-warning me-2">BETA</span>
-<hr/>
 
 {{<img settings-backup.png>}}
 

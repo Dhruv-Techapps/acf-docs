@@ -44,4 +44,3 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
     </tr>
   </tbody>
 </table>
-Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-warning">Beta</span>

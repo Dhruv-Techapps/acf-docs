@@ -5,8 +5,6 @@ description: Each configuration can have its own google sheet id. But you cannot
 group: config-settings
 toc: true
 ---
-Available on <span class="badge bg-danger me-2">DEV</span><span class="badge bg-warning me-2">BETA</span>
-<hr/>
 
 {{<img configuration-settings-google-sheet-id.png>}}
 

@@ -7,8 +7,6 @@ group: action-value
 toc: true
 ---
 
-
-<span class="badge bg-danger">Dev</span>
 <span>Now run browser default API functions or custom func from extension directly. This feature is still under development and we will provide better location to run command from action. Run one or more than one command by separating them using `;` <br/>`Func::console.log("Hello");console.log("World");`</span>
 
 {{<img func-command.png>}}
