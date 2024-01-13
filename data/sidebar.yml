@@ -61,6 +61,9 @@
   pages:
     - title: Overview
     - title: Google Sheets
+    - title: Append
+    - title: Prepend
+    - title: Replace
     - title: Copy
     - title: Paste
     - title: Random Value
@@ -72,6 +75,7 @@
     - title: Mouse Events
     - title: Form Events
     - title: Key Events
+    - title: Keyboard Events
     - title: Location Command
     - title: Window Command
     - title: Batch Repeat

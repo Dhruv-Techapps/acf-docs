@@ -8,6 +8,9 @@ toc: true
 
 Use below value specific command to advance your configuration
 - [Google Sheets]({{<docsref "/action-value/google-sheets">}})
+- [Append]({{<docsref "/action-value/append">}})
+- [Prepend]({{<docsref "/action-value/prepend">}})
+- [Replace]({{<docsref "/action-value/replace">}})
 - [Copy]({{<docsref "/action-value/copy">}})
 - [Paste]({{<docsref "/action-value/paste">}})
 - [Random Value]({{<docsref "/action-value/random-value">}})
@@ -19,6 +22,7 @@ Use below value specific command to advance your configuration
 - [Mouse Events]({{<docsref "/action-value/mouse-events">}})
 - [Form Events]({{<docsref "/action-value/form-events">}})
 - [Key Events]({{<docsref "/action-value/key-events">}})
+- [Keyboard Events]({{<docsref "/action-value/keyboard-events">}})
 - [Location Command]({{<docsref "/action-value/location-command">}})
 - [Window Command]({{<docsref "/action-value/window-command">}})
 - [Batch Repeat]({{<docsref "/action-value/batch-repeat">}})
