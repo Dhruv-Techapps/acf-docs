@@ -25,6 +25,14 @@ toc: true
       <th scope="row">FormEvents::click</th>
       <td>It will click the form element.</td>
     </tr>
+     <tr>
+      <th scope="row">FormEvents::click-once</th>
+      <td>Our program features an intelligent click behavior that ensures elements are clicked only once, if the page is not fully refreshed. Let’s illustrate this with an example:
+
+Suppose there are five posts available on a page. If extension clicks an element once, our program registers that action. Now, if additional posts are loaded (e.g., through a “Load More” button), the program will not re-click the previously clicked posts. It intelligently avoids redundant clicks, providing a seamless user experience.
+
+By implementing this behavior, we enhance efficiency and prevent unintended interactions. Users can confidently interact with elements without worrying about accidental double-clicks. </td>
+    </tr>
     <tr>
       <th scope="row">FormEvents::focus</th>
       <td>It will trigger focus event on the element.</td>
