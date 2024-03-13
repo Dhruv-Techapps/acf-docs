@@ -64,6 +64,7 @@
     - title: Append
     - title: Prepend
     - title: Replace
+    - title: Clipboard
     - title: Copy
     - title: Paste
     - title: Random Value
