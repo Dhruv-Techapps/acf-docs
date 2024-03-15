@@ -69,9 +69,7 @@
   </div>
   {{ end }}
 {{ define "footer" }}
-  <!-- Ezoic - bottom_of_page - bottom_of_page -->
-  <div id="ezoic-pub-ad-placeholder-111"> </div>
-  <!-- End Ezoic - bottom_of_page - bottom_of_page -->
+  
   {{ range .Page.Params.extra_js -}}
     <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
   {{- end -}}
