@@ -31,9 +31,6 @@
 
       {{ if (eq .Page.Params.toc true) }}
         <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-muted">
-          <!-- Ezoic - ezoic_sidebar_top - sidebar -->
-          <div id="ezoic-pub-ad-placeholder-109"> </div>
-          <!-- End Ezoic - ezoic_sidebar_top - sidebar -->
           <button class="btn btn-link link-dark p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
             On this page
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
@@ -43,9 +40,6 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             {{ .TableOfContents }}
           </div>
-          <!-- Ezoic - ezoic_sidebar_bottom - sidebar_bottom -->
-          <div id="ezoic-pub-ad-placeholder-103"> </div>
-          <!-- End Ezoic - ezoic_sidebar_bottom - sidebar_bottom -->
         </div>
       {{ end }}
 

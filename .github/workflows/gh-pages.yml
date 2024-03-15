@@ -2,7 +2,7 @@ name: github pages
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: ["master","feature/*"]
   workflow_dispatch:
 
 jobs:
