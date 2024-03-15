@@ -93,6 +93,13 @@ toc: true
       <td>To trigger keyboard event arrow left.</td>
     </tr>
     <tr>
+      <td colspan="2">
+      <!-- Ezoic - ezoic_longer_content - longer_content -->
+      <div id="ezoic-pub-ad-placeholder-107"> </div>
+      <!-- End Ezoic - ezoic_longer_content - longer_content -->
+      </td>
+    </tr>
+    <tr>
       <th scope="row">KeyboardEvents::arrow up</th>
       <td>To trigger keyboard event arrow upv.</td>
     </tr>
@@ -148,7 +155,14 @@ toc: true
       <th scope="row">KeyboardEvents::multiply</th>
       <td>To trigger keyboard event multiply.</td>
     </tr>
-     <tr>
+    <tr>
+      <td colspan="2">
+      <!-- Ezoic - ezoic_longer_content - longer_content -->
+      <div id="ezoic-pub-ad-placeholder-107"> </div>
+      <!-- End Ezoic - ezoic_longer_content - longer_content -->
+      </td>
+    </tr>
+    <tr>
       <th scope="row">KeyboardEvents::add</th>
       <td>To trigger keyboard event add.</td>
     </tr>

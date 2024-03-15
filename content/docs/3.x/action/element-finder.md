@@ -25,6 +25,10 @@ Xpath helps to track down and element using its document chain examples are belo
 {{<partial example-xpath.md>}}
 {{</markdown >}}
 
+<!-- Ezoic - ezoic_longer_content - longer_content -->
+<div id="ezoic-pub-ad-placeholder-107"> </div>
+<!-- End Ezoic - ezoic_longer_content - longer_content -->
+
 ### Get Element By Id
 If an element tag is having `id="idValue"` attribute on it you can simply make use of `#idValue` to target that element. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly
 
@@ -114,6 +118,10 @@ Referring below html section
   </form>
 </main>
 ```
+
+<!-- Ezoic - ezoic_longer_content - longer_content -->
+<div id="ezoic-pub-ad-placeholder-107"> </div>
+<!-- End Ezoic - ezoic_longer_content - longer_content -->
 
 ### Query Selector
 To target specific element by its different attributes you can simply make use of `querySelector::selectors`.
