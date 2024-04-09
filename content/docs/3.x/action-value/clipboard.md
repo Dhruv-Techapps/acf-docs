@@ -64,10 +64,6 @@ To enable the functionality, our extension requires clipboard permission for spe
   </tbody>
 </table>
 
-<!-- Ezoic - ezoic_longer_content - longer_content -->
-<div id="ezoic-pub-ad-placeholder-107"> </div>
-<!-- End Ezoic - ezoic_longer_content - longer_content -->
-
 ### Paste from Clipboard
 
 {{<img clipboard-paste-command.png>}}

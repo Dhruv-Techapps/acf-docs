@@ -1,7 +1,4 @@
 {{ define "main" }}
- <!-- Ezoic - top_of_page - top_of_page -->
- <div id="ezoic-pub-ad-placeholder-112"> </div>  
- <!-- End Ezoic - top_of_page - top_of_page -->
   <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
     <aside class="bd-sidebar">
       <div class="offcanvas-lg offcanvas-start" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
@@ -17,7 +14,6 @@
     </aside>
 
     <main class="bd-main order-1">
-     
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-3 mb-md-0 rounded-2" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
@@ -31,9 +27,6 @@
 
       {{ if (eq .Page.Params.toc true) }}
         <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-muted">
-          <!-- Ezoic - ezoic_sidebar_top - sidebar -->
-          <div id="ezoic-pub-ad-placeholder-109"> </div>
-          <!-- End Ezoic - ezoic_sidebar_top - sidebar -->
           <button class="btn btn-link link-dark p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
             On this page
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
@@ -43,9 +36,6 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             {{ .TableOfContents }}
           </div>
-          <!-- Ezoic - ezoic_sidebar_bottom - sidebar_bottom -->
-          <div id="ezoic-pub-ad-placeholder-103"> </div>
-          <!-- End Ezoic - ezoic_sidebar_bottom - sidebar_bottom -->
         </div>
       {{ end }}
 
@@ -67,9 +57,8 @@
       </div>
     </main>
   </div>
-  {{ end }}
+{{ end }}
 {{ define "footer" }}
-  
   {{ range .Page.Params.extra_js -}}
     <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
   {{- end -}}

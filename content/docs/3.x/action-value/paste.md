@@ -89,13 +89,6 @@ toc: true
       </td>
     </tr>
     <tr>
-      <td colspan="2"> 
-        <!-- Ezoic - bottom_of_page - bottom_of_page -->
-        <div id="ezoic-pub-ad-placeholder-111"> </div>
-        <!-- End Ezoic - bottom_of_page - bottom_of_page -->
-      </td>
-    </tr>
-    <tr>
       <th scope="row">Paste::slice(31)</th>
       <td>
         The <code>slice()</code> method extracts a section of a string and returns it as a new string, without modifying the original string.

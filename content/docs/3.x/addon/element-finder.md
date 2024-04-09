@@ -76,9 +76,6 @@ Only single element get selected. If there are two element within page with same
   </form>
 </main>
 ```
- <!-- Ezoic - ezoic_longer_content - longer_content -->
-<div id="ezoic-pub-ad-placeholder-107"> </div>
-<!-- End Ezoic - ezoic_longer_content - longer_content -->
 
 ### Get Elements By ClassName
 If an element tag is having `class="class-1 class-2 class-3"` attribute on it you can simply make use of `ClassName::class-1 class-2 class-3` to target that element.
@@ -146,11 +143,7 @@ Referring below html section
     <button class="btn btn-primary" type="submit">Sign in</button>
   </form>
 </main>
-```
-
- <!-- Ezoic - ezoic_longer_content - longer_content -->
-<div id="ezoic-pub-ad-placeholder-107"> </div>
-<!-- End Ezoic - ezoic_longer_content - longer_content -->  
+``` 
 
 ### Query Selector
 To target specific element by its different attributes you can simply make use of `querySelector::selectors`.
