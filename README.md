@@ -5,6 +5,8 @@
 
 [![chrome][img-chrome]][link-chrome]
 [![chrome][img-chrome-users]][link-chrome]
+![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/iapifmceeokikomajpccajhjpacjmibe)
+
 
 [img-chrome-users]:https://img.shields.io/chrome-web-store/users/iapifmceeokikomajpccajhjpacjmibe
 
