@@ -1,0 +1,122 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+
+- title: Extension
+  pages:
+    - title: Icon
+    - title: Log
+
+- title: Record
+  pages:
+    - title: Overview
+
+- title: Config List
+  pages:
+    - title: Overview
+    - title: Select Configuration
+    - title: Add Configuration   
+    - title: Bulk Export
+    - title: Bulk Import
+    - title: Bulk Remove
+    - title: Reorder
+
+- title: Configuration
+  pages:
+    - title: Overview
+    - title: Name
+    - title: URL
+    - title: Init Wait
+    - title: Duplicate
+    - title: Start Time
+    - title: Enable & Disable
+    - title: Export & Import
+  
+- title: Config Settings
+  pages:
+    - title: Start
+    - title: Extension Load
+    - title: Hotkey
+    - title: Google Sheet ID
+
+- title: Batch
+  pages:
+    - title: Overview
+    - title: Repeat
+    - title: Repeat Interval
+    - title: Refresh
+
+- title: Action
+  pages:
+    - title: Overview
+    - title: Name
+    - title: Init Wait
+    - title: Element Finder
+    - title: Repeat
+    - title: Repeat Interval
+    - title: Columns Filter
+
+- title: Action Value
+  pages:
+    - title: Overview
+    - title: Google Sheets
+    - title: Append
+    - title: Prepend
+    - title: Replace
+    - title: Clipboard
+    - title: Copy
+    - title: Paste
+    - title: Random Value
+    - title: Attribute
+    - title: Class
+    - title: Query Param
+    - title: Select Option
+    - title: Scroll To
+    - title: Mouse Events
+    - title: Form Events
+    - title: Key Events
+    - title: Keyboard Events
+    - title: Location Command
+    - title: Window Command
+    - title: Batch Repeat
+    - title: Function
+
+- title: Action Settings
+  pages:
+    - title: Overview
+    - title: Iframe First
+    - title: Retry
+    - title: Retry Interval
+    - title: Error Handling
+
+- title: Action Condition
+  pages:
+    - title: Overview
+
+- title: Settings
+  pages:
+    - title: Overview
+    - title: Check Iframe
+    - title: Retry
+    - title: Retry Interval
+    - title: Error Handling
+    - title: Show Notification
+    - title: Backup
+    - title: Google Sheets
+
+- title: Addon
+  pages:
+    - title: Overview
+    - title: Element Finder
+    - title: Condition
+    - title: Value
+    - title: Value Extractor
+    - title: Recheck
+    - title: Recheck Interval
+    - title: Recheck Options
+
+- title: About
+  pages:
+    - title: Overview
+    - title: Permissions

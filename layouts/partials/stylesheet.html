@@ -3,6 +3,6 @@
 <link href="{{ .Site.Params.cdn.css }}" rel="stylesheet"  {{ printf "integrity=%q" .Site.Params.cdn.css_hash | safeHTMLAttr }} crossorigin="anonymous">
 
 {{- if (ne .Page.Layout "examples") }}
-  {{- $style := resources.Get "css/docs.css" }}
   <link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 {{- end }}

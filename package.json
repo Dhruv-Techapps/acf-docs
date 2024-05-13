@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo server --port 9001 --disableFastRender",
-    "build": "hugo --minify"
+    "build": "hugo --minify",
+    "docs": "npm-run-all docs-build docs-lint",
+    "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
+    "docs-compile": "npm run docs-build",
+    "docs-vnu": "node build/vnu-jar.mjs",
+    "docs-lint": "npm run docs-vnu",
+    "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
+    "docs-serve-only": "npx sirv-cli _site --port 9001"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
@@ -18,6 +25,12 @@
     "buildTags": "extended"
   },
   "devDependencies": {
-    "hugo-bin": "^0.101.2"
+    "@docsearch/js": "^3.6.0",
+    "@stackblitz/sdk": "^1.10.0",
+    "autoprefixer": "^10.4.19",
+    "clipboard": "^2.0.11",
+    "hugo-bin": "^0.122.8",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.1"
   }
 }
