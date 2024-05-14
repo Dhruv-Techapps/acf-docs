@@ -1,6 +1,6 @@
 languageCode:           "en"
-title:                  "Bootstrap"
-baseURL:                "https://getbootstrap.com"
+title:                  "Auto Clicker - AutoFill"
+baseURL:                "https://getautoclicker.com"
 
 security:
   enableInlineShortcodes: true
@@ -86,8 +86,6 @@ params:
   subtitle:             "The most popular HTML, CSS, and JS library in the world."
   current_ruby_version: "5.3.3"
   rfs_version:          "v10.0.0"
-  themes:               "https://themes.getbootstrap.com/"
-  icons:                "https://icons.getbootstrap.com/"
   swag:                 "https://cottonbureau.com/people/bootstrap"
 
   analytics:

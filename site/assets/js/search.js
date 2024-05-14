@@ -9,10 +9,10 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-import docsearch from '@docsearch/js'
+import docsearch from '@docsearch/js';
 // https://gohugo.io/hugo-pipes/js/#options
 // eslint-disable-next-line import/no-unresolved
-import { appId, apiKey, indexName } from '@params';
+import { apiKey, appId, indexName } from '@params';
 
 (() => {
   const searchElement = document.getElementById('docsearch')
@@ -33,7 +33,7 @@ import { appId, apiKey, indexName } from '@params';
     },
     transformItems(items) {
       return items.map(item => {
-        const liveUrl = 'https://getbootstrap.com/'
+        const liveUrl = 'https://getautoclicker.com/'
 
         item.url = window.location.origin.startsWith(liveUrl) ?
           // On production, return the result as is
