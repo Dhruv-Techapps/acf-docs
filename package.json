@@ -28,6 +28,7 @@
     "@docsearch/js": "^3.6.0",
     "@stackblitz/sdk": "^1.10.0",
     "autoprefixer": "^10.4.19",
+    "bootstrap": "^5.3.3",
     "clipboard": "^2.0.11",
     "hugo-bin": "^0.122.8",
     "postcss-cli": "^11.0.0",

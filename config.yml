@@ -33,7 +33,7 @@ publishDir:             "_site"
 
 module:
   mounts:
-    - source:           dist
+    - source:           node_modules/bootstrap/dist
       target:           static/docs/4.x/dist
     - source:           site/assets
       target:           assets
