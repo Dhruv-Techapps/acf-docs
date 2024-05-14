@@ -91,12 +91,12 @@ params:
   swag:                 "https://cottonbureau.com/people/bootstrap"
 
   analytics:
-    fathom_site:        "ITUSEYJG"
+    container_id:        "GTM-K48RLHS"
 
   algolia:
-    appId:              "AK7KMZKZHQ"
-    apiKey:             "3151f502c7b9e9dafd5e6372b691a24e"
-    indexName:          "bootstrap"
+    appId:              "4Q2FJR0QSQ"
+    apiKey:             "b172a945702e1024904638bc882ac1a1"
+    indexName:          "auto_clicker_auto_fill"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v5.3.3.zip"
