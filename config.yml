@@ -31,6 +31,18 @@ disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
+outputs:
+  home:
+    - HTML
+    - Algolia
+
+outputFormats:
+  Algolia:
+    baseName: algolia
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: true
+
 module:
   mounts:
     - source:           node_modules/bootstrap/dist
@@ -87,6 +99,18 @@ params:
   current_ruby_version: "5.3.3"
   rfs_version:          "v10.0.0"
   swag:                 "https://cottonbureau.com/people/bootstrap"
+
+  algolia:
+    vars:
+      - title
+      - summary
+      - date
+      - publishdate
+      - expirydate
+      - permalink
+    params:
+      - categories
+      - tags
 
   analytics:
     container_id:        "GTM-K48RLHS"

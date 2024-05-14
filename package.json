@@ -12,7 +12,8 @@
     "docs-vnu": "node build/vnu-jar.mjs",
     "docs-lint": "npm run docs-vnu",
     "docs-serve": "hugo server --port 9001 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
-    "docs-serve-only": "npx sirv-cli _site --port 9001"
+    "docs-serve-only": "npx sirv-cli _site --port 9001",
+    "algolia": "atomic-algolia"
   },
   "author": "Dhruv Techapps",
   "license": "Apache-2.0",
@@ -33,5 +34,8 @@
     "hugo-bin": "^0.122.8",
     "postcss-cli": "^11.0.0",
     "sass": "^1.77.1"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.19"
   }
 }
