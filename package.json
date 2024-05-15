@@ -34,8 +34,5 @@
     "hugo-bin": "^0.122.8",
     "postcss-cli": "^11.0.0",
     "sass": "^1.77.1"
-  },
-  "dependencies": {
-    "atomic-algolia": "^0.3.19"
   }
 }

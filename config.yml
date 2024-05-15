@@ -31,18 +31,6 @@ disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
-outputs:
-  home:
-    - HTML
-    - Algolia
-
-outputFormats:
-  Algolia:
-    baseName: algolia
-    isPlainText: true
-    mediaType: application/json
-    notAlternative: true
-
 module:
   mounts:
     - source:           node_modules/bootstrap/dist
@@ -100,25 +88,13 @@ params:
   rfs_version:          "v10.0.0"
   swag:                 "https://cottonbureau.com/people/bootstrap"
 
-  algolia:
-    vars:
-      - title
-      - summary
-      - date
-      - publishdate
-      - expirydate
-      - permalink
-    params:
-      - categories
-      - tags
-
   analytics:
     container_id:        "GTM-K48RLHS"
 
   algolia:
-    appId:              "4Q2FJR0QSQ"
-    apiKey:             "b172a945702e1024904638bc882ac1a1"
-    indexName:          "auto_clicker_auto_fill"
+    appId:              "S4D9IW396R"
+    apiKey:             "fe1f65f50add035126bcff7d278820d1"
+    indexName:          "test-getautoclicker"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v5.3.3.zip"
