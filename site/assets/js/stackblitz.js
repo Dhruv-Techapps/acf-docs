@@ -15,7 +15,7 @@ import sdk from '@stackblitz/sdk'
 // https://gohugo.io/hugo-pipes/js/#options
 import {
   cssCdn, docsVersion, jsBundleCdn, jsSnippetFile
-} from '@params' // eslint-disable-line import/no-unresolved
+} from '@params'; // eslint-disable-line import/no-unresolved
 
 // Open in StackBlitz logic
 document.querySelectorAll('.btn-edit').forEach(btn => {
@@ -39,7 +39,7 @@ const openBootstrapSnippet = (htmlSnippet, jsSnippet, classes) => {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="${cssCdn}" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
+    <link href="https://getautoclicker.com/docs/${docsVersion}/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <${'script'} defer src="${jsBundleCdn}"></${'script'}>
   </head>

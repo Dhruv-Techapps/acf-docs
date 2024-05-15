@@ -45,4 +45,4 @@ Stay up to date on the features of {{<param name>}} and reach out to the communi
 - Read and subscribe to [The Official AutoClicker Blog]({{< param blog >}}).
 - Ask and explore our [GitHub Discussions]({{< param discussion >}}).
 
-You can also follow @getbootstrap on Twitter for the latest gossip and awesome music videos.
+You can also follow @getautoclicker on Twitter for the latest gossip and awesome music videos.

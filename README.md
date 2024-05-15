@@ -12,3 +12,6 @@
 
 [img-chrome]:https://img.shields.io/chrome-web-store/stars/iapifmceeokikomajpccajhjpacjmibe?label=chrome&logo=googlechrome&logoColor=white
 [link-chrome]:https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe
+
+
+Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).

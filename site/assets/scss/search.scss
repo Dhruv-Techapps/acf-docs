@@ -5,9 +5,9 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-@import "../../../scss/functions";
-@import "../../../scss/variables";
-@import "../../../scss/mixins";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
 @import "variables";
 
 @import "@docsearch/css/dist/style";
