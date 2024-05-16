@@ -1,6 +1,6 @@
 languageCode:           "en"
-title:                  "Bootstrap"
-baseURL:                "https://getbootstrap.com"
+title:                  "Auto Clicker - AutoFill"
+baseURL:                "https://getautoclicker.com"
 
 security:
   enableInlineShortcodes: true
@@ -33,7 +33,7 @@ publishDir:             "_site"
 
 module:
   mounts:
-    - source:           dist
+    - source:           node_modules/bootstrap/dist
       target:           static/docs/4.x/dist
     - source:           site/assets
       target:           assets
@@ -86,17 +86,15 @@ params:
   subtitle:             "The most popular HTML, CSS, and JS library in the world."
   current_ruby_version: "5.3.3"
   rfs_version:          "v10.0.0"
-  themes:               "https://themes.getbootstrap.com/"
-  icons:                "https://icons.getbootstrap.com/"
   swag:                 "https://cottonbureau.com/people/bootstrap"
 
   analytics:
-    fathom_site:        "ITUSEYJG"
+    container_id:        "GTM-K48RLHS"
 
   algolia:
-    appId:              "AK7KMZKZHQ"
-    apiKey:             "3151f502c7b9e9dafd5e6372b691a24e"
-    indexName:          "bootstrap"
+    appId:              "S4D9IW396R"
+    apiKey:             "fe1f65f50add035126bcff7d278820d1"
+    indexName:          "test-getautoclicker"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v5.3.3.zip"

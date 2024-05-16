@@ -25,7 +25,7 @@
 
     <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
       <div class="offcanvas-header px-4 pb-0">
-        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">{{ .Site.Params.name }}</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
       </div>
 
@@ -36,16 +36,28 @@
             <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Layout "docs" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">Docs</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Title "Examples" }} active" aria-current="true{{ end }}" href="/docs/{{ .Site.Params.docs_version }}/examples/">Issues</a>
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.issues }}">Issues</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.icons }}" target="_blank" rel="noopener">Icons</a>
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.discussion }}" target="_blank" rel="noopener">Discussion</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.themes }}" target="_blank" rel="noopener">Themes</a>
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.configs }}" target="_blank" rel="noopener">Configs</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.blog }}" target="_blank" rel="noopener">Blog</a>
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.test }}" target="_blank" rel="noopener">Test</a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Variant
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{ .Site.Params.stable }}">Stable</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{ .Site.Params.beta }}">Beta</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{ .Site.Params.dev }}">Dev</a></li>
+            </ul>
           </li>
         </ul>
 
@@ -53,9 +65,21 @@
 
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" aria-label="Youtube" href="{{ .Site.Params.youtube }}" target="_blank" rel="noopener">
+              {{ partial "icons/youtube.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
+              <small class="d-lg-none ms-2">Youtube</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">
               {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
               <small class="d-lg-none ms-2">GitHub</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" aria-label="Google Group" href="{{ .Site.Params.google_group }}" target="_blank" rel="noopener">
+              {{ partial "icons/chat-left-quote-fill.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
+              <small class="d-lg-none ms-2">Google Group</small>
             </a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
@@ -68,6 +92,12 @@
             <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.opencollective }}" target="_blank" rel="noopener">
               {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
               <small class="d-lg-none ms-2">Open Collective</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" aria-label="Discord" href="{{ .Site.Params.discord }}" target="_blank" rel="noopener">
+              {{ partial "icons/discord.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
+              <small class="d-lg-none ms-2">Discord</small>
             </a>
           </li>
           <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
