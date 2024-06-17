@@ -17,6 +17,7 @@ aliases:
 
 
 ## Edge
-- [Stable]({{<param download.edge.stable>}})  - well tested and stable version
+- visit chrome webstore and download from there
+  - [Stable]({{<param download.chrome.stable>}})  - well tested and stable version
 
 
