@@ -10,14 +10,7 @@ aliases:
   - "/download/"
 ---
 
-## Chrome
+## Chrome / Edge
 - [Stable]({{<param download.chrome.stable>}})  - well tested and stable version
 - [Beta]({{<param download.chrome.beta>}}) - Preview the latest features: Try out the newest features. 
 - [Dev]({{<param download.chrome.dev>}}) - Live on the bleeding edge: Try out our latest features. 
-
-
-## Edge
-- visit chrome webstore and download from there
-  - [Stable]({{<param download.chrome.stable>}})  - well tested and stable version
-
-
