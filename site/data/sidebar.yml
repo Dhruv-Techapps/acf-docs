@@ -47,6 +47,10 @@
     - title: Repeat Interval
     - title: Refresh
 
+- title: Session
+  pages:
+    - title: Overview
+
 - title: Action
   pages:
     - title: Overview

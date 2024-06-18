@@ -37,7 +37,7 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
       </td>
     </tr>
     <tr>
-      <th scope="row">GoogleSheets::Sheet1!C&lt;sessionCount&gt;</th>
+      <th scope="row">GoogleSheets::Sheet1!C&lt;<a href='{{<docsref "/session/overview">}}'>sessionCount</a>&gt;</th>
       <td>
         count will be maintained in session so if page require to submit/refresh/reopen the page it will continue from where it was left until its opened in new tab
       </td>
