@@ -15,6 +15,10 @@
 {{- $applicationJs := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/application.js") }}
 <script defer src="{{ $applicationJs.RelPermalink }}"></script>
 
+
+{{- $liteYtEmbed := resources.Get "js/lite-yt-embed.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/lite-yt-embed.js") }}
+<script defer src="{{ $liteYtEmbed.RelPermalink }}"></script>
+
 {{- if (ne .Page.Layout "examples") -}}
 {{- $esbuildParams := dict
   "apiKey" .Site.Params.algolia.apiKey
