@@ -19,9 +19,8 @@ Click the subscription button below to securely pay for your subscription using
 
 ## Send Payment Details
 
-After completing your payment, please send an email to dhruv.techapps@gmail.com with the following details:
-- Your PayPal email address
-- The Gmail address you use to log in to the Auto Clicker application (if it's different from your PayPal email)
+After completing your payment, please send an email to [dhruv.techapps@gmail.com](mailto:dhruv.techapps@gmail.com) with the following details:
+- The Gmail address you use to log in to the Auto Clicker application
 - Transaction ID
 - Any other relevant information
 
