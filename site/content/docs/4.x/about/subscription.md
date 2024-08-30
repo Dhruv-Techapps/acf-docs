@@ -13,9 +13,10 @@ To upgrade to the Pro version of our extension, please follow these steps:
 Click the subscription button below to securely pay for your subscription using 
 
 - [Github Subscription](https://github.com/sponsors/Dhruv-Techapps)
+<!--
 - [PayPal Pay.Me Link](https://paypal.me/SarojPatel296)
 - [PayPal Subscription](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-74712455GU701232NMZWXVPA)
-- [Open Collective](https://opencollective.com/auto-clicker-autofill)
+- [Open Collective](https://opencollective.com/auto-clicker-autofill) -->
 
 ## Send Payment Details
 
