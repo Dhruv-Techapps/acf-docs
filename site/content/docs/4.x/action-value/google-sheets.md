@@ -10,6 +10,8 @@ Before using Google Sheets Value please do connect extension with [Google Sheets
 
 You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api/guides/concepts#:~:text=The%20Google%20Sheets%20API%20is,Update%20spreadsheet%20formatting) to fetch the cell value
 
+
+
 <table class="table">
   <thead>
     <tr>
@@ -44,3 +46,15 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
     </tr>
   </tbody>
 </table>
+
+{{<callout warning>}}
+We offer a generous daily allowance of 10 free Google Sheets API calls per user. This limit resets every day, providing you with a fresh set of 10 calls each day.
+
+To unlock unlimited access to Google Sheets API calls, you have two options:
+
+#### Subscribe to the Pro Version
+By upgrading to our Pro version, you gain unlimited access to Google Sheets API calls, allowing you to maximize productivity without worrying about daily limits.
+
+#### Switch to a Public Profile
+Alternatively, you can switch your profile to public mode to enjoy unlimited access to Google Sheets API calls. This option is ideal for users who do not require private data handling and are comfortable sharing their configurations publicly.
+{{</callout >}}
