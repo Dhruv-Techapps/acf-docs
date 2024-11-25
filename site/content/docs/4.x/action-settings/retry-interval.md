@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Retry Interval
+title: Action · Retry Interval
 description: Retry Interval will wait for no of sec provided before retry to find XPath of Action. default is 1 sec
 group: action-settings
 toc: true

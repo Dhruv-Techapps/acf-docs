@@ -6,7 +6,6 @@ group: action-condition
 toc: true
 ---
 
-
 {{<img action-condition.png>}}
 
 {{<callout info>}}
@@ -14,7 +13,6 @@ toc: true
 - Action condition are available from second [Action]({{<docsref "/action/overview">}}) only. As first [Action]({{<docsref "/action/overview">}}) do not have previous action status to check.
 - Action condition can check status of all previous action and not just immediate previous action status
 {{</callout>}}
-
 
 ### Action Condition Modal
 

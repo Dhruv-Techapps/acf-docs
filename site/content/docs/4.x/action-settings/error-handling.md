@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Error Handling
-description: Select what should happen if xpath is not found after no of retry.
+title: Action · Error Handling
+description: Select what should happen if element is not found after no of retry.
 group: action-settings
 toc: true
 ---

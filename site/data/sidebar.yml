@@ -5,18 +5,27 @@
 
 - title: Extension
   pages:
-    - title: Icon
+    - title: Status Bar
     - title: Log
+    - title: Theme
+    - title: Language
 
 - title: Record
   pages:
     - title: Overview
 
+- title: Settings
+  pages:
+    - title: Overview
+    - title: Retry
+    - title: Show Notification
+    - title: Backup
+    - title: Google Sheets
+    - title: Status Bar Location
+
 - title: Config List
   pages:
     - title: Overview
-    - title: Select Configuration
-    - title: Add Configuration   
     - title: Bulk Export
     - title: Bulk Import
     - title: Bulk Remove
@@ -47,14 +56,11 @@
     - title: Repeat Interval
     - title: Refresh
 
-- title: Session
-  pages:
-    - title: Overview
-
 - title: Action
   pages:
     - title: Overview
     - title: Name
+    - title: Disable
     - title: Init Wait
     - title: Element Finder
     - title: Repeat
@@ -86,6 +92,10 @@
     - title: Batch Repeat
     - title: Function
 
+- title: Session
+  pages:
+    - title: Overview
+
 - title: Action Settings
   pages:
     - title: Overview
@@ -97,17 +107,6 @@
 - title: Action Condition
   pages:
     - title: Overview
-
-- title: Settings
-  pages:
-    - title: Overview
-    - title: Check Iframe
-    - title: Retry
-    - title: Retry Interval
-    - title: Error Handling
-    - title: Show Notification
-    - title: Backup
-    - title: Google Sheets
 
 - title: Addon
   pages:
@@ -122,6 +121,5 @@
 
 - title: About
   pages:
-    - title: Overview
     - title: Permissions
     - title: Subscription

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Backup
+title: Settings · Backup
 description: Backup / Retrieve your configuration safely on your Google Drive
 group: settings
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Recheck Options
+title: Addon · Recheck Options
 description: Recheck options is an action which is performed is condition is failed even after recheck
 group: addon
 toc: true

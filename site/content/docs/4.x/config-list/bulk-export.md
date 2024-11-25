@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Bulk Export Configuration
-description: Bulk Export configuration from extension into json file
+description: Exports all configurations in JSON format for backup purposes.
 group: config-list
 toc: true
 ---

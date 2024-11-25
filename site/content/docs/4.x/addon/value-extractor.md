@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Value Extractor
+title: Addon · Value Extractor
 description: It is used to extract particular value from text.
 group: addon
 toc: true

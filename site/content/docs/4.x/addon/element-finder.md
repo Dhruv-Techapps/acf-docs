@@ -1,12 +1,10 @@
 ---
 layout: docs
-title: Element Finder
+title: Addon · Element Finder
 description: Its little tricky but believe me its not that hard to find.
 group: addon
 toc: true
 ---
-
-
 {{<callout info>}}
 Follow below steps to get XPath quickly
 1. Right click any button or link or whatever you want to click in webpage and select Inspect.
@@ -49,7 +47,6 @@ Now its possible you can check or compare with `date` and `time` and make the [A
 
 {{<callout danger>}}
 #### Func methods
-
 One important warning in advance: Malicious scripts can violate your privacy and act on your behalf!
 - You should create script own. for simpler functionality like calling a function and all.
 - If you not sure how to what all functions are available then You should only run scripts from sources you trust.
@@ -101,7 +98,6 @@ More than one element get selected. If there are two element within page with sa
 
 ### Get Elements By Name
 If an element tag is having `name="nameOfElement"` attribute on it you can simply make use of `Name::nameOfElement` to target that element.
-
 More than one element get selected. If there are two element within page with same name both will be selected and [Action]({{<docsref "/action/overview">}}) will be performed on both elements.
 
 {{<callout info>}}
@@ -122,7 +118,6 @@ Referring below html section
 ```
 ### Get Elements By Tag Name
 To target specific elements by its tag name you can simply make use of `TagName::tagNameOfElement`.
-
 More than one element get selected. If there are two element within page with same tag name both will be selected and [Action]({{<docsref "/action/overview">}}) will be performed on both elements.
 
 {{<callout info>}}
@@ -147,7 +142,6 @@ Referring below html section
 
 ### Query Selector
 To target specific element by its different attributes you can simply make use of `querySelector::selectors`.
-
 Single element get selected. If there are two element within page with same selectors first will be selected and [Action]({{<docsref "/action/overview">}}) will be performed on it.
 
 {{<callout info>}}

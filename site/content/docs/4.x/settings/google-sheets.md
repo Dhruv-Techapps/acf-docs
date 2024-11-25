@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Google Sheets
+title: Settings · Google Sheets
 description: Extension can fetch the values from your Google Sheets and fill the forms on behalf of you.
 group: settings
 toc: true
 ---
 
-{{<img settings.png>}}
+{{<img global-settings.png>}}
 
 ### Google Sheets Login
 Auto Clicker Auto Fill extension require your google sheets readonly permission in order to read cell values from it. It require below two scopes. Click on `Connect with Google Sheets`

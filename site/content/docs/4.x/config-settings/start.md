@@ -11,7 +11,7 @@ toc: true
 
 - Enable Manual Start
 - Refresh target page once to switch from Auto - Manual mode
-- You can check [icon]({{<docsref "/extension/icon">}}) to find Manual mode is enabled.
+- You can check [status bar]({{<docsref "/extension/status-bar">}}) to find Manual mode is enabled.
 - Press `Ctrl + Shift + A` to start extension
 - You can update [hotkey]({{<docsref "/config-settings/hotkey">}}) from settings
 {{</callout>}}

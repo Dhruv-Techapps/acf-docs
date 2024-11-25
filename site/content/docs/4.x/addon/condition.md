@@ -1,13 +1,12 @@
 ---
 layout: docs
-title: Condition
+title: Addon · Condition
 description: Add condition which you can check before performing action
 group: addon
 toc: true
 ---
-
 You can specify what condition you need to apply.<br/>
-(a) - value or text of xpath element<br/>
+(a) - value or text of element<br/>
 (b) - value provided in configuration page field.
 
 <table class="table">
