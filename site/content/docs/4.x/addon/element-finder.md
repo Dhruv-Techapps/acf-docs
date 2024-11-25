@@ -175,7 +175,7 @@ Its similar to query selector which selects all matching element rather than sel
 Xpath helps to track down and element using its document chain examples are below. 
 
 {{<callout warning>}}
-  Combine [batch-repeat]({{<docsref "/batch/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all [Action]({{<docsref "/action/overview">}}) one by one it will replace `<batchRepeat>` value with index from 1 to 10
+  Combine [batch-repeat]({{<docsref "/configuration/batch#repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all [Action]({{<docsref "/action/overview">}}) one by one it will replace `<batchRepeat>` value with index from 1 to 10
 {{</callout>}}
 
 

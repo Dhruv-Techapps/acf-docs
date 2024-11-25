@@ -15,7 +15,7 @@ Auto Clicker Auto Fill extension require your google sheets readonly permission 
 - `https://www.googleapis.com/auth/spreadsheets.readonly`
 - `https://www.googleapis.com/auth/userinfo.profile`
 
-> After you connect with Google Sheets go to configuration settings and add [Google Sheet ID]({{<docsref "/config-settings/google-sheet-id">}})
+> After you connect with Google Sheets go to configuration settings and add [Google Sheet ID]({{<docsref "/configuration/config-settings#google-sheet-id">}})
 
 {{<img settings-google-sheets.png>}}
 

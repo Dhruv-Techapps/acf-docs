@@ -2,7 +2,7 @@
 layout: docs
 title: Action Condition
 description: Action condition are used to check status (`SKIPPED` or `DONE`) of previous executed actions and `Skip` or `Process` current Action
-group: action-condition
+group: action
 toc: true
 ---
 
@@ -16,7 +16,7 @@ toc: true
 
 ### Action Condition Modal
 
-Action Condition consist of two part [IF]({{<docsref "/action-condition/overview#if">}}) and [THEN]({{<docsref "/action-condition/overview#then">}})
+Action Condition consist of two part [IF]({{<docsref "/action/action-condition#if">}}) and [THEN]({{<docsref "/action/action-condition#then">}})
 
 {{<img action-condition-modal.png>}}
 

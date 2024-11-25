@@ -8,7 +8,7 @@ toc: true
 
 {{<callout info>}}
 
-##### You can get sequence value with [batch repeat]({{<docsref "/batch/repeat">}})
+##### You can get sequence value with [batch repeat]({{<docsref "/configuration/batch#repeat">}})
 
 e.g. In value field if you enter `example<batchRepeat>`
 

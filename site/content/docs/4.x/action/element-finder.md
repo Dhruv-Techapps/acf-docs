@@ -17,19 +17,6 @@ Follow below steps to get XPath quickly
 ### XPath
 Xpath helps to track down and element using its document chain examples are below
 
-{{<callout info>}}
-  Combine [batch-repeat]({{<docsref "/batch/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[1]/button` and under batch repeat add value like 5 or 10 based on number of rows. Now when batch repeat all action one by one it will replace `<batchRepeat>` value with index from 1 to 10
-{{</callout>}}
-
-{{<callout info>}}
- Combine [action-repeat]({{<docsref "/action/repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<batchRepeat>]/td[<actionRepeat>]/button` and under action repeat add value like 5 or 10 based on number of rows. Now when action repeat all action one by one it will replace `<actionRepeat>` value with index from 1 to 10
-{{</callout>}}
-
-{{<callout info>}}
-Combine [session-count]({{<docsref "/session/overview">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. now replace it will `//table/tr[<sessionCount>]/td[1]/button`. The session count starts from 1 and increments each time the page is refreshed. For more information on how to clear and start from a different number, refer to the [session overview]({{<docsref "/session/overview">}}) page.
-{{</callout>}}
-
-
 {{<markdown>}}
 {{<partial example-xpath.md>}}
 {{</markdown>}}
@@ -154,4 +141,18 @@ Referring below html section
 {{<callout warning>}}
 #### Important
 Its similar to query selector which selects all matching element rather than selecting first matching element
+{{</callout>}}
+
+
+## Dynamic Xpath
+{{<callout info>}}
+- [batch-repeat]({{<docsref "/configuration/batch#repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row.
+  **Examples**
+    - `//table/tr[<batchRepeat>]/td[1]/button`
+-  [action-repeat]({{<docsref "/action/overview#repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button`
+  **Examples**
+    - `//table/tr[<batchRepeat>]/td[1<actionRepeat>]/button`
+- [session-count]({{<docsref "/session/overview">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. 
+  **Examples**
+    - `//table/tr[1]/td[1<sessionCount>]/button`
 {{</callout>}}

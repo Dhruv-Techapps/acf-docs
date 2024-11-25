@@ -23,6 +23,10 @@
     - title: Google Sheets
     - title: Status Bar Location
 
+- title: Session
+  pages:
+    - title: Overview
+
 - title: Config List
   pages:
     - title: Overview
@@ -34,38 +38,19 @@
 - title: Configuration
   pages:
     - title: Overview
-    - title: Name
     - title: URL
-    - title: Init Wait
-    - title: Duplicate
-    - title: Start Time
-    - title: Enable & Disable
-    - title: Export & Import
-  
-- title: Config Settings
-  pages:
-    - title: Start
-    - title: Extension Load
-    - title: Hotkey
-    - title: Google Sheet ID
-
-- title: Batch
-  pages:
-    - title: Overview
-    - title: Repeat
-    - title: Repeat Interval
-    - title: Refresh
+    - title: Config Settings
+    - title: Batch
+    - title: Action ↩
 
 - title: Action
   pages:
     - title: Overview
-    - title: Name
-    - title: Disable
-    - title: Init Wait
     - title: Element Finder
-    - title: Repeat
-    - title: Repeat Interval
     - title: Columns Filter
+    - title: Value ↩
+    - title: Action Settings
+    - title: Action Condition
 
 - title: Action Value
   pages:
@@ -91,22 +76,6 @@
     - title: Window Command
     - title: Batch Repeat
     - title: Function
-
-- title: Session
-  pages:
-    - title: Overview
-
-- title: Action Settings
-  pages:
-    - title: Overview
-    - title: Iframe First
-    - title: Retry
-    - title: Retry Interval
-    - title: Error Handling
-
-- title: Action Condition
-  pages:
-    - title: Overview
 
 - title: Addon
   pages:

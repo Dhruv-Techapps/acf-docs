@@ -6,7 +6,7 @@ group: action-value
 toc: true
 ---
 
-Before using Google Sheets Value please do connect extension with [Google Sheets]({{<docsref "/settings/google-sheets">}}) and add [Google Sheet ID]({{<docsref "/config-settings/google-sheet-id">}})
+Before using Google Sheets Value please do connect extension with [Google Sheets]({{<docsref "/settings/google-sheets">}}) and add [Google Sheet ID]({{<docsref "/configuration/config-settings#google-sheet-id">}})
 
 You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api/guides/concepts#:~:text=The%20Google%20Sheets%20API%20is,Update%20spreadsheet%20formatting) to fetch the cell value
 

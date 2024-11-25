@@ -8,12 +8,69 @@ toc: true
 
 {{<img configuration.png>}}
 
-Configuration is everything in extension. Every things extension does are instructed using configuration only. You need to configuration your site in order to automate it.
+# Configuration Documentation
 
+The **Configuration** section is the core of the extension, serving as the starting point for all tasks performed by actions. Below is a detailed explanation of its fields and features:
 
-It consist of below parts
-- [Name]({{<docsref "/configuration/name">}}) - to uniquely identify a configuration or to add some information you can write it in name which helps you easily identify what this configuration is all about and what its going to do.
-- [URL]({{<docsref "/configuration/url">}}) - This is one of the main part of configuration every configuration starts from here only. It can contain plain URL or regex expression to match particular URL. if a site is opened and it matches this URL in configuration it takes all action from configuration and perform on site. If there are more than one configuration which matches the URL of page it will take the first configuration from list. and hence order of configuration is important.
-- [Init Wait]({{<docsref "/configuration/init-wait">}}) - many times our page take one or two sec to load completely this is totally dependent on site where its hosted or where its being accessed from . using which device or browser we are accessing. what is our network strength. all this things make page load faster or slow. Also there is scenario where page is loaded but you see loader in page and content is loaded later. This is because of single page application platform. In all above cases you can added init wait which makes extension to wait for that particular amount of time before starting execution.
-- [Enable]({{<docsref "/configuration/enable-disable">}}) - This switch function is not that much used but it can be handy when you want to disable any particular configuration.
-- [Export & Import]({{<docsref "/configuration/export-import">}}) - Export and Import configuration is used when you want to take backup of your configuration or share your configuration with some one. you can simply export your configuration and inform your friend to import that configuration. One important point here is it dont export settings from global if there is any specific setting in global you need to take screen shot and share.
+## Key Fields
+
+### [URL]({{<docsref "configuration/url">}})
+- **Description**: This is the most crucial part of a configuration. It determines where the configuration applies.
+- **Details**:
+  - Can contain a plain URL or a regular expression (regex) to match specific URLs.
+  - When a site matches the URL in a configuration, all actions defined in that configuration are performed on the site.
+  - If multiple configurations match the page URL, the first configuration in the list is used. Hence, **the order of configurations is important**.
+
+### Name
+- **Description**: Helps make the configuration readable.
+- **Details**:
+  - Defaults to the URL’s origin or base URL but can be edited.
+  - Can be left empty without affecting execution.
+
+### Init Wait
+- **Description**: Sets a delay before execution starts to accommodate page loading times.
+- **Details**:
+  - Useful for pages with slow loading times or content that loads asynchronously (e.g., single-page applications).
+  - Configurable based on factors like device, browser, and network speed.
+
+### Enable
+- **Description**: A toggle to enable or disable the configuration.
+- **Details**:
+  - Handy for temporarily disabling configurations without deleting them.
+
+### Export
+- **Description**: Exports a single configuration in JSON format for backup or sharing.
+
+### Import
+- **Description**: Imports a single configuration into the extension.
+- **Details**:
+  - Adds the configuration even if one with the same URL or name already exists.
+
+### Duplicate
+- **Description**: Creates a duplicate of the configuration and adds it to the list.
+
+### [Config Settings]({{<docsref "configuration/config-settings">}})
+- **Description**: Allows customization of configuration behavior.
+- **Details**:
+  - **Start Triggers**: Define whether the configuration starts when the window or document loads.
+  - **Auto/Manual Start**: Options for automatic start or manual trigger via a hotkey.
+  - **Start Time**: Specifies a time of day for execution to begin.
+  - **Google Sheets ID**: Allows actions to fetch data from a Google Sheet.
+  - **URL Match Options**: Choose between regex or exact match.
+  - **Alert Overrides**: Option to bypass default browser alerts, confirms, and prompts.
+
+### [Batch]({{<docsref "configuration/batch">}})
+- **Description**: Groups actions together for repeated execution.
+- **Details**:
+  - Includes fields for repeat count, repeat interval, and refresh.
+
+### [Action]({{<docsref "configuration/action">}})
+- **Description**: Represents individual tasks to be performed.
+- **Details**:
+  - Fields include element finder, value, and conditions for execution.
+  - Allows overriding global settings for specific actions.
+
+---
+
+This detailed documentation ensures users can understand and utilize the Configuration section effectively, enabling smooth automation and task execution.
+

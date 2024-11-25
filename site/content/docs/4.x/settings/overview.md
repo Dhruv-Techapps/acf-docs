@@ -35,7 +35,6 @@ Retry settings control how the extension handles cases where an element is not f
 | **Retry Interval**   | Float (seconds)| `1`                       | Interval (in seconds) between retries.                      |
 | **Retry Option**     | Dropdown       | `STOP`                    | Action to take when retries are exhausted. Options include: |
 {{</table>}}
-
 These settings apply globally unless overridden at the action level.
 
 ## [Backup]({{<docsref "settings/backup">}})

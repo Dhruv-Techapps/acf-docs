@@ -27,12 +27,12 @@ toc: true
 ## Additional (Advance)
 - [Configuration List]({{<docsref "/config-list/overview">}}) - it consist of all configuration
   - [Configuration]({{<docsref "/configuration/overview">}}) - combination of url and actions
-    - [Configuration Settings]({{<docsref "/config-settings/start">}})
-    - [Batch]({{<docsref "/batch/overview">}}) - set of actions
-      - [Action]({{<docsref "/action/overview">}}) - combination of element finder and action which need to be performed.
-      - [Action Value]({{<docsref "/action/overview">}}) 
-      - [Action Settings]({{<docsref "/action/overview">}})
-      - [Action Condition]({{<docsref "/action/overview">}})
+    - [Configuration Settings]({{<docsref "/configuration/config-settings">}})
+    - [Batch]({{<docsref "/configuration/batch">}}) - set of actions
+      - [Action]({{<docsref "/configuration/action">}}) - combination of element finder and action which need to be performed.
+      - [Action Value]({{<docsref "/action-value/overview">}}) 
+      - [Action Settings]({{<docsref "/action/action-settings">}})
+      - [Action Condition]({{<docsref "/action/action-condition">}})
         - [Addon]({{<docsref "/addon/overview">}}) - add condition before action
 - [Global Settings]({{<docsref "/settings/overview">}}) - global setting how extension should work
 
