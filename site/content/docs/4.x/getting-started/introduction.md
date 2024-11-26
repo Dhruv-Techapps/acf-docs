@@ -29,7 +29,7 @@ toc: true
   - [Configuration]({{<docsref "/configuration/overview">}}) - combination of url and actions
     - [Configuration Settings]({{<docsref "/configuration/config-settings">}})
     - [Batch]({{<docsref "/configuration/batch">}}) - set of actions
-      - [Action]({{<docsref "/configuration/action">}}) - combination of element finder and action which need to be performed.
+      - [Action]({{<docsref "/action/overview">}}) - combination of element finder and action which need to be performed.
       - [Action Value]({{<docsref "/action-value/overview">}}) 
       - [Action Settings]({{<docsref "/action/action-settings">}})
       - [Action Condition]({{<docsref "/action/action-condition">}})
