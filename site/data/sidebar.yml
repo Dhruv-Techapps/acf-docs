@@ -41,14 +41,12 @@
     - title: URL
     - title: Config Settings
     - title: Batch
-    - title: Action ↩
 
 - title: Action
   pages:
     - title: Overview
     - title: Element Finder
     - title: Columns Filter
-    - title: Value ↩
     - title: Action Settings
     - title: Action Condition
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Settings · Retry
-description: Retry finding an element on a webpage for a specified number of times. The default is 5.
+description: Retry settings control how the extension handles cases where an element is not found on the page.
 group: settings
 toc: true
 ---
@@ -35,3 +35,5 @@ Choose what should happen if the element is not found after the specified number
 | SKIP    | Skips the action and proceeds to the next one.   |
 | REFRESH | Refreshes the webpage and retries the action.    |
 {{</table>}}
+
+These settings apply globally unless overridden at the action level.
