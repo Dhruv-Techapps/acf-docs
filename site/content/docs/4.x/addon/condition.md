@@ -9,44 +9,17 @@ You can specify what condition you need to apply.<br/>
 (a) - value or text of element<br/>
 (b) - value provided in configuration page field.
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Equals</td>
-      <td>String | Number</td>
-      <td>(a) should be equal to (b)</td>
-    </tr>
-    <tr>
-      <td>Contains</td>
-      <td>String | Number</td>
-      <td>(a) contains (b)</td>
-    </tr>
-    <tr>
-      <td>Greater Than</td>
-      <td>Number</td>
-      <td>(a) is greater than (b)</td>
-    </tr>
-    <tr>
-      <td>Lesser Than</td>
-      <td>Number</td>
-      <td>(a) is lesser than (b)</td>
-    </tr>
-    <tr>
-      <td>Greater Than Equals</td>
-      <td>Number</td>
-      <td>(a) is greater than or equals to (b)</td>
-    </tr>
-    <tr>
-      <td>Lesser Than Equals</td>
-      <td>Number</td>
-      <td>(a) is lesser than or equals to (b)</td>
-    </tr>
-  </tbody>
-</table>
+{{<table>}}
+| `Name`                  | Type            | Description                             |
+|-----------------------|-----------------|-----------------------------------------|
+| `Equals`              | String | Number | (a) should be equal to (b)              |
+| `Not Equals`          | String | Number | (a) should not be equal to (b)          |
+| `Contains`            | String | Number | (a) contains (b)                        |
+| `Not Contains`        | String | Number | (a) does not contain (b)                |
+| `Greater Than`        | Number          | (a) is greater than (b)                 |
+| `Lesser Than`         | Number          | (a) is lesser than (b)                  |
+| `Greater Than Equals` | Number          | (a) is greater than or equals to (b)    |
+| `Lesser Than Equals`  | Number          | (a) is lesser than or equals to (b)     |
+| `Is Checked`          | Boolean         | (a) is checked                          |
+| `Is Not Checked`      | Boolean         | (a) is not checked                      |
+{{</table>}}

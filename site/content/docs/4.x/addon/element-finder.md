@@ -17,28 +17,13 @@ Follow below steps to get XPath quickly
 Now its possible you can check or compare with `date` and `time` and make the [Action]({{<docsref "/action/overview">}}) work accordingly. All you have to do is instead of Element finder try adding `Func::new Date().getHours()` to get the system current hour and it will be in 24 hours. now add condition greater than less than. which ever condition you want and in value field add hour. and under Recheck add SKIP if not matched.
 {{<img addon-func.png>}}
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Func::</th>
-      <th scope="col">Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="col">new Date().getHours()</th>
-      <td>It will return current browser hours. There are other `Date` functions also reference link <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">Date</a></td>
-    </tr>
-    <tr>
-      <th scope="col">location.href</th>
-      <td>It will return current browser URL. There are other `location` functions also reference link <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location" target="_blank" rel="noopener">Location</a></td>
-    </tr>
-    <tr>
-      <th scope="col">Other</td>
-      <td>Currently we have not tested all functions but will test and keep updating this list.</td>
-    </tr>
-  </tbody>
-</table>
+{{<table>}}
+| `Func::`                  | Result |
+|---------------------------|----------------------------------------------------------------------------------------------------------|
+| `new Date().getHours()`   | It will return current browser hours. There are other `Date` functions also reference link [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                |
+| `location.href`           | It will return current browser URL. There are other `location` functions also reference link [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)                                      |
+| `Other`                   | Currently we have not tested all functions but will test and keep updating this list.                                                                                                                   |
+{{</table>}}
 
 
 {{<callout info>}}
