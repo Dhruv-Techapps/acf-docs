@@ -6,7 +6,7 @@
   <script>document.getElementById('${n.id}').submit();<\/script>
 </body>
 </html>`}function z(e,t){let n=N(e);n.action=w("/run",t),n.target=T(t),document.body.appendChild(n),n.submit(),document.body.removeChild(n)}function h(e){var n;return e!=null&&e.contentWindow?((n=K(e))!=null?n:new E(e)).pending:Promise.reject("Provided element is not an iframe.")}function J(e,t){z(e,t)}function X(e,t){let n=w(`/edit/${e}`,t),o=T(t);window.open(n,o)}function Y(e,t){let n=w(`/github/${e}`,t),o=T(t);window.open(n,o)}function Q(e,t,n){var c;let o=S(e),r=G(t,n),s=document.createElement("iframe");return v(o,s,n),(c=s.contentDocument)==null||c.write(r),h(s)}function Z(e,t,n){let o=S(e),r=document.createElement("iframe");return r.src=_(`/edit/${t}`,n),v(o,r,n),h(r)}function ee(e,t,n){let o=S(e),r=document.createElement("iframe");return r.src=_(`/github/${t}`,n),v(o,r,n),h(r)}var L={connect:h,embedGithubProject:ee,embedProject:Q,embedProjectId:Z,openGithubProject:Y,openProject:J,openProjectId:X};var C="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",D="4.x";var M="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",O=`(() => {
-  // ns-hugo:/home/runner/work/acf-docs/acf-docs/site/assets/js/partials/snippets.js
+  // ns-hugo-imp:/home/runner/work/acf-docs/acf-docs/site/assets/js/partials/snippets.js
   var snippets_default = () => {
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
       new bootstrap.Tooltip(tooltip);
