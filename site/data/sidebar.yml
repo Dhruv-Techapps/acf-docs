@@ -53,6 +53,8 @@
 - title: Action Value
   pages:
     - title: Overview
+    - title: AI
+    - title: Captcha
     - title: Google Sheets
     - title: Append
     - title: Prepend
@@ -74,7 +76,7 @@
     - title: Window Command
     - title: Batch Repeat
     - title: Function
-
+ 
 - title: Addon
   pages:
     - title: Overview

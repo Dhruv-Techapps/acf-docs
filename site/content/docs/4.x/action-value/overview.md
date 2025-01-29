@@ -7,6 +7,8 @@ toc: true
 ---
 
 Use below value specific command to advance your configuration
+- [AI]({{<docsref "/action-value/ai">}})
+- [Captcha]({{<docsref "/action-value/captcha">}})
 - [Google Sheets]({{<docsref "/action-value/google-sheets">}})
 - [Append]({{<docsref "/action-value/append">}})
 - [Prepend]({{<docsref "/action-value/prepend">}})
