@@ -4,7 +4,7 @@ import frontmatter
 import markdown
 from bs4 import BeautifulSoup
 
-BASE_URL = "https://getautoclicker.com/docs/4.x"
+BASE_URL = "https://getautoclicker.com/docs/4.x/"
 PARTIAL_BASE_URL = "./site/layouts/partials"
 
 # Function to remove <img> tags from content

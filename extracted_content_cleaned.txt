@@ -2,82 +2,23 @@
 Title: Global Settings
 Description: The Global Settings section in the application provides various options to control notifications, retries, backups, integrations, and advanced features to enhance user experience. Below is a detailed explanation of each section, presented in a structured and user-friendly format.
 Content:
-## Notification Settings
+- [Show Notification](https://getautoclicker.com/docs/4.x/settings/show-notification)
+- [Retry](https://getautoclicker.com/docs/4.x/settings/retry)
+- [Backup](https://getautoclicker.com/docs/4.x/settings/backup)
+- [Google Sheets](https://getautoclicker.com/docs/4.x/settings/google-sheets)
 
-Notification settings allow you to control how the extension displays notifications to the user. These settings include:
-
-
-| **Notification Type**          | **Description**                                                             |
-|---------------------------------|-----------------------------------------------------------------------------|
-| **Action Complete**            | Notifies when an individual action is completed.                            |
-| **Batch Complete**             | Notifies when a batch of actions is completed.                              |
-| **Configuration Complete**     | Notifies when a configuration process is completed.                         |
-| **Error Notifications**        | Notifies when an error occurs during execution.                             |
-
-
-### Additional Options:
-- **Silent Mode**: Show notifications without sound.
-- **Sound Alerts**: Play a sound with notifications.
-- **Discord Integration**: Connect the extension to a Discord server. When enabled:
-  - Notifications (e.g., action complete, batch complete, errors) are sent to the user's Discord account.
-  - Users must be part of the same Discord server and allow direct messages from server members.
-
-## Retry Settings
-
-Retry settings control how the extension handles cases where an element is not found on the page.
-
-| **Field**            | **Type**       | **Default Value**         | **Description**                                              |
-|----------------------|----------------|---------------------------|--------------------------------------------------------------|
-| **Retry Count**      | Number         | `5`                       | Number of retry attempts for locating an element.            |
-| **Retry Interval**   | Float (seconds)| `1`                       | Interval (in seconds) between retries.                      |
-| **Retry Option**     | Dropdown       | `STOP`                    | Action to take when retries are exhausted. Options include: |
-
-### Retry Options:
-1. **STOP**: Stops execution if the element is not found.
-2. **SKIP**: Skips the action and proceeds to the next one.
-3. **REFRESH**: Refreshes the webpage and retries the action.
-
-These settings apply globally unless overridden at the action level.
-
-## Backup Settings
-
-Backup settings allow users to store and manage configuration files using Google Drive.
-
-| **Option**         | **Description**                                                                 |
-|--------------------|-------------------------------------------------------------------------------|
-| **Backup Frequency** | Choose when backups occur: `Daily`, `Weekly`, `Monthly`, or `Now`.           |
-| **Opt-Out**         | Disable automatic backups.                                                    |
-| **View Backups**    | View the current backup files stored in Google Drive.                         |
-
-### Google Sheets Integration
-- Users can connect their Google Sheets account to fetch data and auto-fill it into web pages.
-
-## IFrame Handling
+## Check Iframes
 
 | **Option**                | **Description**                                                                                   |
 |---------------------------|---------------------------------------------------------------------------------------------------|
 | **Check IFrame Enabled**  | Ensures the extension can search for elements within an iframe, provided the iframe lacks a `src`. |
 | **Separate Configurations** | Required for iframes with a `src` attribute; create specific configurations for these cases.     |
 
-## Error Handling
 
-| **Option**                 | **Description**                                                                 |
-|----------------------------|-------------------------------------------------------------------------------|
-| **Reload on Error**         | Automatically reload the webpage if a technical error occurs within the extension. |
+## Reload on Error
+Automatically reload the webpage if a technical error occurs within the extension.
 
-## Status Bar Location
-
-Users can customize the status bar's position or disable it altogether.
-
-| **Location Options**       | **Description**                                                                 |
-|----------------------------|-------------------------------------------------------------------------------|
-| **Top Left**               | Places the status bar in the top-left corner of the screen.                   |
-| **Top Right**              | Places the status bar in the top-right corner of the screen.                  |
-| **Bottom Left**            | Places the status bar in the bottom-left corner of the screen.                |
-| **Bottom Right**           | Places the status bar in the bottom-right corner of the screen.               |
-| **Disabled**               | Hides the status bar.                                                         |
-
-By configuring these global settings, users can tailor the extension to their specific needs and preferences, ensuring an optimized and seamless experience.
+- [Status Bar Location](https://getautoclicker.com/docs/4.x/settings/status-bar-location)
 
 References:
 - https://getautoclicker.com/docs/4.x/overview/
@@ -86,21 +27,16 @@ References:
 
 ---START DOCUMENT---
 Title: Settings · Retry
-Description: Retry finding XPath in webpage for number of times provided. default is 5
+Description: Retry settings control how the extension handles cases where an element is not found on the page.
 Content:
+## Retry
+Retry finding an element on a webpage for a specified number of times. The default is 5.
 ### Info
-positive numeric value `1` to `999`
+Specify a positive numeric value between `1` and `999`.
 
-References:
-- https://getautoclicker.com/docs/4.x/retry/
----END DOCUMENT---
-
-
----START DOCUMENT---
-Title: Settings · Retry Interval
-Description: Retry Interval will wait for no of sec provided before retry to find XPath of Action. default is 1 sec
-Content:
-### Examples
+## Retry Interval
+The time interval between retries. The default is 1 second.
+**Examples**
 - `1`
 - `1.5`
 - `0.5`
@@ -109,13 +45,25 @@ Content:
 - Leave it `blank` / `empty` to start right away
 
 ### Info
-Its not mandatory field. if left blank extension will start executing right away.
+This field is optional. If left blank, the extension will start executing immediately.
 
 ### Warning
-Repeat value is mandatory for Repeat Interval.
+The repeat value is mandatory for the Retry Interval.
+
+## Retry Options
+Choose what should happen if the element is not found after the specified number of retries. default is `STOP`.
+
+| Option  | Description                                      |
+|---------|--------------------------------------------------|
+| STOP    | Stops execution if the element is not found.     |
+| SKIP    | Skips the action and proceeds to the next one.   |
+| REFRESH | Refreshes the webpage and retries the action.    |
+
+
+These settings apply globally unless overridden at the action level.
 
 References:
-- https://getautoclicker.com/docs/4.x/retry-interval/
+- https://getautoclicker.com/docs/4.x/retry/
 ---END DOCUMENT---
 
 
@@ -130,7 +78,7 @@ Auto Clicker Auto Fill extension require your google sheets readonly permission 
 - `https://www.googleapis.com/auth/spreadsheets.readonly`
 - `https://www.googleapis.com/auth/userinfo.profile`
 
-&gt; After you connect with Google Sheets go to configuration settings and add [Google Sheet ID](https://getautoclicker.com/docs/4.x/config-settings/google-sheet-id)### Danger
+&gt; After you connect with Google Sheets go to configuration settings and add [Google Sheet ID](https://getautoclicker.com/docs/4.x//configuration/config-settings#google-sheet-id)### Danger
 Auto Clicker Auto Fill extension Google may warn you with below error as Google only review application which are in production version and not which are in Development or testing phase. In order to proceed click on Advance and `Go to  Auto Clicker Auto Fill (unsafe)`.
 
 References:
@@ -139,26 +87,48 @@ References:
 
 
 ---START DOCUMENT---
-Title: Settings · Check Iframe
-Description: If an action need to be performed on button / input field which is inside iframe you must check this checkbox which enables check of iframe content as well.
-Content:
-
-
-References:
-- https://getautoclicker.com/docs/4.x/check-iframe/
----END DOCUMENT---
-
-
----START DOCUMENT---
 Title: Settings · Show Notification
-Description: Select what should happen if xpath is not found after no of retry.
+Description: Notification settings allow you to control how the extension displays notifications to the user. These settings include
 Content:
+| **Notification Type**          | **Description**                                                             |
+|---------------------------------|-----------------------------------------------------------------------------|
+| **Action Complete**            | Notifies when an individual action is completed.                            |
+| **Batch Complete**             | Notifies when a batch of actions is completed.                              |
+| **Configuration Complete**     | Notifies when a configuration process is completed.                         |
+| **Error Notifications**        | Notifies when an error occurs during execution.                             |
+
+
+Additional Options:
+- **Silent Mode**: Show notifications without sound.
+- **Sound Alerts**: Play a sound with notifications.
+- **Discord Integration**: Connect the extension to a Discord server. When enabled:
+  - Notifications (e.g., action complete, batch complete, errors) are sent to the user's Discord account.
+  - Users must be part of the same Discord server and allow direct messages from server members.
+
 ### Warning
 #### ! Important
 This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
 
 References:
 - https://getautoclicker.com/docs/4.x/show-notification/
+---END DOCUMENT---
+
+
+---START DOCUMENT---
+Title: Status Bar Location
+Description: Customize the status bar's position or disable it altogether.
+Content:
+Users can customize the status bar's position or disable it altogether.| **Location Options**       | **Description**                                                                 |
+|----------------------------|-------------------------------------------------------------------------------|
+| **Top Left**               | Places the status bar in the top-left corner of the screen.                   |
+| **Top Right**              | Places the status bar in the top-right corner of the screen.                  |
+| **Bottom Left**            | Places the status bar in the bottom-left corner of the screen.                |
+| **Bottom Right**           | Places the status bar in the bottom-right corner of the screen.               |
+| **Disabled**               | Hides the status bar.                                                         |
+
+
+References:
+- https://getautoclicker.com/docs/4.x/status-bar-location/
 ---END DOCUMENT---
 
 
@@ -185,21 +155,6 @@ This process is irreversible, it will override configuration and settings in you
 
 References:
 - https://getautoclicker.com/docs/4.x/backup/
----END DOCUMENT---
-
-
----START DOCUMENT---
-Title: Settings · Error Handling
-Description: Select what should happen if xpath is not found after no of retry.
-Content:
-| Name | Default | Description |
-| --- | --- | --- |
-| Stop | selected | Do nothing. Stop extension without proceeding further. |
-| Skip | not selected | Skip current action and continue next action. |
-| Refresh Page | not selected | Refresh whole page. |
-
-References:
-- https://getautoclicker.com/docs/4.x/error-handling/
 ---END DOCUMENT---
 
 
