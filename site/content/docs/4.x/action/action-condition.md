@@ -104,23 +104,28 @@ This component is dependent on IF statement based on the final result of IF stat
   <tbody>
     <tr>
       <td class="text-success">true</td>
-      <td >SKIP</td>
-      <th scope="row">SKIP</th>
+      <td></td>
+      <th scope="row">Process Action</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >SKIP</td>
-      <th scope="row">PROCEED</th>
-    </tr>
-     <tr>
-      <td class="text-success">true</td>
-      <td >PROCEED</td>
-      <th scope="row">PROCEED</th>
+      <td >Stop</td>
+      <th scope="row">Stop Action</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >PROCEED</td>
-      <th scope="row">SKIP</th>
+      <td >Skip</td>
+      <th scope="row">Skip Action</th>
+    </tr>
+    <tr>
+      <td class="text-danger">false</td>
+      <td >Refresh</td>
+      <th scope="row">Refresh the page</th>
+    </tr>
+    <tr>
+      <td class="text-danger">false</td>
+      <td >Goto Action</td>
+      <th scope="row">Goto to specified action</th>
     </tr>
   </tbody>
 </table>
