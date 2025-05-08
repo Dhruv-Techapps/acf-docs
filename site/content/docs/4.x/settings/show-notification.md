@@ -28,3 +28,9 @@ Additional Options:
 #### ! Important
 This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
 {{</callout>}}
+
+{{<callout info>}}
+We offer 10 free Discord calls per user each month — perfect for testing and trying out our features. This limit resets monthly, giving you a fresh opportunity to explore our capabilities.
+
+Need more? [Upgrade to the Pro]({{<docsref "/about/subscription">}}) version to unlock unlimited API access and boost your productivity without restrictions. This upgrade allows you to maximize productivity without worrying about daily limits.
+{{</callout >}}

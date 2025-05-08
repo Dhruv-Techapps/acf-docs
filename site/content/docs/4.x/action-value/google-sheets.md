@@ -47,14 +47,8 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
   </tbody>
 </table>
 
-{{<callout warning>}}
-We offer a generous daily allowance of 10 free Google Sheets API calls per user. This limit resets every day, providing you with a fresh set of 10 calls each day.
+{{<callout info>}}
+We offer 10 free calls per user each month — perfect for testing and trying out our features. This limit resets monthly, giving you a fresh opportunity to explore our capabilities.
 
-To unlock unlimited access to Google Sheets API calls, you have two options:
-
-#### Subscribe to the Pro Version
-By upgrading to our Pro version, you gain unlimited access to Google Sheets API calls, allowing you to maximize productivity without worrying about daily limits.
-
-#### Switch to a Public Profile
-Alternatively, you can switch your profile to public mode to enjoy unlimited access to Google Sheets API calls. This option is ideal for users who do not require private data handling and are comfortable sharing their configurations publicly.
+Need more? [Upgrade to the Pro]({{<docsref "/about/subscription">}}) version to unlock unlimited API access and boost your productivity without restrictions. This upgrade allows you to maximize productivity without worrying about daily limits.
 {{</callout >}}

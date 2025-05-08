@@ -13,9 +13,8 @@ Click the subscription button below to securely pay for your subscription using
 - [Github Subscription](https://github.com/sponsors/Dhruv-Techapps)
 
 ## Send Payment Details
-After completing your payment, please send an email to [dhruv.techapps@gmail.com](mailto:dhruv.techapps@gmail.com) with the following details:
+After completing your payment, please send an email to [support.getautoclicker@gmail.com](mailto:support.getautoclicker@gmail.com) with the following details:
 - The Gmail address you use to log in to the Auto Clicker application
-- Transaction ID
 - Any other relevant information
 
 ## Enable Pro Version
