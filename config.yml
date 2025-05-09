@@ -104,10 +104,6 @@ params:
       stable: "https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe"
       beta: "https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep"
       dev: "https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel"
-    Edge:
-      stable: "https://microsoftedge.microsoft.com/addons/detail/obhglnjhcgnokifphfmamhmmknipkhik"
-      beta: "https://microsoftedge.microsoft.com/addons/detail/cinocbjgkeplahhciecdcbicpccgpopl"
-      dev: "https://microsoftedge.microsoft.com/addons/detail/pmckiknbinanfnmbichcncmfpbcfpocn"
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
