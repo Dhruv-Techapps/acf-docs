@@ -5,7 +5,7 @@
 {{- $lazy := .lazyload | default true -}}
 {{- $classes := slice "img-fluid" "mx-auto" | append (slice .classes) -}}
 
-{{- $basePath := path.Join "/docs" .context.Site.Params.docs_version (path.Dir .imgPath) -}}
+{{- $basePath := path.Join (path.Dir .imgPath) -}}
 {{- $basename := path.BaseName .imgPath -}}
 {{- $ext := path.Ext .imgPath -}}
 {{- $imgPath := path.Join $basePath (printf "%s%s" $basename $ext) -}}
