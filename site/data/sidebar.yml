@@ -50,6 +50,10 @@
     - title: Action Settings
     - title: Action Condition
 
+- title: Userscript
+  pages:
+    - title: Overview
+
 - title: Action Value
   pages:
     - title: Overview
