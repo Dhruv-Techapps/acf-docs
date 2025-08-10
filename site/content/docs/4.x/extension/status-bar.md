@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Status Bar
-description: Extension status now can be tracked in much better way
+description: Track configuration and execution status from a compact on-page status bar
 group: extension
 toc: true
 ---
 
-The status of the configuration is now shown by default at the bottom right of the page. This can be disabled or repositioned from the global settings.
+The configuration status appears by default at the bottom-right of the page. You can disable or reposition it from global settings.
 {{<img status-bar.png>}}
 
 <table class="table">
@@ -19,31 +19,31 @@ The status of the configuration is now shown by default at the bottom right of t
   <tbody>
     <tr>
       <th scope="row">🅱️1</th>
-      <td>`🅱️` represents batch and `1` represents the index of the batch, which starts from 1.</td>
+  <td>`🅱️` denotes the batch; `1` is the current batch index (1‑based).</td>
     </tr>
     <tr>
       <th scope="row">🅰️1</th>
-      <td>`🅰️` represents action and `1` represents the action number, which starts from 1.</td>
+  <td>`🅰️` denotes the action; `1` is the current action index (1‑based).</td>
     </tr>
     <tr>
       <th scope="row">❓</th>
-      <td>While checking the condition from the addon, it is represented by `❓`.</td>
+  <td>Addon condition check in progress.</td>
     </tr>
     <tr>
       <th scope="row">🔁 "addon" | "action"</th>
-      <td>Addon or action repeat is represented by `🔁 "addon" | "action"`.</td>
+  <td>Repeat in progress for the specified scope: <code>addon</code> or <code>action</code>.</td>
     </tr>
     <tr>
       <th scope="row">🔍</th>
-      <td>Represents the element finder is finding the element when it is not found.</td>
+  <td>Element Finder is searching for the target element (not yet found).</td>
     </tr>
     <tr>
       <th scope="row">🕒</th>
-      <td>Represents the wait time for all init wait, repeat interval, retry interval.</td>
+  <td>Waiting (Init Wait, Repeat Interval, or Retry Interval).</td>
     </tr>
     <tr>
       <th scope="row">Done</th>
-      <td>Represents the action is completed successfully.</td>
+  <td>Action completed successfully.</td>
     </tr>
   </tbody>
 </table>

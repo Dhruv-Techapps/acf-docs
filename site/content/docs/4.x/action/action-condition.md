@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Action Condition
-description: Action condition are used to check status (`SKIPPED` or `DONE`) of previous executed actions and `Skip` or `Process` current Action
+description: Configure conditions that test statuses (DONE/SKIPPED) of previous actions. If conditions match, the current action runs; if not, apply a fallback (Stop, Skip Action, Refresh, or Goto Action).
 group: action
 toc: true
 ---
@@ -10,24 +10,30 @@ toc: true
 
 {{<callout info>}}
 #### Action Condition 
-- Action condition are available from second [Action]({{<docsref "/action/overview">}}) only. As first [Action]({{<docsref "/action/overview">}}) do not have previous action status to check.
-- Action condition can check status of all previous action and not just immediate previous action status
+- Available from the second [Action]({{<docsref "/action/overview">}}) onward (the first action has no previous status to check).
+- Can reference the status of any earlier action—not just the immediately preceding one.
 {{</callout>}}
 
-### Action Condition Modal
+### Action Condition modal
 
-Action Condition consist of two part [IF]({{<docsref "/action/action-condition#if">}}) and [THEN]({{<docsref "/action/action-condition#then">}})
+Use the conditions grid to define how the current action should react to the results of previous actions. When the combined condition evaluates to true, the action is processed. When it evaluates to false (not matched), a fallback option is applied.
 
 {{<img action-condition-modal.png>}}
 
-#### IF
-From name itself its clear that its the place where you configure your condition. you can add more than one condition with operator like `OR` and `AND` to it. It consist of three column. OPR (operator condition), Previous [Action]({{<docsref "/action/overview">}}) (whose status need to check), Status of previous action which need to be checked. And there is one more column which is to add or remove condition.
+#### Conditions
+Define one or more rows that evaluate the status of earlier actions. Combine rows with logical operators `AND` and `OR`.
 
-Action column is used to select the action for which status need to be checked.
+Columns:
+- OPR: Operator that combines this row with the previous one (`AND` or `OR`). Defaults to `AND`.
+- Action: The previous [Action]({{<docsref "/action/overview">}}) whose status you want to check.
+- Status: The status to compare against (`DONE` or `SKIPPED`).
+- Controls: Add or remove condition rows.
 
-Status column is simple which need to be check for that particular action. There are two status only for action which are `SKIPPED` or `DONE`. If by any condition on action if its skipped to next action its status is set as `SKIPPED` and if that action is completed successfully its status is set as `DONE`.
+Status semantics:
+- An action is `DONE` when it completed successfully.
+- An action is `SKIPPED` when it was skipped due to its own conditions or flow control.
 
-If you have more than one condition you need to select OPR. OPR are either `OR` / `AND`. By default `AND` is selected. These operator result as below.
+When you have multiple rows, the OPR controls how they are combined. Truth table examples:
 
 <table class="table">
   <thead>
@@ -35,7 +41,7 @@ If you have more than one condition you need to select OPR. OPR are either `OR` 
       <th scope="col">Action 1 status result</th>
       <th scope="col">OPR</th>
       <th scope="col">Action 2 status result</th>
-      <th scope="col">result</th>
+  <th scope="col">Result</th>
     </tr>
   </thead>
   <tbody>
@@ -90,42 +96,48 @@ If you have more than one condition you need to select OPR. OPR are either `OR` 
   </tbody>
 </table>
 
-#### THEN
-This component is dependent on IF statement based on the final result of IF statement. Then has only two option to be selected `SKIP` / `PROCEED`. Below table show how it works.
+#### When conditions are not matched
+If the combined condition evaluates to false, select one of the fallback options shown in the modal:
+- Stop — end the workflow and do not execute further actions.
+- Skip Action — move to the next action.
+- Refresh — reload the current page before continuing.
+- Goto Action — jump to a specific action in the list (you’ll be prompted to choose which action).
+
+Behavior summary:
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">IF</th>
-      <th scope="col">THEN</th>
-      <th scope="col">result</th>
+  <th scope="col">Conditions matched?</th>
+  <th scope="col">Selected option</th>
+  <th scope="col">Result</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td class="text-success">true</td>
-      <td></td>
+  <td>—</td>
       <th scope="row">Process Action</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >Stop</td>
+  <td>Stop</td>
       <th scope="row">Stop Action</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >Skip</td>
+  <td>Skip Action</td>
       <th scope="row">Skip Action</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >Refresh</td>
+  <td>Refresh</td>
       <th scope="row">Refresh the page</th>
     </tr>
     <tr>
       <td class="text-danger">false</td>
-      <td >Goto Action</td>
-      <th scope="row">Goto to specified action</th>
+  <td>Goto Action</td>
+  <th scope="row">Go to specified action</th>
     </tr>
   </tbody>
 </table>

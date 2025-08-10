@@ -7,11 +7,12 @@ toc: true
 ---
 {{<img configuration-list-reorder.png>}}
 
-{{<callout warning>}}
-#### Make sure to save all your configuration before reordering them
-
-- Simply drag and drop configuration as per your need
-- Click save once done
-- Click close if you do not want to save reorder.
+{{<callout info>}}
+Priority matters: when multiple configurations match the same URL, the first match (topmost) is used.
 {{</callout>}}
+
+Steps:
+1. Click “Reorder Configurations”.
+2. Drag and drop items to adjust their order.
+3. Click Save to apply changes, or Close to discard.
 {{<img configuration-list-reorder-modal.png>}}

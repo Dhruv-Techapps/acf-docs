@@ -1,18 +1,18 @@
 ---
 layout: docs
 title: Log
-description: Extension statistics now can be tracked in much better way
+description: Track extension execution with an improved, structured logging view
 group: extension
 toc: true
 ---
 
 {{<callout info>}}
 ### Improved Logging System
-We have improved logging of our extension to see the flow of extension also if it breaks any where we can pin down same.
+We’ve improved logging to visualize the end‑to‑end flow and quickly pinpoint issues when something breaks.
 
-It tracks all steps from `Configuration` -> `Batch` -> `Action` -> `Event`.
+It tracks all steps from `Configuration` → `Batch` → `Action` → `Event`.
 
-`Action` and `Batch` are grouped to understand its action better. You can collapse or expand group to have more clear view.
+`Action` and `Batch` are grouped for clarity. Collapse or expand groups to focus on what matters.
 {{</callout>}}
 
 {{<img extension-log.png>}}
@@ -20,8 +20,8 @@ It tracks all steps from `Configuration` -> `Batch` -> `Action` -> `Event`.
 {{<callout info>}}
 #### To see logs follow below steps
 
-- `Option + ⌘ + J` (on macOS) 
-- `Shift + CTRL + J` (on Windows/Linux) / `F12`
+- `Option + ⌘ + J` (macOS)
+- `Shift + Ctrl + J` (Windows/Linux) or `F12`
 - Open `Console` Tab
 - Search `Auto Clicker - AutoFill` to filter out other logs
 - Choose `Verbose` under `All levels`

@@ -1,22 +1,27 @@
 ---
 layout: docs
 title: Subscription
-description: Subscribe to PRO features of extension
+description: Subscribe to unlock Pro features in the extension
 group: about
 toc: true
 ---
 
-To upgrade to the Pro version of our extension, please follow these steps:
+Upgrade to the Pro version to unlock advanced features. Follow the steps below to complete your subscription and activation.
 
-## Subscribe via different payment option
-Click the subscription button below to securely pay for your subscription using 
-- [Github Subscription](https://github.com/sponsors/Dhruv-Techapps)
+## 1) Choose a payment option
+Use one of the available methods below to complete your purchase:
+- [GitHub Sponsors](https://github.com/sponsors/Dhruv-Techapps)
 
-## Send Payment Details
-After completing your payment, please send an email to [support.getautoclicker@gmail.com](mailto:support.getautoclicker@gmail.com) with the following details:
-- The Gmail address you use to log in to the Auto Clicker application
-- Any other relevant information
+## 2) Send payment details
+After you complete payment, email [support.getautoclicker@gmail.com](mailto:support.getautoclicker@gmail.com) with:
+- The Gmail address you use to sign in to the Auto Clicker application (required)
+- Your GitHub username or the email used for the payment (required)
+- Payment reference/receipt or a screenshot (optional, helps us verify faster)
+- Any other relevant notes (e.g., if the Gmail differs from your payment email)
 
-## Enable Pro Version
-Once we receive and verify your payment information, we will enable the Pro version of the extension for your account. You'll receive a confirmation email when the upgrade is complete.
-Thank you for your support! 
+## 3) Activation
+We’ll verify your payment and enable the Pro version for your account. You’ll receive a confirmation email once the upgrade is complete.
+
+If you need help at any point, contact us at [support.getautoclicker@gmail.com](mailto:support.getautoclicker@gmail.com).
+
+Thank you for your support!

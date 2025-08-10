@@ -47,8 +47,4 @@ You can use [Google Sheets A1 Notation](https://developers.google.com/sheets/api
   </tbody>
 </table>
 
-{{<callout info>}}
-We offer 10 free calls per user each month — perfect for testing and trying out our features. This limit resets monthly, giving you a fresh opportunity to explore our capabilities.
-
-Need more? [Upgrade to the Pro]({{<docsref "/about/subscription">}}) version to unlock unlimited API access and boost your productivity without restrictions. This upgrade allows you to maximize productivity without worrying about daily limits.
-{{</callout >}}
+{{<partial subscribe-callout.md>}}

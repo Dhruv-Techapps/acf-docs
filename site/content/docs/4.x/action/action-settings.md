@@ -5,49 +5,49 @@ description: Overview of action settings including retry, retry interval, iframe
 group: action
 toc: true
 ---
-These action-level settings will take precedence over the global settings. If not specified, each action will default to the global settings.
+These action-level settings override the global settings and apply to both the action and its add‑on conditions. If a value isn’t specified here, the action uses the global setting.
 
 {{<img action-settings.png>}}
 
+## Iframe First
+If an element is inside an inline iframe, enable this to search within the iframe first and then on the main page. This often improves performance when working with embedded content.
+
+Default: off. Applicable to same‑origin iframes without a URL in the src attribute, for example:
+- &lt;iframe src="about:blank">&lt;/iframe>
+- &lt;iframe src="">&lt;/iframe>
+
+If the iframe has a URL (especially a different origin), create a separate configuration targeted to that URL.
+
 ## Retry
-Retry finding element in webpage for number of times provided. Default is 5.
+Retries locating the target element on the page the specified number of times. Default: 5.
 
 **Examples**
-- positive numeric value `1` to `999`
-
+- Positive integer in the range `1`–`999`.
 
 ## Retry Interval
-Retry Interval will wait for number of seconds provided before retrying to find XPath of Action. Default is 1 second.
+Waits the given number of seconds between retries when searching for the element/XPath. Default: 1 second.
 
 {{<markdown>}}
 {{<partial example-float.md>}}
 {{</markdown >}}
 
 {{<callout info>}}
-It's not a mandatory field. If left blank, the extension will start executing right away.
+If not set at the action level, the global Retry Interval is used; if the global value is also unset, the extension uses 1 second by default.
 {{</callout>}}
 
 {{<callout warning>}}
-Repeat value is mandatory for Repeat Interval.
+Set both Retry and Retry Interval together for predictable timing. A Retry Interval without a Retry count won’t have any effect.
 {{</callout>}}
 
-## Iframe First
-If an action needs to be performed on a button or input field inside an iframe, you can check this checkbox to check within the iframe first and then in the main page, which saves a lot of time. 
 
-Default is unchecked. It's applicable to iframes which do not have a URL in the src attribute. Example:
-- &lt;iframe src="about:blank">&lt;/iframe>
-- &lt;iframe src="">&lt;/iframe>
-
-If there is a URL in the src attribute, consider creating a new configuration with the targeted URL.
-
-## Error Handling
-Select what should happen if the element is not found after the number of retries.
+## Error handling
+Choose what should happen if the element/XPath is not found after all retries.
 
 <table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Default</th>
+  <th>Name</th>
+  <th>Default</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -55,17 +55,26 @@ Select what should happen if the element is not found after the number of retrie
     <tr>
       <td>Stop</td>
       <td>selected</td>
-      <td>Do nothing. Stop extension without proceeding further.</td>
+      <td>Stop the workflow immediately; no further actions are executed.</td>
     </tr>
     <tr>
-      <td>Skip</td>
+      <td>Skip Action</td>
       <td>not selected</td>
-      <td>Skip current action and continue to the next action.</td>
+      <td>Skip only this action and continue with the next one.</td>
     </tr>
     <tr>
-      <td>Refresh Page</td>
+      <td>Refresh</td>
       <td>not selected</td>
-      <td>Refresh the whole page.</td>
+      <td>Reload the current page and then continue according to your configuration.</td>
+    </tr>
+    <tr>
+      <td>Goto Action</td>
+      <td>not selected</td>
+      <td>Jump to a specific action in the list. You’ll be prompted to choose the destination action.</td>
     </tr>
   </tbody>
 </table>
+
+{{<callout info>}}
+Default selection is Stop. The options displayed in the modal match these labels: Stop, Skip Action, Refresh, and Goto Action.
+{{</callout>}}

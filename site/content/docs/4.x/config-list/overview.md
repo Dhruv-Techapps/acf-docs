@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Configuration List
-description: The Configuration List provides an organized view of all the configurations stored in the extension, making it easier for users to manage and utilize them effectively. Here are the detailed features and functionalities of the Configuration List section
+description: Browse, search, and manage all saved configurations in one place.
 group: config-list
 toc: true
 ---
@@ -9,14 +9,14 @@ toc: true
 
 ## Features
 {{<table>}}
-| **Feature**                     | **Description**                                                                 |
-|---------------------------------|---------------------------------------------------------------------------------|
-| **New Config Button** | A button located at the top-left of the list to create a new configuration. |
-| **View by Name or URL**         | Configurations can be displayed by name, URL, or both.                         |
-| **Search Box**                  | Filter configurations by name or URL for quick access.                         |
-| **View Details**                | Selecting a configuration displays its details on the right-hand side.          |
-| **Delete Configuration**        | Hover over a configuration to reveal a delete icon on the leftmost side. Click to delete the configuration. |
-| **Toggle View**                 | Change the display format to show either the name, URL, or both.                |
+| Feature                 | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| New Config              | Create a new configuration from the top-left action.                        |
+| View by Name/URL        | Toggle the list to show Name, URL, or both.                                 |
+| Search                  | Filter configurations by Name or URL for quick access.                      |
+| View Details            | Select a configuration to see details in the right-hand panel.              |
+| Delete                  | Hover to reveal the delete icon (leftmost) and click to remove an item.     |
+| Toggle View             | Switch display format (Name, URL, or both) to reduce clutter.               |
 {{</table>}}
 
 ## How to Use
@@ -34,15 +34,14 @@ toc: true
    - Use the toggle view option to switch between displaying the name, URL, or both.
 
 ## Best Practices
+- Review configurations periodically to keep them accurate and relevant.
+- Use meaningful names to improve filtering and search.
+- Back up important configurations (see [Backup]({{<docsref "/settings/backup">}})).
 
-- Regularly review your list of configurations to ensure they are up-to-date and relevant.
-- Use meaningful names for configurations to make filtering and searching more efficient.
-- Backup important configurations using the global settings to avoid accidental loss.
-
-By effectively utilizing the Configuration List, users can streamline their workflows and maintain an organized repository of configurations for the extension.
+By using the Configuration List effectively, you can streamline your workflow and keep an organized repository of configurations.
 
 ## Other Features
-- [Bulk Export Configuration]({{<docsref "/config-list/bulk-export">}}) - Button is used to export all configuration into single json file. Bulk Export configuration in array format. Configuration which are exported using Bulk Export button can be imported as bulk configuration only. We have single configuration export and import feature as well. 
-- [Bulk Import Configuration]({{<docsref "/config-list/bulk-import">}}) - Button is used to import configurations which are exported in bulk using Bulk export button. It throw error when a user import configuration which is exported using Export Configuration and not Bulk Export Configuration
-- [Bulk Remove Configuration]({{<docsref "/config-list/bulk-remove">}}) - Removing single configuration can be difficult so we have now bulk remove button using which you can multi select configuration and remove/delete them easily.
-- [Reorder Configuration]({{<docsref "/config-list/reorder">}}) - Order of configuration plays main role. When you have two configuration with same url or similar url pattern the configuration which matches first gets picked and the other ones are not used. Sometime you may need to change the order of configuration in order to get picked for different set of url
+- [Bulk Export]({{<docsref "/config-list/bulk-export">}}): Export all configurations to a single JSON file (array format). Bulk exports can be restored via Bulk Import.
+- [Bulk Import]({{<docsref "/config-list/bulk-import">}}): Import a JSON file previously created with Bulk Export. Other formats will be rejected.
+- [Bulk Remove]({{<docsref "/config-list/bulk-remove">}}): Select multiple configurations and delete them at once.
+- [Reorder]({{<docsref "/config-list/reorder">}}): Change priority. When multiple configurations match the same URL, the first match in the list wins.

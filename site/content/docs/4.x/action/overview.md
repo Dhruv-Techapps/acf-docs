@@ -1,15 +1,17 @@
 ---
 layout: docs
 title: Action
-description: Overview of various actions and their properties.
+description: What an action is and how to configure its key properties.
 group: action
 toc: true
 ---
 {{<img action.png>}}
 
-Action is a combination of an [element finder]({{<docsref "/action/element-finder">}}) and a [value]({{<docsref "action-value/overview">}}). The element finder is used to locate a specific element within the page. There are multiple ways to find the element refer to the documentation for more details. The value field can be left blank if a click is required, or it can be filled with plain text to fill input fields. There are multiple options that can be performed; check out the action value documentation for more details.
+An action combines an [element finder]({{<docsref "/action/element-finder">}}) and a [value]({{<docsref "action-value/overview">}}).
+- Element finder: locates the target element on the page (multiple strategies supported).
+- Value: defines what to do—leave blank to click, or supply text/commands/events. See the action value guide for all options.
 
-In addition to these two, there are other properties of action that can enhance its features, such as 
+Key properties that enhance an action:
 - [init wait]({{<docsref "/action/overview#init-wait">}})
 - [name]({{<docsref "/action/overview#name">}})
 - [element finder]({{<docsref "/action/element-finder">}})
@@ -22,30 +24,37 @@ In addition to these two, there are other properties of action that can enhance 
 - [action condition]({{<docsref "/action/action-condition">}})
 
 {{<callout warning>}}
-If no element is found it will do [retry]({{<docsref "/settings/retry">}}) for n number of times as configured under [settings]({{<docsref "/settings/overview">}}) screen and proceed with [error handling]({{<docsref "/settings/overview#error-handling">}}) method.
+If the element isn’t found, the extension retries per your configuration (global or action‑level) and then follows your error handling choice. See [Retry]({{<docsref "/settings/retry">}}), [Settings]({{<docsref "/settings/overview">}}), and [Action settings]({{<docsref "/action/action-settings#error-handling">}}) for Stop, Skip Action, Refresh, or Goto Action.
 {{</callout>}}
 
 ## Init Wait
-Init Wait stands for Initial Wait. Initial Wait to start particular action. Waiting time is provided in sec. It can be used where extension starts but it requires a few seconds for the page to load fully.
-Init Wait can be used to delay the action with the given number of seconds. It runs only the first time when the action executes and does not run when the action is repeated in a loop. It's not a mandatory field. If left blank, the extension will start executing right away.
+Delay the start of this action by a given number of seconds. Useful when the page needs a little extra time to become ready.
+
+Details:
+- Runs only the first time the action executes (not on repeats in a loop).
+- Value is in seconds and supports decimals and ranges (for example, `1.5`, `1e4`).
+- Optional: if left blank, the action starts immediately.
 
 {{<markdown>}}
 {{<partial example-float.md>}}
 {{</markdown >}}
 
 ## Name
-The `name` property is used to distinguish between different actions. It is not a mandatory field and can be left blank. You can provide any name that helps you understand the purpose of the action.
+A label to identify the action in your list. Optional—use any name that helps you recognize its purpose.
 
 ## Repeat
-If you want a specific action to repeat multiple times, you can set a repeat value. By default, the action will run once. Setting a repeat value of 1 will make the action run twice.
-**Examples**
-positive numeric value `1` to `999`
+Run this action additional times after the first run. By default, an action runs once.
+
+Details:
+- Repeat = 0 or blank → run once.
+- Repeat = 1 → run twice (1 extra time), and so on.
+- Accepts positive integers `1` to `999`.
 
 ## Repeat Interval
-If you want to control the time between each repeat you can provide repeat-interval as well.
+Time to wait between each repeat of this action (in seconds). Supports decimals and the `aeb` range syntax for random delays.
 {{<markdown>}}
 {{<partial example-float.md>}}
 {{</markdown >}}
 
 ## Disable
-The `disable` property allows you to disable an action. When an action is disabled, it will be skipped during execution.
+Temporarily turn off an action. Disabled actions are skipped during execution.
