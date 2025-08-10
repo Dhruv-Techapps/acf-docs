@@ -1,3 +1,4 @@
+---
 layout: docs
 title: Subscription
 description: Subscribe to unlock Pro features in the extension

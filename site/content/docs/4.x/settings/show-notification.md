@@ -29,8 +29,4 @@ Additional Options:
 Enable notifications while configuring to catch errors quickly (e.g., missing/wrong XPath). You can turn them off once your setup is stable.
 {{</callout>}}
 
-{{<callout info>}}
-We offer 10 free Discord calls per user each month for testing. The limit resets monthly.
-
-Need more? [Upgrade to Pro]({{<docsref "/about/subscription">}}) for higher limits and more features.
-{{</callout >}}
+{{<partial subscribe-callout.md>}}

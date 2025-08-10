@@ -1,3 +1,4 @@
+---
 layout: docs
 title: Permissions
 description: Why these permissions are required
@@ -57,7 +58,7 @@ This page explains why the extension requests each permission and how it uses th
 {{</callout>}}
 
 {{<callout info>}}
-#### Host Permissions
+#### [Host Permissions](https://developer.chrome.com/docs/extensions/reference/permissions/#host-permissions)
 - Automation can target any website you configure. Host permissions allow the extension to read the DOM and perform actions on those sites.
 {{</callout>}}
 
