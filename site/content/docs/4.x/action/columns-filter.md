@@ -1,12 +1,22 @@
 ---
 layout: docs
 title: Action · Columns Filter
-description: If you do not want any specific column you can hide/show the same from table view.
+description: Show or hide optional columns in the Actions table to reduce clutter—this changes only the view, not behavior.
 group: action
 toc: true
 ---
 
-## Toggles the visibility of action columns in a table.
-This function is used to show or hide specific action columns such as [name]({{<docsref "/action/overview#name">}}), [init-wait]({{<docsref "/action/overview#init-wait">}}), [repeat]({{<docsref "/action/overview#repeat">}}), and [repeat-interval]({{<docsref "/action/overview#repeat-interval">}}). By default, all these columns are hidden to reduce UI clutter. However, this function allows you to display or hide them as needed. Note that hiding a column does not affect its functionality; it only clears the UI clutter by reducing the number of visible columns.
+## Show or hide columns in the Actions table
+Use the Columns Filter to toggle visibility of optional action columns. This helps keep the table focused while you edit. Hiding a column does not disable the feature—it only changes what’s visible.
+
+Available columns you can toggle include:
+- [name]({{<docsref "/action/overview#name">}})
+- [init wait]({{<docsref "/action/overview#init-wait">}})
+- [repeat]({{<docsref "/action/overview#repeat">}})
+- [repeat interval]({{<docsref "/action/overview#repeat-interval">}})
+
+Notes:
+- By default, these optional columns are hidden to reduce clutter.
+- Values remain active even when a column is hidden. Reveal a column when you need to view or edit it.
  
 {{<img action-columns.png>}}

@@ -1,26 +1,28 @@
 ---
 layout: docs
 title: Settings · Backup
-description: Backup / Retrieve your configuration safely on your Google Drive
+description: Back up and restore your configurations safely using Google Drive (App Data folder)
 group: settings
 toc: true
 ---
 
 {{<img settings-backup.png>}}
 
-It require [https://www.googleapis.com/auth/drive.appdata](https://developers.google.com/drive/api/guides/appdata) scope of your Google Drive and Google create application specific folder in your Google drive to store the configuration safely. This above scope don't allow application access to your entire Google Drive. instead it creates application specific folder which can be accessed by Auto Clicker Auto Fill extension.
+Backups use your Google Drive’s App Data folder, which is private to the extension. This requires the [https://www.googleapis.com/auth/drive.appdata](https://developers.google.com/drive/api/guides/appdata) scope.
 
-It will ask your permission first time when you click on Backup and Auto Clicker Auto Fill extension will authenticate and upload your Configuration and Settings safely.
+Important
+- The App Data scope does not grant access to your entire Drive; it only allows storing data in an application‑specific folder.
+- On first backup, the extension requests permission and then securely uploads your configurations and settings.
 
-You can go and check same under Manage Apps section of settings https://drive.google.com/drive/u/0/settings. You can revoke or remove access from here.
+You can review or revoke access under Google Drive Settings → Manage Apps: https://drive.google.com/drive/u/0/settings
 
 ### Backup Option
-- Backup Now : Auto Clicker Auto Fill extension will instantly do backup of your current configuration 
-- Auto Backup
-  - Daily - extension will backup daily basis
-  - Weekly - extension will backup weekly basis
-  - Monthly - extension will backup monthly basis
-  - Off - extension will stop auto backup of configuration and settings.
+- Backup Now: Immediately back up your current configurations and settings.
+- Auto Backup:
+  - Daily: Back up once per day.
+  - Weekly: Back up once per week.
+  - Monthly: Back up once per month.
+  - Off: Disable automatic backups.
 
 ### Restore Configuration
-This process is irreversible, it will override configuration and settings in your configuration page from latest backup from Google Drive.
+Restoring replaces your existing configurations and settings with the latest backup from Google Drive. This action cannot be undone.

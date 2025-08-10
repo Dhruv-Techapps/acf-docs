@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Settings · Show Notification
-description: Notification settings allow you to control how the extension displays notifications to the user. These settings include
+description: Control how the extension displays notifications and optionally send alerts via Discord
 group: settings
 toc: true
 ---
@@ -26,11 +26,11 @@ Additional Options:
 
 {{<callout warning>}}
 #### ! Important
-This is very important feature of extension which tells you if any error occur in extension while executing. Or if any XPath provided is not found or wrong. Select this option while configuring and uncheck once you have finished configuring.
+Enable notifications while configuring to catch errors quickly (e.g., missing/wrong XPath). You can turn them off once your setup is stable.
 {{</callout>}}
 
 {{<callout info>}}
-We offer 10 free Discord calls per user each month — perfect for testing and trying out our features. This limit resets monthly, giving you a fresh opportunity to explore our capabilities.
+We offer 10 free Discord calls per user each month for testing. The limit resets monthly.
 
-Need more? [Upgrade to the Pro]({{<docsref "/about/subscription">}}) version to unlock unlimited API access and boost your productivity without restrictions. This upgrade allows you to maximize productivity without worrying about daily limits.
+Need more? [Upgrade to Pro]({{<docsref "/about/subscription">}}) for higher limits and more features.
 {{</callout >}}

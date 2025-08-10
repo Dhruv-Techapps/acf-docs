@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Download
-description: Download Auto Clicker - Auto Fill for your fav browser Chrome and Edge
+description: Download Auto Clicker – Auto Fill for Chrome and Microsoft Edge
 group: getting-started
 toc: true
 aliases:
@@ -11,6 +11,6 @@ aliases:
 ---
 
 ## Chrome / Edge
-- [Stable]({{<param download.chrome.stable>}})  - well tested and stable version
-- [Beta]({{<param download.chrome.beta>}}) - Preview the latest features: Try out the newest features. 
-- [Dev]({{<param download.chrome.dev>}}) - Live on the bleeding edge: Try out our latest features. 
+- [Stable]({{<param download.chrome.stable>}}) – Well‑tested and recommended for most users.
+- [Beta]({{<param download.chrome.beta>}}) – Preview upcoming features.
+- [Dev]({{<param download.chrome.dev>}}) – Bleeding‑edge builds for testers.

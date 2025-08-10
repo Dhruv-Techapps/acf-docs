@@ -2,17 +2,17 @@
 ---
 layout: docs
 title: Language
-description: Switch between different languages in the extension
+description: Switch the extension UI between supported languages
 group: extension
 toc: true
 ---
 ## Language Support
-We have introduced language support in our extension. You can now switch between different languages for a better user experience.
+The extension supports multiple languages. Choose your preferred language for a more comfortable experience.
 
 ### Switching Languages
 To switch languages, follow these steps:
-- choose your preferred language from the dropdown menu in the header of the application.
-- The selected language will be applied immediately.
+- Choose your preferred language from the language dropdown in the header.
+- The selected language applies immediately.
 
 ### Available Languages
 You can choose from the following languages:
@@ -35,4 +35,4 @@ You can choose from the following languages:
 
 [Add your Language](https://github.com/Dhruv-Techapps/auto-clicker-auto-fill/discussions/484)
 
-Enjoy a more personalized experience with our new language feature!
+Enjoy a more personalized experience with language support.

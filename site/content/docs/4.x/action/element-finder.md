@@ -1,35 +1,36 @@
 ---
 layout: docs
 title: Action · Element Finder
-description: Its little tricky but believe me its not that hard to find.
+description: Find page elements using XPath or selectors—quick tips, patterns, and examples.
 group: action
 toc: true
 ---
 
 {{<callout info>}}
-Follow below steps to get XPath quickly
-1. Right click any button or link or whatever you want to click in webpage and select Inspect.
-2. It will open developer console and highlight that element under Elements Tab
-3. Right click that element and select Copy > Copy XPath.
-4. Thats it you have your XPath of that element now.
+Quickly copy an XPath with DevTools:
+1. Right‑click the target element (button, link, input) and choose Inspect.
+2. In the Elements panel, ensure the element is highlighted.
+3. Right‑click the highlighted node and choose Copy → Copy XPath.
+4. Paste the XPath into the Element Finder.
 {{</callout>}}
 
 ### XPath
-Xpath helps to track down and element using its document chain examples are below
+XPath locates an element by its position and attributes in the DOM tree. See examples below.
 
 {{<markdown>}}
 {{<partial example-xpath.md>}}
 {{</markdown>}}
 
-### Get Element By Id
-If an element tag is having `id="idValue"` attribute on it you can simply make use of `#idValue` to target that element. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly
+### Get element by ID
+When an element has an id attribute (for example, `id="idValue"`), you can target it with `#idValue`.
 
-Only single element get selected. If there are two element within page with same id first one will be getting selected.
+Notes:
+- IDs are intended to be unique. If duplicates exist, the first match is selected.
 
 {{<callout info>}}
-  Referring below html section
-- `#inputEmail` To target element with id attribute as `id="inputEmail"`
-- `#inputPassword` To target element with id attribute as `id="inputPassword"`
+Referring to the HTML below:
+- `#inputEmail` targets `id="inputEmail"`.
+- `#inputPassword` targets `id="inputPassword"`.
 {{</callout>}}
 ```html
 <main class="form-signin">
@@ -40,18 +41,19 @@ Only single element get selected. If there are two element within page with same
     <input type="password" id="inputPassword" class="form-control"> 👈 selected
     <button class="btn btn-primary" type="submit">Sign in</button>
   </form>
-</main>
+  </main>
 ```
 
-### Get Elements By ClassName
-If an element tag is having `class="class-1 class-2 class-3"` attribute on it you can simply make use of `ClassName::class-1 class-2 class-3` to target that element.
+### Get elements by class name
+When an element has a class list (for example, `class="class-1 class-2"`), target it with `ClassName::class-1 class-2`.
 
-More than one element get selected. If there are two element within page with same class name both will be selected and action will be performed on both elements.
+Notes:
+- This selector can match multiple elements. The action is applied to each match.
 
 {{<callout info>}}
- Referring below html section
-- `ClassName::form-control` To target elements with class attribute as `class="form-control"`
-- `ClassName::btn btn-primary` To target elements with class attribute as `class="btn btn-primary"`
+Referring to the HTML below:
+- `ClassName::form-control` targets `class="form-control"` inputs.
+- `ClassName::btn btn-primary` targets `class="btn btn-primary"` buttons.
 {{</callout>}}
 ```html
 <main class="form-signin">
@@ -65,15 +67,16 @@ More than one element get selected. If there are two element within page with sa
 </main>
 ```
 
-### Get Elements By Name
-If an element tag is having `name="nameOfElement"` attribute on it you can simply make use of `Name::nameOfElement` to target that element.
+### Get elements by name
+When an element has a name attribute (for example, `name="email"`), target it with `Name::email`.
 
-More than one element get selected. If there are two element within page with same name both will be selected and action will be performed on both elements.
+Notes:
+- This selector can match multiple elements. The action is applied to each match.
 
 {{<callout info>}}
-Referring below html section
-- `Name::email` To target elements with name attribute as `name="email"`
-- `Name::password` To target elements with name attribute as `name="password"`
+Referring to the HTML below:
+- `Name::email` targets `name="email"`.
+- `Name::password` targets `name="password"`.
 {{</callout>}}
 ```html
 <main class="form-signin">
@@ -86,18 +89,20 @@ Referring below html section
   </form>
 </main>
 ```
-### Get Elements By Tag Name
-To target specific elements by its tag name you can simply make use of `TagName::tagNameOfElement`.
 
-More than one element get selected. If there are two element within page with same tag name both will be selected and action will be performed on both elements.
+### Get elements by tag name
+To target all elements of a given tag, use `TagName::tagNameOfElement`.
+
+Notes:
+- This selector matches all elements with the specified tag. The action is applied to each match.
 
 {{<callout info>}}
-Referring below html section
-- `TagName::main` To target elements with tag name as `<main>`
-- `TagName::form` To target elements with tag name as `<form>`
-- `TagName::input` To target elements with tag name as `<input>`
-- `TagName::label` To target elements with tag name as `<label>`
-- `TagName::button` To target elements with tag name as `<button>`
+Referring to the HTML below:
+- `TagName::main` targets `<main>`.
+- `TagName::form` targets `<form>`.
+- `TagName::input` targets `<input>`.
+- `TagName::label` targets `<label>`.
+- `TagName::button` targets `<button>`.
 {{</callout>}}
 ```html
 <main class="form-signin">
@@ -111,19 +116,20 @@ Referring below html section
 </main>
 ```
 
-### Query Selector
-To target specific element by its different attributes you can simply make use of `querySelector::selectors`.
+### Query Selector (single)
+To target a specific element by CSS selector, use `querySelector::selector`.
 
-Single element get selected. If there are two element within page with same selectors first will be selected and action will be performed on it.
+Notes:
+- Selects the first matching element. If multiple elements match, only the first is used.
 
 {{<callout info>}}
-Referring below html section
-- `querySelector::main.form-signin` To target elements with tag name as `<main class="form-signin">`
-- `querySelector::form` To target elements with tag name as `<form>`
-- `querySelector::input[type="email"]` To target elements with tag name as `<input type="email">`
-- `querySelector::input[type="password"]` To target elements with tag name as `<input type="password">`
-- `querySelector::label[for]` To target elements with tag name as `<label for="anything">`
-- `querySelector::button.btn.btn-primary` To target elements with tag name as `<button class="btn btn-primary">`
+Referring to the HTML below:
+- `querySelector::main.form-signin` targets `<main class="form-signin">`.
+- `querySelector::form` targets `<form>`.
+- `querySelector::input[type="email"]` targets `<input type="email">`.
+- `querySelector::input[type="password"]` targets `<input type="password">`.
+- `querySelector::label[for]` targets `<label for="…">`.
+- `querySelector::button.btn.btn-primary` targets `<button class="btn btn-primary">`.
 {{</callout>}}
 ```html
 <main class="form-signin">
@@ -137,22 +143,14 @@ Referring below html section
 </main>
 ```
 
-### Query Selector All
+### Query Selector All (multiple)
 {{<callout warning>}}
-#### Important
-Its similar to query selector which selects all matching element rather than selecting first matching element
+Important: Works like Query Selector, but selects all matching elements instead of only the first one. The action is applied to each matched element.
 {{</callout>}}
 
-
-## Dynamic Xpath
+## Dynamic XPath
 {{<callout info>}}
-- [batch-repeat]({{<docsref "/configuration/batch#repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row.
-  **Examples**
-    - `//table/tr[<batchRepeat>]/td[1]/button`
--  [action-repeat]({{<docsref "/action/overview#repeat">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button`
-  **Examples**
-    - `//table/tr[<batchRepeat>]/td[1<actionRepeat>]/button`
-- [session-count]({{<docsref "/session/overview">}}) with xpath to iterate over elements one by one. e.g if Xpath of element is like table format and you need to iterate all its row one by one. `//table/tr[1]/td[1]/button` this xpath will select button of fist row. 
-  **Examples**
-    - `//table/tr[1]/td[1<sessionCount>]/button`
+- [batch-repeat]({{<docsref "/configuration/batch#repeat">}}): iterate over rows using a placeholder in the XPath. For example, to click the button in each row: base XPath `//table/tr[1]/td[1]/button` → `//table/tr[<batchRepeat>]/td[1]/button`.
+- [action-repeat]({{<docsref "/action/overview#repeat">}}): iterate over columns or repeated targets within a row. Example: `//table/tr[1]/td[<actionRepeat>]/button`.
+- [session-count]({{<docsref "/session/overview">}}): refer to the current session number. Example: `//table/tr[1]/td[<sessionCount>]/button`.
 {{</callout>}}

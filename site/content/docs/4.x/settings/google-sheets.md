@@ -9,7 +9,7 @@ toc: true
 {{<img global-settings.png>}}
 
 ### Google Sheets Login
-Auto Clicker Auto Fill extension require your google sheets readonly permission in order to read cell values from it. It require below two scopes. Click on `Connect with Google Sheets`
+Auto Clicker Auto Fill needs read‑only access to your Google Sheets to fetch cell values. Click `Connect with Google Sheets` and grant the following scopes.
 
 ### Google Sheets Scope
 - `https://www.googleapis.com/auth/spreadsheets.readonly`
@@ -20,6 +20,6 @@ Auto Clicker Auto Fill extension require your google sheets readonly permission 
 {{<img settings-google-sheets.png>}}
 
 {{<callout danger>}}
-Auto Clicker Auto Fill extension Google may warn you with below error as Google only review application which are in production version and not which are in Development or testing phase. In order to proceed click on Advance and `Go to  Auto Clicker Auto Fill (unsafe)`.
+Google may show a warning for apps not yet fully verified for production. To proceed during development/testing, click Advanced → `Go to Auto Clicker Auto Fill (unsafe)`.
 {{<img settings-google-sheets-error.png>}}
 {{</callout>}}

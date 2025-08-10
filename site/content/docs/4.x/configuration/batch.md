@@ -1,43 +1,50 @@
 ---
 layout: docs
 title: Batch
-description: Overview of batch functionalities including repeat, repeat interval, and refresh.
+description: Configure how many times a batch runs, the delay between runs, and whether to refresh the page after completion.
 group: configuration
 toc: true
 ---
 {{<img batch.png>}}
 
 ## Repeat
-If you want specific batch to repeat more than once you can provide repeat value.
+Set how many times this batch should execute.
 
-Its also used within ElementFinder Xpath and value to be replaces with the value of batch repeat index. e.g. If Element Finder need to be iterated over number of rows in table for that xpath will be `//table/tr[1]/td[1]/button` well this will only select the first row button and if you want to iterate the process for all button you can make use of batch repeat here like `//table/tr[<batchRepeat>]/td[1]/button` like this and repeat number 3 will iterate first three rows of table like [1..3].
+- Provide a positive integer. The batch runs that many times.
+- Valid range: `1` to `999`.
 
-**Examples**
-- positive numeric value `1` to `999`
+You can also use the repeat index inside Element Finder XPath or Value using the `<batchRepeat>` placeholder. The placeholder is replaced with the current 1‑based repeat index during execution.
+
+Example:
+- Without repeat index: `//table/tr[1]/td[1]/button` selects only the first row button.
+- With repeat index: `//table/tr[<batchRepeat>]/td[1]/button` and Repeat = `3` will iterate rows 1, 2, and 3.
 
 ## Repeat Interval
-If you want to control the time between each repeat you can provide repeat-interval as well.
+Control the delay between repeats.
+
+- Unit: seconds (supports decimals). Examples: `0.5`, `1`, `2.5`.
+- Requires Repeat to be set (>= 1).
 
 {{<markdown>}}
 {{<partial example-float.md>}}
 {{</markdown >}}
 
 {{<callout info>}}
-Its not mandatory field. if left blank extension will start executing right away.
+Repeat Interval is optional. If left blank, each repeat starts immediately.
 {{</callout>}}
 
 {{<callout warning>}}
-Repeat value is mandatory for Repeat Interval.
+Repeat is required when using Repeat Interval.
 {{</callout>}}
 
 ## Refresh
-If you want your site to be refresh after all the Action are completed successfully you can do that by checking refresh box.
+Refresh the page after all actions in the batch complete successfully.
 
 {{<callout info>}}
-Refresh functionality will only trigger once all the actions are completed successfully.
+The page refresh triggers only after all actions finish successfully.
 {{</callout>}}
 
 {{<callout danger>}}
-#### Refresh will override Batch Repeat  
-It do not work with repeat functionality. You can either use batch repeat or page refresh.
+#### Refresh and Repeat cannot be used together
+Refresh overrides Batch Repeat. Use either Batch Repeat or Refresh, not both.
 {{</callout>}}

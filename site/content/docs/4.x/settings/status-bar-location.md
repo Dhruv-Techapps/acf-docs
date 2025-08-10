@@ -6,7 +6,7 @@ description: Customize the status bar's position or disable it altogether.
 group: settings
 toc: true
 ---
-Users can customize the status bar's position or disable it altogether.
+Customize the status bar’s position or disable it entirely.
 {{<img global-settings.png>}}
 {{<img status-bar.png>}}
 

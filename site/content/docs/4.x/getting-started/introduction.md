@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Introduction
-description: Auto Click / Auto Fill is like a utility extension which helps user to click / fill on any website with by providing few information about the site and the button which they want to click.
+description: Auto Clicker – Auto Fill helps you automate clicks and form fills on any website by defining targets and actions.
 group: getting-started
 aliases:
   - "/docs/3.1/getting-started/"
@@ -12,16 +12,13 @@ toc: true
 
 ## Quick start
 
-* [Download extension]({{<docsref "/getting-started/download">}})
-* Go to webpage on which you need to perform click/fill automation.
-* Right click `button`, `input`, `textarea`, or any UI element , 
-* select <kbd>{{<param name>}}</kbd> option from menu.
-  * select `★ Configure for this Field`
-    * You will be redirected to configuration page of extension, with pre filled value 
-    * [URL]({{<docsref "/configuration/url">}}) of webpage
-    * [Element Finder]({{<docsref "/action/element-finder">}}) of UI element.
-  * select [☉ Auto Clicker (Record)]({{<docsref "/record/overview">}}) options
-    * Extension will track all your actions and create configuration for you
+1) [Download the extension]({{<docsref "/getting-started/download">}}) and install it in Chrome or Edge.
+2) Open the web page where you want to automate clicks or fills.
+3) Right‑click any element (`button`, `input`, `textarea`, etc.) and choose <kbd>{{<param name>}}</kbd>.
+  - Pick `★ Configure for this Field` to auto-fill:
+    - The page [URL]({{<docsref "/configuration/url">}})
+    - The [Element Finder]({{<docsref "/action/element-finder">}}) for the selected element
+  - Or pick [☉ Auto Clicker (Record)]({{<docsref "/record/overview">}}) to record your actions and auto‑create a configuration.
 
 
 ## Additional (Advance)
@@ -36,6 +33,44 @@ toc: true
         - [Addon]({{<docsref "/addon/overview">}}) - add condition before action
 - [Global Settings]({{<docsref "/settings/overview">}}) - global setting how extension should work
 
+
+## New to the extension? Start here
+
+- [Check out the video on YouTube](https://youtu.be/M3yNuBkJW3g)
+- [Check out the documentation](https://getautoclicker.com/docs/)
+- [Try out our extension on the test page](https://test.getautoclicker.com/)
+- [Run into an issue? Chat on Discord](https://discord.gg/hArVQns)
+
+### Try it now on the test page
+
+- URL: https://test.getautoclicker.com/
+- Goal: Fill username and click a button
+
+Steps
+1) Open the page above.
+2) Add [Action]({{<docsref "/action/overview">}}) 1
+  - [Element Finder]({{<docsref "/action/element-finder">}}): `//input[@name="username"]`
+  - [Value]({{<docsref "/action-value/overview">}}): Your name
+3) Add [Action]({{<docsref "/action/overview">}}) 2
+  - [Element Finder]({{<docsref "/action/element-finder">}}): `//button[@random]`
+  - [Value]({{<docsref "/action-value/overview">}}): leave blank (blank value triggers click)
+4) Save and run.
+
+Tips
+- Use right‑click → <kbd>{{<param name>}}</kbd> → `★ Configure for this Field` to auto‑capture the [Element Finder]({{<docsref "/action/element-finder">}}).
+- If the page loads slowly, set an [Init Wait]({{<docsref "/configuration/overview#init-wait">}}).
+
+### Set up Global Settings (recommended)
+
+Global settings control how the extension behaves across all configurations.
+
+1) Open [Global Settings]({{<docsref "/settings/overview">}}).
+2) Consider setting:
+  - Start mode: [Auto or Manual]({{<docsref "/configuration/config-settings#start--auto--manual-">}})
+  - Hotkey: Define a shortcut to start in Manual mode (e.g., `Ctrl + Shift + A`)
+  - Extension Load event: Window vs Document for faster startup
+  - Status Bar location: Adjust or disable if needed
+3) Save changes and refresh your target page.
 
 ## Community
 

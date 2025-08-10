@@ -1,25 +1,25 @@
 ---
 layout: docs
 title: Addon · Condition
-description: Add condition which you can check before performing action
+description: Define how the Addon compares the page value (a) to your input (b) before the Action runs.
 group: addon
 toc: true
 ---
-You can specify what condition you need to apply.<br/>
-(a) - value or text of element<br/>
-(b) - value provided in configuration page field.
+Choose a comparison to apply:
+- (a) is the page value (text or attribute) captured by the Addon’s Element Finder, or a function result.
+- (b) is the value you provide in the Addon’s input field.
 
 {{<table>}}
-| `Name`                  | Type            | Description                             |
-|-----------------------|-----------------|-----------------------------------------|
-| `Equals`              | String | Number | (a) should be equal to (b)              |
-| `Not Equals`          | String | Number | (a) should not be equal to (b)          |
-| `Contains`            | String | Number | (a) contains (b)                        |
-| `Not Contains`        | String | Number | (a) does not contain (b)                |
-| `Greater Than`        | Number          | (a) is greater than (b)                 |
-| `Lesser Than`         | Number          | (a) is lesser than (b)                  |
-| `Greater Than Equals` | Number          | (a) is greater than or equals to (b)    |
-| `Lesser Than Equals`  | Number          | (a) is lesser than or equals to (b)     |
-| `Is Checked`          | Boolean         | (a) is checked                          |
-| `Is Not Checked`      | Boolean         | (a) is not checked                      |
+| `Name`                  | Types              | Description                              |
+|-------------------------|--------------------|------------------------------------------|
+| `Equals`                | String, Number     | (a) equals (b)                           |
+| `Not Equals`            | String, Number     | (a) is not equal to (b)                  |
+| `Contains`              | String             | (a) contains (b)                         |
+| `Not Contains`          | String             | (a) does not contain (b)                 |
+| `Greater Than`          | Number             | (a) > (b)                                |
+| `Less Than`             | Number             | (a) < (b)                                |
+| `Greater Than Or Equal` | Number             | (a) ≥ (b)                                |
+| `Less Than Or Equal`    | Number             | (a) ≤ (b)                                |
+| `Is Checked`            | Boolean            | Checkbox/radio is checked                |
+| `Is Not Checked`        | Boolean            | Checkbox/radio is not checked            |
 {{</table>}}

@@ -19,11 +19,11 @@ The time interval between retries. The default is 1 second.
 {{</markdown>}}
 
 {{<callout info>}}
-This field is optional. If left blank, the extension will start executing immediately.
+This field is optional. If left blank, retries occur without additional delay.
 {{</callout>}}
 
 {{<callout warning>}}
-The repeat value is mandatory for the Retry Interval.
+Set Retry (> 1) if you want Retry Interval to take effect.
 {{</callout>}}
 
 ## Retry Options
