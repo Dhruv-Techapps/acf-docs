@@ -11,6 +11,10 @@ An action combines an [element finder]({{<docsref "/action/element-finder">}}) a
 - Element finder: locates the target element on the page (multiple strategies supported).
 - Value: defines what to do—leave blank to click, or supply text/commands/events. See the action value guide for all options.
 
+{{<callout info>}}
+New: You can also add a [Userscript]({{<docsref "/userscript/overview">}}) as a full action using the “Add Userscript” button next to Add Action. Enable the Userscript switch on the extension’s details page before using it. Userscripts can replace the Name, Init Wait, Repeat, and Repeat Interval fields with custom logic and run alongside other actions.
+{{</callout>}}
+
 Key properties that enhance an action:
 - [init wait]({{<docsref "/action/overview#init-wait">}})
 - [name]({{<docsref "/action/overview#name">}})
