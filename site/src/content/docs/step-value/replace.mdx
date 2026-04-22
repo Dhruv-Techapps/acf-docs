@@ -1,0 +1,24 @@
+---
+title: Replace
+description: Replace the text on existing field.
+tags: [action, value, replace, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input[@type=email]',
+    value: 'Replace::Hello::World'
+  }}
+/>
+
+## Replace::Hello::World
+
+Replace value in the existing input field. This replaces "Hello" with "World".
+
+```html
+<input value="Hello" /> → <input value="World" />
+```

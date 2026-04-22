@@ -1,0 +1,41 @@
+---
+title: Settings · Show Notification
+description: Control how the extension displays notifications and optionally send alerts via Discord
+tags: [settings, notifications, discord, global-settings]
+toc: true
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/global-settings-show-notifications.png"
+  alt=""
+/>
+
+<BsTable>
+
+| **Notification Type**        | **Description**                                 |
+| ---------------------------- | ----------------------------------------------- |
+| **On Step completion**       | Notifies when an individual step is completed.  |
+| **On Loop completion**       | Notifies when a loop of steps is completed.     |
+| **On Automation completion** | Notifies when an automation is completed.       |
+| **On Error**                 | Notifies when an error occurs during execution. |
+
+</BsTable>
+
+## Notification Sound
+
+Toggle whether notifications play a sound.
+
+## Notification on Discord
+
+Connect the extension to a Discord server to receive notifications there. When enabled:
+
+- Notifications (e.g., step complete, loop complete, errors) are sent to your Discord account.
+- You must be part of the same Discord server and allow direct messages from server members.
+
+<Callout type="warning">
+  ! Important Enable notifications while configuring to catch errors quickly (e.g., missing/wrong XPath). You can turn
+  them off once your setup is stable.
+</Callout>
+
+<Callout name="subscribe-callout" />

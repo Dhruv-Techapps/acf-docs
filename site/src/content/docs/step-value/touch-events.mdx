@@ -1,0 +1,30 @@
+---
+title: Touch Events
+description: 'Dispatch touch events on a page element using TouchEvents:: commands.'
+tags: [step, value, touch, touch-events, step-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//button',
+    value: 'TouchEvents::touchstart'
+  }}
+/>
+
+<BsTable>
+
+| **TouchEvents::**                        | **Description**                                |
+| ---------------------------------------- | ---------------------------------------------- |
+| `TouchEvents::touchstart`                | Dispatch a `touchstart` event on the element.  |
+| `TouchEvents::touchend`                  | Dispatch a `touchend` event on the element.    |
+| `TouchEvents::touchmove`                 | Dispatch a `touchmove` event on the element.   |
+| `TouchEvents::touchcancel`               | Dispatch a `touchcancel` event on the element. |
+| `TouchEvents::["touchstart","touchend"]` | Dispatch a sequence of touch events.           |
+
+</BsTable>
+
+You can pass a single event name or a JSON array of event names to fire a sequence in order.

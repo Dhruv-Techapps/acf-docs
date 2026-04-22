@@ -1,0 +1,53 @@
+---
+title: Settings · Retry Attempts
+description: Retry settings control how the extension handles cases where a target is not found on the page.
+tags: [settings, retry-attempts, automation, global-settings, retry-interval, retry-options]
+toc: true
+aliases:
+  - '/docs/4.x/settings/retry/'
+  - '/docs/settings/retry/'
+  - '/settings/retry/'
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/global-settings-retry-attempts.png"
+  alt=""
+/>
+
+Sometimes a page takes a moment to load all its elements. These settings tell the extension how long to keep trying before giving up, and what to do if it still cannot find what it needs.
+
+These are global defaults. You can override them for a specific step in [Step Settings]([[docsref:/step/step-settings]]).
+
+## Retry Attempts
+
+How many times the extension should look for an element on the page before giving up. The default is **5**.
+
+- Enter any positive number, for example `10` to try ten times.
+- Click the **infinity button** (∞) next to the input to keep trying until the element appears, with no limit.
+
+<IncludeMdx src="/content/callouts/example-unlimited.mdx" />
+
+## Wait Between Retries
+
+How long the extension should wait between each attempt. The default is **1 second**.
+
+- Enter a single number for a fixed delay (for example `2` for a 2-second pause between tries).
+- Click the **range button** to set a random delay between a minimum and maximum value — useful when you want less predictable timing.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+## What should happen if the item is not found on the page?
+
+Once all retry attempts are used up and the element still cannot be found, you can choose what happens next.
+
+<BsTable>
+
+| **Option**          | **Description**                                                                 |
+| ------------------- | ------------------------------------------------------------------------------- |
+| **Stop Automation** | Stop everything immediately. No further steps will run. _(Default)_             |
+| **Skip This Step**  | Ignore this step and move on to the next one.                                   |
+| **Refresh & Retry** | Reload the page and try running the automation again from the beginning.        |
+| **Go to Step**      | Jump to a specific step number instead of stopping. Useful for branching flows. |
+
+</BsTable>

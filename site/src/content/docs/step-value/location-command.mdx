@@ -1,0 +1,34 @@
+---
+title: Location Command
+description: Perform location specific commands
+tags: [action, value, location, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//html',
+    value: 'LocationCommand::reload'
+  }}
+/>
+
+<BsTable>
+
+| **LocationCommand::**                                  | **Description**                                                        |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- |
+| `LocationCommand::reload`                              | Force reload the current page from the server.                         |
+| `LocationCommand::href::https://getautoclicker.com`    | Open https://getautoclicker.com in the same tab.                       |
+| `LocationCommand::replace::https://getautoclicker.com` | Navigate to the page without keeping history (Back won’t return here). |
+| `LocationCommand::assign::https://getautoclicker.com`  | Navigate to the page (like clicking a link).                           |
+| `LocationCommand::focus`                               | Focus the window/page.                                                 |
+| `LocationCommand::blur`                                | Remove focus from the window/page.                                     |
+| `LocationCommand::print`                               | Open the print dialog.                                                 |
+| `LocationCommand::stop`                                | Stop loading the page.                                                 |
+| `LocationCommand::moveBy::x,y`                         | Move the window by x and y pixels.                                     |
+| `LocationCommand::moveTo::x,y`                         | Move the window to x and y coordinates.                                |
+| `LocationCommand::open::https://getautoclicker.com`    | Open https://getautoclicker.com in a new tab.                          |
+
+</BsTable>

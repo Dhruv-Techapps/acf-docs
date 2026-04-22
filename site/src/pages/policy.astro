@@ -1,0 +1,19 @@
+---
+import SingleLayout from '@layouts/SingleLayout.astro'
+import { getData } from '@libs/data'
+import { remark } from 'remark'
+import html from 'remark-html'
+
+const policy = getData('policy')
+const rendered = String(await remark().use(html).process(policy.content))
+---
+
+<SingleLayout title="Privacy Policy" description="Our commitment to your privacy and data handling practices.">
+  <div>
+    <p class="text-body-secondary">Last updated {policy.last_updated}</p>
+    {policy.effective && <p class="text-body-secondary">Effective as of {policy.effective}</p>}
+    <div class="mt-4">
+      <Fragment set:html={rendered} />
+    </div>
+  </div>
+</SingleLayout>

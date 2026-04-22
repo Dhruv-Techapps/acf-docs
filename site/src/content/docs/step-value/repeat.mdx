@@ -1,0 +1,59 @@
+---
+title: Repeat
+description: Use loop, step, and session repeat placeholders inside step values.
+tags: [batch-repeat, action-repeat, session-count]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input3.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'example<loopRepeat>',
+    element_finder2: "//input[@name='user']",
+    value2: 'GoogleSheets::SheetName::A<stepRepeat>',
+    element_finder3: '//textarea',
+    value3: 'run<sessionCount>'
+  }}
+/>
+
+For example, if you enter `example<loopRepeat>` in the value field and the current loop repeat is `5`, the resolved value becomes `example4`.
+
+## Supported Patterns
+
+<BsTable>
+
+| **Pattern**                       | **Description**                                                |
+| --------------------------------- | -------------------------------------------------------------- |
+| [`<loopRepeat>`](#looprepeat)     | Replaces with the current loop repeat index (starting from 1). |
+| [`<stepRepeat>`](#steprepeat)     | Replaces with the current step repeat index (starting from 1). |
+| [`<sessionCount>`](#sessioncount) | Replaces with the current session count (starting from 1).     |
+| `<batchRepeat>`                   | Legacy alias for `<loopRepeat>`.                               |
+| `<actionRepeat>`                  | Legacy alias for `<stepRepeat>`.                               |
+
+</BsTable>
+
+### `<loopRepeat>`
+
+`example<loopRepeat>`
+
+<Code code={`example<loopRepeat>  → example1`} lang="html" />
+
+### `<stepRepeat>`
+
+`item<stepRepeat>`
+
+<Code code={`item<stepRepeat>  → item1`} lang="html" />
+
+### `<sessionCount>`
+
+`run<sessionCount>`
+
+<Code code={`run<sessionCount>  → run1`} lang="html" />
+
+<Callout type="info">
+  Older placeholders still work for backward compatibility: use `<batchRepeat>` as a legacy alias for
+  `<loopRepeat>`, and `<actionRepeat>` as a legacy alias for `<stepRepeat>`.
+</Callout>

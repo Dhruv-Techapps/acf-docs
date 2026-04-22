@@ -1,0 +1,7 @@
+/dist
+/_site
+/site/dist
+/.nx/cache
+CHANGELOG.md
+**/CHANGELOG.md
+**/dist/**

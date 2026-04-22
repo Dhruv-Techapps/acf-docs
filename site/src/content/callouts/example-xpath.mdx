@@ -1,0 +1,222 @@
+#### Note
+
+Chrome (Chromium) supports XPath 1.0. The examples below use XPath 1.0 syntax and show which elements are selected.
+
+`//div/a[1]`
+
+<Code
+  code={`<div>
+    <a>One</a> 👈 selected
+    <a>Two</a>
+</div>`}
+  lang="html"
+/>
+
+`//div/a[last()]`
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <a>Middle</a>
+  <a>Last</a> 👈 selected
+</div>`}
+  lang="html"
+/>
+
+`//div/a[last()-1]`
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <a>Middle</a> 👈 selected
+  <a>Last</a>
+</div>`}
+  lang="html"
+/>
+
+`//div/a[position() > 2]`
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <a>Second</a>
+  <a>Third</a> 👈 selected <a>Fourth</a> 👈 selected
+</div>`}
+  lang="html"
+/>
+
+`//a[@href]` (attribute present)
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <a>Second</a>
+  <a href="#">Third</a> 👈 selected
+  <a>Fourth</a>
+</div>`}
+  lang="html"
+/>
+
+`//a[@href='google']` (attribute equals)
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <a href="#">Second</a>
+  <a href="google">Third</a> 👈 selected
+  <a>Fourth</a>
+</div>`}
+  lang="html"
+/>
+
+`//button[@id='1']` (match by id)
+
+<Code
+  code={`<div>
+  <a>First</a>
+  <button type="button" id="1">Click me</button> 👈 selected
+  <a href="#">Second</a>
+  <a href="dhruv-techapps.github.io">Third</a>
+  <a>Fourth</a>
+</div>`}
+  lang="html"
+/>
+
+`//a[@data-rank < 3]` (numeric comparison)
+
+<Code
+  code={`<div>
+  <a data-rank="1">Primary</a> 👈 selected <a data-rank="2">Secondary</a> 👈 selected
+  <a data-rank="3">Warning</a>
+  <a data-rank="4">Info</a>
+</div>`}
+  lang="html"
+/>
+
+`//button[contains(@class,'me')]` (substring match)
+
+<Code
+  code={`<div>
+  <button type="button" id="1">Primary</button>
+  <button class="me second">Secondary</button> 👈 selected <button class="me warning">Warning</button> 👈 selected
+  <button class="me-too done">Me Too</button> 👈 selected (substring match)
+</div>`}
+  lang="html"
+/>
+
+`//button[contains(concat(' ', normalize-space(@class), ' '), ' me ')]` (safe class match)
+
+<Code
+  code={`<div>
+  <button class="me second">Secondary</button> 👈 selected
+  <button class="me-too done">Me Too</button>
+</div>`}
+  lang="html"
+/>
+
+`//button[contains(text(),'Me')]` (text contains)
+
+<Code
+  code={`<div>
+  <button type="button" id="1">Primary</button>
+  <button class="me second">Secondary</button>
+  <button class="me warning">Warning</button>
+  <button class="me-too done">Me Too</button> 👈 selected
+</div>`}
+  lang="html"
+/>
+
+`//button[starts-with(normalize-space(.), 'Sign')]` (text starts-with)
+
+<Code
+  code={`<div>
+  <button>Sign in</button> 👈 selected <button>Signup</button> 👈 selected
+  <button>Log out</button>
+</div>`}
+  lang="html"
+/>
+
+`//span[contains(@class,'badge')][number(translate(normalize-space(.),' %','')) >= 50]` (numeric text greater than or equal to 50)
+
+<Code
+  code={`<div>
+  <span class="badge">55 %</span> 👈 selected <span class="badge">50 %</span> 👈 selected
+  <span class="badge">45 %</span>
+  <span class="badge">43 %</span>
+</div>`}
+  lang="html"
+/>
+
+`//label[normalize-space(text())='Email']/following-sibling::input[1]` (following sibling)
+
+<Code
+  code={`<div>
+  <label>Email</label>
+  <input type="email" /> 👈 selected
+  <input type="text" />
+</div>`}
+  lang="html"
+/>
+
+`//input[@id='street']/parent::*` (parent)
+
+<Code
+  code={`<div>
+  <div class="field">
+    👈 selected
+    <input id="street" type="text" />
+  </div>
+</div>`}
+  lang="html"
+/>
+
+`//button[@type='submit']/ancestor::form` (ancestor)
+
+<Code
+  code={`<form>
+  👈 selected
+  <button type="submit">Send</button>
+</form>`}
+  lang="html"
+/>
+
+`//li[@class='active']/preceding-sibling::li[1]` (preceding sibling)
+
+<Code
+  code={`<ul>
+  <li>One</li>
+  👈 selected
+  <li class="active">Two</li>
+  <li>Three</li>
+</ul>`}
+  lang="html"
+/>
+
+`//div//button` (descendant of div)
+
+<Code
+  code={`<div>
+  <section><button>Ok</button> 👈 selected</section>
+</div>`}
+  lang="html"
+/>
+
+`//button[@type='submit'][contains(@class,'primary')][not(@disabled)]` (combined conditions)
+
+<Code
+  code={`<div>
+  <button type="submit" class="primary">Save</button> 👈 selected
+  <button type="submit" class="primary" disabled>Save</button>
+  <button class="primary">Not submit</button>
+</div>`}
+  lang="html"
+/>
+
+Chat with us on
+
+<a class="text-decoration-none" style="color:#7289da" href="[[config:discord]]" target="_blank" rel="noopener">
+  <svg class="bi me-2" aria-hidden="true">
+    <use xlink:href={`#discord`} />
+  </svg>
+</a>
+if you find it difficult to craft an XPath or have suggestions.

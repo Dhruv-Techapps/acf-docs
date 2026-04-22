@@ -1,0 +1,27 @@
+{
+  "name": "Auto Clicker - AutoFill",
+  "short_name": "Auto Clicker",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7952b3",
+  "background_color": "#7952b3",
+  "related_applications": [
+    {
+      "platform": "chrome_web_store",
+      "url": "https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe?hl=en",
+      "id": "iapifmceeokikomajpccajhjpacjmibe"
+    }
+  ]
+}

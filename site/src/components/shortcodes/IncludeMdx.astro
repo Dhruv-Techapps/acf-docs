@@ -1,0 +1,70 @@
+---
+/**
+ * IncludeMdx.astro
+ *
+ * Shortcode to load and render another MDX/MD file.
+ *
+ * Usage in MDX/MD/Astro:
+ *   <IncludeMdx src="/src/components/shortcodes/GuideFooter.mdx" />
+ *   <IncludeMdx src="GuideFooter.mdx" />               // relative by suffix match
+ *   <IncludeMdx src="components/shortcodes/GuideFooter.mdx" />
+ *   <IncludeMdx src="content/docs/foo.mdx" props={{ title: 'Hello' }} />
+ */
+
+interface Props {
+  /** Path to the MDX/MD file. Accepts absolute (starting with /src) or relative/suffix paths. */
+  src: string
+  /** Optional props to pass down to the included MDX component's default export. */
+  props?: Record<string, unknown>
+}
+
+const { src, props = {} } = Astro.props as Props
+
+// Discover all markdown and mdx files within the site's src tree for inclusion.
+// Use paths relative to this file to keep glob portable across environments.
+const loaders = import.meta.glob(['../../**/*.mdx', '../../**/*.md'], { eager: false })
+
+// Normalize an input path and find a matching key from the glob map by suffix.
+function normalize(p: string) {
+  // Turn backslashes into slashes and trim whitespace
+  let s = p.replace(/\\+/g, '/').trim()
+  // If it contains "/src/", prefer the portion after it so it matches our relative keys
+  const idx = s.indexOf('/src/')
+  if (idx >= 0) s = s.slice(idx + '/src/'.length)
+  // Remove any leading './' or '/'
+  s = s.replace(/^\.?\//, '')
+  return s
+}
+
+const target = normalize(src)
+
+let chosenKey: string | undefined
+for (const key of Object.keys(loaders)) {
+  // Keys are relative like '../../content/docs/foo.mdx' — strip leading ../ segments for a suffix compare
+  const suffix = key.replace(/^(\.\.\/)+/, '')
+  if (suffix.endsWith(target) || suffix.endsWith('/' + target)) {
+    chosenKey = key
+    break
+  }
+}
+
+if (!chosenKey) {
+  const examples = Object.keys(loaders)
+    .map((k) => k.replace(/^(\.\.\/)+/, ''))
+    .slice(0, 5)
+    .join('\n  - ')
+  throw new Error(
+    `IncludeMdx: Could not find file for src="${src}". Tried suffix match with "${target}".\n` +
+      (examples ? `Sample available files:\n  - ${examples}\n` : '')
+  )
+}
+
+const mod = await (loaders[chosenKey] as () => Promise<any>)()
+const Included = (mod && (mod.default || mod.MDXContent)) as unknown as any
+
+if (!Included) {
+  throw new Error(`IncludeMdx: File "${chosenKey}" does not have a default export to render.`)
+}
+---
+
+<Included {...props} />

@@ -1,0 +1,49 @@
+---
+title: Loop
+description: Configure how many times an automation repeats, the interval between loops, and whether to refresh the page after completion.
+tags: [loop, batch, automation, configuration, repeat, refresh, repeat-interval]
+toc: true
+aliases:
+  - '/docs/4.x/automation/batch/'
+  - '/docs/automation/batch/'
+  - '/automation/batch/'
+  - '/docs/4.x/configuration/batch/'
+---
+
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/loop.png" alt="" />
+
+## Refresh
+
+Refresh the page after all steps in the automation complete successfully.
+
+- Enable this when you want to reload the page between runs instead of looping through steps again.
+- Refresh and Repeat cannot be used together. Use one or the other.
+
+## Repeat
+
+How many times the full automation should run.
+
+- Leave it blank or `0` to run once.
+- Enter any positive number for a fixed loop count, for example `5` to run five times.
+- Click the **infinity button** (∞) to keep looping until you stop it manually.
+
+<IncludeMdx src="/content/callouts/example-unlimited.mdx" />
+
+You can also use the repeat index inside a Target or Value by using the `<loopRepeat>` placeholder. The placeholder is replaced with the current 1-based loop index during execution.
+
+`<batchRepeat>` is still supported as a backward-compatible alias.
+
+Example:
+
+- Without repeat index: `//table/tr[1]/td[1]/button` selects only the first row button.
+- With repeat index: `//table/tr[<loopRepeat>]/td[1]/button` and Repeat = `3` iterates rows 1, 2, and 3.
+
+## Interval Between Loops (sec)
+
+How long to wait between each loop of the automation.
+
+- Enter a single number for a fixed delay (for example `2` for a 2-second pause between loops).
+- Click the **range button** to set a random delay between a minimum and maximum value — useful when you want less predictable timing.
+- Leave it blank to start the next loop immediately.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />

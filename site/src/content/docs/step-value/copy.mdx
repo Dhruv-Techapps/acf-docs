@@ -1,0 +1,52 @@
+---
+title: Copy
+description: Copy text content or a regex-extracted value from a page element for use in subsequent steps.
+tags: [action, value, copy, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//a',
+    value: 'Copy::Text'
+  }}
+/>
+
+### Copy::[\d]{6}
+
+`Copy::[\\d]{6}`
+
+<Code code={`<div>OTP: 123456</div> → Copy: 123456`} lang="html" />
+
+### Copy::[.]{6}
+
+`Copy::[.]{6}`
+
+<Code code={`<div>dots: ......</div> → Copy: ......`} lang="html" />
+
+### Copy::[.]+
+
+`Copy::[.]+`
+
+<Code code={`<div>path: a..b</div> → Copy: ..`} lang="html" />
+
+### Copy::[a-z]{6}
+
+`Copy::[a-z]{6}`
+
+<Code code={`<div>code: nature</div> → Copy: nature`} lang="html" />
+
+### Copy::[A-Z]{6}
+
+`Copy::[A-Z]{6}`
+
+<Code code={`<div>code: MONKEY</div> → Copy: MONKEY`} lang="html" />
+
+### Copy::[\\w]{6}
+
+`Copy::[\\w]{6}`
+
+<Code code={`<div>id: A1B2C3X</div> → Copy: A1B2C3`} lang="html" />

@@ -1,0 +1,22 @@
+---
+title: Append
+description: Append the text on existing field.
+tags: [action, value, append, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Append::World'
+  }}
+/>
+
+## Append::World
+
+Append value to the existing input field. This adds "World" to the current field value.
+
+<Code code={`<input value="Hello">  → <input value="Hello World">`} lang="html" />

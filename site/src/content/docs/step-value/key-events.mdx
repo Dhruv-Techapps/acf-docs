@@ -1,0 +1,25 @@
+---
+title: Key Events
+description: Perform key specific events with delay on input fields and search bar
+tags: [action, value, key-events, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: "KeyEvents::{'value':'Example text','delay':3}"
+  }}
+/>
+
+<BsTable>
+
+| **KeyEvents::**                                 | **Description**                                              |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| `KeyEvents::Example Text`                       | Simulates typing of “Example Text” like real keyboard input. |
+| `KeyEvents::{"value":"Example text","delay":3}` | Simulates typing with a 3s delay between each character.     |
+
+</BsTable>

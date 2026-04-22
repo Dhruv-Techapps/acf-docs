@@ -1,0 +1,41 @@
+---
+title: Query Param
+description: Fetch values passed in url of web page and use same to fill the forms.
+tags: [action, value, query, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input[@type=email]',
+    value: 'Query::email',
+    element_finder2: '//input[@type=password]',
+    value2: 'Query::password'
+  }}
+/>
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/query-url.png"
+  alt=""
+/>
+
+## Supported Patterns
+
+<BsTable>
+
+| **Pattern**      | **Description**                                                                                                         | **Example**                                                 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `Query::param`   | Replace with the value of query parameter param from the URL. If not found, returns the key.                            | Query::userId → 123 (if ?userId=123 in URL)                 |
+| `<query::param>` | Replace all occurrences of `<query::param>` with the value of query parameter param from the URL. Useful for templates. | Hello `<query::name>`! → Hello John! (if ?name=John in URL) |
+
+</BsTable>
+
+### Usage
+
+Use <code>Query::param</code> for single value replacement, and <code>&lt;query::param&gt;</code> for replacing within a string or template.
+
+---

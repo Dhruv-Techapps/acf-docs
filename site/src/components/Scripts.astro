@@ -1,0 +1,21 @@
+---
+import { getVersionedBsJsProps } from '@libs/bootstrap'
+import type { Layout } from '@libs/layout'
+import AdsRecovery from './AdsRecovery.astro'
+import DocsScripts from './DocsScripts.astro'
+
+interface Props {
+  layout: Layout
+}
+
+const { layout } = Astro.props
+---
+
+<script is:inline {...getVersionedBsJsProps()}></script>
+
+<script src="../assets/application.js"></script>
+<script src="../assets/search.js"></script>
+<script src="../assets/lite-yt-embed.js"></script>
+
+{layout === 'docs' && <DocsScripts />}
+<AdsRecovery />

@@ -1,0 +1,31 @@
+---
+title: History Command
+description: 'Control browser history navigation using HistoryCommand:: commands.'
+tags: [step, value, history, navigation, step-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//html',
+    value: 'HistoryCommand::back'
+  }}
+/>
+
+<BsTable>
+
+| **HistoryCommand::**                                                      | **Description**                                            |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `HistoryCommand::back`                                                    | Go back one step in the browser history.                   |
+| `HistoryCommand::forward`                                                 | Go forward one step in the browser history.                |
+| `HistoryCommand::go::-1`                                                  | Go back by 1 entry. Use positive numbers to go forward.    |
+| `HistoryCommand::go::1`                                                   | Go forward by 1 entry.                                     |
+| `HistoryCommand::pushState::{"state":{},"title":"","url":"/new-path"}`    | Push a new state onto the history stack without reloading. |
+| `HistoryCommand::replaceState::{"state":{},"title":"","url":"/new-path"}` | Replace the current history entry without reloading.       |
+
+</BsTable>
+
+For `pushState` and `replaceState`, the value after the third `::` must be a JSON object with three fields: `{"state": {}, "title": "", "url": "/path"}`.

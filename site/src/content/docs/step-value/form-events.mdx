@@ -1,0 +1,31 @@
+---
+title: Form Events
+description: Perform form specific events on input field and button of form.
+tags: [action, value, form, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'FormEvents::focus'
+  }}
+/>
+
+<BsTable>
+
+| **FormEvents::**         | **Description**                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `FormEvents::blur`       | Trigger blur event; removes focus from the element.                                                            |
+| `FormEvents::click`      | Click the form element.                                                                                        |
+| `FormEvents::click-once` | Clicks an element only once unless the page fully refreshes, avoiding duplicate clicks for items loaded later. |
+| `FormEvents::focus`      | Trigger focus event on the element.                                                                            |
+| `FormEvents::select`     | Trigger select event; selects the text inside inputs and textareas.                                            |
+| `FormEvents::submit`     | Submit the form containing the element.                                                                        |
+| `FormEvents::clear`      | Trigger clear event; clears field value.                                                                       |
+| `FormEvents::remove`     | Remove the element.                                                                                            |
+
+</BsTable>

@@ -1,0 +1,30 @@
+---
+title: Scroll To
+description: Scroll to any specific part of application or to specific element using below command
+tags: [action, value, scroll, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//html',
+    value: 'ScrollTo::Bottom',
+    element_finder2: '//input[@type=email]',
+    value2: 'ScrollTo::XPath'
+  }}
+/>
+
+<BsTable>
+
+| **ScrollTo::**                              | **Description**             |
+| ------------------------------------------- | --------------------------- |
+| `ScrollTo::XPath`                           | Scroll page to the element. |
+| `ScrollTo::Top` / `ScrollTo::TopLeft`       | Scroll to Top Left.         |
+| `ScrollTo::TopRight`                        | Scroll to Top Right.        |
+| `ScrollTo::Bottom` / `ScrollTo::BottomLeft` | Scroll to Bottom Left.      |
+| `ScrollTo::BottomRight`                     | Scroll to Bottom Right.     |
+
+</BsTable>

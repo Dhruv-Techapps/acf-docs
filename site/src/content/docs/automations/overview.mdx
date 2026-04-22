@@ -1,0 +1,54 @@
+---
+title: Automations
+description: Browse, search, import, reorder, and manage all saved automations in one place.
+toc: true
+tags: [automations, list, configuration-list]
+aliases:
+  - '/docs/4.x/config-list/overview/'
+sections:
+  - title: Export
+    description: Select one or more automations and export them to a JSON file for backup or transfer.
+  - title: Import
+    description: Import automations from a JSON file. Accepts both single and multiple automations in one go.
+  - title: Remove
+    description: Select one or more automations and delete them at once.
+  - title: Reorder
+    description: Change priority. When multiple automations match the same URL, the first match in the list wins.
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automations.png"
+  alt=""
+/>
+
+## What you manage here
+
+<BsTable>
+
+| **Feature**      | **Description**                                                                 |
+| ---------------- | ------------------------------------------------------------------------------- |
+| **New**          | Create a new automation from the top-right‑click button.                        |
+| **Import**       | Import one or more automations from a JSON export.                              |
+| **Search**       | Filter automations by name or URL.                                              |
+| **Select**       | Enter bulk-selection mode to export or delete multiple automations.             |
+| **Reorder**      | Reorder automations so the highest-priority match appears first.                |
+| **Step Count**   | See how many steps each automation contains before opening it.                  |
+| **Open Details** | Select an automation to open its edit screen and review settings or loop rules. |
+
+</BsTable>
+
+## Typical workflow
+
+1. Review the automation list to find an existing entry or create a new one.
+2. Use the search box to filter by automation name or target URL.
+3. Click an automation to open its detail screen and edit its steps.
+4. Use `Select` when you want to bulk export or bulk remove multiple items.
+5. Use `Reorder` to control which automation wins when several match the same page.
+
+## Best practices
+
+- Use clear names so search results stay readable in long lists.
+- Reorder broad automations below narrow URL-specific ones.
+- Export before doing large imports or removals.
+- Treat this screen as the source of truth for what will run inside the extension.
