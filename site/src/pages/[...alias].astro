@@ -41,7 +41,7 @@ export async function getStaticPaths() {
     const aliases = normalizeAliases(aliasedDocsPage.data.aliases)
 
     for (const alias of aliases) {
-      staticPaths.push(getAliasStaticPath(alias, aliasedDocsPage.slug))
+      staticPaths.push(getAliasStaticPath(alias, aliasedDocsPage.id))
     }
   }
 
