@@ -1,0 +1,39 @@
+---
+title: Attribute
+description: Update the attribute of the element using below commands.
+tags: [action, value, attribute, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Attr::set::disable::false',
+    element_finder2: '//a',
+    value2: 'Attr::remove::disabled'
+  }}
+/>
+
+<BsTable>
+
+| **Attr::**                                  | **Description**         |
+| ------------------------------------------- | ----------------------- |
+| [Attr::set::prop::value](#attrsetpropvalue) | Update attribute value. |
+| [Attr::remove::prop](#attrremoveprop)       | Remove attribute.       |
+
+</BsTable>
+
+## Attr::set::prop::value
+
+`Attr::set::disabled::false`
+
+<Code code={`<input disabled="true">  → <input disabled="false">`} lang="html" />
+
+## Attr::remove::prop
+
+`Attr::remove::disabled`
+
+<Code code={`<input disabled="true">  → <input disabled="false">`} lang="html" />

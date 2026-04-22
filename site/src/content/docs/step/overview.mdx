@@ -1,0 +1,91 @@
+---
+title: Step
+description: What a step is and how to configure its target, value, timing, repeat, and disable state.
+tags: [step, action, overview, name, init-wait, repeat, repeat-interval]
+toc: true
+aliases:
+  - '/docs/3.1/action/init-wait/'
+  - '/docs/4.x/action/overview/'
+sections:
+  - title: Element Finder
+    description: 'Locate the target element on the page using flexible strategies.'
+  - title: Value
+    description: 'Define what the step does: click, fill, extract, or trigger commands.'
+  - title: Page Guard
+    description: 'Extend steps with pre-checks and advanced logic.'
+  - title: Step Settings
+    description: 'Fine-tune retry behavior, iframe handling, and error handling.'
+  - title: State Guard
+    description: 'Add logic to run a step only when previous steps have specific statuses.'
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border img-light"
+  src="/docs/[[config:docs_version]]/assets/img/step.png"
+  alt=""
+/>
+
+A step combines a [Target]([[docsref:/step/element-finder]]) and a [Value]([[docsref:/step-value/overview]]).
+
+- Target: locates the item on the page using XPath, position, or other supported strategies.
+- Value: defines what to do. Leave it blank to click, or provide text, commands, events, or integrations.
+
+In the options page, steps are edited inline inside the automation screen. Common columns include `Delay`, `Name`, `Target`, `Value`, `Repeat`, and `Interval`, plus step actions such as remove, disable, and more options.
+
+<Callout type="info">
+  You can also add a [Userscript]([[docsref:/userscript/overview]]) as a full step using the Add Userscript option.
+  Userscripts can replace the standard Name, Delay, Repeat, and Interval behavior with custom logic.
+</Callout>
+
+<Callout type="warning">
+  If the target is not found, the extension uses the retry settings from Global Settings or [Step
+  Settings]([[docsref:/step/step-settings]]), then follows your selected fallback such as Stop Automation, Skip This
+  Step, Refresh & Retry, or Go to Step.
+</Callout>
+
+## Delay
+
+How long to wait before this step starts, in seconds.
+
+- Use it when the page or a specific widget needs extra time to become ready.
+- It runs before the step starts, not between repeats.
+- Enter a single number for a fixed delay, for example `2` for a 2-second pause.
+- Click the **range button** to set a random delay between a minimum and maximum value.
+- Leave it blank or `0` for no extra delay.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+## Name
+
+A label to identify the step in the grid. This is optional but strongly recommended once an automation has more than a few steps.
+
+## Target
+
+The target tells the extension which item on the page this step should act on.
+
+- Use [Element Finder]([[docsref:/step/element-finder]]) for XPath, position-based finders, and similar selectors.
+- Keep targets as specific as possible for reliability.
+
+## Repeat
+
+How many additional times to run this step after the first execution.
+
+- Leave it blank or `0` to run once.
+- Enter any positive number for a fixed repeat count, for example `3` to run the step four times total.
+- Click the **infinity button** (∞) to keep repeating until the automation stops.
+
+<IncludeMdx src="/content/callouts/example-unlimited.mdx" />
+
+## Interval
+
+How long to wait between each repeat of this step.
+
+- Enter a single number for a fixed delay, for example `1` for a 1-second pause between repeats.
+- Click the **range button** to set a random delay between a minimum and maximum value — useful to reduce mechanical timing patterns.
+- Leave it blank to start the next repeat immediately.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+## Disable
+
+Temporarily turn off a step. Disabled steps remain in the automation but are skipped during execution.

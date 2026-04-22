@@ -1,0 +1,45 @@
+---
+title: Settings · Additional Settings
+description: Configure embedded page search, automatic page reload on error, and status bar position.
+tags: [settings, additional-settings, check-iframes, reload-on-error, status-bar]
+toc: true
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/global-settings-additional-settings.png"
+  alt=""
+/>
+
+## Search Inside Embedded Pages
+
+Also look for items inside embedded sections of the page.
+
+When enabled, the extension searches inside `<iframe>` elements embedded in the page before falling back to the main document.
+
+## Refresh Page on Error
+
+Automatically reload the page if something goes wrong.
+
+If the extension context is invalidated (for example, after the extension is updated while the page is open), the page reloads automatically to re-establish the connection.
+
+## Status Bar
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/status-bar.png"
+  alt=""
+/>
+Show status bar at bottom of the page.
+
+<BsTable>
+
+| **Position**     | **Description**                                   |
+| ---------------- | ------------------------------------------------- |
+| **Hide**         | Hides the status bar entirely.                    |
+| **Top Left**     | Places the status bar in the top-left corner.     |
+| **Top Right**    | Places the status bar in the top-right corner.    |
+| **Bottom Left**  | Places the status bar in the bottom-left corner.  |
+| **Bottom Right** | Places the status bar in the bottom-right corner. |
+
+</BsTable>

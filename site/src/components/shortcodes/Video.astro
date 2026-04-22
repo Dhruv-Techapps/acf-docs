@@ -1,0 +1,56 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  /** File name of the video (e.g. "recording.mp4"). Prefer `src`; `name` is kept for Hugo parity. */
+  src?: string
+  name?: string
+  /** CSS width attribute value. Defaults to 100%. */
+  width?: string | number
+  /** Inline style string. */
+  style?: string
+  /** Extra classes to apply to the <video> element. */
+  class?: string
+  /** Control boolean attributes for the <video>. */
+  autoplay?: boolean
+  controls?: boolean
+  muted?: boolean
+  loop?: boolean
+  playsinline?: boolean
+}
+
+const {
+  src,
+  name,
+  width = '100%',
+  style = '',
+  class: className = 'video-thumbnail mb-3 border border-secondary',
+  autoplay = true,
+  controls = true,
+  muted = true,
+  loop = false,
+  playsinline = true
+} = Astro.props as Props
+
+const filename = src ?? name
+if (!filename) {
+  throw new Error('Video: missing required "src" (or "name") prop.')
+}
+
+const videoSrc = getVersionedDocsPath(`/assets/video/${filename}`)
+---
+
+<video
+  class={className}
+  width={width}
+  style={style}
+  autoplay={autoplay}
+  controls={controls}
+  muted={muted}
+  loop={loop}
+  playsinline={playsinline}
+>
+  <source src={videoSrc} type="video/mp4" />
+  Your browser does not support the video tag.
+  <slot />
+</video>

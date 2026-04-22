@@ -1,0 +1,27 @@
+---
+title: Tabs
+description: 'Control the current browser tab using Tabs:: commands — reload or update the tab URL.'
+tags: [step, value, tabs, tab, step-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//html',
+    value: 'Tabs::reload'
+  }}
+/>
+
+<BsTable>
+
+| **Tabs::**                                           | **Description**                                |
+| ---------------------------------------------------- | ---------------------------------------------- |
+| `Tabs::reload`                                       | Reload the current tab.                        |
+| `Tabs::update::{"url":"https://getautoclicker.com"}` | Navigate the current tab to the specified URL. |
+
+</BsTable>
+
+For `Tabs::update`, the value after the third `::` must be a JSON object with a `url` property.

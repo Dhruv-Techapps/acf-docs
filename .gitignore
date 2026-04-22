@@ -1,6 +1,16 @@
-# Ignore docs files
+# Build output
 /_site/
-# Hugo files
+/site/dist/
+/site/.astro/
+
+# Dependencies
+node_modules/
+
+# Cache
+/.prettiercache
+/site/.prettiercache
+
+# Hugo legacy files (kept as archive)
 /resources/
 /.hugo_build.lock
 

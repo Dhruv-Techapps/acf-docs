@@ -1,0 +1,99 @@
+---
+title: Automation
+description: An automation combines a target URL with steps, loop rules, settings, and monitoring behavior.
+toc: true
+tags: [automation, configuration, overview, name, init-wait, enable, export, import, duplicate]
+aliases:
+  - '/docs/3.1/configuration/export-import/'
+  - '/docs/4.x/configuration/overview/'
+sections:
+  - title: Loop
+    description: Repeat the full automation or refresh the page after all steps complete.
+  - title: Monitor
+    description: Re-run matching steps when new content is added on dynamic pages.
+  - title: Automation Settings
+    description: Adjust automation-level settings such as run mode, URL matching, and page load timing.
+  - title: Schedule
+    description: Schedule an automation to run on a specific date and time, with an optional repeat interval.
+  - title: URL
+    description: Specify the target URL or pattern that should trigger the automation.
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automation.png"
+  alt=""
+/>
+
+An automation is the top-level unit. Each automation targets a URL, contains one or more [Steps]([[docsref:/step/overview]]), and can optionally define [Loop]([[docsref:/automation/loop]]), [Monitor]([[docsref:/automation/monitor]]), and [Automation Settings]([[docsref:/automation/settings]]).
+
+## Name and Actions
+
+Each automation row has an input field showing the automation name and a dropdown button grouped next to it.
+
+### Name input
+
+- Click the name field directly to edit it inline.
+- Use a descriptive name so long lists stay readable.
+- The name defaults from the URL or captured page title.
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automation-name.png"
+  alt=""
+/>
+
+### Dropdown button
+
+Click the split button next to the name to open a menu with all automation actions:
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automation-menu.png"
+  alt=""
+/>
+
+<BsTable>
+
+| **Action**    | **Description**                                                                                                       |
+| ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Edit**      | Open the automation detail screen to edit URL, Wait Before Start.                                                     |
+| **Export**    | Download this automation as a single JSON file for backup or sharing.                                                 |
+| **Schedule**  | Open [Schedule]([[docsref:/automation/schedule]]) settings to configure when the automation should run automatically. |
+| **Loop**      | Open [Loop]([[docsref:/automation/loop]]) settings to set repeat count and interval.                                  |
+| **Monitor**   | Open [Monitor]([[docsref:/automation/monitor]]) settings to watch for page changes.                                   |
+| **Duplicate** | Create a copy of the automation and add it to the list.                                                               |
+| **Disable**   | Temporarily turn off the automation without deleting it.                                                              |
+| **Remove**    | Permanently delete the automation.                                                                                    |
+
+</BsTable>
+
+## URL and Wait Before Start
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automation-url.png"
+  alt=""
+/>
+To edit the URL or Wait Before Start, click the URL field directly or choose **Edit** from the dropdown menu. An inline
+edit section expands with:
+
+- **URL** — the target address or pattern. See [URL]([[docsref:/automation/url]]) for matching options.
+- **Wait Before Start** — how long to wait before the automation starts after the page loads.
+
+Click **Save** to apply changes or **Cancel** to discard.
+
+### Wait Before Start
+
+Some pages need extra time to finish rendering before the automation can reliably find elements. Wait Before Start adds a pause between the page load event and the first step running.
+
+- Enter a number in milliseconds, for example `1000` for a 1-second delay.
+- Click the **range button** to set a random delay between a minimum and maximum value — useful when page load time varies.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+## URL changes on modern apps
+
+- Automations can re-run on single-page apps when the address changes without a full reload.
+- Use [Run on Page Navigation]([[docsref:/automation/settings#run-on-page-navigation]]) for Gmail, social feeds, dashboards, and similar sites.
+- Pair it with precise URL matching so the automation does not trigger too broadly.

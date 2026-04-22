@@ -1,0 +1,34 @@
+---
+title: Random Value
+description: Now fill generate random value into form fields
+tags: [action, value, random, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input[@type=email]',
+    value: '<random[a-z]{6}>',
+    element_finder2: '//input[@type=password]',
+    value2: '<random[\\w]{6}>'
+  }}
+/>
+
+> By Default the length of string is fixed to 6 and filter is set to all character + numbers + symbol so when you use `<random>` you will get random string of length 6 with mix of char + num + symbol
+
+<BsTable>
+
+| **&lt;random&gt;**       | **Description (Generate Random value)**                    |
+| ------------------------ | ---------------------------------------------------------- |
+| `<random[.]\{6\}>`       | [.] any character; {6} exactly 6 characters                |
+| `<random[.]\{(6, 12)\}>` | [.] any character; {(6, 12)} 6 to 12 characters            |
+| `<random[a-z]\{6\}>`     | [a-z] a character in range a–z; {6} length 6               |
+| `<random[A-Z]\{6\}>`     | [A-Z] a character in range A–Z; {6} length 6               |
+| `<random[\d]\{6\}>`      | [\d] a digit; {6} length 6                                 |
+| `<random[\w]\{6\}>`      | [\w] a word character; {6} length 6                        |
+| `<random[custom]\{6\}>`  | [custom] custom character set (e.g., custom); {6} length 6 |
+
+</BsTable>

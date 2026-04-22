@@ -1,0 +1,30 @@
+---
+title: Element
+description: 'Perform DOM operations directly on the matched element using Element:: commands.'
+tags: [step, value, element, dom, step-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//button',
+    value: 'Element::scrollIntoView'
+  }}
+/>
+
+<BsTable>
+
+| **Element::**                                                                     | **Description**                                                 |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `Element::remove`                                                                 | Remove the matched element from the DOM.                        |
+| `Element::scrollIntoView`                                                         | Scroll the element into the visible area of the viewport.       |
+| `Element::scrollIntoView::true`                                                   | Scroll so the element is aligned to the top of the viewport.    |
+| `Element::scrollIntoView::false`                                                  | Scroll so the element is aligned to the bottom of the viewport. |
+| `Element::scrollIntoView::{"behavior":"smooth","block":"end","inline":"nearest"}` | Scroll with custom options (`behavior`, `block`, `inline`).     |
+
+</BsTable>
+
+The options object for `scrollIntoView` follows the [`ScrollIntoViewOptions`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) API.

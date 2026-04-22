@@ -1,0 +1,74 @@
+---
+title: Keyboard
+description: Trigger Keyboard like events from extension but not fill the input field. some input field watch for event for those you can use this syntax
+tags: [action, value, keyboard, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'KeyboardEvents::0'
+  }}
+/>
+
+<BsTable>
+
+| **KeyboardEvents::**               | **Description**                                  |
+| ---------------------------------- | ------------------------------------------------ |
+| `KeyboardEvents::Ctrl+Shift+A`     | Combine multiple keys like Ctrl + Shift + A.     |
+| `KeyboardEvents::Ctrl+Shift+Enter` | Combine multiple keys like Ctrl + Shift + Enter. |
+| `KeyboardEvents::0`                | Trigger key 0.                                   |
+| `KeyboardEvents::9`                | Trigger key 9.                                   |
+| `KeyboardEvents::backspace`        | Trigger Backspace key.                           |
+| `KeyboardEvents::tab`              | Trigger Tab key.                                 |
+| `KeyboardEvents::enter`            | Trigger Enter key.                               |
+| `KeyboardEvents::shift`            | Trigger Shift key.                               |
+| `KeyboardEvents::ctrl`             | Trigger Ctrl key.                                |
+| `KeyboardEvents::alt`              | Trigger Alt key.                                 |
+| `KeyboardEvents::pause/break`      | Trigger Pause/Break key.                         |
+| `KeyboardEvents::caps lock`        | Trigger Caps Lock key.                           |
+| `KeyboardEvents::escape`           | Trigger Escape key.                              |
+| `KeyboardEvents::page up`          | Trigger Page Up key.                             |
+| `KeyboardEvents::space`            | Trigger Space key.                               |
+| `KeyboardEvents::page down`        | Trigger Page Down key.                           |
+| `KeyboardEvents::end`              | Trigger End key.                                 |
+| `KeyboardEvents::home`             | Trigger Home key.                                |
+| `KeyboardEvents::arrow left`       | Trigger Arrow Left key.                          |
+| `KeyboardEvents::arrow up`         | Trigger Arrow Up key.                            |
+| `KeyboardEvents::arrow right`      | Trigger Arrow Right key.                         |
+| `KeyboardEvents::arrow down`       | Trigger Arrow Down key.                          |
+| `KeyboardEvents::print screen`     | Trigger Print Screen key.                        |
+| `KeyboardEvents::insert`           | Trigger Insert key.                              |
+| `KeyboardEvents::delete`           | Trigger Delete key.                              |
+| `KeyboardEvents::a`                | Trigger key 'a'.                                 |
+| `KeyboardEvents::z`                | Trigger key 'z'.                                 |
+| `KeyboardEvents::left window key`  | Trigger Left Windows key.                        |
+| `KeyboardEvents::right window key` | Trigger Right Windows key.                       |
+| `KeyboardEvents::select key`       | Trigger Select key.                              |
+| `KeyboardEvents::numpad 0`         | Trigger Numpad 0.                                |
+| `KeyboardEvents::numpad 9`         | Trigger Numpad 9.                                |
+| `KeyboardEvents::multiply`         | Trigger Multiply key.                            |
+| `KeyboardEvents::add`              | Trigger Add key.                                 |
+| `KeyboardEvents::subtract`         | Trigger Subtract key.                            |
+| `KeyboardEvents::decimal point`    | Trigger Decimal Point key.                       |
+| `KeyboardEvents::divide`           | Trigger Divide key.                              |
+| `KeyboardEvents::f1`               | Trigger F1 key.                                  |
+| `KeyboardEvents::f12`              | Trigger F12 key.                                 |
+| `KeyboardEvents::num lock`         | Trigger Num Lock key.                            |
+| `KeyboardEvents::scroll lock`      | Trigger Scroll Lock key.                         |
+| `KeyboardEvents::semi-colon`       | Trigger Semicolon key.                           |
+| `KeyboardEvents::equal sign`       | Trigger Equal Sign key.                          |
+| `KeyboardEvents::comma`            | Trigger Comma key.                               |
+| `KeyboardEvents::dash`             | Trigger Dash key.                                |
+| `KeyboardEvents::period`           | Trigger Period key.                              |
+| `KeyboardEvents::forward slash`    | Trigger Forward Slash key.                       |
+| `KeyboardEvents::open bracket`     | Trigger Open Bracket key.                        |
+| `KeyboardEvents::back slash`       | Trigger Backslash key.                           |
+| `KeyboardEvents::close bracket`    | Trigger Close Bracket key.                       |
+| `KeyboardEvents::single quote`     | To trigger keyboard event single quote.          |
+
+</BsTable>

@@ -1,0 +1,36 @@
+---
+title: Status Bar
+description: Track automation and execution status from the in-page status bar and Chrome Action badge
+tags: [status-bar, configuration, execution, ui]
+toc: true
+---
+
+The status bar is shown on the page again while an automation is running. It acts as the main live indicator for progress, waits, retries, errors, and completion.
+
+The extension also updates the Chrome Action badge so you can track the same run from the toolbar icon. Together, the in-page status bar and the icon give both detailed and quick at-a-glance feedback.
+
+- The in-page status bar displays the current loop and step counts.
+- Countdown states are shown directly in the bar for automation waits, step delays, loop repeats, retries, and page guard rechecks.
+- The Chrome Action badge and title mirror automation state in the extension icon.
+- The status bar position follows your [Additional Settings]([[docsref:/settings/additional-settings]]) setting, or can be disabled entirely.
+
+<BsTable>
+
+| Surface             | What you see                                                                                                | When it appears                                                                                                         |
+| ------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| In-page status bar  | `LOOP {current}/{total}` and `STEP {current}/{total}`                                                       | While the automation is running through loops and steps.                                                                |
+| In-page status bar  | Countdown text such as `⏳ 5s ▶️ Automation.` or `⏳ 3s 🔁 Step.`                                           | During init waits, step delays, loop repeat intervals, and repeat timers.                                               |
+| In-page status bar  | Warnings such as `⚠️ Element not found.` or `⚠️ Page Guard condition not met.`                              | When the extension is retrying or rechecking conditions before continuing.                                              |
+| In-page status bar  | `Done` or the current error message                                                                         | When the run finishes successfully or stops on an error.                                                                |
+| Chrome Action badge | `⚡` with `Initializing setup...`                                                                           | Immediately after automation starts; the badge is enabled and the extension icon signals that steps are being prepared. |
+| Chrome Action badge | `▶️⏳` with `Waiting {time}s before starting automation.`                                                   | Automation wait timers (Init Wait) before the first loop or step runs.                                                  |
+| Chrome Action badge | `📦⏳` with `Waiting {time}s before starting Loop {current} of {total}.`                                    | Loop level waits between loop executions.                                                                               |
+| Chrome Action badge | `🔁⏳` with `Waiting {time}s before starting Step {current} of {total}.`                                    | Delay before the next step executes.                                                                                    |
+| Chrome Action badge | `🔎⏳` with `Element not found. Retrying in {time}s... {retries} retries left (Step {current}).`            | Retry logic while searching for page elements.                                                                          |
+| Chrome Action badge | `✅⏳` with `Page Guard condition not met. Rechecking in {time}s... {checks} checks left (Step {current}).` | Page guard recheck countdowns before concluding conditions.                                                             |
+| Chrome Action badge | `❌` with `<error message>`                                                                                 | An error occurred; the badge remains active until the issue is resolved or automation stops.                            |
+| Chrome Action badge | `✅` with `Auto Clicker & Auto Fill`                                                                        | Automation completed successfully; the badge resets but stays enabled momentarily before disable.                       |
+
+</BsTable>
+
+> **Note:** If you choose `Disabled` in Status Bar Location, the in-page bar is hidden, but the Chrome Action badge still provides the run state from the extension icon.

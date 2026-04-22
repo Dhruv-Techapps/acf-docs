@@ -1,0 +1,92 @@
+---
+title: Permissions
+description: Why these permissions are required
+tags: [permissions]
+toc: true
+---
+
+This page explains why the extension requests each permission and how it uses them in practice. We only use the permissions to enable the features described below and do not collect personal data.
+
+<Callout type="info">
+
+#### [notifications](https://developer.chrome.com/docs/extensions/reference/notifications/)
+
+> When a configured step encounters an error and notifications are enabled, we show a system notification with clear details (what failed and where) so you can quickly fix it.
+
+</Callout>
+
+<Callout type="info">
+
+#### [contextMenus](https://developer.chrome.com/docs/extensions/reference/contextMenus/)
+
+> Adds a right‑click menu item (e.g., "Auto Clicker Auto Fill") that lets you capture elements and create automations faster, directly from the page.
+
+</Callout>
+
+<Callout type="info">
+
+#### [downloads](https://developer.chrome.com/docs/extensions/reference/downloads/)
+
+> Allows exporting your automations and backups as files to your computer.
+
+</Callout>
+
+<Callout type="info">
+
+#### [storage](https://developer.chrome.com/docs/extensions/reference/storage/), [unlimitedStorage](https://developer.chrome.com/docs/extensions/reference/permissions/#permission-unlimitedStorage)
+
+> Your form‑fill and automation data are saved in `chrome.storage.local` for reliability.
+> Some users create many or large automations; `unlimitedStorage` removes the ~5 MB quota so your data isn’t truncated.
+
+</Callout>
+
+<Callout type="info">
+
+#### [activeTab](https://developer.chrome.com/docs/extensions/reference/activeTab/)
+
+> After you click the extension icon, this lets us inject the in‑page automation panel and record additional steps in the current tab.
+
+</Callout>
+
+<Callout type="info">
+
+#### [alarms](https://developer.chrome.com/docs/extensions/reference/alarms/)
+
+> Schedules periodic jobs such as automatic backups and other time‑based automation (daily/weekly/monthly), when enabled.
+
+</Callout>
+
+<Callout type="info">
+
+#### [identity](https://developer.chrome.com/docs/extensions/reference/identity/)
+
+> Used to obtain an OAuth token for the Google Drive API, so we can back up automation files to your Drive app data (app‑specific storage).
+> Only the following scope is requested: https://www.googleapis.com/auth/drive.appdata
+
+</Callout>
+
+<Callout type="info">
+
+#### [userScripts](https://developer.chrome.com/docs/extensions/reference/userScripts/)
+
+> Most automation is driven by user‑defined automations. For advanced cases, we use `chrome.userScripts` to inject secure, isolated scripts that run only where needed.
+> This enables flexible automation without compromising page isolation or performance. Scripts run locally in your browser; no user data is collected.
+
+</Callout>
+
+<Callout type="info">
+
+#### [scripting](https://developer.chrome.com/docs/extensions/reference/scripting/)
+
+> Some pages rely on inline scripts that don’t receive events from the isolated world. We use `chrome.scripting.executeScript` (main world) to dispatch events and interact reliably with such pages.
+> Scripts execute only as part of your configured automations or when you explicitly start them, honoring Manifest V3 world separation.
+
+</Callout>
+
+<Callout type="info">
+
+#### [Host Permissions](https://developer.chrome.com/docs/extensions/reference/permissions/#host-permissions)
+
+> Automation can target any website you configure. Host permissions allow the extension to read the DOM and perform steps on those sites.
+
+</Callout>

@@ -1,0 +1,99 @@
+---
+title: Paste
+description: Now you can paste content into input fields which are copied by extension using [copy]([[docsref:/step-value/copy/]]) command within same domain.
+tags: [action, value, paste, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Paste::',
+    element_finder2: '//textarea',
+    value2: 'Hello <Paste>, how are you ?'
+  }}
+/>
+
+### Paste::
+
+Paste the content copied using the copy command
+
+<Code code={`Paste:: → copiedText!`} lang="js" />
+
+### &lt;paste&gt;
+
+Placeholder that expands to the last copied value
+
+<Code code={`Hello <paste> World <paste>! → Hello copiedText World copiedText!`} lang="html" />
+
+### Paste::at(5)
+
+Return character at position 5
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.at(5) → u; at(-4) → d`} lang="js" />
+
+### Paste::charAt(4)
+
+Same as at(4)
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.charAt(4) → q`} lang="js" />
+
+### Paste::concat("World")
+
+Concatenate strings
+
+<Code code={`'Hello'.concat(' ', 'World') → Hello World`} lang="js" />
+
+### Paste::match(/^[A-Z]/g)
+
+Regex match
+
+<Code code={`'The quick brown fox jumps. It barked.'.match(/[A-Z]/g) → ["T","I"]`} lang="js" />
+
+### Paste::replace("dog", "monkey")
+
+Replace first occurrence
+
+<Code
+  code={`'The quick brown fox jumps over the lazy dog.'.replace('dog', 'monkey') → The quick brown fox jumps over the lazy monkey.`}
+  lang="js"
+/>
+
+### Paste::replaceAll("dog", "monkey")
+
+Replace all occurrences
+
+<Code code={`'dog, hotdog, dogma'.replaceAll('dog', 'monkey') → monkey, hotmonkey, monkeyma`} lang="js" />
+
+### Paste::slice(31)
+
+Slice from index 31
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.slice(31) → the lazy dog.`} lang="js" />
+
+### Paste::split(" ")
+
+Split by space
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.split(' ')[3] → fox`} lang="js" />
+
+### Paste::substring(1, 3)
+
+Substring from 1 to 3 (exclusive)
+
+<Code code={`'ABCDE'.substring(1, 3) → BC`} lang="js" />
+
+### Paste::toLowerCase()
+
+Lowercase
+
+<Code code={`'Auto Clicker AutoFill'.toLowerCase() → auto clicker autofill`} lang="js" />
+
+### Paste::toUpperCase()
+
+Uppercase
+
+<Code code={`'Auto Clicker AutoFill'.toUpperCase() → AUTO CLICKER AUTOFILL`} lang="js" />

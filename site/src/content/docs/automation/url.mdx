@@ -1,0 +1,143 @@
+---
+title: URL
+description: Provide the target URL where steps will run. Use a plain URL, a partial path, or a regular expression to match multiple pages.
+toc: true
+tags: [configuration, url, url-match, regex, partial, priority]
+aliases:
+  - '/docs/3.1/configuration/url/'
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automation-url.png"
+  alt=""
+/>
+
+<Callout type="info">
+  This is the target URL where the extension executes steps. You may use a plain URL, a partial path, or a [regular
+  expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) to match multiple
+  pages.
+</Callout>
+
+## Editing URL
+
+To edit the URL, do one of the following:
+
+- **Click the URL** field directly in the automation row.
+- **Open the dropdown** next to the automation name and choose **Edit**.
+
+This expands an inline edit section with the **URL** input — the target address or pattern for the automation. You can also update **Wait Before Start** from the same panel.
+
+After making changes, click **Save** to apply or **Cancel** to discard.
+
+## How URL Matching Works
+
+The extension checks the current page address against each automation's URL field using two strategies, controlled by the **URL Match Type** setting in [Automation Settings]([[docsref:/automation/settings]]):
+
+<BsTable>
+
+| **URL Match Type**  | **How it matches**                                                                                                                                                                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Regex** (default) | First tries the value as a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). If the regex is invalid, falls back to a plain substring search. |
+| **Exact**           | Only matches when the URL field equals the full page address character for character.                                                                                                                |
+
+</BsTable>
+
+## Priority When Multiple Automations Match
+
+When more than one automation matches the current page, the extension uses the following rules to decide which one runs automatically and which are available for manual triggering.
+
+### Auto-run selection
+
+1. **Exact full-URL match wins**: If any enabled automation's URL field equals the full page address exactly and its start type is **Auto**, that automation runs — even if a partial or regex match appears earlier in the list.
+2. **First partial match wins**: If no automation has an exact full-URL match, the first enabled **Auto** automation in list order whose URL pattern matches the page runs automatically.
+3. **List position is the tiebreaker**: Among multiple exact or multiple partial matches, the one closest to the top of the list wins.
+
+### Manual automations
+
+All other matching automations whose start type is **Manual** appear in the [Side Panel]([[docsref:/side-panel/overview]]) for you to trigger by hand. They do not run automatically.
+
+<Callout type="warning">
+  Only one automation runs automatically per page load. If two **Auto** automations match, the lower-priority one is
+  silently skipped. Use **Manual** start type for secondary automations on the same page.
+</Callout>
+
+## Examples
+
+The target page in all examples is `https://www.instagram.com/dhruv.techapps/`.
+
+### Exact full URL
+
+Matches only that one specific address:
+
+```
+https://www.instagram.com/dhruv.techapps/
+```
+
+### Partial / substring match
+
+Any value that appears anywhere in the page address qualifies. Useful for matching an entire site or section:
+
+<BsTable>
+
+| **URL value**                     | **Matches because**                         |
+| --------------------------------- | ------------------------------------------- |
+| `instagram.com`                   | substring found in the address              |
+| `https://www.instagram.com/`      | substring found at the start of the address |
+| `https://www.instagram.com/dhruv` | substring found in the path                 |
+
+</BsTable>
+
+### Regex match
+
+Use a regular expression to match patterns across multiple pages:
+
+<BsTable>
+
+| **URL value**                  | **Matches because**                            |
+| ------------------------------ | ---------------------------------------------- |
+| `https://.*.instagram.com/`    | `.*` matches any subdomain of instagram.com    |
+| `.*://.*.instagram.com/`       | `.*` matches any protocol and any subdomain    |
+| `instagram\.com/dhruv.*`       | matches any profile path starting with `dhruv` |
+| `instagram\.com/(dhruv\|ravi)` | matches either the `dhruv` or `ravi` profile   |
+
+</BsTable>
+
+### Regex match on query parameters
+
+Use `.*` to skip over any query parameters that appear before the one you care about.
+
+**Match any domain, specific path and query param:**
+
+```
+BookingPage\.aspx\?.*TicketType=S
+```
+
+Matches any page where the path ends with `BookingPage.aspx` and the query contains `TicketType=S`.
+
+**Match a specific domain, any path, specific query param:**
+
+```
+tickets\.example\.gov\.in/.*\?.*TicketType=S
+```
+
+Matches any page under that domain where the query contains `TicketType=S`, regardless of path or other parameters.
+
+**Match a specific domain, specific path, specific query param:**
+
+```
+tickets\.example\.gov\.in/BookingPage\.aspx\?.*TicketType=S
+```
+
+Matches only that exact path on that domain with `TicketType=S` anywhere in the query string.
+
+<Callout type="info">
+  The `?` character has special meaning in regex (makes the preceding token optional). Escape it as `\?` when you want
+  to match a literal question mark in a query string. Similarly, escape dots as `\.` to match a literal dot instead of
+  any character.
+</Callout>
+
+<Callout type="info">
+  If the value you enter is not a valid regular expression, the extension automatically falls back to a plain substring
+  search. You do not need to escape dots or special characters unless you want regex behaviour.
+</Callout>

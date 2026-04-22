@@ -1,0 +1,156 @@
+---
+title: Page Guard
+description: Only run a step if a value on the page meets your condition — check text, attributes, or browser values before the step executes.
+toc: true
+tags: [page-guard, addon, condition, comparison, recheck, element-finder, value-extractor]
+aliases:
+  - '/docs/4.x/addon'
+  - '/docs/4.x/addon/overview'
+  - '/docs/4.x/action/addon'
+  - '/docs/addon'
+  - '/addon'
+  - '/docs/page-guard/overview'
+  - '/docs/page-guard/element-finder'
+  - '/docs/page-guard/condition'
+  - '/docs/page-guard/value'
+  - '/docs/page-guard/recheck'
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/page-guard.png"
+  alt=""
+/>
+
+Only run this step if a value on the page meets your condition.
+
+Page Guard checks the page before a step executes. You can read text or attributes from any element, evaluate browser values like the current time or URL, compare them against your criteria, and decide whether to proceed.
+
+To open Page Guard, click the three-dot menu at the end of a step row and choose **Page Guard**.
+
+## Find Item on Page
+
+The element or value to evaluate. This is what Page Guard reads before running the step.
+
+You can use any selector type supported by the step [Element Finder]([[docsref:/step/element-finder]]) — XPath, `#id`, `ClassName::`, `Name::`, `TagName::`, `querySelector::`, or `Position::x,y`.
+
+### Browser Functions (`Func::`)
+
+Instead of a page element, you can evaluate a JavaScript expression by prefixing with `Func::`.
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/page-guard-func.png"
+  alt=""
+/>
+
+<BsTable>
+
+| **Expression**                | **Returns**                                                                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Func::new Date().getHours()` | Current browser hour (0–23). See [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) for all methods. |
+| `Func::location.href`         | Current page URL. See [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location) for all properties.                                 |
+| `Func::<expression>`          | Any valid JavaScript expression that returns a value.                                                                                           |
+
+</BsTable>
+
+<Callout type="warning">
+  Only use `Func::` expressions you wrote yourself or fully understand. Malicious scripts can act on your behalf and
+  violate your privacy.
+</Callout>
+
+<Callout type="info">
+  `Func::` is only available in Page Guard. Using it in a step's Element Finder will cause an error.
+</Callout>
+
+## Compare
+
+How the page value (a) is compared to your input (b).
+
+<BsTable>
+
+| **Condition**           | **Types**      | **Description**                  |
+| ----------------------- | -------------- | -------------------------------- |
+| `Equals`                | String, Number | (a) equals (b)                   |
+| `Not Equals`            | String, Number | (a) is not equal to (b)          |
+| `Contains`              | String         | (a) contains (b)                 |
+| `Not Contains`          | String         | (a) does not contain (b)         |
+| `Greater Than`          | Number         | (a) > (b)                        |
+| `Less Than`             | Number         | (a) < (b)                        |
+| `Greater Than Or Equal` | Number         | (a) ≥ (b)                        |
+| `Less Than Or Equal`    | Number         | (a) ≤ (b)                        |
+| `Is Checked`            | Boolean        | Checkbox or radio is checked     |
+| `Is Not Checked`        | Boolean        | Checkbox or radio is not checked |
+
+</BsTable>
+
+## Compare With
+
+The expected value to compare against. This is (b) in the comparison.
+
+- Enter text to match exactly or partially (depending on the chosen condition).
+- Enter a number for numeric comparisons (`Greater Than`, `Less Than`, etc.).
+- Leave blank for boolean conditions (`Is Checked`, `Is Not Checked`).
+
+## Extract Number or Text
+
+Use a regular expression to extract part of the element's text before comparison. Useful when the text includes currency symbols, labels, or surrounding content.
+
+Examples:
+
+- `\d+\.\d*` — `$123.00` → `123.00`
+- `\d+` — `$123.00` → `123`
+- `(?<=\$)[\d,]+(?:\.\d+)?` — `$1,234.56` → `1,234.56`
+- `\d{4}-\d{2}-\d{2}` — `Updated: 2024-07-01` → `2024-07-01`
+- `(?<=Total:\s)\d+` — `Total: 42 items` → `42`
+
+Try your pattern at [regex101.com](https://regex101.com/).
+
+<Callout type="info">
+  Attribute tips: - `@aria-checked` — extracts the `aria-checked` value (e.g., `true`/`false`) - `@class` — extracts the
+  full class string; use a regex like `(^|\s)active(\s|$)` to check for a single class - `@type` — extracts the `type`
+  attribute (e.g., `checkbox`) - `@data-status` — any attribute by replacing `data-status` with the actual name
+</Callout>
+
+## If Condition Not Met
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/page-guard-recheck.png"
+  alt="Page Guard Recheck"
+/>
+
+Choose what should happen if the filter condition is not met.
+
+### Check Again
+
+How many times to retry the Page Guard condition when it does not match initially.
+
+- Enter a positive number for a fixed retry limit, for example `5` to try five times.
+- Click the **infinity button** (∞) to keep retrying until the condition matches.
+- Leave it blank to check only once.
+
+<IncludeMdx src="/content/callouts/example-unlimited.mdx" />
+
+### Wait Before Checking Again (sec)
+
+How long to wait between each retry attempt, in seconds.
+
+- Enter a single number for a fixed delay, for example `2` for a 2-second pause between retries.
+- Click the **range button** to set a random delay between a minimum and maximum.
+- Leave it blank to retry immediately.
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+### What happens if the condition is never met
+
+<BsTable>
+
+| **Option**          | **Default**  | **Description**                                             |
+| ------------------- | ------------ | ----------------------------------------------------------- |
+| **Stop Automation** | selected     | Stop the full automation immediately. No further steps run. |
+| **Skip This Step**  | not selected | Skip this step and continue with the next one.              |
+| **Refresh & Retry** | not selected | Reload the current page and try again.                      |
+| **Go to Step**      | not selected | Jump to a specific step in the list.                        |
+
+</BsTable>

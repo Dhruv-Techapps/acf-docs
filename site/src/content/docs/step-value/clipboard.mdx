@@ -1,0 +1,165 @@
+---
+title: Clipboard
+description: Now you can copy any content from webpage using copy command and paste back any where within clipboard.
+tags: [action, value, clipboard, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+## Copy to Clipboard
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//a',
+    value: 'Clipboard::Copy::Text'
+  }}
+/>
+
+### Clipboard::Copy::[\d]{6}
+
+`Clipboard::Copy::[\\d]{6}`
+
+<Code code={`<div>OTP: 123456</div> → Clipboard: 123456`} lang="html" />
+
+### Clipboard::Copy::[.]{6}
+
+Any six characters (literal dot used inside character class)
+
+<Code code={`<div>dots: ......</div> → Clipboard: ......`} lang="js" />
+
+### Clipboard::Copy::[.]+
+
+One or more literal dots
+
+<Code code={`<div>path: a..b</div> → Clipboard: ..`} lang="js" />
+
+### Clipboard::Copy::[a-z]{6}
+
+Six lowercase letters (a–z)
+
+<Code code={`<div>code: nature</div> → Clipboard: nature`} lang="js" />
+
+### Clipboard::Copy::[A-Z]{6}
+
+Six uppercase letters (A–Z)
+
+<Code code={`<div>code: MONKEY</div> → Clipboard: MONKEY`} lang="js" />
+
+### Clipboard::Copy::[\\w]{6}
+
+Six word characters (letters, digits, or underscore)
+
+<Code code={`<div>id: A1B2C3X</div> → Clipboard: A1B2C3`} lang="js" />
+
+## Paste from Clipboard
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Clipboard::Paste::',
+    element_finder2: '//textarea',
+    value2: 'Hello <clipboardPaste>, how are you?'
+  }}
+/>
+
+### &lt;clipboardPaste&gt;
+
+Replaces with the current clipboard content. You can use `<clipboardPaste>` anywhere within your text, and it will be replaced with the clipboard value. Supports multiple replacements in the same string
+
+<Code code={`Hello <clipboardPaste> World <clipboardPaste>! → Hello copiedText World copiedText!`} lang="html" />
+
+### Clipboard::Paste::
+
+Paste the current clipboard content or the value copied using Clipboard::copy::
+
+<Code code={`Clipboard::Paste:: → copiedText!`} lang="js" />
+
+### Clipboard::Paste::at(5)
+
+Character at position 5
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.at(5) → u; at(-4) → d`} lang="js" />
+
+### Clipboard::Paste::charAt(4)
+
+Same as at(4)
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.charAt(4) → q`} lang="js" />
+
+### Clipboard::Paste::concat("World")
+
+Concatenate strings
+
+<Code code={`'Hello'.concat(' ', 'World') → Hello World`} lang="js" />
+
+### Clipboard::Paste::match(/^[A-Z]/g)
+
+Regex match
+
+<Code code={`'The quick brown fox jumps. It barked.'.match(/[A-Z]/g) → ["T","I"]`} lang="js" />
+
+### Clipboard::Paste::replace("dog", "monkey")
+
+Replace first occurrence
+
+<Code
+  code={`'The quick brown fox jumps over the lazy dog.'.replace('dog', 'monkey') → The quick brown fox jumps over the lazy monkey.`}
+  lang="js"
+/>
+
+### Clipboard::Paste::replaceAll("dog", "monkey")
+
+Replace all occurrences
+
+<Code code={`'dog, hotdog, dogma'.replaceAll('dog', 'monkey') → monkey, hotmonkey, monkeyma`} lang="js" />
+
+### Clipboard::Paste::slice(31)
+
+Slice substring by indices
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.slice(31) → the lazy dog.`} lang="js" />
+
+### Clipboard::Paste::split(" ")
+
+Split by space
+
+<Code code={`'The quick brown fox jumps over the lazy dog.'.split(' ')[3] → fox`} lang="js" />
+
+### Clipboard::Paste::substring(1, 3)
+
+Substring from 1 to 3 (exclusive)
+
+<Code code={`'ABCDE'.substring(1, 3) → BC`} lang="js" />
+
+### Clipboard::Paste::toLowerCase()
+
+Convert to lower case
+
+<Code code={`'Auto Clicker AutoFill'.toLowerCase() → auto clicker autofill`} lang="js" />
+
+### Clipboard::Paste::toUpperCase()
+
+Convert to upper case
+
+<Code code={`'Auto Clicker AutoFill'.toUpperCase() → AUTO CLICKER AUTOFILL`} lang="js" />
+
+### Clipboard::Paste::trim()
+
+Trim both ends
+
+<Code code={`'     Auto Clicker AutoFill     '.trim() → Auto Clicker AutoFill`} lang="js" />
+
+### Clipboard::Paste::trimStart()
+
+Trim start only
+
+<Code code={`'     Auto Clicker AutoFill'.trimStart() → Auto Clicker AutoFill`} lang="js" />
+
+### Clipboard::Paste::trimEnd()
+
+Trim end only
+
+<Code code={`'Auto Clicker AutoFill     '.trimEnd() → Auto Clicker AutoFill`} lang="js" />

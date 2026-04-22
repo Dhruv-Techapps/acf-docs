@@ -1,0 +1,33 @@
+---
+title: Settings · Google Sheets
+description: Extension can fetch the values from your Google Sheets and fill the forms on behalf of you.
+tags: [settings, google-sheets, automation, google-sheets-login, pro]
+toc: true
+---
+
+### Google Sheets Login
+
+Auto Clicker Auto Fill needs read‑only access to your Google Sheets to fetch cell values. Click `Connect with Google Sheets` and grant the following scopes.
+
+### Google Sheets Scope
+
+- `https://www.googleapis.com/auth/spreadsheets.readonly`
+- `https://www.googleapis.com/auth/userinfo.profile`
+
+> After you connect with Google Sheets go to automation settings and add [Google Sheet ID]([[docsref:/automation/settings#google-sheet-id]])
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/global-settings-google-sheets.png"
+  alt=""
+/>
+
+<Callout type="danger">
+  Google may show a warning for apps not yet fully verified for production. To proceed during development/testing, click
+  Advanced → `Go to Auto Clicker Auto Fill (unsafe)`.
+  <img
+    class="d-block mb-4 img-fluid rounded-3 border"
+    src="/docs/[[config:docs_version]]/assets/img/global-settings-google-sheets-error.png"
+    alt=""
+  />
+</Callout>

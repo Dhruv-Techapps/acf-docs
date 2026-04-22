@@ -1,0 +1,26 @@
+---
+title: Prepend
+description: Prepend the text on existing field.
+tags: [action, value, prepend, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input2.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Patel',
+    element_finder2: '//input',
+    value2: 'Prepend::Dharmesh'
+  }}
+/>
+
+## Prepend::World
+
+Prepend value to the existing input field. This adds "World" to the current field value.
+
+```html
+<input value="Hello" /> → <input value="Hello World" />
+```

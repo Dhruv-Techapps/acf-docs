@@ -1,0 +1,34 @@
+---
+title: Import Automations
+description: Import one or more automations from a JSON file into your list.
+tags: [bulk-import, automations, json, configuration-list]
+aliases:
+  - '/docs/2.0/configuration-list/import-all/'
+  - '/docs/configuration-list/import-all/'
+  - '/configuration-list/import-all/'
+  - '/docs/4.x/config-list/bulk-import/'
+  - '/docs/automations/bulk-import/'
+  - '/automations/bulk-import/'
+toc: true
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/automations.png"
+  alt=""
+/>
+
+Import automations from a JSON file. The importer handles both single automations and files containing multiple automations — no separate flow is needed.
+
+## Supported files
+
+- A single automation exported from the options page (single-object JSON).
+- A file from [Export]([[docsref:/automations/export]]) containing multiple automations (array JSON).
+
+## What happens during import
+
+- Automations from the file are added to your existing list.
+- The file type is detected automatically — arrays and single objects are both accepted.
+- Imports merge on top of existing automations; duplicates may occur if the same automation is already in your list.
+
+<Callout type="info">Keep a backup of your current list before large imports.</Callout>

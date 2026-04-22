@@ -1,0 +1,68 @@
+---
+title: Step Settings
+description: Overview of step settings including retry attempts, wait between retries, embedded page search, and fallback behavior.
+tags: [step, action, settings, retry, iframe, embedded, error-handling, action-settings]
+toc: true
+aliases:
+  - '/docs/4.x/step/action-settings/'
+  - '/docs/step/action-settings/'
+  - '/step/action-settings/'
+  - '/docs/4.x/action/action-settings/'
+---
+
+These step-level settings override Global Settings and apply to both the step and its pre-checks. If you leave a field blank here, the step falls back to the global retry behavior.
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/step-settings.png"
+  alt="Step Settings"
+/>
+
+## Search Embedded Pages First
+
+If an element is inside an inline iframe, enable this to search within the embedded page first and then on the main page. This often improves performance when working with embedded content.
+
+Default: off. Applicable to same‑origin iframes without a URL in the src attribute, for example:
+
+<Code
+  code={`<iframe src="about:blank"></iframe>
+<iframe src=""></iframe>`}
+  lang="html"
+/>
+
+If the iframe has its own URL, especially on a different origin, create a separate automation for that page instead of relying on iframe-first lookup.
+
+## Retry Attempts
+
+How many times the extension should retry this step if the target is not found.
+
+- Enter any positive number for a fixed retry limit, for example `10` to try ten times.
+- Click the **infinity button** (∞) to keep retrying until the element appears.
+- Leave it blank to inherit the global retry value from [Settings]([[docsref:/settings/retry-attempts]]).
+
+<IncludeMdx src="/content/callouts/example-unlimited.mdx" />
+
+## Wait Between Retries (sec)
+
+How long to wait between each retry attempt.
+
+- Enter a single number for a fixed delay, for example `2` for a 2-second pause between tries.
+- Click the **range button** to set a random delay between a minimum and maximum value.
+- Leave it blank to inherit the global retry interval from [Settings]([[docsref:/settings/retry-attempts]]).
+
+<IncludeMdx src="/content/callouts/example-float.mdx" />
+
+## What should happen if the item is not found on the page?
+
+Choose what should happen if the target is still not found after all retries.
+
+<BsTable>
+
+| **Name**        | **Default**  | **Description**                                                         |
+| --------------- | ------------ | ----------------------------------------------------------------------- |
+| Stop Automation | selected     | Stop the full automation immediately.                                   |
+| Skip This Step  | not selected | Skip only this step and continue with the next one.                     |
+| Refresh & Retry | not selected | Reload the current page and try again according to the automation flow. |
+| Go to Step      | not selected | Jump to a specific step in the list.                                    |
+
+</BsTable>

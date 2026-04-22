@@ -1,0 +1,61 @@
+---
+title: Function
+description: Perform browser specific functions using `func::` command its limited to browser specific functions only and not user defined.
+tags: [action, value, function, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Callout type="info">
+  Now run browser default API functions or custom func from extension directly. This feature is still under development
+  and we will provide better location to run command from action. Run one or more than one command by separating them
+  using `;` <br />
+  `Func::console.log("Hello");console.log("World");`
+</Callout>
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'Func::Date.now().getDay()'
+  }}
+/>
+
+<Callout type="danger">
+
+#### Func methods
+
+One important warning in advance: Malicious scripts can violate your privacy and act on your behalf!
+
+- You should create script own. for simpler functionality like calling a function and all.
+- If you not sure how to what all functions are available then You should only run scripts from sources you trust.
+
+</Callout>
+
+Legacy aliases `<batchRepeat>` and `<actionRepeat>` are still supported.
+
+<BsTable>
+
+| **Examples**                                                                                             |
+| -------------------------------------------------------------------------------------------------------- |
+| `Func::console.log("Hello")`                                                                             |
+| `Func::<loopRepeat>`                                                                                     |
+| `Func::<stepRepeat>`                                                                                     |
+| `Func::<sessionCount>`                                                                                   |
+| `Func::<random>`                                                                                         |
+| `Func::<clipboardPaste>`                                                                                 |
+| `Func::<paste>`                                                                                          |
+| `Func::<paste>`.split(",")[0]                                                                            |
+| `Func::'Lion,Elephant,Tiger,Giraffe,Zebra,Kangaroo,Penguin,Dolphin,Panda,Leopard'.split(",")["<paste>"]` |
+| `Func::new Date()`                                                                                       |
+| `Func::Date.now()`                                                                                       |
+| `Func::Date.now().getDate()`                                                                             |
+| `Func::Date.now().getDay()`                                                                              |
+| `Func::window.location.href`                                                                             |
+
+</BsTable>
+
+<a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="_blank">
+  Javascript Inbuilt functions
+</a>

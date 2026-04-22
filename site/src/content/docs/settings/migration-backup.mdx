@@ -1,0 +1,29 @@
+---
+title: Settings · Migration Backup
+description: View, download, or restore local snapshots captured automatically before schema migrations.
+tags: [settings, migration-backup, backup, restore]
+toc: true
+---
+
+<img
+  class="d-block mb-4 img-fluid rounded-3 border"
+  src="/docs/[[config:docs_version]]/assets/img/global-settings-migration-backup.png"
+  alt=""
+/>
+
+When the extension updates and applies a storage schema migration, it automatically creates a local snapshot of your pre-migration data.
+
+- Open Settings → Migration Backup to view these snapshots.
+- You can inspect the stored JSON, download it, or restore your current local automations and settings from a selected snapshot.
+- The extension keeps the newest snapshots and rotates older ones automatically.
+- Restoring a snapshot overwrites your current local data — the options page asks for confirmation first.
+
+<BsTable>
+
+| **Action**         | **Description**                                                         |
+| ------------------ | ----------------------------------------------------------------------- |
+| **Download**       | Export the snapshot as a JSON file.                                     |
+| **Restore backup** | Replace your current local automations and settings with this snapshot. |
+| **Delete**         | Remove this snapshot permanently.                                       |
+
+</BsTable>

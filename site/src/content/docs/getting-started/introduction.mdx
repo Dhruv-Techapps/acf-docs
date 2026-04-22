@@ -1,0 +1,97 @@
+---
+title: Introduction
+description: Auto Clicker – Auto Fill helps you automate clicks and form fills on any website by creating automations made of steps.
+aliases:
+  - '/docs/3.1/getting-started/'
+  - '/docs/4.x/getting-started/'
+  - '/docs/getting-started/'
+  - '/getting-started/'
+tags: [getting-started, introduction, quick-start]
+toc: true
+---
+
+## Quick start
+
+1. [Download the extension]([[docsref:/getting-started/download]]) and install it in Chrome or Edge.
+2. Open the page you want to automate, then open the options page at https://stable.getautoclicker.com.
+3. Go to [Automations]([[docsref:/automations/overview]]) and click `New` to create an automation.
+4. Add your target [URL]([[docsref:/automation/url]]), then add one or more [Steps]([[docsref:/step/overview]]) with a [Target]([[docsref:/step/element-finder]]) and a [Value]([[docsref:/step-value/overview]]).
+5. Save the automation and refresh the target page, or run it manually with a hotkey if you selected Manual mode.
+
+You can still right-click any element (`button`, `input`, `textarea`, and similar controls) and choose <kbd>[[config:title]]</kbd> to pre-fill the current page URL and target selector. Use:
+
+- `⊕ Configure for this Field` to capture an XPath-based target
+- `⌖ Configure by Position` to capture a position-based target
+- [☉ Auto Clicker (Record)]([[docsref:/side-panel/recording]]) to record steps and turn them into an automation
+
+## Additional (Advance)
+
+- [Automations]([[docsref:/automations/overview]]) - the full list of saved automations in the extension
+  - [Automation]([[docsref:/automation/overview]]) - one URL rule plus its steps and automation-level behavior
+    - [Loop]([[docsref:/automation/loop]]) - repeat the full automation or refresh after it finishes
+      - [Step]([[docsref:/step/overview]]) - one target plus the value or command to run on it
+        - [Step Value]([[docsref:/step-value/overview]])
+        - [State Guard]([[docsref:/step/state-guard]])
+        - [Page Guard]([[docsref:/step/page-guard]]) - add a pre-check before a step runs
+        - [Step Settings]([[docsref:/step/step-settings]])
+    - [Monitor]([[docsref:/automation/monitor]]) - monitor for new matching elements on dynamic pages
+    - [Automation Settings]([[docsref:/automation/settings]])
+- [Global Settings]([[docsref:/settings/overview]]) - shared defaults that apply across all automations
+
+## New to the extension?
+
+- [Check out the video on YouTube](https://youtu.be/M3yNuBkJW3g)
+- [Check out the documentation](https://getautoclicker.com/docs/)
+- [Try out our extension on the test page](https://test.getautoclicker.com/)
+- [Run into an issue? Chat on Discord](https://discord.gg/hArVQns)
+
+### Try now
+
+- URL: https://test.getautoclicker.com/
+- Goal: Fill username and click a button
+
+Steps
+
+1. Open the page above.
+2. Create a new [Automation]([[docsref:/automation/overview]]) for that URL.
+3. Add [Step]([[docsref:/step/overview]]) 1
+
+- [Target]([[docsref:/step/element-finder]]): `//input[@name="username"]`
+- [Value]([[docsref:/step-value/overview]]): Your name
+
+4. Add [Step]([[docsref:/step/overview]]) 2
+
+- [Target]([[docsref:/step/element-finder]]): `//button[@random]`
+- [Value]([[docsref:/step-value/overview]]): leave blank (blank value triggers click)
+
+5. Save and run.
+
+<Callout type="info">
+
+- Use right‑click → <kbd>[[config:title]]</kbd> → `⊕ Configure for this Field` (XPath) or `⌖ Configure by Position` (viewport coordinates) to auto-capture the [Target]([[docsref:/step/element-finder]]).
+- If the page loads slowly, set a [Wait Before Start]([[docsref:/automation/overview#wait-before-start]]).
+
+</Callout>
+### Set up Global Settings (recommended)
+
+Global settings control how the extension behaves across all automations.
+
+1. Open [Global Settings]([[docsref:/settings/overview]]).
+2. Consider setting:
+
+- Run mode: [Automatic or Manual]([[docsref:/automation/settings#run-mode]])
+- Hotkey: Define a shortcut to start in Manual mode (e.g., `Ctrl + Shift + A`)
+- Page Load Timing: After Full Load vs As Page Loads
+- Status Bar: Adjust position or disable in [Additional Settings]([[docsref:/settings/additional-settings]])
+
+3. Save changes and refresh your target page.
+
+## Community
+
+Stay up to date on the features of [[config:title]] and reach out to the community with these helpful resources.
+
+- Connect with us on Discord [The Official Discord server]([[config:discord]]).
+- Read and subscribe to [The Official AutoClicker Blog]([[config:blog]]).
+- Ask and explore our [GitHub Discussions]([[config:discussion]]).
+
+You can also follow [X](https://twitter.com/[[config:x]]) on Twitter for the latest gossip and awesome music videos.

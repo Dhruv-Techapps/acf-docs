@@ -1,0 +1,47 @@
+---
+title: Mouse Events
+description: Perform click events and mouse events using below commands
+tags: [action, value, mouse, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: 'MouseEvents::click'
+  }}
+/>
+
+<BsTable>
+
+| **MouseEvents::**                                | **Description**                        |
+| ------------------------------------------------ | -------------------------------------- |
+| `MouseEvents::click`                             | Click the element.                     |
+| `MouseEvents::dblclick`                          | Double-click the element.              |
+| `MouseEvents::mousedown`                         | Trigger mousedown on the element.      |
+| `MouseEvents::mouseup`                           | Trigger mouseup on the element.        |
+| `MouseEvents::mouseover`                         | Trigger mouseover on the element.      |
+| `MouseEvents::mouseout`                          | Trigger mouseout on the element.       |
+| `MouseEvents::mouseenter`                        | Trigger mouseenter on the element.     |
+| `MouseEvents::mouseleave`                        | Trigger mouseleave on the element.     |
+| `MouseEvents::mousemove`                         | Trigger mousemove on the element.      |
+| `MouseEvents::["mouseover","mouseover","click"]` | Sequence: mouseover, mouseover, click. |
+| `MouseEvents::["mouseout","mouseleave"]`         | Sequence: mouseout, mouseleave.        |
+| `MouseEvents::input`                             | Trigger input event on the element.    |
+| `MouseEvents::change`                            | Trigger change event on the element.   |
+| `MouseEvents::["input","change"]`                | Sequence: input, change.               |
+
+</BsTable>
+
+<Callout type="info">You can also perform more than one task in series e.g</Callout>
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//input',
+    value: "MouseEvents::['mouseover','mouseover','click']"
+  }}
+/>

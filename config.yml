@@ -1,124 +1,74 @@
-languageCode:           "en"
-title:                  "Auto Clicker - AutoFill"
-baseURL:                "https://getautoclicker.com"
+title: 'Auto Clicker - AutoFill'
+baseURL: 'https://getautoclicker.com'
 
-security:
-  enableInlineShortcodes: true
-  funcs:
-    getenv:
-      - ^HUGO_
-      - NETLIFY
+docsDir: 'site'
 
-markup:
-  goldmark:
-    renderer:
-      unsafe:           true
-  highlight:
-    noClasses:          false
-  tableOfContents:
-    startLevel:         2
-    endLevel:           6
+subtitle: 'Extension to automate click / fill.'
 
-build:
-  noJSConfigInAssets:   true
+description: 'Extension to automate click / fill.'
+authors: 'Dhruv Patel, Dharmesh Patel, and AutoClicker contributors'
+author: 'Dhruv Techapps'
+logo: '/docs/3.x/assets/brand/bootstrap-social-logo.png'
+header: 'Auto Clicker - AutoFill'
+facebook: 'dhruv.techapps'
+instagram: 'dharmeshhemaram'
+github: 'Dhruv-Techapps'
+current_version: '5.0.0'
+docs_version: '5.x'
+github_org: 'https://github.com/Dhruv-Techapps'
+discussion: 'https://github.com/Dhruv-Techapps/acf-docs/discussions'
+issues: 'https://github.com/Dhruv-Techapps/acf-docs/issues'
+repo: 'https://github.com/Dhruv-Techapps/acf-docs'
+x: 'dharmeshhemaram'
+discord: 'https://discord.gg/ubMBeX3'
+google_group: 'https://groups.google.com/g/auto-clicker-autofill'
+opencollective: 'https://opencollective.com/auto-clicker-autofill'
+youtube: 'https://www.youtube.com/@autoclickerautofill'
+blog: 'https://blog.getautoclicker.com/'
+configs: 'https://configs.getautoclicker.com'
+data_entry: 'https://getdataentry.com/docs/3.x/getting-started/introduction/'
+schedule_url: 'https://scheduleurl.com/docs/1.x/getting-started/introduction/'
+stable: 'https://stable.getautoclicker.com'
+beta: 'https://beta.getautoclicker.com'
+dev: 'https://dev.getautoclicker.com'
+test: 'https://test.getautoclicker.com'
 
-buildDrafts:            true
-buildFuture:            true
+analytics:
+  container_id: 'GTM-K48RLHS'
 
-enableRobotsTXT:        true
-metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "term", "RSS"]
+algolia:
+  app_id: 'S4D9IW396R'
+  api_key: 'fe1f65f50add035126bcff7d278820d1'
+  index_name: 'test-getautoclicker'
 
-publishDir:             "_site"
+ext:
+  stable: 'https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe'
+  beta: 'https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep'
+  dev: 'https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel'
 
-module:
-  mounts:
-    - source:           node_modules/bootstrap/dist
-      target:           static/docs/4.x/dist
-    - source:           site/assets
-      target:           assets
-    - source:           site/content
-      target:           content
-    - source:           site/data
-      target:           data
-    - source:           site/layouts
-      target:           layouts
-    - source:           site/static
-      target:           static
-    - source:           node_modules/@docsearch/css
-      target:           assets/scss/@docsearch/css
-    - source:           site/static/docs/4.x/assets/img/favicons/apple-touch-icon.png
-      target:           static/apple-touch-icon.png
-    - source:           site/static/docs/4.x/assets/img/favicons/favicon.ico
-      target:           static/favicon.ico
+download:
+  source:               "https://github.com/twbs/bootstrap/archive/v5.3.8.zip"
+  dist:                 "https://github.com/twbs/bootstrap/releases/download/v5.3.8/bootstrap-5.3.8-dist.zip"
+  dist_examples:        "https://github.com/twbs/bootstrap/releases/download/v5.3.8/bootstrap-5.3.8-examples.zip"
 
-params:
-  name: "Auto Clicker - AutoFill"
-  description: "Extension to automate click / fill."
-  authors: "Dhruv Patel, Dharmesh Patel, and AutoClicker contributors"
-  author: "Dhruv Techapps"
-  logo: "/docs/3.x/assets/brand/bootstrap-social-logo.png"
-  header: "Auto Clicker - AutoFill"
-  facebook: "dhruv.techapps"
-  instagram: "dharmeshhemaram"
-  github: "Dhruv-Techapps"
-  current_version: "4.0.42"
-  social_image_path: "/docs/4.x/assets/brand/bootstrap-social.png"
-  social_logo_path: "/docs/4.x/assets/brand/bootstrap-social-logo.png"
-  docs_version: "4.x"
-  github_org: "https://github.com/Dhruv-Techapps"
-  discussion: "https://github.com/Dhruv-Techapps/auto-clicker-auto-fill/discussions"
-  issues: "https://github.com/Dhruv-Techapps/auto-clicker-auto-fill/issues"
-  repo: "https://github.com/Dhruv-Techapps/auto-clicker-auto-fill"
-  twitter: "dharmeshhemaram"
-  discord: "https://discord.gg/ubMBeX3"
-  google_group: "https://groups.google.com/g/auto-clicker-autofill"
-  opencollective: "https://opencollective.com/auto-clicker-autofill"
-  youtube: "https://www.youtube.com/@autoclickerautofill"
-  blog: "https://blog.getautoclicker.com/"
-  configs: "https://configs.getautoclicker.com"
-  data_entry: "https://getdataentry.com/docs/3.x/getting-started/introduction/"
-  schedule_url: "https://scheduleurl.com/docs/1.x/getting-started/introduction/"
-  stable: "https://stable.getautoclicker.com"
-  beta: "https://beta.getautoclicker.com"
-  dev: "https://dev.getautoclicker.com"
-  test: "https://test.getautoclicker.com"
-  subtitle:             "The most popular HTML, CSS, and JS library in the world."
-  current_ruby_version: "5.3.3"
-  rfs_version:          "v10.0.0"
-  swag:                 "https://cottonbureau.com/people/bootstrap"
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:                  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  css_hash:             "sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+  css_rtl:              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+  css_rtl_hash:         "sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW"
+  js:                   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  js_hash:              "sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  js_bundle:            "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  js_bundle_hash:       "sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  popper:               "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  popper_hash:          "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  popper_esm:           "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
 
-  analytics:
-    container_id:        "GTM-K48RLHS"
+anchors:
+  min: 2
+  max: 5
 
-  algolia:
-    appId:              "S4D9IW396R"
-    apiKey:             "fe1f65f50add035126bcff7d278820d1"
-    indexName:          "test-getautoclicker"
-
-  download:
-    source:             "https://github.com/twbs/bootstrap/archive/v5.3.3.zip"
-    dist:               "https://github.com/twbs/bootstrap/releases/download/v5.3.3/bootstrap-5.3.3-dist.zip"
-    dist_examples:      "https://github.com/twbs/bootstrap/releases/download/v5.3.3/bootstrap-5.3.3-examples.zip"
-    chrome:
-      stable: "https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe"
-      beta: "https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep"
-      dev: "https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel"
-
-  cdn:
-    # See https://www.srihash.org for info on how to generate the hashes
-    css:              "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    css_hash:         "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    css_rtl:          "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-    css_rtl_hash:     "sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
-    js:               "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    js_hash:          "sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    js_bundle:        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    js_bundle_hash:   "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    popper:           "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    popper_hash:      "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    popper_esm:       "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js"
-
-  anchors:
-    min: 2
-    max: 5
+toc:
+  min: 2
+  max: 3

@@ -1,0 +1,351 @@
+---
+title: Q&A
+description: Simple answers to common Auto Clicker – Auto Fill questions. Written for everyone.
+tags: [faq, quick-qa]
+toc: true
+---
+
+## Getting started
+
+#### Q: How do I start the auto clicker?
+
+Create an Automation for your website, add Steps, then start it with the status bar hotkey or by visiting a matching URL. Learn more: [Automation Overview]([[docsref:/automation/overview]])
+
+#### Q: Where do I put the page element I want to click or fill?
+
+Use the step’s Element Finder. Every step needs:
+
+- Finder: how to locate the element
+- Value: what to do (click, paste text, etc.)
+
+#### Q: What is “Element Finder”?
+
+It’s how you point to something on the page (a button, input, link). You can use:
+
+- Text-based paths (XPath)
+- CSS selector (querySelector)
+- Shortcuts like Id::, Name::, ClassName::, Selector::
+  More: [Element Finder]([[docsref:/step/element-finder]])
+
+#### Q: How do I add a new step?
+
+Open your Automation, click Add Step, then set the Target, choose the Value, and adjust timing or conditions if needed. Details: [Step Settings]([[docsref:/step/step-settings]])
+
+## Selectors (how to point to elements)
+
+#### Q: What are some Finder examples?
+
+- XPath: `//button[contains(., 'Apply')]`
+- CSS selector: `Selector::input[type="email"]`
+- By id: `Id::username`
+- By name: `Name::login`
+- By class: `ClassName::form-control`
+- Many elements: `SelectorAll::li.item` (use with "Query All" actions)
+
+#### Q: I see “invalid XPath expression”. What does that mean?
+
+Use regular ASCII characters (use @ not the full‑width ＠), match quotes correctly, and don’t paste raw HTML. Example that works:
+
+```
+//select[@id='ShippingCityRegionID']
+```
+
+#### Q: How do I match changing (dynamic) IDs?
+
+Try stable attributes first (like name, role, data-\*). If needed:
+
+- Starts with:
+
+```
+//*[starts-with(@id,'react-select-')]
+```
+
+- Ends with (workaround):
+
+```
+//*[substring(@id, string-length(@id) - string-length('_r_3') + 1) = '_r_3']
+```
+
+#### Q: How do I pick the first or nth result when many match?
+
+Add a position:
+
+```
+(//*[contains(text(),'Tom')])[1]
+(//*[contains(text(),'Tom')])[5]
+```
+
+#### Q: How do I find a link when only part of the URL is stable?
+
+```
+//a[contains(@href, '/d/') and contains(@href, '/apply')]
+```
+
+#### Q: Can I match one of two texts?
+
+```
+//*[contains(text(),'Tom') or contains(text(),'Nick')]
+```
+
+#### Q: Should I use full (absolute) paths?
+
+Avoid full paths. Use robust, readable selectors (text, labels, names, data-attributes).
+
+## Common steps and values
+
+#### Q: How do I click a button?
+
+- Finder: point to the button
+- Value: `MouseEvents::click`
+  More: [Mouse Events]([[docsref:/step-value/mouse-events]])
+
+#### Q: How do I double‑click?
+
+Use `MouseEvents::dblclick`.
+
+#### Q: How do I fill a text field?
+
+- Finder: the input
+- Value: `Paste::Your text` (or Replace/Append/Prepend)
+  More: [Paste]([[docsref:/step-value/paste]])
+
+#### Q: Only fill if the field is empty?
+
+Add a State Guard with a value rule such as `Value equals '' (empty)` before your fill step. [State Guard]([[docsref:/step/state-guard]])
+
+#### Q: How do I clear a field?
+
+Use `Replace::` with an empty value, or select-all + backspace via KeyboardEvents.
+
+#### Q: How do I press Enter (or other keys)?
+
+Use `KeyboardEvents::Enter` (or combinations). [Keyboard Events]([[docsref:/step-value/keyboard-events]])
+
+#### Q: How do I hold a key or long‑press the mouse?
+
+Split into down and up with a pause:
+
+1. `MouseEvents::mousedown` → wait
+2. `MouseEvents::mouseup`
+
+#### Q: How do I scroll to an element?
+
+Use `ScrollTo::`. [Scroll To]([[docsref:/step-value/scroll-to]])
+
+#### Q: How do I open a URL (same tab or new tab)?
+
+- Same tab: `LocationCommand::replace=https://...`
+- New tab: `LocationCommand::open=https://...`
+  More: [Location Command]([[docsref:/step-value/location-command]])
+
+#### Q: How do I focus a window or tab?
+
+Use `WindowCommand::focus`. [Window Command]([[docsref:/step-value/window-command]])
+
+## Dropdowns and selects
+
+#### Q: How do I select an option in a normal `<select>` dropdown?
+
+Use Select Option by text or value. [Select Option]([[docsref:/step-value/select-option]])
+
+#### Q: How about Select2/rc-select/custom dropdowns?
+
+- Click the dropdown to open it
+- Type into the search box
+- Click the result by its visible text
+
+Tip for rc-select: target the input (role="combobox"), then pick the matching list item by its text.
+
+#### Q: I get “css-dvua67-singleValue is not unique”.
+
+Click the dropdown trigger first, then select the item in the open list by its exact visible text (not the summary chip).
+
+## Timing, repeats, and scheduling
+
+#### Q: What is Init Wait (sec)?
+
+A delay before a step or automation starts. Set 0 for no delay. [Timing]([[docsref:/step/overview#delay]])
+
+#### Q: Why is there a 5s delay before steps?
+
+Lower Wait Between Retries in Global Settings and set each step’s Delay to 0 if you don’t want a delay.
+
+#### Q: Can I repeat steps N times or forever?
+
+Yes. Use [Loop]([[docsref:/automation/loop#repeat]]) for the full automation or a step’s own Repeat field for one row. Use the unlimited control if you want repeat to run forever.
+
+#### Q: How do I add a short delay between steps?
+
+Add a tiny wait step (Target `//html`) or set a small Delay on the next step.
+
+#### Q: Can I run every X minutes/hours?
+
+Use [Loop]([[docsref:/automation/loop]]) with an interval between loops. To refresh the page between runs, use the Refresh option instead of a manual reload step.
+
+## Conditions and branching
+
+#### Q: Run a step only if some text exists?
+
+Add a [State Guard]([[docsref:/step/state-guard]]) with a target for that element and use a matching condition such as contains text or exists.
+
+#### Q: If‑then flows (skip/refresh/go‑to)?
+
+Use the step’s fallback behavior (Skip This Step / Refresh & Retry / Go to Step) plus conditions to create simple branches.
+
+#### Q: Click “Tom” if it exists, else “Nick”?
+
+- Step 1: condition-check for “Tom”
+- Step 2: if not found, target “Nick”
+
+#### Q: Keep running even if the element isn’t found?
+
+Set the fallback to Skip This Step or Refresh & Retry, then use the unlimited retry control if you want the step to keep trying.
+
+## URLs and patterns
+
+#### Q: Can I match multiple URLs or IPs?
+
+Yes, use a regular expression with URL Match Type set to Pattern Match. Examples:
+
+- `^https://108\.181\..*`
+- `^https://(108\.181|208\.87)\..*`
+- `^https://example\.com/(a|b|c)/.*`
+
+Learn more: [Automation URL]([[docsref:/automation/url]])
+
+#### Q: Open another URL when done?
+
+Final step:
+
+- Finder: `//html`
+- Value: `LocationCommand::replace=https://...`
+
+## iFrames and special pages
+
+#### Q: How do I click inside an iframe (even nested ones)?
+
+Turn on “Iframe First” for the step in Step Settings that targets the iframe’s content.
+
+#### Q: Payment fields (like Stripe) won’t fill.
+
+Many payment inputs live in secure, cross‑origin iframes and block automation. Use the site’s normal flow; scripted input often won’t work there.
+
+#### Q: Sites built with React/Vue aren’t recording clicks well.
+
+Use stable attributes (like data-\*), clear text, or CSS selectors. Avoid absolute XPaths that change easily.
+
+## Google Sheets integration
+
+#### Q: How do I pull a value from Google Sheets?
+
+Use `GoogleSheets::Sheet1!A1` as the Value. First, connect in Global Settings → Google Sheets. [Google Sheets]([[docsref:/step-value/google-sheets]])
+
+#### Q: How do I go row by row each time it runs?
+
+Use the session counter: `GoogleSheets::Sheet1!A<sessionCount>`. [Session]([[docsref:/step-value/session]])
+
+#### Q: It types the literal text “GoogleSheets::Sheet1!A1”.
+
+Reconnect and authorize Google Sheets in Global Settings, then reload and rerun.
+
+## Notifications and hotkeys
+
+#### Q: Can I get a Discord message when it finishes?
+
+Yes. Global Settings → Notifications → Connect Discord → enable “on automation completion”. [Show Notification]([[docsref:/settings/show-notification]])
+
+#### Q: “Invalid URL” after Discord authorize.
+
+Update the extension, allow DMs, make sure the redirect isn’t blocked. Reconnect.
+
+#### Q: Can I set a start/stop hotkey?
+
+Yes. Automation Settings → Hotkey (e.g., Ctrl+Shift+A). [Automation Settings – Hotkey]([[docsref:/automation/settings#hotkey]])
+
+## Error handling and logs
+
+#### Q: How are errors handled?
+
+Each step has On‑Failure behavior (Skip, Refresh, Go to). Check logs for details. [Logs]([[docsref:/extension/log]])
+
+#### Q: “Failed to execute 'evaluate' on 'Document' …”
+
+Usually a malformed XPath (wrong quotes, leading colons, non‑ASCII characters). Fix the Finder and try again.
+
+#### Q: “Undefined element”
+
+The Finder didn’t match. Check the right iframe, dynamic loading, and timing.
+
+## Mini examples (copy‑paste friendly)
+
+#### Q: Click by text
+
+Finder: `//button[contains(., 'Apply')]`
+Value: `MouseEvents::click`
+
+#### Q: First of many identical icons
+
+Finder: `(//i[@class='icon'])[1]`
+Value: `MouseEvents::click`
+
+#### Q: Label → checkbox
+
+Finder: `//label[normalize-space(.)='I agree']/input[@type='checkbox']`
+Value: `MouseEvents::click`
+
+#### Q: Select option by text
+
+Finder: `//select[@name='city']`
+Value: `SelectOption::text=Kitchener`
+
+#### Q: Custom dropdown (type + pick)
+
+1. Finder: `//div[@role='combobox']` → Value: `MouseEvents::click`
+2. Finder: `Selector::input[role='combobox']` → Value: `Paste::tung`
+3. Finder: `//li[normalize-space(.)='tung']` → Value: `MouseEvents::click`
+
+#### Q: Open a new tab at the end
+
+Finder: `//html`
+Value: `LocationCommand::open=https://example.com/next`
+
+#### Q: Wait 0.25s between steps
+
+Add a step with Finder: `//html` and set Init Wait (sec): `0.25`.
+
+#### Q: Only fill empty input
+
+- Step 1 (condition): Finder → the input, Operator → value equals ''
+- Step 2 (fill): Finder → same input, Value → `Paste::Your text`
+
+## Special topics
+
+#### Q: Can it solve CAPTCHAs, bypass protections, auto‑approve wallet transactions, or target gameplay?
+
+Sorry, I can't assist with that.
+
+#### Q: Will it work on payment screens or security keypads?
+
+Many providers block automation there. Manual interaction is often required.
+
+#### Q: Can I close a tab?
+
+Use `WindowCommand::close` if available; otherwise not supported.
+
+#### Q: Can I run one flow across multiple pages?
+
+Yes. Use a URL pattern that matches all pages, and add steps that run conditionally per page.
+
+#### Q: Can it react to SPA route changes without reloading?
+
+Yes.
+
+## Quick troubleshooting
+
+- Check the URL pattern matches the current page (use regex if needed).
+- Lower Init Wait and Retry Interval if it feels slow.
+- Confirm the Finder points to the right element and iframe (enable Iframe First if needed).
+- Prefer clear, text‑based or attribute‑based selectors; avoid brittle full paths.
+- Review logs for details: [Logs]([[docsref:/extension/log]])
+- Reconnect Google Sheets or Discord if values/notifications don’t work.
+- Update the extension to the latest version.

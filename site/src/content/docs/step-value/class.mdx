@@ -1,0 +1,49 @@
+---
+title: Class
+description: Update the class attribute of and element selected using element finder
+tags: [action, value, class, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input4.html')}
+  variables={{
+    element_finder: '//button',
+    value: 'Class::add::btn',
+    element_finder2: '//button',
+    value2: 'Class::remove::btn',
+    element_finder3: '//button',
+    value3: 'Class::replace::primary::secondary',
+    element_finder4: '//button',
+    value4: 'Class::clear'
+  }}
+/>
+
+<BsTable>
+
+| **Class::**                                                                               | **Description**                      |
+| ----------------------------------------------------------------------------------------- | ------------------------------------ |
+| [Class::add::className](#classaddclassname)                                               | Add a class to the element.          |
+| [Class::remove::className](#classremoveclassname)                                         | Remove a class from the element.     |
+| [Class::replace::removeClassName::addClassName](#classreplaceremoveclassnameaddclassname) | Replace one class with another.      |
+| [Class::clear](#classclear)                                                               | Remove all classes from the element. |
+
+</BsTable>
+
+## Class::add::className
+
+<Code code={`<input class="button">  → <input class="button btn">`} lang="html" />
+
+## Class::remove::className
+
+<Code code={`<input class="button btn">  → <input class="button">`} lang="html" />
+
+## Class::replace::removeClassName::addClassName
+
+<Code code={`<input class="button btn">  → <input class="button like">`} lang="html" />
+
+## Class::clear
+
+<Code code={`<input class="button btn">  → <input class="">`} lang="html" />

@@ -1,0 +1,31 @@
+---
+title: Window Command
+description: Window specific command
+tags: [action, value, window, action-value]
+toc: true
+---
+
+import { getDocsRelativePath } from '@libs/path'
+
+<Example
+  filePath={getDocsRelativePath('/src/content/html/input.html')}
+  variables={{
+    element_finder: '//html',
+    value: 'WindowCommand::close '
+  }}
+/>
+
+<BsTable>
+
+| **WindowCommand::**                               | **Description**                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------------- |
+| `WindowCommand::close`                            | Close current page (only works if opened via script, not manually). |
+| `WindowCommand::focus`                            | Focus the window/page.                                              |
+| `WindowCommand::blur`                             | Remove focus from the window/page.                                  |
+| `WindowCommand::print`                            | Open the print dialog (Ctrl + P equivalent).                        |
+| `WindowCommand::stop`                             | Stop loading the page.                                              |
+| `WindowCommand::moveBy::x,y`                      | Move the window by x and y pixels.                                  |
+| `WindowCommand::moveTo::x,y`                      | Move the window to x and y coordinates.                             |
+| `WindowCommand::open::https://getautoclicker.com` | Open https://getautoclicker.com in a new tab.                       |
+
+</BsTable>
