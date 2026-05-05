@@ -20,6 +20,7 @@
   icon_color: blue
   pages:
     - title: Overview
+    - title: Explore
     - title: Export
     - title: Import
     - title: Remove
@@ -35,6 +36,7 @@
     - title: Schedule
     - title: Loop
     - title: Monitor
+    - title: Publish
 
 - title: Step
   icon: braces-asterisk
