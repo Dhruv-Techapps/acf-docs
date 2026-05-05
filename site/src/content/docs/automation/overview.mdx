@@ -13,6 +13,8 @@ sections:
     description: Repeat the full automation or refresh the page after all steps complete.
   - title: Monitor
     description: Re-run matching steps when new content is added on dynamic pages.
+  - title: Publish
+    description: Publish automation metadata to the cloud so other users can discover and import it.
   - title: Automation Settings
     description: Adjust automation-level settings such as run mode, URL matching, and page load timing.
   - title: Schedule
@@ -27,7 +29,7 @@ sections:
   alt=""
 />
 
-An automation is the top-level unit. Each automation targets a URL, contains one or more [Steps]([[docsref:/step/overview]]), and can optionally define [Loop]([[docsref:/automation/loop]]), [Monitor]([[docsref:/automation/monitor]]), and [Automation Settings]([[docsref:/automation/settings]]).
+An automation is the top-level unit. Each automation targets a URL, contains one or more [Steps]([[docsref:/step/overview]]), and can optionally define [Loop]([[docsref:/automation/loop]]), [Monitor]([[docsref:/automation/monitor]]), [Publish]([[docsref:/automation/publish]]), and [Automation Settings]([[docsref:/automation/settings]]).
 
 ## Name and Actions
 
@@ -64,6 +66,7 @@ Click the split button next to the name to open a menu with all automation actio
 | **Schedule**  | Open [Schedule]([[docsref:/automation/schedule]]) settings to configure when the automation should run automatically. |
 | **Loop**      | Open [Loop]([[docsref:/automation/loop]]) settings to set repeat count and interval.                                  |
 | **Monitor**   | Open [Monitor]([[docsref:/automation/monitor]]) settings to watch for page changes.                                   |
+| **Publish**   | Open [Publish]([[docsref:/automation/publish]]) to publish, unpublish, or clone cloud-published automations.          |
 | **Duplicate** | Create a copy of the automation and add it to the list.                                                               |
 | **Disable**   | Temporarily turn off the automation without deleting it.                                                              |
 | **Remove**    | Permanently delete the automation.                                                                                    |
