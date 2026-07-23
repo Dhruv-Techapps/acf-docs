@@ -1,0 +1,34 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  /**
+   * Basename of the example JSON in `public/docs/<version>/assets/examples/` (without extension).
+   */
+  file: string
+  /**
+   * Show a PLUS-plan hint next to the title.
+   */
+  plus?: boolean
+  /**
+   * Test page opened to watch the automation run.
+   */
+  testUrl?: string
+}
+
+const { file, plus = false, testUrl = 'https://test.getautoclicker.com' } = Astro.props
+
+const jsonPath = getVersionedDocsPath(`assets/examples/${file}.json`)
+const importPath = getVersionedDocsPath('automations/import/')
+const testLabel = new URL(testUrl).host
+---
+
+<div class="bd-callout bd-callout-info">
+  <strong>Try it yourself{plus && ' (PLUS plan)'}:</strong> download the <a href={jsonPath} download={`${file}.json`}
+    >{file}.json</a
+  > example automation, import it via <a href={importPath}>Automations → Import</a>, then open <a
+    href={testUrl}
+    target="_blank"
+    rel="noopener">{testLabel}</a
+  > to watch it run. <slot />
+</div>

@@ -21,6 +21,8 @@ aliases:
   previous status to check. - Can reference any earlier step, not just the immediately previous one.
 </Callout>
 
+<ExampleAutomation file="state-guard" plus>Step 2 is skipped because step 1 (missing element) was not DONE, while step 3 still runs.</ExampleAutomation>
+
 ### State Guard modal
 
 Use the conditions grid to define how the current step should react to the results of previous steps. When the combined guard evaluates to true, the step runs. When it evaluates to false, a fallback option is applied.
@@ -52,8 +54,8 @@ When you have multiple rows, the OPR controls how they are combined. Truth table
 | false                    | OR      | true                     | true       |
 | false                    | OR      | false                    | false      |
 | true                     | AND     | true                     | true       |
-| false                    | AND     | false                    | false      |
 | true                     | AND     | false                    | false      |
+| false                    | AND     | true                     | false      |
 | false                    | AND     | false                    | false      |
 
 </BsTable>
