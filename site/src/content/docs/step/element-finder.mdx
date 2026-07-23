@@ -9,6 +9,8 @@ aliases:
   - '/docs/4.x/action/element-finder/'
 ---
 
+<ExampleAutomation file="element-finder">Watch every finder type (XPath, `#id`, `Selector::`, `ClassName::`, `Name::`, `TagName::`, shadow DOM) run on the practice form.</ExampleAutomation>
+
 <Callout type="info">
 
 Quickly copy an XPath with DevTools:
@@ -28,7 +30,7 @@ XPath locates an element by its position and attributes in the DOM tree. See exa
 
 ### Get element by ID
 
-When an element has an id attribute (for example, `id="idValue"`), you can target it with `#idValue`.
+When an element has an id attribute (for example, `id="idValue"`), you can target it with `#idValue` or `Id::idValue`.
 
 Notes:
 
@@ -131,20 +133,21 @@ Referring to the HTML below:
 
 ### Query Selector (single)
 
-To target a specific element by CSS selector, use `querySelector::selector`.
+To target a specific element by CSS selector, use `Selector::selector`.
 
 Notes:
 
 - Selects the first matching element. If multiple elements match, only the first is used.
+- If no match is found in the main document, open shadow roots are also searched.
 
 <Callout type="info">
 Referring to the HTML below:
-- `querySelector::main.form-signin` targets `<main class="form-signin">`.
-- `querySelector::form` targets `<form>`.
-- `querySelector::input[type="email"]` targets `<input type="email">`.
-- `querySelector::input[type="password"]` targets `<input type="password">`.
-- `querySelector::label[for]` targets `<label for="…">`.
-- `querySelector::button.btn.btn-primary` targets `<button class="btn btn-primary">`.
+- `Selector::main.form-signin` targets `<main class="form-signin">`.
+- `Selector::form` targets `<form>`.
+- `Selector::input[type="email"]` targets `<input type="email">`.
+- `Selector::input[type="password"]` targets `<input type="password">`.
+- `Selector::label[for]` targets `<label for="…">`.
+- `Selector::button.btn.btn-primary` targets `<button class="btn btn-primary">`.
 </Callout>
 ```html
 <main class="form-signin">
@@ -159,6 +162,8 @@ Referring to the HTML below:
 ```
 
 ### Query Selector All (multiple)
+
+To target all matching elements by CSS selector, use `SelectorAll::selector`.
 
 <Callout type="warning">
   Important: Works like Query Selector, but selects all matching elements instead of only the first one. The step is

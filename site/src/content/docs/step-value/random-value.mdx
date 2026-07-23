@@ -9,6 +9,8 @@ aliases:
 
 import { getDocsRelativePath } from '@libs/path'
 
+<ExampleAutomation file="random-value">Refresh the test page to get new random values each time.</ExampleAutomation>
+
 <Example
   filePath={getDocsRelativePath('/src/content/html/input2.html')}
   variables={{
@@ -19,18 +21,23 @@ import { getDocsRelativePath } from '@libs/path'
   }}
 />
 
-> By Default the length of string is fixed to 6 and filter is set to all character + numbers + symbol so when you use `<random>` you will get random string of length 6 with mix of char + num + symbol
+> The pattern inside `<random…>` is a regular expression — the generated value matches it. A pattern is required: bare `<random>` (without a pattern) is left unchanged.
 
 <BsTable>
 
-| **&lt;random&gt;**       | **Description (Generate Random value)**                    |
-| ------------------------ | ---------------------------------------------------------- |
-| `<random[.]\{6\}>`       | [.] any character; {6} exactly 6 characters                |
-| `<random[.]\{(6, 12)\}>` | [.] any character; {(6, 12)} 6 to 12 characters            |
-| `<random[a-z]\{6\}>`     | [a-z] a character in range a–z; {6} length 6               |
-| `<random[A-Z]\{6\}>`     | [A-Z] a character in range A–Z; {6} length 6               |
-| `<random[\d]\{6\}>`      | [\d] a digit; {6} length 6                                 |
-| `<random[\w]\{6\}>`      | [\w] a word character; {6} length 6                        |
-| `<random[custom]\{6\}>`  | [custom] custom character set (e.g., custom); {6} length 6 |
+| **&lt;random&gt;**        | **Description (Generate Random value)**                                 |
+| ------------------------- | ----------------------------------------------------------------------- |
+| `<random[a-z]{6}>`       | [a-z] a character in range a–z; {6} length 6                            |
+| `<random[A-Z]{6}>`       | [A-Z] a character in range A–Z; {6} length 6                            |
+| `<random[a-z]{6,12}>`    | {6,12} between 6 and 12 characters                                      |
+| `<random[\d]{6}>`        | [\d] a digit; {6} length 6                                              |
+| `<random[\w]{6}>`        | [\w] a word character; {6} length 6                                     |
+| `<random[custom]{6}>`    | [custom] custom character set (e.g., custom); {6} length 6              |
 
 </BsTable>
+
+<Callout type="warning">
+  Regular-expression rules apply inside the pattern: `[.]` matches a literal dot (it generates `......` for
+  `<random[.]\{6\}>`), and a bare `.` matches any character — including uncommon Unicode ones — so prefer explicit
+  character sets like `[a-zA-Z0-9]`.
+</Callout>
