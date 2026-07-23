@@ -9,6 +9,8 @@ aliases:
 
 import { getDocsRelativePath } from '@libs/path'
 
+<ExampleAutomation file="query-param" testUrl="https://test.getautoclicker.com/?username=john&name=John&city=Paris">Watch the URL query params fill the form (the test-page link already includes `?username=john&name=John&city=Paris`).</ExampleAutomation>
+
 <Example
   filePath={getDocsRelativePath('/src/content/html/input2.html')}
   variables={{
@@ -31,8 +33,8 @@ import { getDocsRelativePath } from '@libs/path'
 
 | **Pattern**      | **Description**                                                                                                         | **Example**                                                 |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `Query::param`   | Replace with the value of query parameter param from the URL. If not found, returns the key.                            | Query::userId → 123 (if ?userId=123 in URL)                 |
-| `<query::param>` | Replace all occurrences of `<query::param>` with the value of query parameter param from the URL. Useful for templates. | Hello `<query::name>`! → Hello John! (if ?name=John in URL) |
+| `Query::param`   | Replace with the value of query parameter param from the URL. If not found, the value stays unchanged (`Query::param`). | Query::userId → 123 (if ?userId=123 in URL)                 |
+| `<query::param>` | Replace all occurrences of `<query::param>` with the value of query parameter param from the URL. If a param is missing, the placeholder resolves to the key itself. Useful for templates. | Hello `<query::name>`! → Hello John! (if ?name=John in URL) |
 
 </BsTable>
 
