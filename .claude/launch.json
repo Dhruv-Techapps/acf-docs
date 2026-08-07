@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "acf-docs-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "docs-serve"],
+      "port": 9001
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { getVersionedDocsPath } from '@libs/path'
 import Ads from '@components/Ads.astro'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import DocsSidebar from '@components/DocsSidebar.astro'
+import SubscriptionBadge from '@shortcodes/SubscriptionBadge.astro'
 import TableOfContents from '@components/TableOfContents.astro'
 
 interface Props {
@@ -63,6 +64,11 @@ if (frontmatter.toc) {
                   </small>
                 )
             }
+            {frontmatter.subscription && (
+              <span class="me-2">
+                <SubscriptionBadge plan={frontmatter.subscription} />
+              </span>
+            )}
             <a
               class="btn btn-sm btn-bd-light rounded-2"
               href={`${getConfig().repo}/blob/v${getConfig().current_version}/site/src/content/docs/${id}`}
