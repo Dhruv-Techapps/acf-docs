@@ -84,7 +84,6 @@ const { addedIn, layout, title } = Astro.props
           <LinkItem active={layout === 'docs'} href={getVersionedDocsPath('getting-started/introduction/')} track>
             Docs
           </LinkItem>
-          <LinkItem active={title === 'Examples'} href={getVersionedDocsPath('examples/')} track>Examples</LinkItem>
           <LinkItem href={getConfig().discussion} target="_blank" rel="noopener" track>Discussion</LinkItem>
           <LinkItem href={getConfig().test} target="_blank" rel="noopener" track>Test</LinkItem>
         </ul>

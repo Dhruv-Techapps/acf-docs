@@ -25,6 +25,7 @@ const docsSchema = z.object({
     })
     .array()
     .optional(),
+  subscription: z.enum(['PLUS', 'PRO']).optional(),
   thumbnail: z.string().optional(),
   title: z.string(),
   toc: z.boolean().optional()
