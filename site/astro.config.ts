@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import { defineConfig } from 'astro/config'
 
 import { bootstrap } from './src/libs/astro'
@@ -20,7 +21,7 @@ export default defineConfig({
   },
   integrations: [bootstrap()],
   markdown: {
-    smartypants: false,
+    processor: unified({ smartypants: false }),
     syntaxHighlight: 'prism'
   },
   site,
