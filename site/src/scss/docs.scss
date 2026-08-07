@@ -57,3 +57,13 @@ $enable-cssgrid: true;
 // Load docs dependencies
 @import 'syntax';
 @import 'anchor';
+
+.bg-plus {
+  background: #feec41;
+  color: var(--bs-dark);
+}
+
+.bg-pro {
+  background: #e24b4a;
+  color: var(--bs-light);
+}
