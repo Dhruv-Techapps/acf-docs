@@ -61,6 +61,11 @@ $enable-cssgrid: true;
 .bg-plus {
   background: #feec41;
   color: var(--bs-dark);
+
+  &:hover,
+  &:focus {
+    color: var(--bs-dark);
+  }
 }
 
 .bg-pro {
