@@ -14,6 +14,7 @@
   pages:
     - title: Overview
     - title: Recording
+    - title: Ask AI
 
 - title: Automations
   icon: ui-radios

@@ -2,6 +2,7 @@
 title: Step Settings
 description: Overview of step settings including retry attempts, wait between retries, embedded page search, and fallback behavior.
 tags: [step, action, settings, retry, iframe, embedded, error-handling, action-settings]
+subscription: PLUS
 toc: true
 aliases:
   - '/docs/4.x/step/action-settings/'
@@ -13,10 +14,6 @@ aliases:
 ---
 
 These step-level settings override Global Settings and apply to both the step and its pre-checks. If you leave a field blank here, the step falls back to the global retry behavior.
-
-<Callout type="warning">
-  Step Settings require a [PLUS plan]([[docsref:/about/upgrade-plan]]).
-</Callout>
 
 <ExampleAutomation file="goto" plus>Step 1 fails to find its target and jumps straight to step 3.</ExampleAutomation>
 

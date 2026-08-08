@@ -19,6 +19,7 @@ export declare global {
   export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default
   export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
   export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default
+  export const SubscriptionBadge: typeof import('@shortcodes/SubscriptionBadge.astro').default
   export const Table: typeof import('@shortcodes/Table.astro').default
   export const Video: typeof import('@shortcodes/Video.astro').default
 }
