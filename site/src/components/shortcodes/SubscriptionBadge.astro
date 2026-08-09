@@ -1,0 +1,19 @@
+---
+/*
+ * Outputs a badge linking to the upgrade plan page, for PLUS/PRO-gated features
+ */
+import { getVersionedDocsPath } from '@libs/path'
+
+interface Props {
+  plan: 'PLUS' | 'PRO'
+}
+
+const { plan } = Astro.props
+---
+
+<a
+  href={getVersionedDocsPath('about/upgrade-plan')}
+  class={`d-inline-flex text-decoration-none px-2 py-1 fs-6 fw-semibold bg-${plan === 'PRO' ? 'pro' : 'plus'} rounded-2`}
+>
+  {plan}
+</a>
