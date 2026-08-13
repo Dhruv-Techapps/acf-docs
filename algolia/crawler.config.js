@@ -3,10 +3,9 @@
 // exported. This file is a mirror of that dashboard config, not application code.
 new Crawler({ // NOSONAR
   appId: 'S4D9IW396R',
-  // Crawler API key. The dashboard sandbox has no `process.env`, so it has to be a literal
-  // here. Note this is a WRITE-capable key in a public repo — rotate it in the Algolia
-  // dashboard if it is ever exposed, and re-paste the new value.
-  apiKey: 'ad3b8c61cf737fc0c3593d254d9b2cd3',
+  // Crawler API key.
+  // Do not commit a real WRITE-capable key in this public repo; paste it into the Algolia dashboard when applying this config.
+  apiKey: 'REPLACE_WITH_CRAWLER_API_KEY',
   maxUrls: 5000,
   indexPrefix: '',
   rateLimit: 8,
