@@ -1,0 +1,30 @@
+{
+  "id": "42a6de12-0d27-4727-aeb1-2a5c3d7d2299",
+  "name": "Page Guard example",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "actions": [
+    {
+      "id": "9fe3238f-9e9e-4ea8-83d1-2a251d852fd0",
+      "elementFinder": "#address",
+      "name": "Runs only if the guard matches",
+      "value": "Guard passed",
+      "addon": {
+        "elementFinder": "#last-name",
+        "value": "ready",
+        "condition": "Contains",
+        "recheck": 3,
+        "recheckInterval": 1,
+        "recheckOption": "skip"
+      }
+    },
+    {
+      "id": "a4e9cc3d-011a-4763-b38e-770f715ed4ca",
+      "elementFinder": "#last-name",
+      "name": "Sets the value the guard waits for",
+      "value": "ready"
+    }
+  ]
+}

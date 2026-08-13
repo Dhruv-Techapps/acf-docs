@@ -1,0 +1,38 @@
+{
+  "id": "3a48d7d0-20d0-4c36-ae9c-ff8dd5348445",
+  "name": "State Guard example",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "actions": [
+    {
+      "id": "334ea165-ea86-4804-baae-ab03a41f318e",
+      "elementFinder": "#does-not-exist",
+      "name": "Step 1 - target missing on purpose",
+      "value": "never runs"
+    },
+    {
+      "id": "45b2c850-cca8-4aad-9e7d-e65a7021be4b",
+      "elementFinder": "#address",
+      "name": "Step 2 - gated on step 1 being DONE",
+      "value": "should be skipped",
+      "statement": {
+        "conditions": [
+          {
+            "id": "a8a62f19-4641-44e7-aa4e-5a63de13bafa",
+            "actionId": "334ea165-ea86-4804-baae-ab03a41f318e",
+            "status": "done"
+          }
+        ],
+        "option": "skip"
+      }
+    },
+    {
+      "id": "59f724c5-d64b-48c0-ae9e-7285af8aedcd",
+      "elementFinder": "#last-name",
+      "name": "Step 3 - unaffected",
+      "value": "step 3 still runs"
+    }
+  ]
+}

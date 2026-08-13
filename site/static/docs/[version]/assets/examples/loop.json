@@ -1,0 +1,24 @@
+{
+  "id": "44ce60aa-34ff-4251-bbef-fd1ac39b1d01",
+  "name": "Loop example",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "batch": {
+    "repeat": 3,
+    "repeatInterval": 1
+  },
+  "actions": [
+    {
+      "id": "fdf5caeb-ee69-4f89-845d-06443e47f09e",
+      "elementFinder": "#last-name",
+      "value": "Loop run <loopRepeat>"
+    },
+    {
+      "id": "8444c59c-792e-43fa-aa9c-2f23c5c30ed9",
+      "elementFinder": "#inputEmail",
+      "value": "run-<loopRepeat>@example.com"
+    }
+  ]
+}

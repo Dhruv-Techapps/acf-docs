@@ -44,7 +44,7 @@ jobs:
           paths: _site
           recurse: true
           verbosity: error
-          skip: '^http://localhost'
+          skip: '^(?!http://localhost)'
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
