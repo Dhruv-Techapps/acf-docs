@@ -1,7 +1,7 @@
-// NOSONAR - the return value is intentionally unused. The Algolia crawler dashboard expects
-// the configuration as a bare `new Crawler({ ... })` expression, so it cannot be assigned or
+// The return value is intentionally unused. The Algolia crawler dashboard expects the
+// configuration as a bare `new Crawler({ ... })` expression, so it cannot be assigned or
 // exported. This file is a mirror of that dashboard config, not application code.
-new Crawler({
+new Crawler({ // NOSONAR
   appId: 'S4D9IW396R',
   // Crawler API key. The dashboard sandbox has no `process.env`, so it has to be a literal
   // here. Note this is a WRITE-capable key in a public repo — rotate it in the Algolia
