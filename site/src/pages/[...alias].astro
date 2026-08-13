@@ -1,5 +1,5 @@
 ---
-import type { InferGetStaticPropsType } from 'astro'
+import type { AstroInstance, InferGetStaticPropsType } from 'astro'
 import RedirectLayout from '@layouts/RedirectLayout.astro'
 import { getVersionedDocsPath } from '@libs/path'
 import { trimLeadingAndTrailingSlashes } from '@libs/utils'
@@ -18,11 +18,13 @@ export async function getStaticPaths() {
 
   const staticPaths = []
 
-  const examplesPageModules = import.meta.glob('../assets/examples/**/*.astro', { eager: true })
+  const examplesPageModules = import.meta.glob<AstroInstance>('../assets/examples/**/*.astro', { eager: true })
+  // The glob key is the authoritative path here — it is what `getExampleNameFromPagePath()` parses — so it wins over
+  // the `file` Astro injects into the module itself.
   const examplesPages = Object.entries(examplesPageModules).map(([file, module]) => {
     return {
-      file,
-      ...module
+      ...module,
+      file
     }
   })
   const aliasedExamplesPages = getAliasedExamplesPages(examplesPages)

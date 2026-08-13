@@ -116,15 +116,17 @@ const dataDefinitions = {
   })
 } satisfies Record<string, DataSchema>
 
-let data = new Map<DataType, z.infer<DataSchema>>()
+// Parsed data is cached as `unknown` because the concrete shape depends on the `type` argument passed to `getData()`,
+// which narrows it back down on the way out.
+const data = new Map<DataType, unknown>()
 
 // A helper to get data loaded fom a yml file in the `./site/data/` directory. If the data does not match its associated
 // schema from `dataDefinitions`, an error is thrown to indicate that the data file is invalid and some action is
 // required.
-export function getData<TType extends DataType>(type: TType): z.infer<(typeof dataDefinitions)[TType]> {
+export function getData<TType extends DataType>(type: TType): DataOfType<TType> {
   if (data.has(type)) {
     // Returns the data if it has already been loaded.
-    return data.get(type)
+    return data.get(type) as DataOfType<TType>
   }
 
   const dataPath = `./site/data/${type}.yml`
@@ -139,7 +141,7 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
     // Cache the data.
     data.set(type, parsedData)
 
-    return parsedData
+    return parsedData as DataOfType<TType>
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error(`The \`${dataPath}\` file content is invalid:`, error.issues)
@@ -150,4 +152,5 @@ export function getData<TType extends DataType>(type: TType): z.infer<(typeof da
 }
 
 type DataType = keyof typeof dataDefinitions
+type DataOfType<TType extends DataType> = z.infer<(typeof dataDefinitions)[TType]>
 type DataSchema = z.ZodTypeAny

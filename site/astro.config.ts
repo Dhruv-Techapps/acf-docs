@@ -30,11 +30,7 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          silenceDeprecations: [
-            'import',
-            'mixed-decls',
-            'function-units'
-          ]
+          silenceDeprecations: ['import', 'mixed-decls', 'function-units']
         }
       }
     }
