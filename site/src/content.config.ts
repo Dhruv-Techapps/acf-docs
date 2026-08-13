@@ -26,6 +26,8 @@ const docsSchema = z.object({
     .array()
     .optional(),
   subscription: z.enum(['PLUS', 'PRO']).optional(),
+  // Keyword metadata surfaced to the Algolia crawler as `docsearch:tags`. See `algolia/crawler.config.js`.
+  tags: z.string().array().optional(),
   thumbnail: z.string().optional(),
   title: z.string(),
   toc: z.boolean().optional()

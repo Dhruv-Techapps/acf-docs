@@ -48,10 +48,12 @@ const mainProps = overrides?.main ?? {}
 <html lang="en" data-bs-theme="auto">
   <head>
     <Head
+      aliases={frontmatter?.aliases}
       description={description}
       direction={frontmatter?.direction}
       layout={layout}
       robots={robots}
+      tags={frontmatter?.tags}
       thumbnail={thumbnail}
       title={title}
     />
