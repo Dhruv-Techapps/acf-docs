@@ -1,6 +1,3 @@
-// The return value is intentionally unused. The Algolia crawler dashboard expects the
-// configuration as a bare `new Crawler({ ... })` expression, so it cannot be assigned or
-// exported. This file is a mirror of that dashboard config, not application code.
 new Crawler({ // NOSONAR
   appId: 'S4D9IW396R',
   // Crawler API key.
