@@ -120,9 +120,9 @@ nothing until it's pasted there. Its `recordExtractor` reads those meta tags and
 `tags` / `aliases` to every record, since `helpers.docsearch()` only extracts the DOM
 selectors it's given. `tags` is a facet and ranks above body content; `aliases` ranks last.
 
-The crawler API key is **not** in that file — it has write access to the index and this
-repo is public. The key in `config.yml` (`algolia.api_key`) is the search-only key and is
-safe to expose.
+The crawler API key must not be committed in this repo (it has write access to the index). Keep `algolia/crawler.config.js`
+using a placeholder and paste the real key only in the Algolia dashboard. The key in `config.yml` (`algolia.api_key`) is the
+search-only key and is safe to expose.
 
 `algolia-plugin.js` substitutes app id / index name / search key into `search.js` at build
 time. `Head.astro` also emits `docsearch:version` to scope the index to `5.x`.
