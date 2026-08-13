@@ -18,9 +18,14 @@ const docsSchema = z.object({
     })
     .array()
     .optional(),
+  // Renders a card grid of links on the page. By default each card links to a sibling page
+  // in the same directory, derived from `title` — so `title: Element Finder` on a page in
+  // `step/` links to `step/element-finder`. Set `href` when the target lives elsewhere.
+  // A card whose target does not exist fails the build; see `DocsLayout.astro`.
   sections: z
     .object({
       description: z.string(),
+      href: z.string().optional(),
       title: z.string()
     })
     .array()

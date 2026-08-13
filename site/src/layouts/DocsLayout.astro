@@ -2,6 +2,7 @@
 import type { MarkdownHeading } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import { getConfig } from '@libs/config'
+import { docsPages } from '@libs/content'
 import type { LayoutOverridesHTMLAttributes } from '@libs/layout'
 import { getSlug, processMarkdownToHtml } from '@libs/utils'
 import { getVersionedDocsPath } from '@libs/path'
@@ -21,6 +22,28 @@ const { frontmatter, headings, id } = Astro.props
 
 // Extract the directory/section from the ID (format: "directory/filename.mdx")
 const parentDirectory = id.includes('/') ? id.split('/')[0] : ''
+
+// Resolve the `sections` card grid to real links, and fail the build on a dead one.
+// By default a card links to a sibling page derived from its title, which silently 404s
+// when the title doesn't match a file on disk — see the note on `getSlug()` in
+// `src/libs/utils.ts`. `href` is the escape hatch for targets in another directory.
+const sectionLinks = (frontmatter.sections ?? []).map((section) => {
+  if (section.href) {
+    return { ...section, url: getVersionedDocsPath(section.href) }
+  }
+
+  const target = `${parentDirectory ? parentDirectory + '/' : ''}${getSlug(section.title)}`
+
+  if (!docsPages.some((page) => page.id === target)) {
+    throw new Error(
+      `The section '${section.title}' on page '${id}' links to '${target}', which does not exist. ` +
+        `Either rename the section title to match the target page, set an explicit 'href' on the ` +
+        `section, or remove it from 'sections' if it is not a link to another page.`
+    )
+  }
+
+  return { ...section, url: getVersionedDocsPath(`${target}/`) }
+})
 
 const bodyProps: LayoutOverridesHTMLAttributes<'body'> = {}
 
@@ -116,16 +139,11 @@ if (frontmatter.toc) {
 
       <div class="bd-content ps-lg-2">
         {
-          frontmatter.sections && (
+          sectionLinks.length > 0 && (
             <div class="row g-3">
-              {frontmatter.sections.map((section) => (
+              {sectionLinks.map((section) => (
                 <div class="col-md-6">
-                  <a
-                    class="d-block text-decoration-none"
-                    href={getVersionedDocsPath(
-                      `${parentDirectory ? parentDirectory + '/' : ''}${getSlug(section.title)}/`
-                    )}
-                  >
+                  <a class="d-block text-decoration-none" href={section.url}>
                     <strong class="d-block h5 mb-0">{section.title}</strong>
                     <span class="text-secondary">{section.description}</span>
                   </a>
