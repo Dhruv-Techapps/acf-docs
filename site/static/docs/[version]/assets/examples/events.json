@@ -1,0 +1,58 @@
+{
+  "id": "62f58dc6-7c10-455a-9588-7100fd758846",
+  "name": "Value commands showcase",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "actions": [
+    {
+      "id": "2990b4c6-5b07-4596-8672-6fef76be6014",
+      "elementFinder": "#last-name",
+      "name": "Attr:: set an attribute",
+      "value": "Attr::set::data-example::hello"
+    },
+    {
+      "id": "bbe03a3a-0cb5-4cf3-954d-6031425ae0dd",
+      "elementFinder": "#address",
+      "name": "Class:: add a class",
+      "value": "Class::add::example-added"
+    },
+    {
+      "id": "5b13a73c-fd70-4c59-9301-47441aeb0e18",
+      "elementFinder": "#inputEmail",
+      "name": "Seed a value to transform",
+      "value": "cat@example.com"
+    },
+    {
+      "id": "52cad204-defa-46d0-ae5c-49dbcb23c26d",
+      "elementFinder": "#inputEmail",
+      "name": "Replace:: substring",
+      "value": "Replace::cat::dog"
+    },
+    {
+      "id": "d864d5fd-a87e-4431-8345-574dd35e3384",
+      "elementFinder": "#last-name",
+      "name": "Append:: to current value",
+      "value": "Append::-appended"
+    },
+    {
+      "id": "c3cc232f-4103-4bad-9dc4-f3c818f8f0f9",
+      "elementFinder": "#last-name",
+      "name": "Prepend:: to current value",
+      "value": "Prepend::pre-"
+    },
+    {
+      "id": "5211d5f8-73bb-4bdc-9644-8090e267c0d1",
+      "elementFinder": "#form-events-test",
+      "name": "FormEvents:: dispatch",
+      "value": "FormEvents::click"
+    },
+    {
+      "id": "c73ec4dc-ab54-4bab-8ea3-9db25a19c082",
+      "elementFinder": "#content-editable",
+      "name": "ScrollTo:: the page",
+      "value": "ScrollTo::Bottom"
+    }
+  ]
+}

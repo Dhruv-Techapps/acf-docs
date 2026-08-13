@@ -1,0 +1,34 @@
+{
+  "id": "05e517f8-5ea9-4ad1-83f8-ce91e0945054",
+  "name": "Copy and Paste example",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "actions": [
+    {
+      "id": "fa69dacd-8377-4d08-b201-45225f0d9f8d",
+      "elementFinder": "#last-name",
+      "name": "Seed the source field",
+      "value": "Copy me 12345"
+    },
+    {
+      "id": "711febac-da1a-476a-82e1-186ea97ac83b",
+      "elementFinder": "#last-name",
+      "name": "Copy the field value",
+      "value": "Clipboard::copy::"
+    },
+    {
+      "id": "d855b8ab-e40b-454d-a76b-0e5333d7fbc8",
+      "elementFinder": "#address",
+      "name": "Paste it verbatim",
+      "value": "Clipboard::paste::"
+    },
+    {
+      "id": "c049624b-d370-4159-8b84-c0c14b33ba9b",
+      "elementFinder": "#inputEmail",
+      "name": "Paste transformed",
+      "value": "Clipboard::paste::toUpperCase()"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "e70072f1-9eb3-4eb6-a4e5-ab9e18b3d2c9",
+  "name": "Session count example",
+  "url": "https://test.getautoclicker.com",
+  "enable": true,
+  "startType": "auto",
+  "loadType": "window",
+  "actions": [
+    {
+      "id": "5f6a33c2-0863-4c00-a540-30a2f01f8ca5",
+      "elementFinder": "#last-name",
+      "name": "sessionCount increments per refresh",
+      "value": "visit-<sessionCount>"
+    },
+    {
+      "id": "8df2ffb3-42ff-4b44-a9f1-0ed9f08ef857",
+      "elementFinder": "#address",
+      "name": "Same value, inline",
+      "value": "session id <sessionCount>"
+    }
+  ]
+}
