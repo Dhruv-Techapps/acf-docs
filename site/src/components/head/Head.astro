@@ -9,15 +9,22 @@ import Analytics from '@components/head/Analytics.astro'
 import Gdpr from '@components/head/Gdpr.astro'
 
 interface Props {
+  aliases?: string | string[]
   description: string
   direction?: 'rtl'
   layout: Layout
   robots: string | undefined
+  tags?: string[]
   thumbnail: string
   title: string
 }
 
-const { description, direction, layout, robots, thumbnail, title } = Astro.props
+const { aliases, description, direction, layout, robots, tags, thumbnail, title } = Astro.props
+
+// Keyword metadata for the Algolia crawler, which reads these `docsearch:*` meta tags and attaches them to every
+// record it extracts. See `algolia/crawler.config.js` — the crawler does NOT pick them up automatically.
+const tagList = tags?.filter(Boolean) ?? []
+const aliasList = (Array.isArray(aliases) ? aliases : aliases ? [aliases] : []).filter(Boolean)
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
@@ -40,6 +47,9 @@ const ScssProd = import.meta.env.PROD ? await import('@components/head/ScssProd.
 <meta name="generator" content={Astro.generator} />
 <meta name="docsearch:language" content="en" />
 <meta name="docsearch:version" content={getConfig().docs_version} />
+{tagList.length > 0 && <meta name="docsearch:tags" content={tagList.join(',')} />}
+{tagList.length > 0 && <meta name="keywords" content={tagList.join(', ')} />}
+{aliasList.length > 0 && <meta name="docsearch:aliases" content={aliasList.join(',')} />}
 
 <link rel="canonical" href={canonicalUrl} />
 
