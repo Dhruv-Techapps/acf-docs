@@ -1,3 +1,6 @@
+// NOSONAR - the return value is intentionally unused. The Algolia crawler dashboard expects
+// the configuration as a bare `new Crawler({ ... })` expression, so it cannot be assigned or
+// exported. This file is a mirror of that dashboard config, not application code.
 new Crawler({
   appId: 'S4D9IW396R',
   // Crawler API key. The dashboard sandbox has no `process.env`, so it has to be a literal
@@ -86,14 +89,17 @@ new Crawler({
         // `helpers.docsearch()` only extracts the DOM selectors above, so meta-tag values
         // have to be attached to each record explicitly. `version` and `lang` are already
         // configured as facets on the index but carried no data before this.
-        // `Object.assign` rather than object spread — see the syntax note above.
+        //
+        // Assigned in place rather than with object spread or `Object.assign`: spread is
+        // rejected by the config sandbox (see the syntax note above), and `Object.assign`
+        // trips a lint rule that wants spread. The records are freshly built by
+        // `helpers.docsearch()` above and not shared, so mutating them is safe.
         return records.map(function (record) {
-          return Object.assign({}, record, {
-            tags: tags,
-            aliases: aliases,
-            version: version,
-            lang: lang
-          })
+          record.tags = tags
+          record.aliases = aliases
+          record.version = version
+          record.lang = lang
+          return record
         })
       }
     }
