@@ -6,20 +6,20 @@
  * @see site/src/libs/astro.ts
  */
 export declare global {
-  export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default
-  export const BsTable: typeof import('@shortcodes/BsTable.astro').default
-  export const Callout: typeof import('@shortcodes/Callout.astro').default
-  export const CalloutDeprecatedDarkVariants: typeof import('@shortcodes/CalloutDeprecatedDarkVariants.astro').default
-  export const Code: typeof import('@shortcodes/Code.astro').default
-  export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default
-  export const Example: typeof import('@shortcodes/Example.astro').default
-  export const ExampleAutomation: typeof import('@shortcodes/ExampleAutomation.astro').default
-  export const IncludeMdx: typeof import('@shortcodes/IncludeMdx.astro').default
-  export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default
-  export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default
-  export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
-  export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default
-  export const SubscriptionBadge: typeof import('@shortcodes/SubscriptionBadge.astro').default
-  export const Table: typeof import('@shortcodes/Table.astro').default
-  export const Video: typeof import('@shortcodes/Video.astro').default
+  export const AddedIn: typeof import('@shortcodes/AddedIn.astro').default;
+  export const BsTable: typeof import('@shortcodes/BsTable.astro').default;
+  export const Callout: typeof import('@shortcodes/Callout.astro').default;
+  export const CalloutDeprecatedDarkVariants: typeof import('@shortcodes/CalloutDeprecatedDarkVariants.astro').default;
+  export const Code: typeof import('@shortcodes/Code.astro').default;
+  export const DeprecatedIn: typeof import('@shortcodes/DeprecatedIn.astro').default;
+  export const Example: typeof import('@shortcodes/Example.astro').default;
+  export const ExampleAutomation: typeof import('@shortcodes/ExampleAutomation.astro').default;
+  export const IncludeMdx: typeof import('@shortcodes/IncludeMdx.astro').default;
+  export const JsDismiss: typeof import('@shortcodes/JsDismiss.astro').default;
+  export const JsDocs: typeof import('@shortcodes/JsDocs.astro').default;
+  export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default;
+  export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default;
+  export const SubscriptionBadge: typeof import('@shortcodes/SubscriptionBadge.astro').default;
+  export const Table: typeof import('@shortcodes/Table.astro').default;
+  export const Video: typeof import('@shortcodes/Video.astro').default;
 }
