@@ -1,15 +1,8 @@
-import yaml from 'js-yaml'
-import fs from 'node:fs'
-import { z } from 'zod'
-import { capitalizeFirstLetter } from './utils'
-import {
-  zHexColor,
-  zLanguageCode,
-  zNamedHexColors,
-  zPxSizeOrEmpty,
-  zVersionMajorMinor,
-  zVersionSemver
-} from './validation'
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { z } from 'zod';
+import { capitalizeFirstLetter } from './utils';
+import { zHexColor, zLanguageCode, zNamedHexColors, zPxSizeOrEmpty, zVersionMajorMinor, zVersionSemver } from './validation';
 
 // An object containing all the data types and their associated schema. The key should match the name of the data file
 // in the `./site/data/` directory.
@@ -99,7 +92,7 @@ const dataDefinitions = {
     .array()
     .transform((val) => {
       // Add a `title` property to each theme color object being the capitalized version of the `name` property.
-      return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }))
+      return val.map((themeColor) => ({ ...themeColor, title: capitalizeFirstLetter(themeColor.name) }));
     }),
   translations: z
     .object({
@@ -114,11 +107,11 @@ const dataDefinitions = {
     effective: z.string().optional(),
     content: z.string()
   })
-} satisfies Record<string, DataSchema>
+} satisfies Record<string, DataSchema>;
 
 // Parsed data is cached as `unknown` because the concrete shape depends on the `type` argument passed to `getData()`,
 // which narrows it back down on the way out.
-const data = new Map<DataType, unknown>()
+const data = new Map<DataType, unknown>();
 
 // A helper to get data loaded fom a yml file in the `./site/data/` directory. If the data does not match its associated
 // schema from `dataDefinitions`, an error is thrown to indicate that the data file is invalid and some action is
@@ -126,31 +119,31 @@ const data = new Map<DataType, unknown>()
 export function getData<TType extends DataType>(type: TType): DataOfType<TType> {
   if (data.has(type)) {
     // Returns the data if it has already been loaded.
-    return data.get(type) as DataOfType<TType>
+    return data.get(type) as DataOfType<TType>;
   }
 
-  const dataPath = `./site/data/${type}.yml`
+  const dataPath = `./site/data/${type}.yml`;
 
   try {
     // Load the data from the yml  file.
-    const rawData = yaml.load(fs.readFileSync(dataPath, 'utf8'))
+    const rawData = yaml.load(fs.readFileSync(dataPath, 'utf8'));
 
     // Parse the data using the data schema to validate its content and get back a fully typed data object.
-    const parsedData = dataDefinitions[type].parse(rawData)
+    const parsedData = dataDefinitions[type].parse(rawData);
 
     // Cache the data.
-    data.set(type, parsedData)
+    data.set(type, parsedData);
 
-    return parsedData as DataOfType<TType>
+    return parsedData as DataOfType<TType>;
   } catch (error) {
     if (error instanceof z.ZodError) {
-      console.error(`The \`${dataPath}\` file content is invalid:`, error.issues)
+      console.error(`The \`${dataPath}\` file content is invalid:`, error.issues);
     }
 
-    throw new Error(`Failed to load data from \`${dataPath}\``, { cause: error })
+    throw new Error(`Failed to load data from \`${dataPath}\``, { cause: error });
   }
 }
 
-type DataType = keyof typeof dataDefinitions
-type DataOfType<TType extends DataType> = z.infer<(typeof dataDefinitions)[TType]>
-type DataSchema = z.ZodTypeAny
+type DataType = keyof typeof dataDefinitions;
+type DataOfType<TType extends DataType> = z.infer<(typeof dataDefinitions)[TType]>;
+type DataSchema = z.ZodTypeAny;

@@ -11,31 +11,31 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-import sdk from '@stackblitz/sdk'
+import sdk from '@stackblitz/sdk';
 // eslint-disable-next-line import/no-unresolved
-import snippetsContent from './partials/snippets.js?raw'
+import snippetsContent from './partials/snippets.js?raw';
 
 // These values will be replaced by Astro's Vite plugin
 const CONFIG = {
   cssCdn: '__CSS_CDN__',
   jsBundleCdn: '__JS_BUNDLE_CDN__',
   docsVersion: '__DOCS_VERSION__'
-}
+};
 
 // Open in StackBlitz logic
 document.querySelectorAll('.btn-edit').forEach((btn) => {
   btn.addEventListener('click', (event) => {
-    const codeSnippet = event.target.closest('.bd-code-snippet')
-    const exampleEl = codeSnippet.querySelector('.bd-example')
+    const codeSnippet = event.target.closest('.bd-code-snippet');
+    const exampleEl = codeSnippet.querySelector('.bd-example');
 
-    const htmlSnippet = exampleEl.innerHTML
-    const jsSnippet = codeSnippet.querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
+    const htmlSnippet = exampleEl.innerHTML;
+    const jsSnippet = codeSnippet.querySelector('.btn-edit').getAttribute('data-sb-js-snippet');
     // Get extra classes for this example
-    const classes = Array.from(exampleEl.classList).join(' ')
+    const classes = Array.from(exampleEl.classList).join(' ');
 
-    openBootstrapSnippet(htmlSnippet, jsSnippet, classes)
-  })
-})
+    openBootstrapSnippet(htmlSnippet, jsSnippet, classes);
+  });
+});
 
 const openBootstrapSnippet = (htmlSnippet, jsSnippet, classes) => {
   const indexHtml = `<!doctype html>
@@ -57,14 +57,14 @@ ${htmlSnippet
   .trimEnd()}
     <!-- Example Code End -->
   </body>
-</html>`
+</html>`;
 
   // Modify the snippets content to convert export default to a variable and invoke it
-  let modifiedSnippetsContent = ''
+  let modifiedSnippetsContent = '';
 
   if (jsSnippet) {
     // Replace export default with a variable assignment
-    modifiedSnippetsContent = snippetsContent.replace('export default () => {', 'const snippets_default = () => {')
+    modifiedSnippetsContent = snippetsContent.replace('export default () => {', 'const snippets_default = () => {');
 
     // Add IIFE wrapper and execution
     modifiedSnippetsContent = `(() => {
@@ -72,7 +72,7 @@ ${htmlSnippet
 
   // <stdin>
   snippets_default();
-})();`
+})();`;
   }
 
   const project = {
@@ -84,7 +84,7 @@ ${htmlSnippet
     description: `Official example from ${window.location.href}`,
     template: jsSnippet ? 'javascript' : 'html',
     tags: ['bootstrap']
-  }
+  };
 
-  sdk.openProject(project, { openFile: 'index.html' })
-}
+  sdk.openProject(project, { openFile: 'index.html' });
+};

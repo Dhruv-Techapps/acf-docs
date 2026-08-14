@@ -1,7 +1,7 @@
-import yaml from 'js-yaml'
-import fs from 'node:fs'
-import { z } from 'zod'
-import { zVersionSemver } from './validation'
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { z } from 'zod';
+import { zVersionSemver } from './validation';
 
 // The config schema used to validate the config file content and ensure all values required by the site are valid.
 const configSchema = z.object({
@@ -56,33 +56,33 @@ const configSchema = z.object({
     min: z.number(),
     max: z.number()
   })
-})
+});
 
-let config: Config | undefined
+let config: Config | undefined;
 
 // A helper to get the config loaded fom the `config.yml` file. If the config does not match the `configSchema`, an
 // error is thrown to indicate that the config file is invalid and some action is required.
 export function getConfig(): Config {
   if (config) {
     // Returns the config if it has already been loaded.
-    return config
+    return config;
   }
 
   try {
     // Load the config from the `config.yml` file.
-    const rawConfig = yaml.load(fs.readFileSync('./config.yml', 'utf8'))
+    const rawConfig = yaml.load(fs.readFileSync('./config.yml', 'utf8'));
 
     // Parse the config using the config schema to validate its content and get back a fully typed config object.
-    config = configSchema.parse(rawConfig)
+    config = configSchema.parse(rawConfig);
 
-    return config
+    return config;
   } catch (error) {
     if (error instanceof z.ZodError) {
-      console.error('The `config.yml` file content is invalid:', error.issues)
+      console.error('The `config.yml` file content is invalid:', error.issues);
     }
 
-    throw new Error('Failed to load configuration from `config.yml`', { cause: error })
+    throw new Error('Failed to load configuration from `config.yml`', { cause: error });
   }
 }
 
-type Config = z.infer<typeof configSchema>
+type Config = z.infer<typeof configSchema>;

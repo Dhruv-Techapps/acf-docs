@@ -1,44 +1,38 @@
-import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import mdx from '@astrojs/mdx'
-import sitemap from '@astrojs/sitemap'
-import type { AstroIntegration } from 'astro'
-import autoImport from 'astro-auto-import'
-import type { Element, Text } from 'hast'
-import fs from 'node:fs'
-import path from 'node:path'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import { getConfig } from './config'
-import {
-  docsDirectory,
-  getDocsFsPath,
-  getDocsPublicFsPath,
-  getDocsStaticFsPath,
-  validateVersionedDocsPaths
-} from './path'
-import { configurePrism } from './prism'
-import { rehypeBsTable } from './rehype'
-import { remarkBsConfig, remarkBsDocsref } from './remark'
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import type { AstroIntegration } from 'astro';
+import autoImport from 'astro-auto-import';
+import type { Element, Text } from 'hast';
+import fs from 'node:fs';
+import path from 'node:path';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { getConfig } from './config';
+import { docsDirectory, getDocsFsPath, getDocsPublicFsPath, getDocsStaticFsPath, validateVersionedDocsPaths } from './path';
+import { configurePrism } from './prism';
+import { rehypeBsTable } from './rehype';
+import { remarkBsConfig, remarkBsDocsref } from './remark';
 
 // A list of directories in `src/components` that contains components that will be auto imported in all pages for
 // convenience.
 // Note: adding a new component to one of the existing directories requires a restart of the dev server.
-const autoImportedComponentDirectories = ['shortcodes']
+const autoImportedComponentDirectories = ['shortcodes'];
 
 // A list of static file paths that will be aliased to a different path.
 const staticFileAliases = {
   '/docs/[version]/assets/img/favicons/apple-touch-icon.png': '/apple-touch-icon.png',
   '/docs/[version]/assets/img/favicons/favicon.ico': '/favicon.ico'
-}
+};
 
 // A list of pages that will be excluded from the sitemap.
-const sitemapExcludes = ['/404', '/docs', `/docs/${getConfig().docs_version}`]
+const sitemapExcludes = ['/404', '/docs', `/docs/${getConfig().docs_version}`];
 
-const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`)
+const headingsRangeRegex = new RegExp(`^h[${getConfig().anchors.min}-${getConfig().anchors.max}]$`);
 
 export function bootstrap(): AstroIntegration[] {
-  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`)
+  const sitemapExcludedUrls = sitemapExcludes.map((url) => `${getConfig().baseURL}${url}/`);
 
-  configurePrism()
+  configurePrism();
 
   return [
     bootstrap_auto_import(),
@@ -47,7 +41,7 @@ export function bootstrap(): AstroIntegration[] {
       hooks: {
         'astro:config:setup': ({ addWatchFile, updateConfig }) => {
           // Reload the config when the integration is modified.
-          addWatchFile(path.join(getDocsFsPath(), 'src/libs/astro.ts'))
+          addWatchFile(path.join(getDocsFsPath(), 'src/libs/astro.ts'));
 
           // Add the remark and rehype plugins.
           updateConfig({
@@ -70,16 +64,16 @@ export function bootstrap(): AstroIntegration[] {
               ],
               remarkPlugins: [remarkBsConfig, remarkBsDocsref]
             }
-          })
+          });
         },
         'astro:config:done': () => {
-          cleanPublicDirectory()
-          copyBootstrap()
-          copyStatic()
-          aliasStatic()
+          cleanPublicDirectory();
+          copyBootstrap();
+          copyStatic();
+          aliasStatic();
         },
         'astro:build:done': ({ dir }) => {
-          validateVersionedDocsPaths(dir)
+          validateVersionedDocsPaths(dir);
         }
       }
     },
@@ -88,30 +82,24 @@ export function bootstrap(): AstroIntegration[] {
     sitemap({
       filter: (page) => sitemapFilter(page, sitemapExcludedUrls)
     })
-  ]
+  ];
 }
 
 function bootstrap_auto_import() {
-  const autoImportedComponents: string[] = []
-  const autoImportedComponentDefinitions: string[] = []
+  const autoImportedComponents: string[] = [];
+  const autoImportedComponentDefinitions: string[] = [];
 
   for (const autoImportedComponentDirectory of autoImportedComponentDirectories) {
     const components = fs.readdirSync(path.join(getDocsFsPath(), 'src/components', autoImportedComponentDirectory), {
       withFileTypes: true
-    })
+    });
 
     for (const component of components) {
       if (component.isFile()) {
-        autoImportedComponents.push(
-          `./${path.posix.join(docsDirectory, 'src/components', autoImportedComponentDirectory, component.name)}`
-        )
+        autoImportedComponents.push(`./${path.posix.join(docsDirectory, 'src/components', autoImportedComponentDirectory, component.name)}`);
 
         if (component.name.endsWith('.astro')) {
-          autoImportedComponentDefinitions.push(
-            `export const ${component.name.replace('.astro', '')}: typeof import('@shortcodes/${
-              component.name
-            }').default`
-          )
+          autoImportedComponentDefinitions.push(`export const ${component.name.replace('.astro', '')}: typeof import('@shortcodes/${component.name}').default`);
         }
       }
     }
@@ -127,72 +115,72 @@ function bootstrap_auto_import() {
 export declare global {
   ${autoImportedComponentDefinitions.join('\n  ')}
 }
-`
+`;
 
-  fs.writeFileSync(path.join(getDocsFsPath(), 'src/types/auto-import.d.ts'), autoImportedComponentDefinition)
+  fs.writeFileSync(path.join(getDocsFsPath(), 'src/types/auto-import.d.ts'), autoImportedComponentDefinition);
 
   return autoImport({
     imports: autoImportedComponents
-  })
+  });
 }
 
 function cleanPublicDirectory() {
-  fs.rmSync(getDocsPublicFsPath(), { force: true, recursive: true })
+  fs.rmSync(getDocsPublicFsPath(), { force: true, recursive: true });
 }
 
 // Copy the `dist` folder from the root of the repo containing the latest version of Bootstrap to make it available from
 // the `/docs/${docs_version}/dist` URL.
 function copyBootstrap() {
-  const source = path.join(process.cwd(), 'node_modules', 'bootstrap', 'dist')
-  const destination = path.join(getDocsPublicFsPath(), 'docs', getConfig().docs_version, 'dist')
-  console.log(`Copying Bootstrap from ${source} to ${destination}`)
-  fs.mkdirSync(destination, { recursive: true })
-  fs.cpSync(source, destination, { recursive: true })
+  const source = path.join(process.cwd(), 'node_modules', 'bootstrap', 'dist');
+  const destination = path.join(getDocsPublicFsPath(), 'docs', getConfig().docs_version, 'dist');
+  console.log(`Copying Bootstrap from ${source} to ${destination}`);
+  fs.mkdirSync(destination, { recursive: true });
+  fs.cpSync(source, destination, { recursive: true });
 }
 
 // Copy the content as-is of the `static` folder to make it available from the `/` URL.
 // A folder named `[version]` will automatically be renamed to the current version of the docs extracted from the
 // `config.yml` file.
 function copyStatic() {
-  const source = getDocsStaticFsPath()
-  const destination = path.join(getDocsPublicFsPath())
+  const source = getDocsStaticFsPath();
+  const destination = path.join(getDocsPublicFsPath());
 
-  copyStaticRecursively(source, destination)
+  copyStaticRecursively(source, destination);
 }
 
 // Alias (copy) some static files to different paths.
 function aliasStatic() {
-  const source = getDocsStaticFsPath()
-  const destination = path.join(getDocsPublicFsPath())
+  const source = getDocsStaticFsPath();
+  const destination = path.join(getDocsPublicFsPath());
 
   for (const [aliasSource, aliasDestination] of Object.entries(staticFileAliases)) {
-    fs.cpSync(path.join(source, aliasSource), path.join(destination, aliasDestination))
+    fs.cpSync(path.join(source, aliasSource), path.join(destination, aliasDestination));
   }
 }
 
 // See `copyStatic()` for more details.
 function copyStaticRecursively(source: string, destination: string) {
-  const entries = fs.readdirSync(source, { withFileTypes: true })
+  const entries = fs.readdirSync(source, { withFileTypes: true });
 
   for (const entry of entries) {
     if (entry.isFile()) {
-      fs.cpSync(path.join(source, entry.name), replacePathVersionPlaceholder(path.join(destination, entry.name)))
+      fs.cpSync(path.join(source, entry.name), replacePathVersionPlaceholder(path.join(destination, entry.name)));
     } else if (entry.isDirectory()) {
-      fs.mkdirSync(replacePathVersionPlaceholder(path.join(destination, entry.name)), { recursive: true })
+      fs.mkdirSync(replacePathVersionPlaceholder(path.join(destination, entry.name)), { recursive: true });
 
-      copyStaticRecursively(path.join(source, entry.name), path.join(destination, entry.name))
+      copyStaticRecursively(path.join(source, entry.name), path.join(destination, entry.name));
     }
   }
 }
 
 function replacePathVersionPlaceholder(name: string) {
-  return name.replace('[version]', getConfig().docs_version)
+  return name.replace('[version]', getConfig().docs_version);
 }
 
 function sitemapFilter(page: string, excludedUrls: string[]) {
   if (excludedUrls.includes(page)) {
-    return false
+    return false;
   }
 
-  return true
+  return true;
 }

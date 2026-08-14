@@ -1,7 +1,23 @@
 /dist
 /_site
 /site/dist
+/site/.astro
 /.nx/cache
+/.cache
+node_modules/
+package-lock.json
 CHANGELOG.md
 **/CHANGELOG.md
 **/dist/**
+
+# Vendored Bootstrap assets and examples, served as-is rather than authored here.
+/site/public/
+
+# Editor/agent config, not source.
+/.claude/
+
+# prettier-plugin-astro (0.14.1, its latest) fails to parse ~40 of these templates — it reads them
+# as JSX and rejects adjacent top-level elements. Formatting only the files it happens to accept
+# would leave the tree half-styled, so `.astro` stays out until the plugin catches up. Types in
+# these files are still covered by `npm run docs-typecheck`.
+*.astro

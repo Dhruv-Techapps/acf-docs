@@ -9,8 +9,8 @@
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
 
-import sidebarScroll from './partials/sidebar.js'
-import snippets from './partials/snippets.js'
+import sidebarScroll from './partials/sidebar.js';
+import snippets from './partials/snippets.js';
 
-sidebarScroll()
-snippets()
+sidebarScroll();
+snippets();

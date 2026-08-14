@@ -22,11 +22,7 @@ aliases:
   - '/docs/page-guard/recheck'
 ---
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/page-guard.png"
-  alt=""
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/page-guard.png" alt="" />
 
 Only run this step if a value on the page meets your condition.
 
@@ -48,11 +44,7 @@ You can use any selector type supported by the step [Element Finder]([[docsref:/
 
 Instead of a page element, you can evaluate a JavaScript expression by prefixing with `Func::`.
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/page-guard-func.png"
-  alt=""
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/page-guard-func.png" alt="" />
 
 <BsTable>
 
@@ -64,14 +56,9 @@ Instead of a page element, you can evaluate a JavaScript expression by prefixing
 
 </BsTable>
 
-<Callout type="warning">
-  Only use `Func::` expressions you wrote yourself or fully understand. Malicious scripts can act on your behalf and
-  violate your privacy.
-</Callout>
+<Callout type="warning">Only use `Func::` expressions you wrote yourself or fully understand. Malicious scripts can act on your behalf and violate your privacy.</Callout>
 
-<Callout type="info">
-  `Func::` is only available in Page Guard. Using it in a step's Element Finder will cause an error.
-</Callout>
+<Callout type="info">`Func::` is only available in Page Guard. Using it in a step's Element Finder will cause an error.</Callout>
 
 ## Compare
 
@@ -117,18 +104,13 @@ Examples:
 Try your pattern at [regex101.com](https://regex101.com/).
 
 <Callout type="info">
-  Attribute tips: - `@aria-checked` — extracts the `aria-checked` value (e.g., `true`/`false`) - `@class` — extracts the
-  full class string; use a regex like `(^|\s)active(\s|$)` to check for a single class - `@type` — extracts the `type`
-  attribute (e.g., `checkbox`) - `@data-status` — any attribute by replacing `data-status` with the actual name
+  Attribute tips: - `@aria-checked` — extracts the `aria-checked` value (e.g., `true`/`false`) - `@class` — extracts the full class string; use a regex like `(^|\s)active(\s|$)` to check for a single
+  class - `@type` — extracts the `type` attribute (e.g., `checkbox`) - `@data-status` — any attribute by replacing `data-status` with the actual name
 </Callout>
 
 ## If Condition Not Met
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/page-guard-recheck.png"
-  alt="Page Guard Recheck"
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/page-guard-recheck.png" alt="Page Guard Recheck" />
 
 Choose what should happen if the filter condition is not met.
 

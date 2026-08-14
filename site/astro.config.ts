@@ -1,18 +1,18 @@
-import { unified } from '@astrojs/markdown-remark'
-import { defineConfig } from 'astro/config'
+import { unified } from '@astrojs/markdown-remark';
+import { defineConfig } from 'astro/config';
 
-import { bootstrap } from './src/libs/astro'
-import { getConfig } from './src/libs/config'
-import { algoliaPlugin } from './src/plugins/algolia-plugin'
-import { stackblitzPlugin } from './src/plugins/stackblitz-plugin'
+import { bootstrap } from './src/libs/astro';
+import { getConfig } from './src/libs/config';
+import { algoliaPlugin } from './src/plugins/algolia-plugin';
+import { stackblitzPlugin } from './src/plugins/stackblitz-plugin';
 
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development';
 
 const site = isDev
   ? // In development mode, use the local dev server.
     'http://localhost:9001'
   : // Otherwise, use the `baseURL` value defined in the `config.yml` file.
-    getConfig().baseURL
+    getConfig().baseURL;
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,4 +35,4 @@ export default defineConfig({
       }
     }
   }
-})
+});

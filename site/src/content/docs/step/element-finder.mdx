@@ -2,8 +2,7 @@
 title: Step · Target
 description: Find page elements using XPath or selectors. This page covers target patterns, shortcuts, and examples for steps.
 group: action
-tags:
-  [step, action, element, finder, xpath, selectors, element-by-id, element-by-class, element-by-name, element-by-tag]
+tags: [step, action, element, finder, xpath, selectors, element-by-id, element-by-class, element-by-name, element-by-tag]
 toc: true
 added:
   version: '3.1.0'
@@ -11,10 +10,7 @@ aliases:
   - '/docs/4.x/action/element-finder/'
 ---
 
-<ExampleAutomation file="element-finder">
-  Watch every finder type (XPath, `#id`, `Selector::`, `ClassName::`, `Name::`, `TagName::`, shadow DOM) run on the
-  practice form.
-</ExampleAutomation>
+<ExampleAutomation file="element-finder">Watch every finder type (XPath, `#id`, `Selector::`, `ClassName::`, `Name::`, `TagName::`, shadow DOM) run on the practice form.</ExampleAutomation>
 
 <Callout type="info">
 
@@ -41,10 +37,7 @@ Notes:
 
 - IDs are intended to be unique. If duplicates exist, the first match is selected.
 
-<Callout type="info">
-  Referring to the HTML below: - `#inputEmail` targets `id="inputEmail"`. - `#inputPassword` targets
-  `id="inputPassword"`.
-</Callout>
+<Callout type="info">Referring to the HTML below: - `#inputEmail` targets `id="inputEmail"`. - `#inputPassword` targets `id="inputPassword"`.</Callout>
 
 ```html
 <main class="form-signin">
@@ -170,10 +163,7 @@ Referring to the HTML below:
 
 To target all matching elements by CSS selector, use `SelectorAll::selector`.
 
-<Callout type="warning">
-  Important: Works like Query Selector, but selects all matching elements instead of only the first one. The step is
-  applied to each matched element.
-</Callout>
+<Callout type="warning">Important: Works like Query Selector, but selects all matching elements instead of only the first one. The step is applied to each matched element.</Callout>
 
 ### Find By Position
 

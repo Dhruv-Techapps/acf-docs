@@ -40,8 +40,7 @@ This page explains why the extension requests each permission and how it uses th
 
 #### [storage](https://developer.chrome.com/docs/extensions/reference/storage/), [unlimitedStorage](https://developer.chrome.com/docs/extensions/reference/permissions/#permission-unlimitedStorage)
 
-> Your form‑fill and automation data are saved in `chrome.storage.local` for reliability.
-> Some users create many or large automations; `unlimitedStorage` removes the ~5 MB quota so your data isn’t truncated.
+> Your form‑fill and automation data are saved in `chrome.storage.local` for reliability. Some users create many or large automations; `unlimitedStorage` removes the ~5 MB quota so your data isn’t truncated.
 
 </Callout>
 
@@ -65,8 +64,7 @@ This page explains why the extension requests each permission and how it uses th
 
 #### [identity](https://developer.chrome.com/docs/extensions/reference/identity/)
 
-> Used to obtain an OAuth token for the Google Drive API, so we can back up automation files to your Drive app data (app‑specific storage).
-> Only the following scope is requested: https://www.googleapis.com/auth/drive.appdata
+> Used to obtain an OAuth token for the Google Drive API, so we can back up automation files to your Drive app data (app‑specific storage). Only the following scope is requested: https://www.googleapis.com/auth/drive.appdata
 
 </Callout>
 
@@ -74,8 +72,7 @@ This page explains why the extension requests each permission and how it uses th
 
 #### [userScripts](https://developer.chrome.com/docs/extensions/reference/userScripts/)
 
-> Most automation is driven by user‑defined automations. For advanced cases, we use `chrome.userScripts` to inject secure, isolated scripts that run only where needed.
-> This enables flexible automation without compromising page isolation or performance. Scripts run locally in your browser; no user data is collected.
+> Most automation is driven by user‑defined automations. For advanced cases, we use `chrome.userScripts` to inject secure, isolated scripts that run only where needed. This enables flexible automation without compromising page isolation or performance. Scripts run locally in your browser; no user data is collected.
 
 </Callout>
 
@@ -83,8 +80,7 @@ This page explains why the extension requests each permission and how it uses th
 
 #### [scripting](https://developer.chrome.com/docs/extensions/reference/scripting/)
 
-> Some pages rely on inline scripts that don’t receive events from the isolated world. We use `chrome.scripting.executeScript` (main world) to dispatch events and interact reliably with such pages.
-> Scripts execute only as part of your configured automations or when you explicitly start them, honoring Manifest V3 world separation.
+> Some pages rely on inline scripts that don’t receive events from the isolated world. We use `chrome.scripting.executeScript` (main world) to dispatch events and interact reliably with such pages. Scripts execute only as part of your configured automations or when you explicitly start them, honoring Manifest V3 world separation.
 
 </Callout>
 

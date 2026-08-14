@@ -8,18 +8,11 @@ subscription: PLUS
 tags: [schedule, automation, date, time, repeat, alarm, timer, scheduled-run]
 ---
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/automation-schedule.png"
-  alt=""
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/automation-schedule.png" alt="" />
 
 Schedule lets you set a future date and time when an automation should run, and optionally repeat it at a fixed interval.
 
-<Callout type="warning">
-  Schedule requires a [PLUS plan]([[docsref:/about/upgrade-plan]]). For FREE users the fields are disabled and a
-  subscription notice is shown.
-</Callout>
+<Callout type="warning">Schedule requires a [PLUS plan]([[docsref:/about/upgrade-plan]]). For FREE users the fields are disabled and a subscription notice is shown.</Callout>
 
 ## Opening Schedule
 
@@ -52,8 +45,7 @@ How often to re-trigger the automation after the initial run.
 - Leave it as `0` to run only once at the scheduled date and time.
 
 <Callout type="info">
-  The repeat interval uses the browser's alarm system. The minimum reliable interval depends on the browser's alarm
-  granularity; very short intervals (under 1 minute) are not supported.
+  The repeat interval uses the browser's alarm system. The minimum reliable interval depends on the browser's alarm granularity; very short intervals (under 1 minute) are not supported.
 </Callout>
 
 ## Saving and Clearing
@@ -61,10 +53,7 @@ How often to re-trigger the automation after the initial run.
 - Click **Save** to apply the schedule. The automation will open its target URL in a new tab at the scheduled time.
 - Click **Clear** to remove the schedule entirely. The automation returns to its normal trigger behavior.
 
-<Callout type="warning">
-  The schedule only fires while the browser is running. If the browser is closed at the scheduled time, the alarm is
-  missed and will not catch up.
-</Callout>
+<Callout type="warning">The schedule only fires while the browser is running. If the browser is closed at the scheduled time, the alarm is missed and will not catch up.</Callout>
 
 ## How it works
 
@@ -79,6 +68,4 @@ To run a form-filling automation every weekday morning:
 3. Set **Repeat** to `1440` (24 hours × 60 minutes) so it triggers again at the same time the next day.
 4. Click **Save**.
 
-<Callout type="info">
-  For daily or weekly scheduling, calculate the repeat interval in minutes: 1 day = `1440`, 1 week = `10080`.
-</Callout>
+<Callout type="info">For daily or weekly scheduling, calculate the repeat interval in minutes: 1 day = `1440`, 1 week = `10080`.</Callout>
