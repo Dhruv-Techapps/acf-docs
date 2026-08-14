@@ -2,9 +2,9 @@
 /// <reference types="astro/client" />
 
 interface ImportMetaEnv {
-  readonly NETLIFY?: string
+  readonly NETLIFY?: string;
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv
+  readonly env: ImportMetaEnv;
 }

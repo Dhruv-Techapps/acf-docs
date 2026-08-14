@@ -26,11 +26,7 @@
       font-size: 0.75rem;
       line-height: 1.35;
       white-space: pre;
-      content: str-slice($contrast-ratio, 1, 4)
-        '\A'
-        str-slice($against-white, 1, 4)
-        '\A'
-        str-slice($against-black, 1, 4);
+      content: str-slice($contrast-ratio, 1, 4) '\A' str-slice($against-white, 1, 4) '\A' str-slice($against-black, 1, 4);
       background-color: $value;
       background-image: linear-gradient(
         to bottom,

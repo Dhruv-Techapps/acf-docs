@@ -26,8 +26,7 @@ It’s how you point to something on the page (a button, input, link). You can u
 
 - Text-based paths (XPath)
 - CSS selector (querySelector)
-- Shortcuts like Id::, Name::, ClassName::, Selector::
-  More: [Element Finder]([[docsref:/step/element-finder]])
+- Shortcuts like Id::, Name::, ClassName::, Selector:: More: [Element Finder]([[docsref:/step/element-finder]])
 
 #### Q: How do I add a new step?
 
@@ -98,8 +97,7 @@ Avoid full paths. Use robust, readable selectors (text, labels, names, data-attr
 #### Q: How do I click a button?
 
 - Finder: point to the button
-- Value: `MouseEvents::click`
-  More: [Mouse Events]([[docsref:/step-value/mouse-events]])
+- Value: `MouseEvents::click` More: [Mouse Events]([[docsref:/step-value/mouse-events]])
 
 #### Q: How do I double‑click?
 
@@ -108,8 +106,7 @@ Use `MouseEvents::dblclick`.
 #### Q: How do I fill a text field?
 
 - Finder: the input
-- Value: `Paste::Your text` (or Replace/Append/Prepend)
-  More: [Paste]([[docsref:/step-value/paste]])
+- Value: `Paste::Your text` (or Replace/Append/Prepend) More: [Paste]([[docsref:/step-value/paste]])
 
 #### Q: Only fill if the field is empty?
 
@@ -137,8 +134,7 @@ Use `ScrollTo::`. [Scroll To]([[docsref:/step-value/scroll-to]])
 #### Q: How do I open a URL (same tab or new tab)?
 
 - Same tab: `LocationCommand::replace=https://...`
-- New tab: `LocationCommand::open=https://...`
-  More: [Location Command]([[docsref:/step-value/location-command]])
+- New tab: `LocationCommand::open=https://...` More: [Location Command]([[docsref:/step-value/location-command]])
 
 #### Q: How do I focus a window or tab?
 
@@ -282,23 +278,19 @@ The Finder didn’t match. Check the right iframe, dynamic loading, and timing.
 
 #### Q: Click by text
 
-Finder: `//button[contains(., 'Apply')]`
-Value: `MouseEvents::click`
+Finder: `//button[contains(., 'Apply')]` Value: `MouseEvents::click`
 
 #### Q: First of many identical icons
 
-Finder: `(//i[@class='icon'])[1]`
-Value: `MouseEvents::click`
+Finder: `(//i[@class='icon'])[1]` Value: `MouseEvents::click`
 
 #### Q: Label → checkbox
 
-Finder: `//label[normalize-space(.)='I agree']/input[@type='checkbox']`
-Value: `MouseEvents::click`
+Finder: `//label[normalize-space(.)='I agree']/input[@type='checkbox']` Value: `MouseEvents::click`
 
 #### Q: Select option by text
 
-Finder: `//select[@name='city']`
-Value: `SelectOption::text=Kitchener`
+Finder: `//select[@name='city']` Value: `SelectOption::text=Kitchener`
 
 #### Q: Custom dropdown (type + pick)
 
@@ -308,8 +300,7 @@ Value: `SelectOption::text=Kitchener`
 
 #### Q: Open a new tab at the end
 
-Finder: `//html`
-Value: `LocationCommand::open=https://example.com/next`
+Finder: `//html` Value: `LocationCommand::open=https://example.com/next`
 
 #### Q: Wait 0.25s between steps
 

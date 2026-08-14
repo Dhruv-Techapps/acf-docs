@@ -9,7 +9,7 @@ aliases:
   - '/docs/4.x/action-value/paste/'
 ---
 
-import { getDocsRelativePath } from '@libs/path'
+import { getDocsRelativePath } from '@libs/path';
 
 <ExampleAutomation file="copy-paste">Watch copied values (full and regex-filtered) get pasted into other fields.</ExampleAutomation>
 
@@ -63,10 +63,7 @@ Regex match
 
 Replace first occurrence
 
-<Code
-  code={`'The quick brown fox jumps over the lazy dog.'.replace('dog', 'monkey') → The quick brown fox jumps over the lazy monkey.`}
-  lang="js"
-/>
+<Code code={`'The quick brown fox jumps over the lazy dog.'.replace('dog', 'monkey') → The quick brown fox jumps over the lazy monkey.`} lang="js" />
 
 ### Paste::replaceAll("dog", "monkey")
 

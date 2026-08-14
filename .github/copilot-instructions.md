@@ -67,6 +67,7 @@ This is an Astro-based documentation site for Auto Clicker AutoFill at `getautoc
 ## Common Development Tasks
 
 ### Creating New Documentation Pages
+
 1. Create MDX file in `site/src/content/` under appropriate category
 2. Add frontmatter with title, description, and version
 3. Write content using Markdown/MDX syntax
@@ -75,12 +76,14 @@ This is an Astro-based documentation site for Auto Clicker AutoFill at `getautoc
 6. Validate with `npm run docs-lint`
 
 ### Working with Components
+
 1. Create Astro components in `site/src/components/`
 2. Use TypeScript for props and type safety
 3. Import in MDX files for interactive examples
 4. Follow existing component patterns for consistency
 
 ### Search Integration
+
 - Algolia DocSearch is configured
 - App ID: `S4D9IW396R`
 - Index: `test-getautoclicker`
@@ -97,6 +100,7 @@ This is an Astro-based documentation site for Auto Clicker AutoFill at `getautoc
 ## Quality Checks
 
 Before committing, ensure:
+
 1. **Prettier**: `npm run docs-prettier-check` -- code formatting
 2. **VNU**: `npm run docs-vnu` -- HTML5 validation
 3. **Build**: `npm run docs-build` -- successful Astro build
@@ -124,6 +128,7 @@ Before committing, ensure:
 ## Relationship to Other Projects
 
 This documentation site is part of the Auto Clicker AutoFill ecosystem:
+
 - Main extension: `auto-clicker-auto-fill` workspace (monorepo)
 - Blog: `acf-blog` project at `blog.getautoclicker.com`
 - Backend: `acf-firebase` project (Firebase Functions)
@@ -131,6 +136,7 @@ This documentation site is part of the Auto Clicker AutoFill ecosystem:
 - Options page: Hosted at `stable.getautoclicker.com`
 
 When referencing other projects or creating cross-links, use:
+
 - Blog: `https://blog.getautoclicker.com`
 - Stable app: `https://stable.getautoclicker.com`
 - Configs: `https://configs.getautoclicker.com`
@@ -140,6 +146,7 @@ When referencing other projects or creating cross-links, use:
 ## Version Management
 
 Documentation is versioned:
+
 - Current version: `5.0.0` (`docs_version: 5.x`)
 - Keep version-specific docs in separate folders
 - Update `current_version` in `config.yml` for new releases

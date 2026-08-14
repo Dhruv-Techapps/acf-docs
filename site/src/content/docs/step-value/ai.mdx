@@ -8,7 +8,7 @@ aliases:
   - '/docs/4.x/action-value/ai/'
 ---
 
-import { getDocsRelativePath } from '@libs/path'
+import { getDocsRelativePath } from '@libs/path';
 
 <Example
   filePath={getDocsRelativePath('/src/content/html/textarea.html')}
@@ -23,9 +23,6 @@ import { getDocsRelativePath } from '@libs/path'
 
 Generates a short bio from the prompt using the configured AI provider.
 
-<Code
-  code={`openai::Generate a short bio for a software engineer with 5 years of experience in web development.`}
-  lang="javascript"
-/>
+<Code code={`openai::Generate a short bio for a software engineer with 5 years of experience in web development.`} lang="javascript" />
 
 <Callout name="subscribe-callout" />

@@ -1,0 +1,11 @@
+# Build output
+_site/
+site/dist/
+site/.astro/
+
+# Vendored Bootstrap distribution served as-is, not our source.
+site/public/
+
+# Astro and TypeScript files are covered by `npm run docs-typecheck` (astro check), not ESLint.
+*.astro
+*.ts

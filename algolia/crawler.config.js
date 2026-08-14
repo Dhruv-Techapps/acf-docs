@@ -1,3 +1,7 @@
+// The Algolia crawler evaluates this file and consumes the instance itself, so the "result is unused"
+// finding does not apply. NOSONAR only suppresses the line it sits on, and Prettier moves a trailing
+// comment off the `new Crawler({` line — hence prettier-ignore holding it in place.
+// prettier-ignore
 new Crawler({ // NOSONAR
   appId: 'S4D9IW396R',
   // Crawler API key.
@@ -21,14 +25,14 @@ new Crawler({ // NOSONAR
       indexName: 'test-getautoclicker',
       pathsToMatch: ['https://getautoclicker.com/**'],
       recordExtractor: ({ $, helpers }) => {
-        $('.skippy').remove()
-        $('#bdNavbar').remove()
-        $('#bdSidebar').remove()
-        $('.bd-footer').remove()
+        $('.skippy').remove();
+        $('#bdNavbar').remove();
+        $('#bdSidebar').remove();
+        $('.bd-footer').remove();
         // The table of contents sits INSIDE <main>, so its list items match the `main li`
         // content selector below and every heading gets indexed twice — once as a heading,
         // once as body text. Present on all 68 docs pages.
-        $('.bd-toc').remove()
+        $('.bd-toc').remove();
 
         // Read the `docsearch:*` meta tags emitted by `site/src/components/head/Head.astro`.
         //
@@ -41,28 +45,28 @@ new Crawler({ // NOSONAR
         // optional chaining (`?.`), nullish coalescing (`??`) and object spread with a
         // "Parsing error: Unexpected token ." Do not "modernise" this block.
         var meta = function (name) {
-          var value = $('meta[name="' + name + '"]').attr('content')
-          return value ? value.trim() : ''
-        }
+          var value = $('meta[name="' + name + '"]').attr('content');
+          return value ? value.trim() : '';
+        };
         var metaList = function (name) {
-          var value = meta(name)
+          var value = meta(name);
           if (!value) {
-            return []
+            return [];
           }
           return value
             .split(',')
             .map(function (item) {
-              return item.trim()
+              return item.trim();
             })
             .filter(function (item) {
-              return item.length > 0
-            })
-        }
+              return item.length > 0;
+            });
+        };
 
-        var tags = metaList('docsearch:tags')
-        var aliases = metaList('docsearch:aliases')
-        var version = meta('docsearch:version')
-        var lang = meta('docsearch:language')
+        var tags = metaList('docsearch:tags');
+        var aliases = metaList('docsearch:aliases');
+        var version = meta('docsearch:version');
+        var lang = meta('docsearch:language');
 
         var records = helpers.docsearch({
           recordProps: {
@@ -80,7 +84,7 @@ new Crawler({ // NOSONAR
           },
           aggregateContent: true,
           recordVersion: 'v3'
-        })
+        });
 
         // `helpers.docsearch()` only extracts the DOM selectors above, so meta-tag values
         // have to be attached to each record explicitly. `version` and `lang` are already
@@ -91,12 +95,12 @@ new Crawler({ // NOSONAR
         // trips a lint rule that wants spread. The records are freshly built by
         // `helpers.docsearch()` above and not shared, so mutating them is safe.
         return records.map(function (record) {
-          record.tags = tags
-          record.aliases = aliases
-          record.version = version
-          record.lang = lang
-          return record
-        })
+          record.tags = tags;
+          record.aliases = aliases;
+          record.version = version;
+          record.lang = lang;
+          return record;
+        });
       }
     }
   ],
@@ -148,9 +152,5 @@ new Crawler({ // NOSONAR
   },
   ignoreCanonicalTo: false,
   safetyChecks: { beforeIndexPublishing: { maxLostRecordsPercentage: 10 } },
-  extraUrls: [
-    'https://getautoclicker.com/',
-    'https://getautoclicker.com/sitemap-index.xml',
-    'https://getautoclicker.com/sitemap-0.xml'
-  ]
-})
+  extraUrls: ['https://getautoclicker.com/', 'https://getautoclicker.com/sitemap-index.xml', 'https://getautoclicker.com/sitemap-0.xml']
+});

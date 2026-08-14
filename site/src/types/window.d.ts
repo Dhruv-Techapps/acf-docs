@@ -1,5 +1,5 @@
 export declare global {
-  export const StackBlitzSDK: typeof import('@stackblitz/sdk').default
+  export const StackBlitzSDK: typeof import('@stackblitz/sdk').default;
 
   /**
    * The `bootstrap` object is exposed to the global scope and also to the `window` object in the browser.
@@ -15,11 +15,11 @@ export declare global {
    *  - `bootstrap.Tooltip.getInstance`
    *
    */
-  export const bootstrap: typeof import('bootstrap')
+  export const bootstrap: typeof import('bootstrap');
   // export const bootstrap: any
 
   interface Window {
-    bootstrap: typeof import('bootstrap')
+    bootstrap: typeof import('bootstrap');
     // bootstrap: any
   }
 }

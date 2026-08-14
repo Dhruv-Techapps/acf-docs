@@ -13,10 +13,7 @@ aliases:
   - '/docs/4.x/configuration/watch/'
 ---
 
-<Callout type="warning">
-  Monitor requires a [PLUS plan]([[docsref:/about/upgrade-plan]]). For FREE users the settings are disabled and a
-  subscription notice is shown.
-</Callout>
+<Callout type="warning">Monitor requires a [PLUS plan]([[docsref:/about/upgrade-plan]]). For FREE users the settings are disabled and a subscription notice is shown.</Callout>
 
 ## Monitor settings
 
@@ -26,11 +23,7 @@ aliases:
 - **Real-time chat applications** (new message handling)
 - **Progressive content loading** (search results, dashboards)
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/monitor.png"
-  alt="Monitor Settings"
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/monitor.png" alt="Monitor Settings" />
 
 ### Enable Monitoring
 
@@ -84,9 +77,7 @@ Maximum time the watcher will remain active. The watcher automatically stops aft
 
 Automatically stops monitoring when the page URL changes. This prevents background observers from running on unintended pages in single-page applications.
 
-<Callout type="info">
-  URL change detection works with both traditional page navigation and modern SPA routing (History API, hash changes).
-</Callout>
+<Callout type="info">URL change detection works with both traditional page navigation and modern SPA routing (History API, hash changes).</Callout>
 
 ## Example setups
 
@@ -123,10 +114,7 @@ Process new posts in a social media feed:
 - Monitor Root: `[data-testid="primaryColumn"]`
 - Debounce: `800ms`
 
-<Callout type="warning">
-  Always test monitor configurations thoroughly. Some sites may have rate limiting or anti-automation measures that
-  could conflict with automated interactions.
-</Callout>
+<Callout type="warning">Always test monitor configurations thoroughly. Some sites may have rate limiting or anti-automation measures that could conflict with automated interactions.</Callout>
 
 ## Performance Considerations
 
@@ -136,7 +124,4 @@ Process new posts in a social media feed:
 - **Consider visibility checks:** Enable for content-heavy pages to reduce unnecessary processing
 - **Set appropriate timeouts:** Prevent runaway watchers with reasonable time limits
 
-<Callout type="warning">
-  Monitoring uses `MutationObserver`, which is generally performant, but observing large page sections with frequent
-  changes can impact browser performance.
-</Callout>
+<Callout type="warning">Monitoring uses `MutationObserver`, which is generally performant, but observing large page sections with frequent changes can impact browser performance.</Callout>

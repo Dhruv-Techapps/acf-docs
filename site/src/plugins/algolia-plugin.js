@@ -1,10 +1,10 @@
-import { getConfig } from '../libs/config.ts'
+import { getConfig } from '../libs/config.ts';
 
 /**
  * Vite plugin to replace placeholder values in search.js with actual configuration values
  */
 export function algoliaPlugin() {
-  const config = getConfig()
+  const config = getConfig();
 
   return {
     name: 'algolia-config-replacer',
@@ -13,10 +13,10 @@ export function algoliaPlugin() {
         return code
           .replace(/__API_KEY__/g, config.algolia.api_key)
           .replace(/__INDEX_NAME__/g, config.algolia.index_name)
-          .replace(/__APP_ID__/g, config.algolia.app_id)
+          .replace(/__APP_ID__/g, config.algolia.app_id);
       }
 
-      return code
+      return code;
     }
-  }
+  };
 }

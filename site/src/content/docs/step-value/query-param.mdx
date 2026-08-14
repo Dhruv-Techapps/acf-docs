@@ -9,9 +9,11 @@ aliases:
   - '/docs/4.x/action-value/query-param/'
 ---
 
-import { getDocsRelativePath } from '@libs/path'
+import { getDocsRelativePath } from '@libs/path';
 
-<ExampleAutomation file="query-param" testUrl="https://test.getautoclicker.com/?username=john&name=John&city=Paris">Watch the URL query params fill the form (the test-page link already includes `?username=john&name=John&city=Paris`).</ExampleAutomation>
+<ExampleAutomation file="query-param" testUrl="https://test.getautoclicker.com/?username=john&name=John&city=Paris">
+  Watch the URL query params fill the form (the test-page link already includes `?username=john&name=John&city=Paris`).
+</ExampleAutomation>
 
 <Example
   filePath={getDocsRelativePath('/src/content/html/input2.html')}
@@ -23,19 +25,15 @@ import { getDocsRelativePath } from '@libs/path'
   }}
 />
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/query-url.png"
-  alt=""
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/query-url.png" alt="" />
 
 ## Supported Patterns
 
 <BsTable>
 
-| **Pattern**      | **Description**                                                                                                         | **Example**                                                 |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `Query::param`   | Replace with the value of query parameter param from the URL. If not found, the value stays unchanged (`Query::param`). | Query::userId → 123 (if ?userId=123 in URL)                 |
+| **Pattern** | **Description** | **Example** |
+| --- | --- | --- |
+| `Query::param` | Replace with the value of query parameter param from the URL. If not found, the value stays unchanged (`Query::param`). | Query::userId → 123 (if ?userId=123 in URL) |
 | `<query::param>` | Replace all occurrences of `<query::param>` with the value of query parameter param from the URL. If a param is missing, the placeholder resolves to the key itself. Useful for templates. | Hello `<query::name>`! → Hello John! (if ?name=John in URL) |
 
 </BsTable>

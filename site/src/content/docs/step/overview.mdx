@@ -23,11 +23,7 @@ sections:
     description: 'Add logic to run a step only when previous steps have specific statuses.'
 ---
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border img-light"
-  src="/docs/[[config:docs_version]]/assets/img/step.png"
-  alt=""
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border img-light" src="/docs/[[config:docs_version]]/assets/img/step.png" alt="" />
 
 A step combines a [Target]([[docsref:/step/element-finder]]) and a [Value]([[docsref:/step-value/overview]]).
 
@@ -37,14 +33,13 @@ A step combines a [Target]([[docsref:/step/element-finder]]) and a [Value]([[doc
 In the options page, steps are edited inline inside the automation screen. Common columns include `Delay`, `Name`, `Target`, `Value`, `Repeat`, and `Interval`, plus step actions such as remove, disable, and more options.
 
 <Callout type="info">
-  You can also add a [Userscript]([[docsref:/userscript/overview]]) as a full step using the Add Userscript option.
-  Userscripts can replace the standard Name, Delay, Repeat, and Interval behavior with custom logic.
+  You can also add a [Userscript]([[docsref:/userscript/overview]]) as a full step using the Add Userscript option. Userscripts can replace the standard Name, Delay, Repeat, and Interval behavior with
+  custom logic.
 </Callout>
 
 <Callout type="warning">
-  If the target is not found, the extension uses the retry settings from Global Settings or [Step
-  Settings]([[docsref:/step/step-settings]]), then follows your selected fallback such as Stop Automation, Skip This
-  Step, Refresh & Retry, or Go to Step.
+  If the target is not found, the extension uses the retry settings from Global Settings or [Step Settings]([[docsref:/step/step-settings]]), then follows your selected fallback such as Stop
+  Automation, Skip This Step, Refresh & Retry, or Go to Step.
 </Callout>
 
 ## Delay

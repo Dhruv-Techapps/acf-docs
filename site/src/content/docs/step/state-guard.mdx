@@ -12,18 +12,16 @@ aliases:
   - '/docs/4.x/action/action-condition/'
 ---
 
-<img
-  class="d-block mb-4 img-fluid rounded-3 border"
-  src="/docs/[[config:docs_version]]/assets/img/state-guard.png"
-  alt="State Guard"
-/>
+<img class="d-block mb-4 img-fluid rounded-3 border" src="/docs/[[config:docs_version]]/assets/img/state-guard.png" alt="State Guard" />
 
 <Callout type="info">
-  #### State Guard - Available from the second [Step]([[docsref:/step/overview]]) onward because the first step has no
-  previous status to check. - Can reference any earlier step, not just the immediately previous one.
+  #### State Guard - Available from the second [Step]([[docsref:/step/overview]]) onward because the first step has no previous status to check. - Can reference any earlier step, not just the
+  immediately previous one.
 </Callout>
 
-<ExampleAutomation file="state-guard" plus>Step 2 is skipped because step 1 (missing element) was not DONE, while step 3 still runs.</ExampleAutomation>
+<ExampleAutomation file="state-guard" plus>
+  Step 2 is skipped because step 1 (missing element) was not DONE, while step 3 still runs.
+</ExampleAutomation>
 
 ### State Guard modal
 
