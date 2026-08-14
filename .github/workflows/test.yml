@@ -7,38 +7,83 @@ env:
   FORCE_COLOR: 2
   NODE: 24
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
-  test:
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-
     steps:
       - name: Clone repository
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '${{ env.NODE }}'
+          cache: 'npm'
+      - run: npm ci --ignore-scripts
+      - run: npm run docs-eslint
 
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '${{ env.NODE }}'
+          cache: 'npm'
+      - run: npm ci --ignore-scripts
+      - run: npm run docs-prettier-check
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '${{ env.NODE }}'
+          cache: 'npm'
+      - run: npm ci --ignore-scripts
+      - run: npm run docs-typecheck
+
+  # There is no unit test suite; the site itself is the thing under test, so this job builds it
+  # and validates the HTML and links it produces.
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '${{ env.NODE }}'
           cache: 'npm'
 
+      # vnu-jar needs a JRE.
       - run: java -version
 
       - name: Install npm dependencies
         run: npm ci --ignore-scripts
-
-      - name: Lint
-        run: npm run docs-eslint
-
-      - name: Check formatting
-        run: npm run docs-prettier-check
-
-      - name: Typecheck
-        run: npm run docs-typecheck
 
       - name: Build docs
         run: npm run docs-build
