@@ -10,12 +10,15 @@ CHANGELOG.md
 **/CHANGELOG.md
 **/dist/**
 
-# Vendored Bootstrap assets and examples, served as-is rather than authored here.
+# Generated, not authored: the `bootstrap()` integration's `copyStatic()` (see site/src/libs/astro.ts)
+# copies `site/static/**` here on every build with `[version]` renamed to the docs version, and
+# `copyBootstrap()` drops Bootstrap's `dist/` in from node_modules. Formatting it would be undone by
+# the next build.
 /site/public/
 
-# Hugo-era leftover: Astro's public dir is `site/public` (no `publicDir` override), nothing in the
-# config or source references `site/static`, and three of its files are byte-identical copies of
-# files under `site/public`. Formatting both copies is pure duplication.
+# The source `site/public` is copied from. The scripts under it are Bootstrap's docs scripts, kept as
+# upstream ships them; formatting them here and in the generated copy also counts double against
+# SonarCloud's duplication gate.
 /site/static/
 
 # Editor/agent config, not source.
