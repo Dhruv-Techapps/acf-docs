@@ -1,5 +1,8 @@
-new Crawler({
-  // NOSONAR
+// The Algolia crawler evaluates this file and consumes the instance itself, so the "result is unused"
+// finding does not apply. NOSONAR only suppresses the line it sits on, and Prettier moves a trailing
+// comment off the `new Crawler({` line — hence prettier-ignore holding it in place.
+// prettier-ignore
+new Crawler({ // NOSONAR
   appId: 'S4D9IW396R',
   // Crawler API key.
   // Do not commit a real WRITE-capable key in this public repo; paste it into the Algolia dashboard when applying this config.

@@ -13,6 +13,11 @@ CHANGELOG.md
 # Vendored Bootstrap assets and examples, served as-is rather than authored here.
 /site/public/
 
+# Hugo-era leftover: Astro's public dir is `site/public` (no `publicDir` override), nothing in the
+# config or source references `site/static`, and three of its files are byte-identical copies of
+# files under `site/public`. Formatting both copies is pure duplication.
+/site/static/
+
 # Editor/agent config, not source.
 /.claude/
 

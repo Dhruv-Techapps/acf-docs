@@ -2,8 +2,8 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-(function () {
-  'use strict';
+;(function () {
+  'use strict'
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
@@ -12,17 +12,17 @@
           registration
             .unregister()
             .then(function () {
-              return self.clients.matchAll();
+              return self.clients.matchAll()
             })
             .then(function (clients) {
               clients.forEach(function (client) {
                 if (client.url && 'navigate' in client) {
-                  client.navigate(client.url);
+                  client.navigate(client.url)
                 }
-              });
-            });
+              })
+            })
         }
-      });
-    });
+      })
+    })
   }
-})();
+})()
