@@ -3,6 +3,12 @@
 /site/dist/
 /site/.astro/
 
+# Written on every build and dev start by the `bootstrap()` integration in site/astro.config.ts:
+# `copyStatic()` copies site/static/** here with `[version]` renamed to the docs version,
+# `copyBootstrap()` adds Bootstrap's dist/ from node_modules, and `aliasStatic()` writes
+# /apple-touch-icon.png and /favicon.ico. Author assets in site/static, not here.
+/site/public/
+
 # Dependencies
 node_modules/
 
