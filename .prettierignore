@@ -16,7 +16,7 @@ CHANGELOG.md
 # the next build.
 /site/public/
 
-# The source `site/public` is copied from. The scripts under it are Bootstrap's docs scripts, kept as
+# The source `site/static` is copied from. The scripts under it are Bootstrap's docs scripts, kept as
 # upstream ships them; formatting them here and in the generated copy also counts double against
 # SonarCloud's duplication gate.
 /site/static/
