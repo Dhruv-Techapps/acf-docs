@@ -1,7 +1,7 @@
 ---
 title: Ask AI
 description: Ask questions about Auto Clicker Auto Fill from the Side Panel and get instant, sourced answers powered by AI.
-tags: [ask-ai, chat, side-panel, openai, qna]
+tags: [ask-ai, chat, side-panel, openai, qna, page-context, element-picker]
 toc: true
 added:
   version: '5.0.0'
@@ -26,6 +26,20 @@ Use any of the following:
 3. The answer renders as formatted text. When the answer draws on specific documentation pages, a `Sources` list of links appears underneath it.
 
 Each exchange stays in the tab's history until the Side Panel is closed, so you can ask follow-up questions in the same session.
+
+## Adding Page Context
+
+For questions about something specific on the page — "what's the Element Finder for this button?" — attach the actual element instead of describing it:
+
+1. Click `Select elements` above the question box.
+2. Hover over the page to highlight elements, then click one to attach it. It appears as a chip in the sidebar.
+3. Repeat to attach more elements — picking stays active until you stop it, so you don't need to reopen the picker for each one.
+4. Click `Select elements` again, or press <kbd>Esc</kbd>, to stop picking. Remove any chip with its close button before you ask your question.
+
+<Callout type="info">
+  Only the elements you pick are sent — never the whole page. Answers work best when the picked element has a stable id, name, or visible text; elements with only framework-generated ids or classes
+  may still resolve to a positional selector.
+</Callout>
 
 ## Rating An Answer
 
