@@ -29,7 +29,8 @@ sections:
 | **New**          | Create a new automation from the top-right‑click button.                        |
 | **Explore**      | Discover public automations and import them from the community feed.            |
 | **Import**       | Import one or more automations from a JSON export.                              |
-| **Search**       | Filter automations by name or URL.                                              |
+| **Search**       | Filter automations by name, URL, or ID from the page or sidebar.                |
+| **Organize**     | Filter by status and group by status, domain, or active features.               |
 | **Select**       | Enter bulk-selection mode to export or delete multiple automations.             |
 | **Reorder**      | Reorder automations so the highest-priority match appears first.                |
 | **Step Count**   | See how many steps each automation contains before opening it.                  |
@@ -40,11 +41,25 @@ sections:
 ## Typical workflow
 
 1. Review your automation list to find an existing entry or create a new one.
-2. Use the search box to filter by automation name or target URL.
+2. Use the page search box or sidebar search button to filter by automation name, target URL, or ID.
 3. Use [Explore]([[docsref:/automations/explore]]) when you want to import public automations.
 4. Click an automation to open its detail screen and edit its steps.
 5. Use `Select` when you want to bulk export or bulk remove multiple items.
 6. Use `Reorder` to control which automation wins when several match the same page.
+
+## Quick search
+
+Select the search icon above the sidebar automation list to open quick search in the center of the page. Quick search includes all automations, regardless of the sidebar's Status filter. Start typing an automation name, target URL, or ID to narrow the results.
+
+Use the up and down arrow keys to select a result, then press `Enter` to open it. Press `Escape` to close quick search without changing pages.
+
+## Organize the sidebar
+
+Select the sliders icon next to the sidebar search icon to organize automations.
+
+- **Status** defaults to **Enabled** and filters only the sidebar list. Choose **Disabled** or **All** when you need to include other automations in the sidebar.
+- **Group by** defaults to **None** and applies to the sidebar and quick-search results. Choose **Status**, **Domain**, or **Features** to add labeled result groups.
+- **Features** groups each automation by its active feature combination, such as Loop, Schedule, Monitor, or Published. Automations without one of these features appear under **No features**.
 
 ## Best practices
 
