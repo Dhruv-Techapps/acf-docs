@@ -21,14 +21,17 @@ Use Explore to browse community-published automations and import them into your 
 
 <BsTable>
 
-| **Feature**            | **Description**                                                  |
-| ---------------------- | ---------------------------------------------------------------- |
-| **Search**             | Search by title, URL, or related keywords.                       |
-| **Tags toggle**        | Show or hide tag badges in list results.                         |
-| **Description toggle** | Show or hide description text to make the list more compact.     |
-| **Load More**          | Fetch the next page of published automations.                    |
-| **Import**             | Download and import a selected automation into your account.     |
-| **Download count**     | View how many times each published automation has been imported. |
+| **Feature**            | **Description**                                                                |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| **Search**             | Search by title, URL, or related keywords.                                     |
+| **Mine filter**        | Type `@me` in the search box to show only the automations that you published.  |
+| **Author filter**      | Click an author's name on any result to show only their published automations. |
+| **Tags toggle**        | Show or hide tag badges in list results.                                       |
+| **Description toggle** | Show or hide description text to make the list more compact.                   |
+| **Load More**          | Fetch the next page of published automations.                                  |
+| **Import**             | Download and import a selected automation into your account.                   |
+| **Download count**     | View how many times each published automation has been imported.               |
+| **Unpublish**          | Remove one of your own published automations from Explore.                     |
 
 </BsTable>
 
@@ -36,18 +39,34 @@ Use Explore to browse community-published automations and import them into your 
 
 - Search is debounced to reduce repeated requests while you type.
 - Results refresh when the search box is cleared or when the query has at least 3 characters.
+- Typing `@me` anywhere in the search box filters the list to your own published automations — combine it with other search terms (e.g. `sheets @me`) to search within just your own results. A **Mine** chip appears below the search box while this is active; click its **×** to clear it.
+- Clicking an author's name on a result does the same thing for that author instead of you — a **By &lt;name&gt;** chip appears the same way. The Mine and author filters are mutually exclusive: turning one on clears the other.
 
 ## Import flow
 
 1. Open **Explore** from the left sidebar.
-2. Find an automation and click the cloud download icon.
-3. Confirm the import prompt.
+2. Find an automation and open its **⋮** menu.
+3. Select **Import** and confirm the prompt.
 4. The extension imports the automation and opens it immediately for editing.
 
 <Callout type="info">Imported automations may include newer fields. The extension migrates imported data to your current format automatically.</Callout>
+
+## Managing your own published automations
+
+Explore also doubles as a quick way to review and manage everything you've published, without opening each automation individually.
+
+1. Type `@me` in the search box to narrow the list down to automations you published.
+2. Open the **⋮** menu on any of your own rows — it has an **Unpublish** option in addition to Import.
+3. Select **Unpublish** and confirm the prompt. The automation is removed from Explore immediately.
+
+<Callout type="info">
+  Unpublishing from Explore has the same effect as unpublishing from the automation's own [Publish]([[docsref:/automation/publish]]) panel: the cloud metadata entry is removed, but your local
+  automation stays in your list.
+</Callout>
 
 ## Tips
 
 - Start with broad terms, then narrow with longer keywords.
 - Keep description view enabled when comparing similar automations.
 - Check the URL and author name before importing.
+- Found something useful from another automator? Click their name to see everything else they've published.
