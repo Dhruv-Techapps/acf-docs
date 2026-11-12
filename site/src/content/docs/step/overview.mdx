@@ -47,6 +47,12 @@ In the options page, steps are edited inline inside the automation screen. Commo
   Automation, Skip This Step, Refresh & Retry, or Go to Step.
 </Callout>
 
+<Callout type="info">
+  The automation editor warns you before a step can fail: an empty Target, or a Target that is not a valid XPath or selector, shows a warning under the field, and an automation with no steps shows a
+  banner with an Add Step button. These are warnings only, so unfinished steps still save. If a step does stop on the page because its element was not found, you can fix it from the status bar. See
+  [Fix Element Not Found]([[docsref:/step/fix-not-found]]).
+</Callout>
+
 ## Delay
 
 How long to wait before this step starts, in seconds.

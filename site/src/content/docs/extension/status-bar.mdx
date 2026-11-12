@@ -28,12 +28,15 @@ The extension also updates the Chrome Action badge so you can track the same run
 | In-page status bar | Countdown text such as `⏳ 5s ▶️ Automation.` or `⏳ 3s 🔁 Step.` | During init waits, step delays, loop repeat intervals, and repeat timers. |
 | In-page status bar | Warnings such as `⚠️ Element not found.` or `⚠️ Page Guard condition not met.` | When the extension is retrying or rechecking conditions before continuing. |
 | In-page status bar | `Done` or the current error message | When the run finishes successfully or stops on an error. |
+| In-page status bar | **Select element again**, **Not on this page** and **Undo change** buttons | When a step stops because its element was not found. See [Fix Element Not Found]([[docsref:/step/fix-not-found]]). |
+| In-page status bar | `Waiting for the element, reloading the page` | When a step set to **Refresh & Retry** did not find its element and the page is reloading. This is a waiting state, not an error. |
 | Chrome Action badge | `⚡` with `Initializing setup...` | Immediately after automation starts; the badge is enabled and the extension icon signals that steps are being prepared. |
 | Chrome Action badge | `▶️⏳` with `Waiting {time}s before starting automation.` | Automation wait timers (Init Wait) before the first loop or step runs. |
 | Chrome Action badge | `📦⏳` with `Waiting {time}s before starting Loop {current} of {total}.` | Loop level waits between loop executions. |
 | Chrome Action badge | `🔁⏳` with `Waiting {time}s before starting Step {current} of {total}.` | Delay before the next step executes. |
 | Chrome Action badge | `🔎⏳` with `Element not found. Retrying in {time}s... {retries} retries left (Step {current}).` | Retry logic while searching for page elements. |
 | Chrome Action badge | `✅⏳` with `Page Guard condition not met. Rechecking in {time}s... {checks} checks left (Step {current}).` | Page guard recheck countdowns before concluding conditions. |
+| Chrome Action badge | `⏳` | A step set to **Refresh & Retry** is waiting for its element and the page is reloading. |
 | Chrome Action badge | `❌` with `<error message>` | An error occurred; the badge remains active until the issue is resolved or automation stops. |
 | Chrome Action badge | `✅` with `Auto Clicker & Auto Fill` | Automation completed successfully; the badge resets but stays enabled momentarily before disable. |
 
