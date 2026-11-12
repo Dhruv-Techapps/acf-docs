@@ -48,3 +48,11 @@ Once all retry attempts are used up and the element still cannot be found, you c
 | **Go to Step**      | Jump to a specific step number instead of stopping. Useful for branching flows. |
 
 </BsTable>
+
+### Fixing a step that stopped
+
+With **Stop Automation**, the status bar shows the error together with buttons to fix the step on the page: pick the right element again, or skip the step where it does not apply. See [Fix Element Not Found]([[docsref:/step/fix-not-found]]).
+
+### Refresh & Retry is a waiting state
+
+With **Refresh & Retry**, a missing element is expected: the page reloads and the automation looks again. The status bar shows `Waiting for the element, reloading the page` and the extension icon shows `⏳` instead of an error, and no error notification is sent for each reload.

@@ -270,6 +270,14 @@ Each step has On‑Failure behavior (Skip, Refresh, Go to). Check logs for detai
 
 Usually a malformed XPath (wrong quotes, leading colons, non‑ASCII characters). Fix the Finder and try again.
 
+#### Q: A step says its element was not found. How do I fix it?
+
+Use the buttons in the status bar on the page: **Select element again** lets you click the right element and continues the run, and **Not on this page** (PLUS) skips the step where it does not apply. [Fix Element Not Found]([[docsref:/step/fix-not-found]])
+
+#### Q: The status bar says “Waiting for the element, reloading the page”. Is that an error?
+
+No. The step is set to Refresh & Retry, so the page reloads until the element appears. [Retry Attempts]([[docsref:/settings/retry-attempts]])
+
 #### Q: “Undefined element”
 
 The Finder didn’t match. Check the right iframe, dynamic loading, and timing.
@@ -338,6 +346,7 @@ Yes.
 - Check the URL pattern matches the current page (use regex if needed).
 - Lower Init Wait and Retry Interval if it feels slow.
 - Confirm the Finder points to the right element and iframe (enable Iframe First if needed).
+- If a step stops with “not found”, fix it from the status bar: [Fix Element Not Found]([[docsref:/step/fix-not-found]])
 - Prefer clear, text‑based or attribute‑based selectors; avoid brittle full paths.
 - Review logs for details: [Logs]([[docsref:/extension/log]])
 - Reconnect Google Sheets or Discord if values/notifications don’t work.

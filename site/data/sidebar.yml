@@ -45,6 +45,7 @@
   pages:
     - title: Overview
     - title: Element Finder
+    - title: Fix Not Found
     - title: Columns Filter
     - title: Step Settings
     - title: State Guard

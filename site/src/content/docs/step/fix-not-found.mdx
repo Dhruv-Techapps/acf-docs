@@ -1,0 +1,63 @@
+---
+title: Step · Fix Element Not Found
+description: When a step cannot find its element, fix it from the status bar on the page - pick the right element again, or skip the step where it does not apply.
+tags: [step, element-not-found, not-found, repair, fix, status-bar, target, selector, undo, skip]
+toc: true
+added:
+  version: '5.7.0'
+---
+
+When a step cannot find its element, the automation stops and the status bar shows the error. You can now fix the step right there on the page, without opening the automation editor or working out a new selector by hand.
+
+## When the buttons appear
+
+The buttons appear in the status bar when all of these are true:
+
+- A step has used up its retries and still cannot find its target.
+- The step is set to **Stop Automation** when the item is not found (the default). See [Retry Attempts]([[docsref:/settings/retry-attempts]]).
+- The step is a normal step, not a userscript.
+
+Clicking the error message itself still opens the failing step in the automation editor, as before.
+
+<Callout type="info">
+  The status bar must be visible for this to work. If **Status Bar Location** is set to `Disabled` in [Additional Settings]([[docsref:/settings/additional-settings]]), turn it back on to use these
+  buttons.
+</Callout>
+
+## Select element again
+
+Use this when the page has changed and the step's target no longer matches anything.
+
+1. Click **Select element again** in the status bar.
+2. Move the mouse over the page. The element under the pointer is outlined.
+3. Click the element the step should use. The click only selects it; it is not passed on to the page.
+4. The step's target is replaced with the element you picked, and the automation continues from that step.
+
+Press **Esc** at any time to cancel. Nothing is changed, and the error and its buttons come back.
+
+The new target is saved to the automation, so the next time the page loads the step works without any prompt.
+
+## Not on this page <SubscriptionBadge plan="PLUS" />
+
+Use this when the automation's URL also matches pages where this element does not exist, so the step is not broken, it just does not apply here.
+
+Click **Not on this page** and the step is set to **Skip This Step** when its item is not found. The automation continues with the next step, and from then on it skips this step quietly on pages where the element is missing.
+
+This changes the same option you can set by hand in [Step Settings]([[docsref:/step/step-settings]]), which is why it needs the PLUS plan. On the free plan only **Select element again** is shown.
+
+## Undo
+
+After either fix, an **Undo change** button stays in the status bar until you leave or reload the page. Click it to put the step back exactly as it was, including its previous target and settings.
+
+## Good to know
+
+- **The rest of the run is a single pass.** After a fix, the automation finishes the remaining steps once. Loop repeats and the completion notification apply again from the next full run.
+- **Pick in the same frame.** The picker works in the page or embedded frame where the automation was running. An element inside a different embedded page cannot be picked from here; edit the step's [Target]([[docsref:/step/element-finder]]) instead.
+- **A second failure offers the fix again.** If a later step also cannot find its element, the buttons appear for that step, with **Undo change** still available for the first fix.
+- **Saved like any other edit.** The change is saved to your automation on this device. If you use [Cloud Backup]([[docsref:/settings/cloud-backup]]), the updated automation is included in subsequent backups.
+
+## Related
+
+- [Step · Target]([[docsref:/step/element-finder]]) for writing a target by hand.
+- [Retry Attempts]([[docsref:/settings/retry-attempts]]) for how long a step keeps looking before it gives up.
+- [Status Bar]([[docsref:/extension/status-bar]]) for everything else the status bar shows.
