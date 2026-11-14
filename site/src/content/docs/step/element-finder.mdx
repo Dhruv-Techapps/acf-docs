@@ -25,7 +25,7 @@ Quickly copy an XPath with DevTools:
 
 <Callout type="info">
 
-The Target field is checked as you save. An empty Target, or one that is not a valid XPath, selector or regular expression, shows a warning under the field because the automation would stop at that step. Targets that are only known when the automation runs (Google Sheets values, placeholders such as `<batchRepeat>`) are not checked.
+The Target field is checked as you save. An empty Target, or a malformed expression when using XPath, an explicit selector or a regular expression, shows a warning under the field because the automation would stop at that step. New steps also support plain-text targets, as described below. Targets that are only known when the automation runs (Google Sheets values, placeholders such as `<batchRepeat>`) are not checked.
 
 If a Target stops matching later because the page changed, you can pick the element again from the status bar instead of rewriting it here. See [Fix Element Not Found]([[docsref:/step/fix-not-found]]).
 
@@ -72,7 +72,7 @@ With quotes, only an exact match counts. If the `email` field is ever removed fr
 
 #### When several elements match
 
-The step runs against every match, the same as an XPath that matches several elements. `Like` clicks every button labelled "Like" and does not touch "Unlike".
+The step runs against every match at the best matching level, the same as an XPath that matches several elements. `"Like"` clicks every button labelled "Like" and does not touch "Unlike".
 
 If both visible and hidden elements match, only the visible ones are used. Pages often keep a hidden mobile copy of a desktop button.
 
