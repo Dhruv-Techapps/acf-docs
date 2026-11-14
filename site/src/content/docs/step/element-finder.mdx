@@ -37,12 +37,16 @@ If a Target stops matching later because the page changed, you can pick the elem
 
 In a new step you can name the element the way you would describe it, with no prefix and no XPath. Type what the field is called or what the button says.
 
+<BsTable>
+
 | You type                 | What it matches                                                                                                              |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | `email`                  | Anything whose name, label or other attribute **contains** "email". If nothing matches, the text is tried as a CSS selector. |
 | `"email"`                | Only what is **exactly** "email".                                                                                            |
 | `/^e-?mail$/i`           | A regular expression.                                                                                                        |
 | `//input[@name="email"]` | XPath, as always.                                                                                                            |
+
+</BsTable>
 
 The text is compared with these attributes of each field and button:
 
