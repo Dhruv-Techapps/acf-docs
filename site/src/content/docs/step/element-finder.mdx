@@ -1,6 +1,6 @@
 ---
 title: Step · Target
-description: Find page elements using XPath or selectors. This page covers target patterns, shortcuts, and examples for steps.
+description: Find page elements using plain text, XPath or selectors. This page covers target patterns, shortcuts, and examples for steps.
 group: action
 tags: [step, action, element, finder, xpath, selectors, element-by-id, element-by-class, element-by-name, element-by-tag]
 toc: true
@@ -25,9 +25,70 @@ Quickly copy an XPath with DevTools:
 
 <Callout type="info">
 
-The Target field is checked as you save. An empty Target, or one that is not a valid XPath or selector, shows a warning under the field because the automation would stop at that step. Targets that are only known when the automation runs (Google Sheets values, placeholders such as `<batchRepeat>`) are not checked.
+The Target field is checked as you save. An empty Target, or one that is not a valid XPath, selector or regular expression, shows a warning under the field because the automation would stop at that step. Targets that are only known when the automation runs (Google Sheets values, placeholders such as `<batchRepeat>`) are not checked.
 
 If a Target stops matching later because the page changed, you can pick the element again from the status bar instead of rewriting it here. See [Fix Element Not Found]([[docsref:/step/fix-not-found]]).
+
+</Callout>
+
+### Plain text
+
+<AddedIn version="5.8.0" />
+
+In a new step you can name the element the way you would describe it, with no prefix and no XPath. Type what the field is called or what the button says.
+
+| You type                 | What it matches                                                                                                              |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `email`                  | Anything whose name, label or other attribute **contains** "email". If nothing matches, the text is tried as a CSS selector. |
+| `"email"`                | Only what is **exactly** "email".                                                                                            |
+| `/^e-?mail$/i`           | A regular expression.                                                                                                        |
+| `//input[@name="email"]` | XPath, as always.                                                                                                            |
+
+The text is compared with these attributes of each field and button:
+
+- `name`, `id`
+- `autocomplete` (except `on` and `off`), for example `given-name` or `postal-code`
+- the field's label
+- `aria-label`, `placeholder`, `title`
+- the visible text of buttons and links
+- `value`, for checkboxes, radio buttons and button inputs only
+- `class`, `ng-model`, `data-bind`, `data-reactid`, `aria-describedby`
+
+Matching ignores upper and lower case. Use a regular expression when case matters.
+
+```html
+<form>
+  <label for="fn">First name</label>
+  <input id="fn" name="first_name" autocomplete="given-name" /> 👈 First name, first_name, "given-name" <input name="email" placeholder="you@example.com" /> 👈 email <input name="confirm_email" /> 👈
+  confirm, "confirm_email" <button type="submit">Create account</button> 👈 Create account
+</form>
+```
+
+#### With and without quotes
+
+Without quotes, the text only has to be contained, and the closest matches win: elements that are exactly the text come first, then those that start with it, then those that contain it. In the form above, `email` fills the `email` field and leaves `confirm_email` alone.
+
+With quotes, only an exact match counts. If the `email` field is ever removed from the page, `email` would move on to `confirm_email`, while `"email"` stops with "element not found". Use quotes when filling the wrong field would be worse than stopping.
+
+#### When several elements match
+
+The step runs against every match, the same as an XPath that matches several elements. `Like` clicks every button labelled "Like" and does not touch "Unlike".
+
+If both visible and hidden elements match, only the visible ones are used. Pages often keep a hidden mobile copy of a desktop button.
+
+To act on fewer elements, make the text more specific, add quotes, or use an XPath.
+
+<Callout type="info">
+
+Plain text works in steps created in version 5.8.0 or later. A step created before that keeps reading its Target as an XPath, even after you edit it, so nothing you already have changes. To use plain text in an older automation, add a new step.
+
+Prefixes such as `#id`, `Selector::` and `Name::`, and XPath, work the same in old and new steps.
+
+</Callout>
+
+<Callout type="info">
+
+Two forms from other tools are also understood: `text=View Form`, which is the same as typing `View Form`, and `button:has-text("Confirm")`, which matches buttons containing that text. Other selectors from those tools are not supported.
 
 </Callout>
 
