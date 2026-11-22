@@ -21,17 +21,18 @@ import { getVersionedDocsPath } from '@libs/path'
             Designed and built with all the love in the world by the {getConfig().title} team with the help of
             <a href={`${getConfig().repo}/graphs/contributors`}>our contributors</a>.
           </li>
-          <li class="mb-2">Currently v{getConfig().current_version}.</li>
+          <li class="mb-2"><a href={getConfig().blog}>Release notes</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
         <h5>Links</h5>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">Home</a></li>
-          <li class="mb-2"><a href={getVersionedDocsPath('/')}>Docs</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('getting-started/introduction/')}>Docs</a></li>
           <li class="mb-2"><a href={getConfig().test}>Test</a></li>
           <li class="mb-2"><a href={getConfig().blog}>Blog</a></li>
-          <li class="mb-2"><a href="/policy">Privacy Policy</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('about/upgrade-plan/')}>Pricing</a></li>
+          <li class="mb-2"><a href="/policy/">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">

@@ -14,6 +14,7 @@
   pages:
     - title: Overview
     - title: Recording
+      slug: recording
     - title: Ask AI
 
 - title: Automations
@@ -117,7 +118,8 @@
   icon_color: indigo
   pages:
     - title: Permissions
-    - title: Upgrade Plan
+    - title: Pricing
+      slug: upgrade-plan
 
 - title: FAQ
   icon: question-circle
