@@ -7,11 +7,15 @@ content: |
 
   ### Privacy & Security
 
-  Auto Clicker - AutoFill does not collect any personal data, browsing history, or any other form of personal information. All data related to the extension's functionality remains on your local hard drive at all times.
+  The extension stores automation configurations in browser storage on your device for local use. When you use sign-in, cloud backups, Ask AI, or an integration, the data needed for that feature is sent to the corresponding service.
 
-  Please note that the data saved by this extension is **not encrypted**. While this data remains on your hard drive and can only be accessed by someone with physical access to your device, it is not secured against unauthorized access. We recommend taking appropriate security measures to protect your device and data.
+  ### Google Drive Cloud Backup
 
-  In the future, Auto Clicker - AutoFill may collect non-personally identifiable information, such as browser version, platform name, display settings, and user-specific filter settings (excluding any data that could identify you). This information will only be used to improve the extension by making decisions on implementing new features, removing unused features, or suggesting default settings for new users.
+  If you enable Cloud Backup, the extension requests access to the Google Drive application-data folder and saves a copy of your automations and settings there. The `drive.appdata` permission is limited to that folder. You can turn off scheduled backups in the extension or revoke access in Google Drive settings.
+
+  ### Ask AI
+
+  Ask AI requires sign-in. When you submit a question, we send it to the service that generates the answer. If you attach page elements, we also send the context from those selected elements to help answer the question. We store your account ID, question, answer, timestamp, and flags indicating whether context was used in Firebase Realtime Database. If you rate an answer or provide feedback, we store that information with the conversation record.
 
   ### Authentication and Data Collection
 
@@ -64,7 +68,7 @@ content: |
   - (b) protect and defend the rights or property of Auto Clicker - AutoFill; and/or
   - (c) act under exigent circumstances to protect the personal safety of users of Auto Clicker - AutoFill, or the public.
 
-  ### Tracking User Behavior
+  ### Website Usage and Analytics
 
   Auto Clicker - AutoFill may track the websites and pages our users visit within Auto Clicker - AutoFill to determine what services are the most popular. This data is used to deliver customized content within Auto Clicker - AutoFill to customers whose behavior indicates that they are interested in a particular subject area.
 

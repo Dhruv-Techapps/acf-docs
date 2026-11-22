@@ -42,7 +42,7 @@ algolia:
   index_name: 'test-getautoclicker'
 
 ext:
-  stable: 'https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe'
+  stable: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe'
   beta: 'https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep'
   dev: 'https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel'
 
