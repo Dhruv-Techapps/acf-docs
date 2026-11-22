@@ -5,7 +5,7 @@ docsDir: 'site'
 
 subtitle: 'Browser extension for auto-clicking and form autofill'
 
-description: 'Record and replay clicks and form fills in desktop Chrome or Edge. Install Auto Clicker AutoFill and try your first automation on the practice page.'
+description: 'Record and replay clicks and form fills in desktop Chrome. Install Auto Clicker AutoFill and try your first automation on the practice page.'
 authors: 'Dhruv Patel, Dharmesh Patel, and AutoClicker contributors'
 author: 'Dhruv Techapps'
 logo: '/docs/3.x/assets/brand/bootstrap-social-logo.png'
