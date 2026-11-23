@@ -43,8 +43,8 @@ algolia:
 
 ext:
   stable: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe'
-  beta: 'https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep'
-  dev: 'https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel'
+  beta: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/nmcpliniiebkbdehpgicgfcidgkpepep'
+  dev: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/cpjikgcdmhfnmaiibplplldlchbjejel'
 
 download:
   source: 'https://github.com/twbs/bootstrap/archive/v5.3.8.zip'
