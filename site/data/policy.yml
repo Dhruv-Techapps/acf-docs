@@ -7,11 +7,19 @@ content: |
 
   ### Privacy & Security
 
-  Auto Clicker - AutoFill does not collect any personal data, browsing history, or any other form of personal information. All data related to the extension's functionality remains on your local hard drive at all times.
+  The extension stores automation configurations in browser storage on your device for local use. When you use sign-in, cloud backups, Ask AI, automation publishing, or an integration, the data needed for that feature is sent to the corresponding service.
 
-  Please note that the data saved by this extension is **not encrypted**. While this data remains on your hard drive and can only be accessed by someone with physical access to your device, it is not secured against unauthorized access. We recommend taking appropriate security measures to protect your device and data.
+  ### Google Drive Cloud Backup
 
-  In the future, Auto Clicker - AutoFill may collect non-personally identifiable information, such as browser version, platform name, display settings, and user-specific filter settings (excluding any data that could identify you). This information will only be used to improve the extension by making decisions on implementing new features, removing unused features, or suggesting default settings for new users.
+  If you enable Cloud Backup, the extension requests access to the Google Drive application-data folder and saves a copy of your automations and settings there. The `drive.appdata` permission is limited to that folder. You can turn off scheduled backups in the extension or revoke access in Google Drive settings.
+
+  ### Ask AI
+
+  Ask AI requires sign-in. When you submit a question, we send it to the service that generates the answer. If you attach page elements, we also send the context from those selected elements to help answer the question. We store your account ID, question, answer, timestamp, and flags indicating whether context was used in Firebase Realtime Database. If you rate an answer or provide feedback, we store that information with the conversation record.
+
+  ### Publishing Automations
+
+  If you publish an automation to Explore, the service stores the configuration you submit and its listing details so other users can find and import it. Review an automation for private information before publishing. You can unpublish it from the extension.
 
   ### Authentication and Data Collection
 
@@ -28,7 +36,7 @@ content: |
 
   Our Auto Clicker - AutoFill extension uses the Google Sheets API with read-only and userinfo.profile scopes to access data from Google Sheets and show which Google account is connected. This API allows us to streamline the form-filling process and provide a better user experience for our users.
 
-  To use the Google Sheets API, we require permission to access your Google Sheets, read the data within them, and access your Google profile information. When you grant permission, we will only access the Google Sheets that you select, and we will only be able to read the data in them. We do not collect or store any of your personal information, including your Google account credentials.
+  To use the Google Sheets API, we require permission to access your Google Sheets, read the data within them, and access your Google profile information. When you grant permission, we will only access the Google Sheets that you select, and we will only be able to read the data in them. This integration uses the Google permissions you grant to read spreadsheet data and display the connected profile.
 
   The data from your Google Sheets will only be used to fill forms on configured websites/applications and to provide you with a better experience. We also use the userinfo.profile scope to show which Google account is connected. We do not store this data on our servers, nor do we use it for any purpose other than filling forms on configured websites/applications and showing the connected Google account.
 
@@ -64,9 +72,9 @@ content: |
   - (b) protect and defend the rights or property of Auto Clicker - AutoFill; and/or
   - (c) act under exigent circumstances to protect the personal safety of users of Auto Clicker - AutoFill, or the public.
 
-  ### Tracking User Behavior
+  ### Website Usage and Analytics
 
-  Auto Clicker - AutoFill may track the websites and pages our users visit within Auto Clicker - AutoFill to determine what services are the most popular. This data is used to deliver customized content within Auto Clicker - AutoFill to customers whose behavior indicates that they are interested in a particular subject area.
+  The documentation website uses Google Tag Manager and displays Google ads on some pages. Website analytics and ads are separate from the automation configurations stored by the browser extension.
 
   ### Microsoft Clarity
 

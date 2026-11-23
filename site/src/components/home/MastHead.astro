@@ -1,4 +1,5 @@
 ---
+import Video from '@shortcodes/Video.astro'
 import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
@@ -9,7 +10,7 @@ import { getVersionedDocsPath } from '@libs/path'
     <div class="col-md-8 mx-auto text-center">
       <ResponsiveImage
         imgPath="/assets/brand/bootstrap-logo-shadow.png"
-        alt="Bootstrap"
+        alt=""
         width={200}
         height={165}
         classes="d-none d-sm-block mx-auto mb-3"
@@ -17,29 +18,30 @@ import { getVersionedDocsPath } from '@libs/path'
       />
       <h1 class="mb-3 fw-semibold lh-1">Auto click, fill, submit with AutoClicker</h1>
       <p class="lead mb-4">
-        Automate Everything with Auto Clicker - AutoFill: Your Complete Autofill, Auto-Click, and Task Automation
-        Solution
+        Record and replay clicks and form fills in desktop Chrome.
       </p>
       <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
         <a
-          href={getVersionedDocsPath('getting-started/download')}
+          href={getConfig().ext.stable}
           class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold"
         >
-          Download
+          Install extension
         </a>
         <a
           href={getVersionedDocsPath('getting-started/introduction')}
           class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold"
         >
           <svg class="bi me-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
-          Read the docs
+          Getting started
         </a>
       </div>
       <p class="text-body-secondary mb-0">
-        Currently <strong>v{getConfig().current_version}</strong>
+        <a href={getVersionedDocsPath('about/upgrade-plan/')}>Compare plans</a>
+        <span aria-hidden="true"> · </span>
+        <a href={getConfig().blog}>Release notes</a>
       </p>
       <div class="mt-4">
-        <lite-youtube videoid="M3yNuBkJW3g" class="m-auto" playlabel="Auto Clicker Auto Fill"></lite-youtube>
+        <Video name="recording.mp4" autoplay={false} style="max-width: 640px" aria-label="Recording demonstration" />
       </div>
     </div>
   </div>

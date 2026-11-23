@@ -61,11 +61,6 @@ When you save a schedule the extension registers a Chrome alarm for that automat
 
 ## Example
 
-To run a form-filling automation every weekday morning:
-
-1. Set **Date** to the first day you want it to run, for example `2026-05-05`.
-2. Set **Time** to `09:00:00.000`.
-3. Set **Repeat** to `1440` (24 hours × 60 minutes) so it triggers again at the same time the next day.
-4. Click **Save**.
+Try this with Plus: create a simple automation on the [practice page](https://test.getautoclicker.com/) that fills the username field. In **Schedule**, choose today's date and a time a few minutes in the future, enter `0` for **Repeat**, and save. Keep the browser open. When the schedule fires, it should open the practice page in a new tab and fill the field. Use **Clear** afterward to remove the schedule.
 
 <Callout type="info">For daily or weekly scheduling, calculate the repeat interval in minutes: 1 day = `1440`, 1 week = `10080`.</Callout>

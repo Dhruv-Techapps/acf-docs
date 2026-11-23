@@ -3,9 +3,9 @@ baseURL: 'https://getautoclicker.com'
 
 docsDir: 'site'
 
-subtitle: 'Extension to automate click / fill.'
+subtitle: 'Browser extension for auto-clicking and form autofill'
 
-description: 'Extension to automate click / fill.'
+description: 'Record and replay clicks and form fills in desktop Chrome. Install Auto Clicker AutoFill and try your first automation on the practice page.'
 authors: 'Dhruv Patel, Dharmesh Patel, and AutoClicker contributors'
 author: 'Dhruv Techapps'
 logo: '/docs/3.x/assets/brand/bootstrap-social-logo.png'
@@ -42,9 +42,9 @@ algolia:
   index_name: 'test-getautoclicker'
 
 ext:
-  stable: 'https://chrome.google.com/webstore/detail/iapifmceeokikomajpccajhjpacjmibe'
-  beta: 'https://chrome.google.com/webstore/detail/nmcpliniiebkbdehpgicgfcidgkpepep'
-  dev: 'https://chrome.google.com/webstore/detail/cpjikgcdmhfnmaiibplplldlchbjejel'
+  stable: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe'
+  beta: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/nmcpliniiebkbdehpgicgfcidgkpepep'
+  dev: 'https://chromewebstore.google.com/detail/auto-clicker-autofill/cpjikgcdmhfnmaiibplplldlchbjejel'
 
 download:
   source: 'https://github.com/twbs/bootstrap/archive/v5.3.8.zip'

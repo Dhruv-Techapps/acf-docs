@@ -162,8 +162,9 @@ if (frontmatter.toc) {
           )
         }
 
-        <Ads />
+        {id !== 'getting-started/introduction' && <Ads />}
         <slot />
+        {id === 'getting-started/introduction' && <Ads />}
       </div>
     </main>
   </div>

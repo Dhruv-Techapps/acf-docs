@@ -1,5 +1,5 @@
 ---
-title: Recording
+title: Record and replay browser actions
 description: Start recording from the Side Panel and capture steps live while you interact with the page.
 tags: [recording, automation, side-panel]
 toc: true
@@ -19,14 +19,15 @@ Record clicks, inputs, and interactions from the Side Panel recording tab and bu
 ## Steps
 
 1. Open the extension Side Panel and go to `Recording`.
-2. The Side Panel has two tabs:
-   - `Automations` tab: your automation list. Click an automation to run it.
-   - `Recording` tab: recording controls and captured steps.
-3. Click `Start Recording` in the `Recording` tab.
-4. Continue interacting with the page as usual (click, fill, select, etc.).
-5. Each recorded step is saved immediately as it is performed. You do not need to wait for `Stop Recording` to persist steps.
-6. Click `Stop Recording` when you are done to end the recording session.
+2. Click `Start Recording` in the `Recording` tab.
+3. Continue interacting with the page as usual (click, fill, select, etc.).
+4. Each recorded step is saved immediately as it is performed. You do not need to wait for `Stop Recording` to persist steps.
+5. Click `Stop Recording` when you are done to end the recording session.
 
 <Callout type="info">Recording runs through the Side Panel workflow. Stopping recording ends capture, but step persistence happens continuously during recording.</Callout>
+
+## Replay your recording
+
+Return to the page you recorded on. Open **Automations** in the Side Panel and select the saved automation to run it. For an example with a visible result, follow the [Getting started walkthrough]([[docsref:/getting-started/introduction/]]).
 
 See [Side Panel]([[docsref:/side-panel/overview]]) for opening methods, automation run behavior, and footer links.

@@ -11,6 +11,8 @@ interface Props {
   style?: string
   /** Extra classes to apply to the <video> element. */
   class?: string
+  /** Accessible name when the video needs a standalone label. */
+  'aria-label'?: string
   /** Control boolean attributes for the <video>. */
   autoplay?: boolean
   controls?: boolean
@@ -25,6 +27,7 @@ const {
   width = '100%',
   style = '',
   class: className = 'video-thumbnail mb-3 border border-secondary',
+  'aria-label': ariaLabel,
   autoplay = true,
   controls = true,
   muted = true,
@@ -42,6 +45,7 @@ const videoSrc = getVersionedDocsPath(`/assets/video/${filename}`)
 
 <video
   class={className}
+  aria-label={ariaLabel}
   width={width}
   style={style}
   autoplay={autoplay}
