@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "acf": {
+      "source": {
+        "source": "github",
+        "repo": "Dhruv-Techapps/acf-claude-plugin"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "acf@acf": true
+  }
+}
