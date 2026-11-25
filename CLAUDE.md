@@ -72,7 +72,7 @@ Broken links and invalid HTML fail the deploy, so they are worth checking locall
 
 ## Downstream: the Discord bot
 
-`acf-bot` answers user questions from a **Pinecone index built by crawling getautoclicker.com/docs/5.x**. Editing a page here does not change the bot's answers until `npm run ingest` is re-run in `acf-bot`. A docs fix intended to correct bot behaviour is only half done at merge.
+`acf-bot` answers user questions from a **Pinecone index built from this repo's source files**: its `npm run ingest` reads `site/src/content/docs/**/*.mdx` from the local acf-docs checkout next to it (not the live site), so it indexes whatever branch that checkout is on. Editing a page here does not change the bot's answers until `npm run ingest` is re-run in `acf-bot`. A docs fix intended to correct bot behaviour is only half done at merge.
 
 ## Search
 
